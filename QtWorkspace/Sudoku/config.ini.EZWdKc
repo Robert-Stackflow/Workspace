@@ -1,0 +1,31 @@
+[system]
+startupstatus=1
+window\size=@Size(802 520)
+window\pos=@Point(835 357)
+toolbars\game=false
+toolbars\edit=true
+toolbars\function=false
+toolbars\music=false
+
+[game]
+level=1
+newgame=1
+candidates=9
+conflict_tips=true
+loadlast=true
+auto_timing=true
+auto_stop_timing=true
+auto_stop_threshold=1
+
+[view]
+font=宋体
+full_mode=false
+simple_mode=false
+language=0
+trayicon=0
+statusbar=true
+
+[advanced]
+closed_prompt_box=true
+closed_to_trayicon=true
+voice=true
