@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ActivityTest</string>
-    <string name="button_1">跳转到副界面</string>
-    <string name="add">Add</string>
-    <string name="remove">Remove</string>
-    <string name="subButton">跳转到主界面</string>
-</resources>

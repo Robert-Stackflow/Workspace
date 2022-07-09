@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">服药助手</string>
+    <string name="title_home">服药提醒</string>
+    <string name="title_dashboard">健康日历</string>
+    <string name="title_personal">个人中心</string>
+    <string name="add_reminder_button">添加提醒</string>
+    <string name="titlebar_title">服药助手</string>
+</resources>

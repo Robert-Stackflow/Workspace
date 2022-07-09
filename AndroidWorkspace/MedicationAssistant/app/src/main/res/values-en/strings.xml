@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Medication Assistant</string>
+    <string name="title_home">Reminder</string>
+    <string name="title_dashboard">Calendar</string>
+    <string name="title_personal">Me</string>
+    <string name="add_reminder_button">Add reminder</string>
+    <string name="titlebar_title">Medication Assistant</string>
+</resources>
