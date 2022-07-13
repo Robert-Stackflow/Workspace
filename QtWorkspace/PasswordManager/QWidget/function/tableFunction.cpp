@@ -238,9 +238,9 @@ void Widget::updatePersonInfo()
             additemdialog->ui->jgy_mail->removeItem(i);
     QSqlDatabase data = QSqlDatabase::addDatabase("SQLITECIPHER",QString::asprintf("%d",++times));
     data.setDatabaseName("user.db");
-//    data.setPassword("123456");
-//    data.setConnectOptions("QSQLITE_CREATE_KEY");
-//    data.setConnectOptions("QSQLITE_REMOVE_KEY");
+    //    data.setPassword("123456");
+    //    data.setConnectOptions("QSQLITE_CREATE_KEY");
+    //    data.setConnectOptions("QSQLITE_REMOVE_KEY");
     QSqlQuery query(data);
     if(!data.open())
     {
@@ -297,6 +297,7 @@ void Widget::updatePersonInfo()
 void Widget::loadUserData()
 {
     tableCount=0;
+    qDebug() << QSqlDatabase::drivers()<<QSqlDatabase::isDriverAvailable("SQLITECIPHER");
     QSqlDatabase data = QSqlDatabase::addDatabase("SQLITECIPHER",QString::asprintf("%d",++times));
     data.setDatabaseName("user.db");
     QSqlQuery query(data);

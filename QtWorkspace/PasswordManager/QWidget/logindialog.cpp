@@ -43,7 +43,7 @@ loginDialog::loginDialog(QWidget *parent) :
     }
 
     QPixmap img1;
-    img1.load("D:/HUST-Sources/画廊/面孔/魈/IMG_20220119_151256.jpg");
+    img1.load("D:/Ruida/Pictures/面孔/魈/1620050232879_20210808_215712_086.jpg");
     QPixmap pixMap= img1.scaled(100,100, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     pixMap=PixmapToRound(pixMap,50);
     ui->portrait->setPixmap(pixMap);
