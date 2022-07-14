@@ -1,5 +1,9 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
@@ -52,7 +56,7 @@ void Widget::initFrame()
     menu = new QMenu;
     saveAsPDF=new QAction("pdf");
     saveAsExcel=new QAction("excel");
-    saveAsCSV=new QAction("txt");
+    saveAsCSV=new QAction("csv");
     menu->addAction(saveAsPDF);
     menu->addAction(saveAsCSV);
     menu->addAction(saveAsExcel);

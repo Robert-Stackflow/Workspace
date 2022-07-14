@@ -1,5 +1,9 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 void Widget::addTableSlot()
 {
     additemdialog->isNewGroup=true;
@@ -297,7 +301,6 @@ void Widget::updatePersonInfo()
 void Widget::loadUserData()
 {
     tableCount=0;
-    qDebug() << QSqlDatabase::drivers()<<QSqlDatabase::isDriverAvailable("SQLITECIPHER");
     QSqlDatabase data = QSqlDatabase::addDatabase("SQLITECIPHER",QString::asprintf("%d",++times));
     data.setDatabaseName("user.db");
     QSqlQuery query(data);

@@ -1,10 +1,14 @@
-#include "logindialog.h"
+﻿#include "logindialog.h"
 #include "ui_logindialog.h"
 #include "widget.h"
 #include "ui_widget.h"
 #include "titleBar.h"
 #include <QFile>
 #include<QGraphicsDropShadowEffect>
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 loginDialog::loginDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::loginDialog)

@@ -1,6 +1,9 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
 
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 void Widget::updateQSS()
 {
     QFile file(":/qss/dark.qss");

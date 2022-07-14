@@ -1,9 +1,13 @@
-#include "additemdialog.h"
+﻿#include "additemdialog.h"
 #include "ui_additemdialog.h"
 #include "widget.h"
 #include <QDebug>
 #include <QFile>
 #include <QCompleter>
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 addItemDialog::addItemDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::addItemDialog)
@@ -199,7 +203,10 @@ void addItemDialog::InitGroup()
 {
     ui->groupNameJudge->setStyleSheet("border:0px;background-color:transparent");
     QStringList typeList;
-    typeList<<"普通密码"<<"邮箱密码"<<"网络共享服务授权码"<<"其他密码";
+    typeList.append("普通密码");
+    typeList.append("邮箱密码");
+    typeList.append("网络共享服务授权码");
+    typeList.append("其他密码");
     ui->groupType->addItems(typeList);
     connect(ui->groupName,SIGNAL(textEdited(QString)),this,SLOT(groupNameJudge_edited(QString)));
     connect(ui->group_yes,SIGNAL(clicked()),this,SLOT(yes_clicked()));

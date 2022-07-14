@@ -1,5 +1,9 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 QString KEY::toString(){
     QStringList ret;
     QString result;
@@ -33,8 +37,8 @@ QString KEY::toString(){
 void Widget::addItemSlot()
 {
     additemdialog->ui->tabWidget->setCurrentIndex(tables[stackedWidget->currentIndex()]->type);
-    additemdialog->setWindowTitle("在分组\""+tables[stackedWidget->currentIndex()]->name+"\"中添加密码");
-    additemdialog->m_titleBar->setWindowTitle("在分组\""+tables[stackedWidget->currentIndex()]->name+"\"中添加条目");
+    additemdialog->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加密码");
+    additemdialog->m_titleBar->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加条目");
     //清除“普通密码”内容
     additemdialog->ui->nickName->clear();
     additemdialog->ui->id->clear();
@@ -350,7 +354,7 @@ void Widget::moveMenuSlot()
             selectRows<<selectItems[i]->row();
     }
     std::sort(selectRows.begin(),selectRows.end());
-    QString message=QString("是否将已选条目从\"'%1'\"移动到\"'%2'\":\n").arg(tables[stackedWidget->currentIndex()]->name).arg(send->text());
+    QString message=QString("是否将已选条目从 '%1' 移动到 '%2' :\n").arg(tables[stackedWidget->currentIndex()]->name).arg(send->text());
     for(int i=selectRows.size()-1;i>=0;i--)
     {
         int row=selectRows[i];
@@ -401,7 +405,7 @@ void Widget::copyMenuSlot()
             selectRows<<selectItems[i]->row();
     }
     std::sort(selectRows.begin(),selectRows.end());
-    QString message=QString("是否将已选条目从\"'%1'\"移动到\"'%2'\":\n").arg(tables[stackedWidget->currentIndex()]->name).arg(send->text());
+    QString message=QString("是否将已选条目从 '%1' 移动到 '%2' :\n").arg(tables[stackedWidget->currentIndex()]->name).arg(send->text());
     for(int i=selectRows.size()-1;i>=0;i--)
     {
         int row=selectRows[i];

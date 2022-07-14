@@ -1,5 +1,9 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
+
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 void Widget::saveMenuTriggered()
 {
     QAction* send=(QAction*)sender();
@@ -9,7 +13,7 @@ void Widget::saveSlot()
 {
     QAction* activeAction=((QToolButton*)sender())->defaultAction();
     QString caption;
-    caption="将分组\""+tables[stackedWidget->currentIndex()]->name+"\"另存为"+save->defaultAction()->text()+"文件";
+    caption="将分组 "+tables[stackedWidget->currentIndex()]->name+" 另存为"+save->defaultAction()->text()+"文件";
     if(activeAction==saveAsPDF)
     {
         QString saveFilePath=QFileDialog::getSaveFileName(this,caption,"./",tr("PDF files(*.pdf)"));
@@ -79,7 +83,7 @@ void Widget::saveSlot()
         xlsxW.selectSheet(tables[0]->name);
         if (xlsxW.saveAs(saveFilePath))
         {
-            qDebug()<<"[debug] success to write xlsx file";
+            qDebug()<<"[Info] success to write xlsx file";
         }
         QDesktopServices::openUrl(QUrl(saveFilePath));
     }

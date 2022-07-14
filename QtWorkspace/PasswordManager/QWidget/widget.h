@@ -1,6 +1,6 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
-
+#pragma warning (disable:4819)
 #include <QWidget>
 #include <QStackedWidget>
 #include <QVBoxLayout>
