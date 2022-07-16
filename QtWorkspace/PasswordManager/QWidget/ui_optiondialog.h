@@ -34,7 +34,7 @@ public:
     QWidget *secure;
     QGroupBox *groupBox_3;
     QCheckBox *autoLock;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget_1;
     QHBoxLayout *horizontalLayout;
     QLabel *autoLockThresholdLabel;
     QSpinBox *autoLockThreshold;
@@ -42,7 +42,7 @@ public:
     QLineEdit *lineEdit;
     QGroupBox *groupBox_4;
     QCheckBox *autoHideItem;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *autoHideItemThresholdLabel;
     QSpinBox *autoHideItemThreshold;
@@ -52,13 +52,13 @@ public:
     QGroupBox *groupBox;
     QListWidget *listWidget;
     QGroupBox *groupBox_2;
-    QWidget *layoutWidget_2;
+    QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
     QLabel *fileTypeLabel;
     QComboBox *fileType;
     QCheckBox *autoLock_2;
     QCheckBox *autoLock_3;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget_4;
     QHBoxLayout *horizontalLayout_4;
     QLabel *fileTypeLabel_2;
     QComboBox *fileType_2;
@@ -87,19 +87,19 @@ public:
         autoLock = new QCheckBox(groupBox_3);
         autoLock->setObjectName(QString::fromUtf8("autoLock"));
         autoLock->setGeometry(QRect(10, 30, 281, 21));
-        layoutWidget = new QWidget(groupBox_3);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 60, 261, 31));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
+        layoutWidget_1 = new QWidget(groupBox_3);
+        layoutWidget_1->setObjectName(QString::fromUtf8("layoutWidget_1"));
+        layoutWidget_1->setGeometry(QRect(30, 60, 261, 31));
+        horizontalLayout = new QHBoxLayout(layoutWidget_1);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        autoLockThresholdLabel = new QLabel(layoutWidget);
+        autoLockThresholdLabel = new QLabel(layoutWidget_1);
         autoLockThresholdLabel->setObjectName(QString::fromUtf8("autoLockThresholdLabel"));
         autoLockThresholdLabel->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(autoLockThresholdLabel);
 
-        autoLockThreshold = new QSpinBox(layoutWidget);
+        autoLockThreshold = new QSpinBox(layoutWidget_1);
         autoLockThreshold->setObjectName(QString::fromUtf8("autoLockThreshold"));
 
         horizontalLayout->addWidget(autoLockThreshold);
@@ -116,19 +116,19 @@ public:
         autoHideItem = new QCheckBox(groupBox_4);
         autoHideItem->setObjectName(QString::fromUtf8("autoHideItem"));
         autoHideItem->setGeometry(QRect(10, 30, 252, 24));
-        layoutWidget1 = new QWidget(groupBox_4);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(31, 62, 251, 31));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
+        layoutWidget_2 = new QWidget(groupBox_4);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(31, 62, 251, 31));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        autoHideItemThresholdLabel = new QLabel(layoutWidget1);
+        autoHideItemThresholdLabel = new QLabel(layoutWidget_2);
         autoHideItemThresholdLabel->setObjectName(QString::fromUtf8("autoHideItemThresholdLabel"));
         autoHideItemThresholdLabel->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_2->addWidget(autoHideItemThresholdLabel);
 
-        autoHideItemThreshold = new QSpinBox(layoutWidget1);
+        autoHideItemThreshold = new QSpinBox(layoutWidget_2);
         autoHideItemThreshold->setObjectName(QString::fromUtf8("autoHideItemThreshold"));
 
         horizontalLayout_2->addWidget(autoHideItemThreshold);
@@ -151,13 +151,13 @@ public:
         groupBox_2 = new QGroupBox(file);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(10, 10, 311, 271));
-        layoutWidget_2 = new QWidget(groupBox_2);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(10, 30, 257, 31));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget_2);
+        layoutWidget_3 = new QWidget(groupBox_2);
+        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
+        layoutWidget_3->setGeometry(QRect(10, 30, 257, 31));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget_3);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        fileTypeLabel = new QLabel(layoutWidget_2);
+        fileTypeLabel = new QLabel(layoutWidget_3);
         fileTypeLabel->setObjectName(QString::fromUtf8("fileTypeLabel"));
         fileTypeLabel->setMinimumSize(QSize(124, 0));
         fileTypeLabel->setMaximumSize(QSize(124, 16777215));
@@ -165,7 +165,7 @@ public:
 
         horizontalLayout_3->addWidget(fileTypeLabel);
 
-        fileType = new QComboBox(layoutWidget_2);
+        fileType = new QComboBox(layoutWidget_3);
         fileType->setObjectName(QString::fromUtf8("fileType"));
         fileType->setMinimumSize(QSize(124, 0));
         fileType->setMaximumSize(QSize(124, 16777215));
@@ -178,24 +178,24 @@ public:
         autoLock_3 = new QCheckBox(groupBox_2);
         autoLock_3->setObjectName(QString::fromUtf8("autoLock_3"));
         autoLock_3->setGeometry(QRect(10, 140, 271, 24));
-        layoutWidget2 = new QWidget(groupBox_2);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 70, 291, 31));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget2);
+        layoutWidget_4 = new QWidget(groupBox_2);
+        layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
+        layoutWidget_4->setGeometry(QRect(10, 70, 291, 31));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget_4);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        fileTypeLabel_2 = new QLabel(layoutWidget2);
+        fileTypeLabel_2 = new QLabel(layoutWidget_4);
         fileTypeLabel_2->setObjectName(QString::fromUtf8("fileTypeLabel_2"));
         fileTypeLabel_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(fileTypeLabel_2);
 
-        fileType_2 = new QComboBox(layoutWidget2);
+        fileType_2 = new QComboBox(layoutWidget_4);
         fileType_2->setObjectName(QString::fromUtf8("fileType_2"));
 
         horizontalLayout_4->addWidget(fileType_2);
 
-        toolButton = new QToolButton(layoutWidget2);
+        toolButton = new QToolButton(layoutWidget_4);
         toolButton->setObjectName(QString::fromUtf8("toolButton"));
 
         horizontalLayout_4->addWidget(toolButton);

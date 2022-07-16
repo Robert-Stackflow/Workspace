@@ -952,7 +952,7 @@ public:
 
         retranslateUi(addItemDialog);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(addItemDialog);

@@ -7,7 +7,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -55,8 +55,244 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtANGLE",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtSql",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2\\QtCore",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\debug",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\mkspecs\\win32-msvc",
+        "/clang:-isystem",
+        "/clang:D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.3\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\ATLMFC\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\ucrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\shared",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\um",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\winrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\cppwinrt",
+        "/clang:-fmessage-length=0",
+        "/clang:-fdiagnostics-show-note-include-stack",
+        "/clang:-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "/TP",
+        "-Wno-unknown-pragmas",
+        "-Wno-unknown-warning-option",
+        "-Wno-documentation-unknown-command",
+        "-fno-delayed-template-parsing",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\dialog\\main.cpp"
+    ],
+    "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/dialog/main.cpp"
+},
+{
+    "arguments": [
+        "clang",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
+        "-I",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
+        "-nostdinc",
+        "-nostdinc++",
+        "--driver-mode=cl",
+        "-nologo",
+        "-Zc:wchar_t",
+        "-FS",
+        "-Zc:rvalueCast",
+        "-Zc:inline",
+        "-Zc:strictStrings",
+        "-Zc:throwingNew",
+        "-Zi",
+        "-MDd",
+        "-W3",
+        "-w34100",
+        "-w34189",
+        "-w44996",
+        "-w44456",
+        "-w44457",
+        "-w44458",
+        "-wd4577",
+        "-wd4467",
+        "-EHsc",
+        "/Zs",
+        "-m64",
+        "--target=x86_64-pc-windows-msvc",
+        "/std:c++14",
+        "-fcxx-exceptions",
+        "-fexceptions",
+        "-fms-compatibility-version=19.32",
+        "-DQ_CREATOR_RUN",
+        "-DUNICODE",
+        "-D_UNICODE",
+        "-DWIN32",
+        "-D_ENABLE_EXTENDED_ALIGNED_STORAGE",
+        "-DWIN64",
+        "-DQT_DEPRECATED_WARNINGS",
+        "-DQT_QML_DEBUG",
+        "-DQT_WIDGETS_LIB",
+        "-DQT_GUI_LIB",
+        "-DQT_SQL_LIB",
+        "-DQT_CORE_LIB",
+        "-D__FUNCSIG__=\"void __cdecl someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580(void)\"",
+        "-D__FUNCTION__=\"someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580\"",
+        "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtANGLE",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtSql",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2\\QtCore",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\debug",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\mkspecs\\win32-msvc",
+        "/clang:-isystem",
+        "/clang:D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.3\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\ATLMFC\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\ucrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\shared",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\um",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\winrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\cppwinrt",
+        "/clang:-fmessage-length=0",
+        "/clang:-fdiagnostics-show-note-include-stack",
+        "/clang:-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "/TP",
+        "-Wno-unknown-pragmas",
+        "-Wno-unknown-warning-option",
+        "-Wno-documentation-unknown-command",
+        "-fno-delayed-template-parsing",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\dialog\\widget.cpp"
+    ],
+    "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/dialog/widget.cpp"
+},
+{
+    "arguments": [
+        "clang",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
+        "-I",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
+        "-nostdinc",
+        "-nostdinc++",
+        "--driver-mode=cl",
+        "-nologo",
+        "-Zc:wchar_t",
+        "-FS",
+        "-Zc:rvalueCast",
+        "-Zc:inline",
+        "-Zc:strictStrings",
+        "-Zc:throwingNew",
+        "-Zi",
+        "-MDd",
+        "-W3",
+        "-w34100",
+        "-w34189",
+        "-w44996",
+        "-w44456",
+        "-w44457",
+        "-w44458",
+        "-wd4577",
+        "-wd4467",
+        "-EHsc",
+        "/Zs",
+        "-m64",
+        "--target=x86_64-pc-windows-msvc",
+        "/std:c++14",
+        "-fcxx-exceptions",
+        "-fexceptions",
+        "-fms-compatibility-version=19.32",
+        "-DQ_CREATOR_RUN",
+        "-DUNICODE",
+        "-D_UNICODE",
+        "-DWIN32",
+        "-D_ENABLE_EXTENDED_ALIGNED_STORAGE",
+        "-DWIN64",
+        "-DQT_DEPRECATED_WARNINGS",
+        "-DQT_QML_DEBUG",
+        "-DQT_WIDGETS_LIB",
+        "-DQT_GUI_LIB",
+        "-DQT_SQL_LIB",
+        "-DQT_CORE_LIB",
+        "-D__FUNCSIG__=\"void __cdecl someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580(void)\"",
+        "-D__FUNCTION__=\"someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580\"",
+        "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -106,10 +342,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\additemdialog.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\dialog\\logindialog.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/additemdialog.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/dialog/logindialog.cpp"
 },
 {
     "arguments": [
@@ -119,7 +355,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -167,8 +403,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -218,10 +458,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\function\\itemFunction.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\dialog\\optiondialog.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/function/itemFunction.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/dialog/optiondialog.cpp"
 },
 {
     "arguments": [
@@ -231,7 +471,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -278,9 +518,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -330,10 +574,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\function\\saveFunction.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\dialog\\additemdialog.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/function/saveFunction.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/dialog/additemdialog.cpp"
 },
 {
     "arguments": [
@@ -343,7 +587,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -390,8 +634,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -442,10 +690,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\function\\tableFunction.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\controller\\titleBar.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/function/tableFunction.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/controller/titleBar.cpp"
 },
 {
     "arguments": [
@@ -455,7 +703,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -503,8 +751,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -554,10 +806,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\function\\viewFunction.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\function\\viewFunction.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/function/viewFunction.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/function/viewFunction.cpp"
 },
 {
     "arguments": [
@@ -567,7 +819,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -614,8 +866,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -666,10 +922,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\logindialog.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\function\\itemFunction.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/logindialog.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/function/itemFunction.cpp"
 },
 {
     "arguments": [
@@ -679,7 +935,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -727,8 +983,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -778,10 +1038,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\main.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\function\\saveFunction.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/main.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/function/saveFunction.cpp"
 },
 {
     "arguments": [
@@ -791,7 +1051,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -838,9 +1098,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -890,10 +1154,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\optiondialog.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\source\\function\\tableFunction.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/optiondialog.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/source/function/tableFunction.cpp"
 },
 {
     "arguments": [
@@ -903,7 +1167,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -950,8 +1214,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -1002,10 +1270,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\titleBar.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxabstractooxmlfile.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/titleBar.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxabstractooxmlfile.cpp"
 },
 {
     "arguments": [
@@ -1015,7 +1283,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1063,8 +1331,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1114,10 +1386,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\widget.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxabstractsheet.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/widget.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxabstractsheet.cpp"
 },
 {
     "arguments": [
@@ -1127,7 +1399,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1174,9 +1446,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1226,10 +1502,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxabstractooxmlfile.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcell.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxabstractooxmlfile.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcell.cpp"
 },
 {
     "arguments": [
@@ -1239,7 +1515,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1286,9 +1562,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1338,10 +1618,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxabstractsheet.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcellformula.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxabstractsheet.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcellformula.cpp"
 },
 {
     "arguments": [
@@ -1351,7 +1631,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1398,9 +1678,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1450,10 +1734,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcell.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcelllocation.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcell.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcelllocation.cpp"
 },
 {
     "arguments": [
@@ -1463,7 +1747,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1510,8 +1794,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -1562,10 +1850,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcellformula.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcellrange.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcellformula.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcellrange.cpp"
 },
 {
     "arguments": [
@@ -1575,7 +1863,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1623,8 +1911,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1674,10 +1966,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcelllocation.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcellreference.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcelllocation.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcellreference.cpp"
 },
 {
     "arguments": [
@@ -1687,7 +1979,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1734,9 +2026,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -1786,10 +2082,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcellrange.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxchart.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcellrange.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxchart.cpp"
 },
 {
     "arguments": [
@@ -1799,7 +2095,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1846,8 +2142,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -1898,10 +2198,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcellreference.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxchartsheet.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcellreference.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxchartsheet.cpp"
 },
 {
     "arguments": [
@@ -1911,7 +2211,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -1959,8 +2259,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2010,10 +2314,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxchart.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcolor.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxchart.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcolor.cpp"
 },
 {
     "arguments": [
@@ -2023,7 +2327,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2070,8 +2374,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -2122,10 +2430,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxchartsheet.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxconditionalformatting.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxchartsheet.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxconditionalformatting.cpp"
 },
 {
     "arguments": [
@@ -2135,7 +2443,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2183,8 +2491,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2234,10 +2546,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcolor.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxcontenttypes.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcolor.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxcontenttypes.cpp"
 },
 {
     "arguments": [
@@ -2247,7 +2559,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2294,9 +2606,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2346,10 +2662,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxconditionalformatting.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdatavalidation.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxconditionalformatting.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdatavalidation.cpp"
 },
 {
     "arguments": [
@@ -2359,7 +2675,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2406,8 +2722,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -2458,10 +2778,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxcontenttypes.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdatetype.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxcontenttypes.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdatetype.cpp"
 },
 {
     "arguments": [
@@ -2471,7 +2791,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2519,8 +2839,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2570,10 +2894,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdatavalidation.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdocpropsapp.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdatavalidation.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdocpropsapp.cpp"
 },
 {
     "arguments": [
@@ -2583,7 +2907,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2630,9 +2954,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2682,10 +3010,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdatetype.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdocpropscore.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdatetype.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdocpropscore.cpp"
 },
 {
     "arguments": [
@@ -2695,7 +3023,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2742,9 +3070,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2794,10 +3126,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdocpropsapp.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdocument.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdocpropsapp.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdocument.cpp"
 },
 {
     "arguments": [
@@ -2807,7 +3139,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2854,9 +3186,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -2906,10 +3242,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdocpropscore.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdrawing.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdocpropscore.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdrawing.cpp"
 },
 {
     "arguments": [
@@ -2919,7 +3255,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -2966,8 +3302,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -3018,10 +3358,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdocument.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxdrawinganchor.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdocument.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxdrawinganchor.cpp"
 },
 {
     "arguments": [
@@ -3031,7 +3371,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3079,8 +3419,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -3130,10 +3474,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdrawing.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxformat.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdrawing.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxformat.cpp"
 },
 {
     "arguments": [
@@ -3143,7 +3487,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3190,9 +3534,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -3242,10 +3590,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxdrawinganchor.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxmediafile.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxdrawinganchor.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxmediafile.cpp"
 },
 {
     "arguments": [
@@ -3255,7 +3603,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3302,8 +3650,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -3354,10 +3706,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxformat.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxnumformatparser.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxformat.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxnumformatparser.cpp"
 },
 {
     "arguments": [
@@ -3367,7 +3719,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3415,8 +3767,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -3466,10 +3822,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxmediafile.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxrelationships.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxmediafile.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxrelationships.cpp"
 },
 {
     "arguments": [
@@ -3479,7 +3835,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3526,8 +3882,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -3578,10 +3938,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxnumformatparser.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxrichstring.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxnumformatparser.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxrichstring.cpp"
 },
 {
     "arguments": [
@@ -3591,7 +3951,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3639,8 +3999,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -3690,10 +4054,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxrelationships.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxsharedstrings.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxrelationships.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxsharedstrings.cpp"
 },
 {
     "arguments": [
@@ -3703,7 +4067,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3750,9 +4114,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -3802,10 +4170,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxrichstring.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxsimpleooxmlfile.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxrichstring.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxsimpleooxmlfile.cpp"
 },
 {
     "arguments": [
@@ -3815,7 +4183,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3862,8 +4230,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -3914,10 +4286,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxsharedstrings.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxstyles.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxsharedstrings.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxstyles.cpp"
 },
 {
     "arguments": [
@@ -3927,7 +4299,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -3975,8 +4347,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4026,10 +4402,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxsimpleooxmlfile.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxtheme.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxsimpleooxmlfile.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxtheme.cpp"
 },
 {
     "arguments": [
@@ -4039,7 +4415,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4086,9 +4462,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4138,10 +4518,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxstyles.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxutility.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxstyles.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxutility.cpp"
 },
 {
     "arguments": [
@@ -4151,7 +4531,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4198,9 +4578,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4250,10 +4634,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxtheme.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxworkbook.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxtheme.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxworkbook.cpp"
 },
 {
     "arguments": [
@@ -4263,7 +4647,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4310,9 +4694,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4362,10 +4750,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxutility.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxworksheet.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxutility.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxworksheet.cpp"
 },
 {
     "arguments": [
@@ -4375,7 +4763,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4422,8 +4810,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -4474,10 +4866,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxworkbook.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxzipreader.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxworkbook.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxzipreader.cpp"
 },
 {
     "arguments": [
@@ -4487,7 +4879,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4535,8 +4927,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4586,10 +4982,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxworksheet.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsSource\\xlsxzipwriter.cpp"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxworksheet.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsSource/xlsxzipwriter.cpp"
 },
 {
     "arguments": [
@@ -4599,7 +4995,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4646,9 +5042,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4698,10 +5098,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxzipreader.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\customItem\\customLineEdit.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxzipreader.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/customItem/customLineEdit.h"
 },
 {
     "arguments": [
@@ -4711,7 +5111,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4758,8 +5158,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -4810,10 +5214,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsSource\\xlsxzipwriter.cpp"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\dialog\\widget.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsSource/xlsxzipwriter.cpp"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/dialog/widget.h"
 },
 {
     "arguments": [
@@ -4823,7 +5227,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4871,8 +5275,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -4922,10 +5330,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\additemdialog.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\dialog\\logindialog.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/additemdialog.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/dialog/logindialog.h"
 },
 {
     "arguments": [
@@ -4935,7 +5343,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -4982,8 +5390,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -5034,10 +5446,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\logindialog.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\dialog\\optiondialog.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/logindialog.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/dialog/optiondialog.h"
 },
 {
     "arguments": [
@@ -5047,7 +5459,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5095,8 +5507,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5146,10 +5562,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\optiondialog.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\dialog\\additemdialog.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/optiondialog.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/dialog/additemdialog.h"
 },
 {
     "arguments": [
@@ -5159,7 +5575,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5206,9 +5622,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5258,10 +5678,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\titleBar.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\controller\\titleBar.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/titleBar.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/controller/titleBar.h"
 },
 {
     "arguments": [
@@ -5271,7 +5691,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5318,8 +5738,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -5370,10 +5794,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\widget.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\passwordType\\passwordType.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/widget.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/passwordType/passwordType.h"
 },
 {
     "arguments": [
@@ -5383,7 +5807,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5431,8 +5855,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5482,10 +5910,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxabstractooxmlfile.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header\\customItem\\abstractCustomItem.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxabstractooxmlfile.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/header/customItem/abstractCustomItem.h"
 },
 {
     "arguments": [
@@ -5495,7 +5923,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5542,9 +5970,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5594,10 +6026,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxabstractooxmlfile_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxabstractooxmlfile.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxabstractooxmlfile_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxabstractooxmlfile.h"
 },
 {
     "arguments": [
@@ -5607,7 +6039,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5654,9 +6086,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5706,10 +6142,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxabstractsheet.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxabstractooxmlfile_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxabstractsheet.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxabstractooxmlfile_p.h"
 },
 {
     "arguments": [
@@ -5719,7 +6155,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5766,9 +6202,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -5818,10 +6258,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxabstractsheet_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxabstractsheet.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxabstractsheet_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxabstractsheet.h"
 },
 {
     "arguments": [
@@ -5831,7 +6271,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5878,8 +6318,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -5930,10 +6374,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcell.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxabstractsheet_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcell.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxabstractsheet_p.h"
 },
 {
     "arguments": [
@@ -5943,7 +6387,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -5991,8 +6435,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6042,10 +6490,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcellformula.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcell.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcellformula.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcell.h"
 },
 {
     "arguments": [
@@ -6055,7 +6503,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6102,9 +6550,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6154,10 +6606,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcellformula_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcellformula.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcellformula_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcellformula.h"
 },
 {
     "arguments": [
@@ -6167,7 +6619,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6214,8 +6666,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -6266,10 +6722,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcelllocation.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcellformula_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcelllocation.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcellformula_p.h"
 },
 {
     "arguments": [
@@ -6279,7 +6735,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6327,8 +6783,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6378,10 +6838,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcellrange.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcelllocation.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcellrange.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcelllocation.h"
 },
 {
     "arguments": [
@@ -6391,7 +6851,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6438,8 +6898,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -6490,10 +6954,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcellreference.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcellrange.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcellreference.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcellrange.h"
 },
 {
     "arguments": [
@@ -6503,7 +6967,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6551,8 +7015,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6602,10 +7070,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcell_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcellreference.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcell_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcellreference.h"
 },
 {
     "arguments": [
@@ -6615,7 +7083,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6662,9 +7130,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6714,10 +7186,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxchart.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcell_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxchart.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcell_p.h"
 },
 {
     "arguments": [
@@ -6727,7 +7199,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6774,8 +7246,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -6826,10 +7302,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxchartsheet.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxchart.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxchartsheet.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxchart.h"
 },
 {
     "arguments": [
@@ -6839,7 +7315,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6887,8 +7363,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -6938,10 +7418,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxchartsheet_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxchartsheet.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxchartsheet_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxchartsheet.h"
 },
 {
     "arguments": [
@@ -6951,7 +7431,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -6998,9 +7478,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7050,10 +7534,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxchart_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxchartsheet_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxchart_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxchartsheet_p.h"
 },
 {
     "arguments": [
@@ -7063,7 +7547,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7110,9 +7594,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7162,10 +7650,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcolor_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxchart_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcolor_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxchart_p.h"
 },
 {
     "arguments": [
@@ -7175,7 +7663,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7222,9 +7710,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7274,10 +7766,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxconditionalformatting.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcolor_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxconditionalformatting.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcolor_p.h"
 },
 {
     "arguments": [
@@ -7287,7 +7779,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7334,8 +7826,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -7386,10 +7882,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxconditionalformatting_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxconditionalformatting.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxconditionalformatting_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxconditionalformatting.h"
 },
 {
     "arguments": [
@@ -7399,7 +7895,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7447,8 +7943,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7498,10 +7998,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxcontenttypes_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxconditionalformatting_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxcontenttypes_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxconditionalformatting_p.h"
 },
 {
     "arguments": [
@@ -7511,7 +8011,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7558,9 +8058,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7610,10 +8114,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdatavalidation.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxcontenttypes_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdatavalidation.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxcontenttypes_p.h"
 },
 {
     "arguments": [
@@ -7623,7 +8127,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7670,8 +8174,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -7722,10 +8230,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdatavalidation_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdatavalidation.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdatavalidation_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdatavalidation.h"
 },
 {
     "arguments": [
@@ -7735,7 +8243,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7783,8 +8291,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -7834,10 +8346,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdatetype.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdatavalidation_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdatetype.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdatavalidation_p.h"
 },
 {
     "arguments": [
@@ -7847,7 +8359,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -7894,8 +8406,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -7946,10 +8462,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdocpropsapp_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdatetype.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdocpropsapp_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdatetype.h"
 },
 {
     "arguments": [
@@ -7959,7 +8475,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8007,8 +8523,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8058,10 +8578,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdocpropscore_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdocpropsapp_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdocpropscore_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdocpropsapp_p.h"
 },
 {
     "arguments": [
@@ -8071,7 +8591,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8118,9 +8638,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8170,10 +8694,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdocument.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdocpropscore_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdocument.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdocpropscore_p.h"
 },
 {
     "arguments": [
@@ -8183,7 +8707,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8230,8 +8754,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -8282,10 +8810,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdocument_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdocument.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdocument_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdocument.h"
 },
 {
     "arguments": [
@@ -8295,7 +8823,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8343,8 +8871,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8394,10 +8926,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdrawinganchor_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdocument_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdrawinganchor_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdocument_p.h"
 },
 {
     "arguments": [
@@ -8407,7 +8939,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8454,9 +8986,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8506,10 +9042,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxdrawing_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdrawinganchor_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxdrawing_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdrawinganchor_p.h"
 },
 {
     "arguments": [
@@ -8519,7 +9055,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8566,9 +9102,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8618,10 +9158,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxformat.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxdrawing_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxformat.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxdrawing_p.h"
 },
 {
     "arguments": [
@@ -8631,7 +9171,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8678,9 +9218,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8730,10 +9274,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxformat_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxformat.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxformat_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxformat.h"
 },
 {
     "arguments": [
@@ -8743,7 +9287,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8790,8 +9334,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -8842,10 +9390,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxglobal.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxformat_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxglobal.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxformat_p.h"
 },
 {
     "arguments": [
@@ -8855,7 +9403,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -8903,8 +9451,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -8954,10 +9506,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxmediafile_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxglobal.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxmediafile_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxglobal.h"
 },
 {
     "arguments": [
@@ -8967,7 +9519,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9014,9 +9566,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9066,10 +9622,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxnumformatparser_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxmediafile_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxnumformatparser_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxmediafile_p.h"
 },
 {
     "arguments": [
@@ -9079,7 +9635,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9126,8 +9682,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -9178,10 +9738,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxrelationships_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxnumformatparser_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxrelationships_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxnumformatparser_p.h"
 },
 {
     "arguments": [
@@ -9191,7 +9751,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9239,8 +9799,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9290,10 +9854,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxrichstring.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxrelationships_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxrichstring.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxrelationships_p.h"
 },
 {
     "arguments": [
@@ -9303,7 +9867,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9350,8 +9914,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -9402,10 +9970,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxrichstring_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxrichstring.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxrichstring_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxrichstring.h"
 },
 {
     "arguments": [
@@ -9415,7 +9983,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9463,8 +10031,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9514,10 +10086,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxsharedstrings_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxrichstring_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxsharedstrings_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxrichstring_p.h"
 },
 {
     "arguments": [
@@ -9527,7 +10099,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9574,9 +10146,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9626,10 +10202,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxsimpleooxmlfile_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxsharedstrings_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxsimpleooxmlfile_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxsharedstrings_p.h"
 },
 {
     "arguments": [
@@ -9639,7 +10215,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9686,8 +10262,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -9738,10 +10318,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxstyles_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxsimpleooxmlfile_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxstyles_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxsimpleooxmlfile_p.h"
 },
 {
     "arguments": [
@@ -9751,7 +10331,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9799,8 +10379,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9850,10 +10434,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxtheme_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxstyles_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxtheme_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxstyles_p.h"
 },
 {
     "arguments": [
@@ -9863,7 +10447,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -9910,9 +10494,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -9962,10 +10550,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxutility_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxtheme_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxutility_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxtheme_p.h"
 },
 {
     "arguments": [
@@ -9975,7 +10563,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10022,9 +10610,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -10074,10 +10666,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxworkbook.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxutility_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxworkbook.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxutility_p.h"
 },
 {
     "arguments": [
@@ -10087,7 +10679,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10134,9 +10726,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -10186,10 +10782,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxworkbook_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxworkbook.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxworkbook_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxworkbook.h"
 },
 {
     "arguments": [
@@ -10199,7 +10795,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10246,8 +10842,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -10298,10 +10898,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxworksheet.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxworkbook_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxworksheet.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxworkbook_p.h"
 },
 {
     "arguments": [
@@ -10311,7 +10911,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10359,8 +10959,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -10410,10 +11014,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxworksheet_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxworksheet.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxworksheet_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxworksheet.h"
 },
 {
     "arguments": [
@@ -10423,7 +11027,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10470,9 +11074,13 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -10522,10 +11130,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxzipreader_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxworksheet_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxzipreader_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxworksheet_p.h"
 },
 {
     "arguments": [
@@ -10535,7 +11143,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10582,8 +11190,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -10634,10 +11246,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader\\xlsxzipwriter_p.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxzipreader_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/QXlxsHeader/xlsxzipwriter_p.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxzipreader_p.h"
 },
 {
     "arguments": [
@@ -10647,7 +11259,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10695,8 +11307,12 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
         "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
@@ -10746,10 +11362,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\ui_logindialog.h"
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader\\xlsxzipwriter_p.h"
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
-    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/ui_logindialog.h"
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/xlsxzipwriter_p.h"
 },
 {
     "arguments": [
@@ -10759,7 +11375,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10806,8 +11422,12 @@
         "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -10871,7 +11491,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -10919,7 +11539,11 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -10983,7 +11607,7 @@
         "-I",
         "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-TstilP\\clang-uiheader-JDWaQL",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
         "-nostdinc",
         "-nostdinc++",
         "--driver-mode=cl",
@@ -11031,7 +11655,11 @@
         "-I",
         "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
         "-I",
-        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\QXlxsHeader",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
         "-I",
         "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
         "-I",
@@ -11086,5 +11714,121 @@
     ],
     "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
     "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/ui_additemdialog.h"
+},
+{
+    "arguments": [
+        "clang",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
+        "-I",
+        "C:\\Users\\ruida\\AppData\\Local\\Temp\\QtCreator-DToPVA\\clang-uiheader-KLuCaU",
+        "-nostdinc",
+        "-nostdinc++",
+        "--driver-mode=cl",
+        "-nologo",
+        "-Zc:wchar_t",
+        "-FS",
+        "-Zc:rvalueCast",
+        "-Zc:inline",
+        "-Zc:strictStrings",
+        "-Zc:throwingNew",
+        "-Zi",
+        "-MDd",
+        "-W3",
+        "-w34100",
+        "-w34189",
+        "-w44996",
+        "-w44456",
+        "-w44457",
+        "-w44458",
+        "-wd4577",
+        "-wd4467",
+        "-EHsc",
+        "/Zs",
+        "-m64",
+        "--target=x86_64-pc-windows-msvc",
+        "/std:c++14",
+        "-fcxx-exceptions",
+        "-fexceptions",
+        "-fms-compatibility-version=19.32",
+        "-DQ_CREATOR_RUN",
+        "-DUNICODE",
+        "-D_UNICODE",
+        "-DWIN32",
+        "-D_ENABLE_EXTENDED_ALIGNED_STORAGE",
+        "-DWIN64",
+        "-DQT_DEPRECATED_WARNINGS",
+        "-DQT_QML_DEBUG",
+        "-DQT_WIDGETS_LIB",
+        "-DQT_GUI_LIB",
+        "-DQT_SQL_LIB",
+        "-DQT_CORE_LIB",
+        "-D__FUNCSIG__=\"void __cdecl someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580(void)\"",
+        "-D__FUNCTION__=\"someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580\"",
+        "-D__FUNCDNAME__=\"?someLegalAndLongishFunctionNameThatWorksAroundQTCREATORBUG-24580@@YAXXZ\"",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\header",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\lib\\QXlxs\\QXlxsHeader",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtWidgets",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui\\5.15.2\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtGui",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtANGLE",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtSql",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore\\5.15.2\\QtCore",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\include\\QtCore",
+        "-I",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\debug",
+        "-I",
+        "D:\\Ruida\\Documents\\Qt\\5.15.2\\msvc2019_64\\mkspecs\\win32-msvc",
+        "/clang:-isystem",
+        "/clang:D:\\Ruida\\Documents\\Qt\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.3\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\ATLMFC\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\include",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\ucrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\shared",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\um",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\winrt",
+        "/clang:-isystem",
+        "/clang:C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.19041.0\\\\cppwinrt",
+        "/clang:-fmessage-length=0",
+        "/clang:-fdiagnostics-show-note-include-stack",
+        "/clang:-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "/TP",
+        "-Wno-unknown-pragmas",
+        "-Wno-unknown-warning-option",
+        "-Wno-documentation-unknown-command",
+        "-fno-delayed-template-parsing",
+        "D:\\Workspace\\QtWorkspace\\PasswordManager\\QWidget\\ui_logindialog.h"
+    ],
+    "directory": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/.qtc_clangd",
+    "file": "D:/Workspace/QtWorkspace/PasswordManager/QWidget/ui_logindialog.h"
 }
 ]

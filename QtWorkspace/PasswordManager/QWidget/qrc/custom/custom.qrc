@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/custom">
+        <file>logos/logo.png</file>
+        <file>icons/nosee.png</file>
+        <file>icons/right.png</file>
+        <file>icons/see.png</file>
+        <file>icons/wrong.png</file>
+        <file>icons/close.png</file>
+        <file>icons/minimize.png</file>
+        <file>icons/maximize.png</file>
+        <file>icons/pin.png</file>
+        <file>icons/setting.png</file>
+        <file>icons/unlogged.png</file>
+    </qresource>
+</RCC>

@@ -240,7 +240,7 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf \
-		QXlsx.pri \
+		lib\QXlxs\QXlsx.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds_post.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf \
@@ -267,7 +267,7 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmain.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf \
-		icon.qrc \
+		qrc\custom\custom.qrc \
 		qrc\dark\dark.qrc \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl \
@@ -431,7 +431,7 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf:
-QXlsx.pri:
+lib\QXlxs\QXlsx.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds_post.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf:
@@ -458,7 +458,7 @@ PasswordManager.pro:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmain.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf:
-icon.qrc:
+qrc\custom\custom.qrc:
 qrc\dark\dark.qrc:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl:

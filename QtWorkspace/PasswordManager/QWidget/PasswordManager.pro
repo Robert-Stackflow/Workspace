@@ -1,48 +1,48 @@
-QT       += core gui
-
+QT += core gui
+QT += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-QT += sql
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+INCLUDEPATH = "./header"
 
 SOURCES += \
-    additemdialog.cpp \
-    function/itemFunction.cpp \
-    function/saveFunction.cpp \
-    function/tableFunction.cpp \
-    function/viewFunction.cpp \
-    logindialog.cpp \
-    main.cpp \
-    optiondialog.cpp \
-    titleBar.cpp \
-    widget.cpp
+    source/dialog/main.cpp \
+    source/dialog/widget.cpp \
+    source/dialog/logindialog.cpp \
+    source/dialog/optiondialog.cpp \
+    source/dialog/additemdialog.cpp \
+    source/controller/titleBar.cpp \
+    source/function/viewFunction.cpp \
+    source/function/itemFunction.cpp \
+    source/function/saveFunction.cpp \
+    source/function/tableFunction.cpp
 
 HEADERS += \
-    additemdialog.h \
-    logindialog.h \
-    optiondialog.h \
-    titleBar.h \
-    widget.h
+    header/customItem/customLineEdit.h \
+    header/dialog/widget.h \
+    header/dialog/logindialog.h \
+    header/dialog/optiondialog.h \
+    header/dialog/additemdialog.h \
+    header/controller/titleBar.h \
+    header/passwordType/passwordType.h \
+    header/customItem/abstractCustomItem.h
 
 FORMS += \
-    additemdialog.ui \
-    logindialog.ui \
-    optiondialog.ui \
-    widget.ui
+    ui/widget.ui \
+    ui/logindialog.ui \
+    ui/optiondialog.ui \
+    ui/additemdialog.ui
 
-QXLSX_PARENTPATH=./
-QXLSX_HEADERPATH=./QXlxsHeader/
-QXLSX_SOURCEPATH=./QXlxsSource/
-include(./QXlsx.pri)
+RESOURCES += \
+    qrc/custom/custom.qrc \
+    qrc/dark/dark.qrc
+
+QXLSX_PARENTPATH=./lib/QXlxs
+QXLSX_HEADERPATH=./lib/QXlxs/QXlxsHeader/
+QXLSX_SOURCEPATH=./lib/QXlxs/QXlxsSource/
+include(./lib/QXlxs/QXlsx.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-RESOURCES += \
-    icon.qrc \
-    qrc/dark/dark.qrc
