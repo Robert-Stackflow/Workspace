@@ -1,25 +1,18 @@
 ﻿#ifndef ABSTRACTCUSTOMITEM_H
 #define ABSTRACTCUSTOMITEM_H
-#include <QString>
+#include <QLabel>
 #include <QWidget>
-class abstractCustomItem{
+#include <QString>
+#include <QComboBox>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QHBoxLayout>
+class abstractCustomItem :public QWidget{
+    Q_OBJECT
 public:
-    abstractCustomItem(QWidget* parent,QString& name,int controllerType,int isRequired=OPTIONAL,int isAutofillable=NOTAutofillable,int dataType=NORMAL);
-
-    const QString &getName() const;
-    int getIsRequired() const;
-    int getIsAutofillable() const;
-    int getDataType() const;
-    int getControllerType() const;
-
-protected:
     enum isRequiredChoices{
         OPTIONAL,
         REQUIRED
-    };
-    enum isAutofillableChoices{
-        NOTAutofillable,
-        Autofillable
     };
     enum controllerTypeChoices{
         LINEEDIT,
@@ -35,48 +28,30 @@ protected:
         MOBILE,
         WEBSITE
     };
-    QWidget* parent;
-    QString name;
-    QString hex;
+    Q_ENUM(isRequiredChoices)
+    Q_ENUM(controllerTypeChoices)
+    Q_ENUM(dataTypeChoices)
+    static const QRegExp websiteRegExp;
+    static const QValidator* websiteValidator;
+    static const QRegExp mobileRegExp;
+    static const QValidator* mobileValidator;
+    static const QRegExp mailRegExp;
+    static const QValidator* mailValidator;
+protected:
     int isRequired;
-    int isAutofillable;
     int dataType;
     int controllerType;
+    QWidget* parent;
+    QString name;
+public:
+    abstractCustomItem(const QString& name,int controllerType,int isRequired=OPTIONAL,int dataType=NORMAL,QWidget* parent=nullptr);
+    const QString &getName() const;
+    int getIsRequired() const;
+    int getDataType() const;
+    int getControllerType() const;
+    const QValidator* getValidator() const;
+    QString toString();
+public:
+    virtual bool isValid()=0;
 };
-abstractCustomItem::abstractCustomItem(QWidget* parent,QString& name,int controllerType,int isRequired,int isAutofillable,int dataType){
-    if(isRequired==REQUIRED){
-        name+='*';
-    }
-    this->parent=parent;
-    this->name=name;
-    this->controllerType=controllerType;
-    this->isRequired=isRequired;
-    this->isAutofillable=isAutofillable;
-    this->dataType=dataType;
-}
-
-inline const QString &abstractCustomItem::getName() const
-{
-    return name;
-}
-
-inline int abstractCustomItem::getIsRequired() const
-{
-    return isRequired;
-}
-
-inline int abstractCustomItem::getIsAutofillable() const
-{
-    return isAutofillable;
-}
-
-inline int abstractCustomItem::getDataType() const
-{
-    return dataType;
-}
-
-inline int abstractCustomItem::getControllerType() const
-{
-    return controllerType;
-}
 #endif // ABSTRACTCUSTOMITEM_H

@@ -1,4 +1,6 @@
 ﻿#include "dialog/additemdialog.h"
+#include "customItem/customComboBox.h"
+#include "customItem/customLineEdit.h"
 #include "ui_additemdialog.h"
 #include "dialog/widget.h"
 #include <QDebug>
@@ -25,7 +27,7 @@ void addItemDialog::InitFrame()
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
     m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":/application/qrc/icon.png");
+    m_titleBar->setTitleBarIcon(":/custom/icons/icon.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);
@@ -57,6 +59,10 @@ void addItemDialog::InitFrame()
         this->setStyleSheet(styleSheet);
         file.close();
     }
+//    customComboBox* demo1=new customComboBox("测试",abstractCustomItem::REQUIRED,abstractCustomItem::MOBILE,this);
+//    ui->verticalLayout->addWidget(demo1);
+    customLineEdit* demo2=new customLineEdit("测试",abstractCustomItem::REQUIRED,abstractCustomItem::PASSWORD,this);
+    ui->verticalLayout->addWidget(demo2);
     //初始化普通密码
     InitCommon();
     //初始化WebDav密码
@@ -71,7 +77,7 @@ void addItemDialog::InitCommon()
     ui->password->setObjectName("password");
     ui->passwordJudge->setObjectName("passwordJudge");
     ui->passwordJudge->setStyleSheet("border:0px;background-color:transparent");
-    ui->passwordJudge->setIcon(QIcon(":/application/qrc/nosee.png"));
+    ui->passwordJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
     ui->passwordJudge->setStatusTip("nosee");
 
     QRegExp websiteReg("^(http|https)://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$");
@@ -121,7 +127,7 @@ void addItemDialog::InitMail()
     ui->mail_password->setObjectName("mail_password");
     ui->mail_passwordJudge->setObjectName("mail_passwordJudge");
     ui->mail_passwordJudge->setStyleSheet("border:0px;background-color:transparent");
-    ui->mail_passwordJudge->setIcon(QIcon(":/application/qrc/nosee.png"));
+    ui->mail_passwordJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
     ui->mail_passwordJudge->setStatusTip("nosee");
 
     QRegExp mailReg("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
@@ -165,7 +171,7 @@ void addItemDialog::InitJGY()
     ui->jgy_password->setObjectName("jgy_password");
     ui->jgy_passwordJudge->setObjectName("jgy_passwordJudge");
     ui->jgy_passwordJudge->setStyleSheet("border:0px;background-color:transparent");
-    ui->jgy_passwordJudge->setIcon(QIcon(":/application/qrc/nosee.png"));
+    ui->jgy_passwordJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
     ui->jgy_passwordJudge->setStatusTip("nosee");
 
     QRegExp mailReg("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
@@ -201,7 +207,7 @@ void addItemDialog::InitOther()
     ui->other_password->setObjectName("other_password");
     ui->other_passwordJudge->setObjectName("other_passwordJudge");
     ui->other_passwordJudge->setStyleSheet("border:0px;background-color:transparent");
-    ui->other_passwordJudge->setIcon(QIcon(":/application/qrc/nosee.png"));
+    ui->other_passwordJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
     ui->other_passwordJudge->setStatusTip("nosee");
 
     connect(ui->other_yes,SIGNAL(clicked()),this,SLOT(yes_clicked()));
@@ -354,19 +360,20 @@ void addItemDialog::passwordJudgeFunction(QPushButton* button)
     QLineEdit* lineEdit=this->findChild<QLineEdit *>(button->objectName().split("Judge")[0]);
     if(button->statusTip()=="nosee")
     {
-        button->setIcon(QIcon(":/application/qrc/see.png"));
+        button->setIcon(QIcon(":/custom/icons/see.png"));
         button->setStatusTip("see");
         lineEdit->setEchoMode(QLineEdit::Normal);
     }
     else if(button->statusTip()=="see")
     {
-        button->setIcon(QIcon(":/application/qrc/nosee.png"));
+        button->setIcon(QIcon(":/custom/icons/nosee.png"));
         button->setStatusTip("nosee");
         lineEdit->setEchoMode(QLineEdit::Password);
     }
 }
 void addItemDialog::websiteJudge_edited(const QString &arg)
 {
+    qDebug("enter");
     QString testValue=arg;
     QPushButton* button=this->findChild<QPushButton *>(sender()->objectName()+"Judge");
     QRegExp websiteReg("^(http|https)://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$");

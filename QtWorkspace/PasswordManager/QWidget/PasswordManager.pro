@@ -6,6 +6,9 @@ CONFIG += c++11
 INCLUDEPATH = "./header"
 
 SOURCES += \
+    source/customItem/customComboBox.cpp \
+    source/customItem/abstractCustomItem.cpp \
+    source/customItem/customLineEdit.cpp \
     source/dialog/main.cpp \
     source/dialog/widget.cpp \
     source/dialog/logindialog.cpp \
@@ -18,6 +21,7 @@ SOURCES += \
     source/function/tableFunction.cpp
 
 HEADERS += \
+    header/customItem/customComboBox.h \
     header/customItem/customLineEdit.h \
     header/dialog/widget.h \
     header/dialog/logindialog.h \
@@ -28,6 +32,8 @@ HEADERS += \
     header/customItem/abstractCustomItem.h
 
 FORMS += \
+    ui/customLineEdit.ui \
+    ui/customComboBox.ui \
     ui/widget.ui \
     ui/logindialog.ui \
     ui/optiondialog.ui \

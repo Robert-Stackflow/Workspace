@@ -2,7 +2,6 @@
 #include "dialog/logindialog.h"
 #include "ui_logindialog.h"
 #include <QApplication>
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -11,6 +10,6 @@ int main(int argc, char *argv[])
     a.setFont(font);
     loginDialog login;
     login.show();
-//    login.ui->yes->click();
+    //    login.ui->yes->click();
     return a.exec();
 }

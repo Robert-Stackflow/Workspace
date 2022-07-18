@@ -37,7 +37,6 @@
 #include "ui_additemdialog.h"
 #include "dialog/optiondialog.h"
 #include "ui_optiondialog.h"
-
 #include "xlsxdocument.h"
 #include "xlsxchartsheet.h"
 #include "xlsxcellrange.h"
