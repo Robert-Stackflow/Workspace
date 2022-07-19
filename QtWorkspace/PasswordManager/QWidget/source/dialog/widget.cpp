@@ -22,7 +22,7 @@ void Widget::initFrame()
     this->setWindowTitle("Password Manager");
     this->setWindowIcon(QIcon(":custom/logos/logo.png"));
     this->setWindowFlags(Qt::FramelessWindowHint);
-
+    //添加自定义标题栏
     m_titleBar=new TitleBar(this);
     m_titleBar->setTitleBarIcon(":custom/logos/logo.png");
     m_titleBar->setWindowTitle("Password Manager");
@@ -35,9 +35,10 @@ void Widget::initFrame()
 
     tableCount=0;
     personInfo=new INFO;
-    additemdialog=new addItemDialog(this);
+    newitemdialog=new newItemDialog(this);
+    newgroupdialog=new newGroupDialog(this);
     optiondialog=new optionDialog(this);
-
+    //添加操作按钮
     int leftEdge=350;
     search=new QLineEdit(this);
     search->setPlaceholderText("键入以搜索/筛选");
@@ -78,5 +79,5 @@ void Widget::initFrame()
     connect(this,SIGNAL(tableCountChanged()),this,SLOT(onTableCountChanged()));
     connect(m_titleBar->m_optionButton,SIGNAL(clicked()),this,SLOT(optionButtonClicked()));
 
-    loadUserData();
+//    loadUserData();
 }

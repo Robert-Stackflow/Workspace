@@ -33,8 +33,9 @@
 #include <QVariant>
 #include <QDir>
 #include "controller/titleBar.h"
-#include "additemdialog.h"
-#include "ui_additemdialog.h"
+#include "newitemdialog.h"
+#include "newgroupdialog.h"
+#include "ui_newitemdialog.h"
 #include "dialog/optiondialog.h"
 #include "ui_optiondialog.h"
 #include "xlsxdocument.h"
@@ -62,7 +63,6 @@ typedef struct key{
     QString remark;
     QDateTime createTime;
     QDateTime lastEditTime;
-    bool account[8];//微信,QQ,微博,Github,支付宝,华为,小米,淘宝
     QString toString();
 }KEY;
 typedef struct Table{
@@ -88,7 +88,7 @@ class Widget : public QWidget
 
 public:
     friend struct key;
-    friend class addItemDialog;
+    friend class newItemDialog;
     Widget(QWidget *parent = nullptr);
     ~Widget();
     void initFrame();
@@ -154,7 +154,8 @@ public:
     TitleBar *m_titleBar;
     TABLE* newGroup=NULL;
     QMenu* tableWidgetMenu;
-    addItemDialog* additemdialog;
+    newItemDialog* newitemdialog;
+    newGroupDialog* newgroupdialog;
     optionDialog* optiondialog;
 signals:
     void tableCountChanged();

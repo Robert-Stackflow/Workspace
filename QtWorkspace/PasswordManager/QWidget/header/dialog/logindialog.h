@@ -1,4 +1,4 @@
-#ifndef LOGINDIALOG_H
+﻿#ifndef LOGINDIALOG_H
 #define LOGINDIALOG_H
 
 #include <QDialog>
@@ -16,12 +16,10 @@ public:
     QPixmap PixmapToRound(const QPixmap &src, int radius);
     explicit loginDialog(QWidget *parent = nullptr);
     ~loginDialog();
-
 private:
     QString styleSheet;
 private slots:
-    void yes_clicked();
-    void passwordJudge_clicked();
+    void confirmClicked();
 };
 
 #endif // LOGINDIALOG_H

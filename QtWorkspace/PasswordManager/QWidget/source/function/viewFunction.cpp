@@ -110,6 +110,6 @@ void Widget::myHeaderList()
 void Widget::optionButtonClicked()
 {
     optiondialog->setModal(true);
-    optiondialog->setGeometry(this->geometry().x()+this->width()/2-additemdialog->width()/2+10,this->geometry().y()+this->height()/2-additemdialog->height()/2+20,additemdialog->width(),additemdialog->height());
+    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
     optiondialog->exec();
 }

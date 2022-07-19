@@ -5,74 +5,18 @@
 #pragma execution_character_set("utf-8")
 #endif
 QString KEY::toString(){
-    QStringList ret;
     QString result;
-    ret<<QString::number(type);
-    switch(type)
-    {
-    case 0:
-        ret<<name<<nickName<<id<<password<<mobile<<mail<<website<<remark;
-        break;
-    case 1:
-        ret<<name<<mail<<subName<<password<<website<<remark;
-        break;
-    case 2:
-        ret<<name<<mail<<website<<password<<remark;
-        break;
-    case 3:
-        ret<<name<<password<<remark;
-        break;
-    }
-    for(int i=0;i<ret.size();i++)
-        if(ret[i]=="")
-            ret[i]="NaN";
-    for(int i=0;i<ret.size();i++)
-    {
-        result+=ret[i];
-        if(i<ret.size()-1)
-            result+="_";
-    }
     return result;
 }
 void Widget::addItemSlot()
 {
-    additemdialog->ui->tabWidget->setCurrentIndex(tables[stackedWidget->currentIndex()]->type);
-    additemdialog->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加密码");
-    additemdialog->m_titleBar->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加条目");
-    //清除“普通密码”内容
-    additemdialog->ui->nickName->clear();
-    additemdialog->ui->id->clear();
-    additemdialog->ui->mail->clearEditText();
-    additemdialog->ui->mobile->clearEditText();
-    additemdialog->ui->name->clear();
-    additemdialog->ui->password->clear();
-    additemdialog->ui->remark->clear();
-    additemdialog->ui->website->clear();
-    additemdialog->ui->websiteJudge->setIcon(QIcon());
-    for(int i=0;i<additemdialog->boxes.size();i++)
-        additemdialog->boxes[i]->setChecked(false);
-    //清除“邮箱密码”内容
-    additemdialog->ui->mail_mail->clearEditText();
-    additemdialog->ui->mail_name->clear();
-    additemdialog->ui->mail_subName->clear();
-    additemdialog->ui->mail_password->clear();
-    additemdialog->ui->mail_remark->clear();
-    additemdialog->ui->mail_website->clearEditText();
-    additemdialog->ui->mail_subNameJudge->setIcon(QIcon());
-    //清除“授权码”内容
-    additemdialog->ui->jgy_mail->clearEditText();
-    additemdialog->ui->jgy_name->clear();
-    additemdialog->ui->jgy_password->clear();
-    additemdialog->ui->jgy_remark->clear();
-    additemdialog->ui->jgy_website->clearEditText();
-    //清除“其他密码”内容
-    additemdialog->ui->other_name->clear();
-    additemdialog->ui->other_password->clear();
-    additemdialog->ui->other_remark->clear();
+//    newitemdialog->ui->tabWidget->setCurrentIndex(tables[stackedWidget->currentIndex()]->type);
+//    newitemdialog->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加密码");
+//    newitemdialog->m_titleBar->setWindowTitle("在分组 "+tables[stackedWidget->currentIndex()]->name+" 中添加密码");
     //打开Dialog
-    additemdialog->setModal(true);
-    additemdialog->setGeometry(this->geometry().x()+this->width()/2-additemdialog->width()/2+10,this->geometry().y()+this->height()/2-additemdialog->height()/2+20,additemdialog->width(),additemdialog->height());
-    additemdialog->exec();
+    newitemdialog->setModal(true);
+    newitemdialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
+    newitemdialog->exec();
 }
 void Widget::addItemFunction(QString& tableName,int mode)
 {//mode=1表示插入,mode=0表示加载

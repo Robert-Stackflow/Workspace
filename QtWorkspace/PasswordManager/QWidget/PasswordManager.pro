@@ -6,6 +6,8 @@ CONFIG += c++11
 INCLUDEPATH = "./header"
 
 SOURCES += \
+    source/dialog/grouptypemanagerdialog.cpp \
+    source/dialog/newitemdialog.cpp \
     source/customItem/customComboBox.cpp \
     source/customItem/abstractCustomItem.cpp \
     source/customItem/customLineEdit.cpp \
@@ -13,31 +15,38 @@ SOURCES += \
     source/dialog/widget.cpp \
     source/dialog/logindialog.cpp \
     source/dialog/optiondialog.cpp \
-    source/dialog/additemdialog.cpp \
+#    source/dialog/additemdialog.cpp \
     source/controller/titleBar.cpp \
+    source/dialog/newgroupdialog.cpp \
     source/function/viewFunction.cpp \
     source/function/itemFunction.cpp \
     source/function/saveFunction.cpp \
     source/function/tableFunction.cpp
 
 HEADERS += \
+    header/dialog/grouptypemanagerdialog.h \
     header/customItem/customComboBox.h \
     header/customItem/customLineEdit.h \
+    header/dialog/newitemdialog.h \
     header/dialog/widget.h \
     header/dialog/logindialog.h \
     header/dialog/optiondialog.h \
-    header/dialog/additemdialog.h \
+#    header/dialog/additemdialog.h \
     header/controller/titleBar.h \
-    header/passwordType/passwordType.h \
-    header/customItem/abstractCustomItem.h
+    header/customItem/abstractCustomItem.h \
+    header/dialog/newgroupdialog.h \
+    header/util/groupType.h
 
 FORMS += \
+    ui/grouptypemanagerdialog.ui \
+    ui/newgroupdialog.ui \
+    ui/newitemdialog.ui \
     ui/customLineEdit.ui \
     ui/customComboBox.ui \
     ui/widget.ui \
     ui/logindialog.ui \
-    ui/optiondialog.ui \
-    ui/additemdialog.ui
+#    ui/additemdialog.ui \
+    ui/optiondialog.ui
 
 RESOURCES += \
     qrc/custom/custom.qrc \

@@ -6,18 +6,10 @@
 #endif
 void Widget::addTableSlot()
 {
-    additemdialog->isNewGroup=true;
-    additemdialog->setWindowTitle("添加分组");
-    additemdialog->m_titleBar->setWindowTitle("添加分组");
-    additemdialog->ui->groupType->setEnabled(true);
-    additemdialog->ui->tabWidget->setCurrentIndex(4);
-    additemdialog->ui->groupName->clear();
-    additemdialog->ui->group_remark->clear();
-    additemdialog->ui->groupNameWarning->clear();
-    additemdialog->ui->groupNameJudge->setIcon(QIcon());
-    additemdialog->setModal(true);
-    additemdialog->setGeometry(this->geometry().x()+this->width()/2-additemdialog->width()/2+10,this->geometry().y()+this->height()/2-additemdialog->height()/2+20,additemdialog->width(),additemdialog->height());
-    additemdialog->exec();
+    newgroupdialog->setWindowTitle("添加分组");
+    newgroupdialog->setModal(true);
+    newgroupdialog->setGeometry(this->geometry().x()+this->width()/2-newgroupdialog->width()/2+10,this->geometry().y()+this->height()/2-newgroupdialog->height()/2+20,newgroupdialog->width(),newgroupdialog->height());
+    newgroupdialog->exec();
 }
 void Widget::addTableFunction(QString name,int type)
 {
@@ -174,18 +166,12 @@ void Widget::deleteTableSlot()
 void Widget::editTableNameSlot()
 {
     QString oldName=tables[stackedWidget->currentIndex()]->name;
-    additemdialog->isNewGroup=false;
-    additemdialog->ui->tabWidget->setCurrentIndex(4);
-    additemdialog->setWindowTitle("编辑分组\""+oldName+"\"");
-    additemdialog->m_titleBar->setWindowTitle("编辑分组\""+oldName+"\"");
-    additemdialog->ui->groupName->setText(oldName);
-    additemdialog->ui->groupType->setCurrentIndex(tables[stackedWidget->currentIndex()]->type);
-    additemdialog->ui->groupType->setEnabled(false);
-    additemdialog->ui->groupNameJudge->setIcon(QIcon());
-    additemdialog->ui->group_remark->setText(tables[stackedWidget->currentIndex()]->remark);
-    additemdialog->setModal(true);
-    additemdialog->setGeometry(this->geometry().x()+this->width()/2-additemdialog->width()/2+10,this->geometry().y()+this->height()/2-additemdialog->height()/2+20,additemdialog->width(),additemdialog->height());
-    additemdialog->exec();
+    newitemdialog->ui->tabWidget->setCurrentIndex(4);
+    newitemdialog->setWindowTitle("编辑分组\""+oldName+"\"");
+    newitemdialog->m_titleBar->setWindowTitle("编辑分组\""+oldName+"\"");
+    newitemdialog->setModal(true);
+    newitemdialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
+    newitemdialog->exec();
 }
 void Widget::editTableNameFunction(QString oldName)
 {
@@ -215,31 +201,18 @@ void Widget::editTableNameFunction(QString oldName)
 }
 void Widget::updatePersonInfo()
 {
-    additemdialog->ui->nickName->clear();
-    additemdialog->ui->mail->clear();
-    additemdialog->ui->mobile->clear();
-    additemdialog->ui->mail->addItems(personInfo->mails);
-    additemdialog->ui->mail->addItems(personInfo->subNames);
-    additemdialog->ui->mobile->addItems(personInfo->mobiles);
-    for(int i=0;i<additemdialog->ui->mail->count();i++)
-        if(additemdialog->ui->mail->itemText(i)=="")
-            additemdialog->ui->mail->removeItem(i);
-    for(int i=0;i<additemdialog->ui->mobile->count();i++)
-        if(additemdialog->ui->mobile->itemText(i)=="")
-            additemdialog->ui->mobile->removeItem(i);
-    additemdialog->ui->mail_mail->clear();
-    additemdialog->ui->mail_website->clear();
-    additemdialog->ui->mail_mail->addItems(personInfo->mails);
-    additemdialog->ui->mail_website->addItems(personInfo->mailWebsites);
-
-    additemdialog->ui->jgy_mail->clear();
-    additemdialog->ui->jgy_website->clear();
-    additemdialog->ui->jgy_mail->addItems(personInfo->mails);
-    additemdialog->ui->jgy_mail->addItems(personInfo->subNames);
-    additemdialog->ui->jgy_website->addItems(personInfo->jgyWebsites);
-    for(int i=0;i<additemdialog->ui->jgy_mail->count();i++)
-        if(additemdialog->ui->jgy_mail->itemText(i)=="")
-            additemdialog->ui->jgy_mail->removeItem(i);
+    newitemdialog->ui->nickName->clear();
+    newitemdialog->ui->mail->clear();
+    newitemdialog->ui->mobile->clear();
+    newitemdialog->ui->mail->addItems(personInfo->mails);
+    newitemdialog->ui->mail->addItems(personInfo->subNames);
+    newitemdialog->ui->mobile->addItems(personInfo->mobiles);
+    for(int i=0;i<newitemdialog->ui->mail->count();i++)
+        if(newitemdialog->ui->mail->itemText(i)=="")
+            newitemdialog->ui->mail->removeItem(i);
+    for(int i=0;i<newitemdialog->ui->mobile->count();i++)
+        if(newitemdialog->ui->mobile->itemText(i)=="")
+            newitemdialog->ui->mobile->removeItem(i);
     QSqlDatabase data = QSqlDatabase::addDatabase("SQLITECIPHER",QString::asprintf("%d",++times));
     data.setDatabaseName("user.db");
     //    data.setPassword("123456");
