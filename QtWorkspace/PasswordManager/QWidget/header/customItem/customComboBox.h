@@ -9,13 +9,9 @@ class customComboBox :public abstractCustomItem
 {
     Q_OBJECT
 public:
-    QComboBox* controller;
-    QLabel* controllerLabel;
-    QObject* abstractControllerJudge;
-    QHBoxLayout* mainLayout;
-public:
-    explicit customComboBox(const QString& name,int isRequired=OPTIONAL,int dataType=NORMAL,QWidget* parent=nullptr);
+    explicit customComboBox(const QString& name,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     ~customComboBox();
+    void setPlaceholderText(const QString &placeholderText);
     bool isValid();
 private:
     Ui::customComboBox *ui;

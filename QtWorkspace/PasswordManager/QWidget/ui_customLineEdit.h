@@ -11,6 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -18,12 +22,48 @@ QT_BEGIN_NAMESPACE
 class Ui_customLineEdit
 {
 public:
+    QWidget *widget;
+    QHBoxLayout *mainLayout;
+    QLabel *controllerLabel;
+    QLineEdit *controller;
+    QPushButton *controllerJudge;
 
     void setupUi(QWidget *customLineEdit)
     {
         if (customLineEdit->objectName().isEmpty())
             customLineEdit->setObjectName(QString::fromUtf8("customLineEdit"));
-        customLineEdit->resize(400, 300);
+        customLineEdit->resize(300, 40);
+        customLineEdit->setMinimumSize(QSize(300, 40));
+        customLineEdit->setMaximumSize(QSize(300, 40));
+        customLineEdit->setContextMenuPolicy(Qt::NoContextMenu);
+        widget = new QWidget(customLineEdit);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(0, 0, 301, 42));
+        mainLayout = new QHBoxLayout(widget);
+        mainLayout->setObjectName(QString::fromUtf8("mainLayout"));
+        mainLayout->setContentsMargins(0, 0, 0, 0);
+        controllerLabel = new QLabel(widget);
+        controllerLabel->setObjectName(QString::fromUtf8("controllerLabel"));
+        controllerLabel->setMinimumSize(QSize(60, 40));
+        controllerLabel->setMaximumSize(QSize(60, 40));
+        controllerLabel->setAlignment(Qt::AlignCenter);
+
+        mainLayout->addWidget(controllerLabel);
+
+        controller = new QLineEdit(widget);
+        controller->setObjectName(QString::fromUtf8("controller"));
+        controller->setMinimumSize(QSize(188, 30));
+        controller->setMaximumSize(QSize(188, 30));
+
+        mainLayout->addWidget(controller);
+
+        controllerJudge = new QPushButton(widget);
+        controllerJudge->setObjectName(QString::fromUtf8("controllerJudge"));
+        controllerJudge->setMinimumSize(QSize(35, 35));
+        controllerJudge->setMaximumSize(QSize(35, 35));
+
+        mainLayout->addWidget(controllerJudge);
+
 
         retranslateUi(customLineEdit);
 
@@ -32,7 +72,9 @@ public:
 
     void retranslateUi(QWidget *customLineEdit)
     {
-        customLineEdit->setWindowTitle(QCoreApplication::translate("customLineEdit", "Form", nullptr));
+        customLineEdit->setWindowTitle(QString());
+        controllerLabel->setText(QString());
+        controllerJudge->setText(QString());
     } // retranslateUi
 
 };

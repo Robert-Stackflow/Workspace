@@ -800,7 +800,8 @@ debug\moc_customComboBox.cpp: header\customItem\customComboBox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -942,7 +943,8 @@ debug\moc_customLineEdit.cpp: header\customItem\customLineEdit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -1971,7 +1973,8 @@ debug\moc_abstractCustomItem.cpp: header\customItem\abstractCustomItem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -2278,7 +2281,8 @@ debug\customComboBox.obj: source\customItem\customComboBox.cpp header\customItem
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -2318,6 +2322,7 @@ debug\customComboBox.obj: source\customItem\customComboBox.cpp header\customItem
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
@@ -2428,7 +2433,8 @@ debug\abstractCustomItem.obj: source\customItem\abstractCustomItem.cpp header\cu
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -2458,7 +2464,9 @@ debug\abstractCustomItem.obj: source\customItem\abstractCustomItem.cpp header\cu
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
 
 debug\customLineEdit.obj: source\customItem\customLineEdit.cpp header\customItem\customLineEdit.h \
 		header\customItem\abstractCustomItem.h \
@@ -2567,7 +2575,8 @@ debug\customLineEdit.obj: source\customItem\customLineEdit.cpp header\customItem
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -2599,6 +2608,15 @@ debug\customLineEdit.obj: source\customItem\customLineEdit.cpp header\customItem
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		ui_customLineEdit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
@@ -3455,7 +3473,7 @@ debug\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialog.h
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		ui\ui_logindialog.h \
+		ui_logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
@@ -3723,7 +3741,7 @@ debug\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialog.h
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
 		lib\QXlxs\QXlxsHeader\xlsxworkbook.h \
-		ui\ui_widget.h \
+		ui_widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QFile
 
 debug\optiondialog.obj: source\dialog\optiondialog.cpp header\dialog\optiondialog.h \
@@ -4234,7 +4252,10 @@ debug\additemdialog.obj: source\dialog\additemdialog.cpp header\dialog\additemdi
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
-		header\customItem\customComboBox.h \
+		groupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		header\customItem\customLineEdit.h \
 		header\customItem\abstractCustomItem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
@@ -4259,8 +4280,6 @@ debug\additemdialog.obj: source\dialog\additemdialog.cpp header\dialog\additemdi
 		ui_additemdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \

@@ -380,6 +380,7 @@ public:
         websiteLabel = new QLabel(layoutWidget_1);
         websiteLabel->setObjectName(QString::fromUtf8("websiteLabel"));
         websiteLabel->setMinimumSize(QSize(60, 0));
+        websiteLabel->setStyleSheet(QString::fromUtf8(""));
         websiteLabel->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_7->addWidget(websiteLabel);

@@ -1,7 +1,7 @@
 ﻿#include "dialog/logindialog.h"
-#include "ui/ui_logindialog.h"
+#include "ui_logindialog.h"
 #include "dialog/widget.h"
-#include "ui/ui_widget.h"
+#include "ui_widget.h"
 #include "controller/titleBar.h"
 #include <QFile>
 #include<QGraphicsDropShadowEffect>

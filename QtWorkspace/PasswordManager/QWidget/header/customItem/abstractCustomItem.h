@@ -38,13 +38,14 @@ public:
     static const QRegExp mailRegExp;
     static const QValidator* mailValidator;
 protected:
-    int isRequired;
-    int dataType;
-    int controllerType;
+    isRequiredChoices isRequired;
+    controllerTypeChoices controllerType;
+    dataTypeChoices dataType;
+    QString defaultPlaceholderText;
     QWidget* parent;
     QString name;
 public:
-    abstractCustomItem(const QString& name,int controllerType,int isRequired=OPTIONAL,int dataType=NORMAL,QWidget* parent=nullptr);
+    abstractCustomItem(const QString& name,controllerTypeChoices controllerType,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     const QString &getName() const;
     int getIsRequired() const;
     int getDataType() const;

@@ -2,66 +2,38 @@
 #include "ui_customLineEdit.h"
 #include <QDebug>
 #include <QMetaEnum>
-customLineEdit::customLineEdit(const QString& name,int isRequired,int dataType,QWidget* parent) :
+customLineEdit::customLineEdit(const QString& name,isRequiredChoices isRequired,dataTypeChoices dataType,QWidget* parent) :
     abstractCustomItem(name,COMBOBOX,isRequired,dataType,parent),
     ui(new Ui::customLineEdit)
 {
     ui->setupUi(this);
-    //初始化controller与对应Label
-    controller=new QLineEdit();
-    controllerLabel=new QLabel(this->name);
-    controllerLabel->setAlignment(Qt::AlignCenter);
-    controllerLabel->setFixedSize(60,40);
-    //初始化布局
-    mainLayout=new QHBoxLayout();
-    mainLayout->addWidget(controllerLabel);
-    mainLayout->addWidget(controller);
-    setLayout(mainLayout);
-    if(dataType==NORMAL){
-        //初始化Judge控件
-        QLabel* controllerJudge=new QLabel();
-        abstractControllerJudge=controllerJudge;
-        mainLayout->addWidget(controllerJudge);
-        //设置Judge控件样式
-        controllerJudge->setFixedSize(35,35);
-        controllerJudge->setObjectName("normalJudge");
-        controllerJudge->setStyleSheet("border:0px;background-color:transparent");
-    }
-    else if(dataType==WEBSITE||dataType==MOBILE||dataType==MAIL){
-        //为controller控件设置Validator
+    //设置controller
+    QMetaEnum controllerTypeMeta = QMetaEnum::fromType<abstractCustomItem::controllerTypeChoices>();
+    ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
+    //设置controllerLabel
+    ui->controllerLabel->setText(this->name);
+    ui->controllerLabel->setAlignment(Qt::AlignCenter);
+    ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
+    ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
+    //设置controllerJudge
+    ui->controllerJudge->setStyleSheet("border:0px;background-color:transparent");
+    QMetaEnum dataTypeMeta = QMetaEnum::fromType<abstractCustomItem::dataTypeChoices>();
+    ui->controllerJudge->setObjectName(dataTypeMeta.valueToKey(controllerType)+QString("JUDGE"));
+    //根据dataType初始化
+    if(dataType==WEBSITE||dataType==MOBILE||dataType==MAIL){
+        //设置Validator
         const QValidator* validator=getValidator();
-        controller->setValidator(validator);
-        QMetaEnum dataTypeMeta = QMetaEnum::fromType<abstractCustomItem::dataTypeChoices>();
-        QMetaEnum controllerTypeMeta = QMetaEnum::fromType<abstractCustomItem::controllerTypeChoices>();
-        controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
-        //初始化Judge控件
-        QPushButton* controllerJudge=new QPushButton();
-        abstractControllerJudge=controllerJudge;
-        mainLayout->addWidget(controllerJudge);
-        //设置Judge控件样式
-        controllerJudge->setFixedSize(35,35);
-        controllerJudge->setStyleSheet("border:0px;background-color:transparent");
-        controllerJudge->setObjectName(dataTypeMeta.valueToKey(controllerType)+QString("JUDGE"));
-        //绑定Judge按钮槽函数
-        connect(controller,SIGNAL(textEdited(QString)),this,SLOT(controllerEdited(QString)));
+        ui->controller->setValidator(validator);
+        //绑定槽函数
+        connect(ui->controller,SIGNAL(textEdited(QString)),this,SLOT(controllerEdited(QString)));
     }else if(dataType==PASSWORD){
-        //为controller控件设置Validator
-        QMetaEnum dataTypeMeta = QMetaEnum::fromType<abstractCustomItem::dataTypeChoices>();
-        QMetaEnum controllerTypeMeta = QMetaEnum::fromType<abstractCustomItem::controllerTypeChoices>();
-        controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
-        //初始化Judge控件
-        QPushButton* controllerJudge=new QPushButton();
-        abstractControllerJudge=controllerJudge;
-        mainLayout->addWidget(controllerJudge);
-        //设置Judge控件样式
-        controllerJudge->setFixedSize(35,35);
-        controllerJudge->setStyleSheet("border:0px;background-color:transparent");
-        controllerJudge->setObjectName(dataTypeMeta.valueToKey(controllerType)+QString("JUDGE"));
-        controllerJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
-        controllerJudge->setStatusTip("nosee");
-        //绑定Judge按钮槽函数
-        connect(controllerJudge,SIGNAL(clicked()),this,SLOT(passwordJudgeClicked()));
+        //设置初始样式:不显示密码
+        ui->controllerJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
+        ui->controllerJudge->setStatusTip("nosee");
+        //绑定槽函数
+        connect(ui->controllerJudge,SIGNAL(clicked()),this,SLOT(passwordJudgeClicked()));
     }
+    setPlaceholderText(defaultPlaceholderText);
 }
 
 customLineEdit::~customLineEdit()
@@ -69,51 +41,40 @@ customLineEdit::~customLineEdit()
     delete ui;
 }
 bool customLineEdit::isValid(){
-    bool flag=true;
     int position=0;
-    QString value=QString(controller->text());
-    if((isRequired==REQUIRED&&value=="")||
+    QString value=QString(ui->controller->text());
+    return (isRequired==REQUIRED&&value=="")||
             (dataType==MAIL&&QValidator::Acceptable!=abstractCustomItem::mailValidator->validate(value,position))||
             (dataType==MOBILE&&QValidator::Acceptable!=abstractCustomItem::mobileValidator->validate(value,position))||
-            (dataType==WEBSITE&&QValidator::Acceptable!=abstractCustomItem::websiteValidator->validate(value,position)))
-        flag=false;
-    return flag;
+            (dataType==WEBSITE&&QValidator::Acceptable!=abstractCustomItem::websiteValidator->validate(value,position));
 }
 void customLineEdit::controllerEdited(const QString &arg)
 {
-    qDebug()<<sender()->objectName();
     int position=0;
     QString testValue=arg;
-    QPushButton* button=(QPushButton*)abstractControllerJudge;
-    if(testValue=="")
-    {
-        button->setIcon(QIcon());
-        button->setStatusTip("");
-    }
-    else if(QValidator::Acceptable!=getValidator()->validate(testValue,position))
-    {
-        button->setIcon(QIcon(":custom/icons/wrong.png"));
-        button->setStatusTip("wrong");
-    }
-    else
-    {
-        button->setIcon(QIcon(":custom/icons/right.png"));
-        button->setStatusTip("right");
+    if(testValue==""){
+        ui->controllerJudge->setIcon(QIcon());
+        ui->controllerJudge->setStatusTip("");
+    }else if(QValidator::Acceptable!=getValidator()->validate(testValue,position)){
+        ui->controllerJudge->setIcon(QIcon(":custom/icons/wrong.png"));
+        ui->controllerJudge->setStatusTip("wrong");
+    }else{
+        ui->controllerJudge->setIcon(QIcon(":custom/icons/right.png"));
+        ui->controllerJudge->setStatusTip("right");
     }
 }
 void customLineEdit::passwordJudgeClicked()
 {
-    QPushButton* button=(QPushButton*)abstractControllerJudge;
-    if(button->statusTip()=="nosee")
-    {
-        button->setIcon(QIcon(":/custom/icons/see.png"));
-        button->setStatusTip("see");
-        controller->setEchoMode(QLineEdit::Normal);
+    if(ui->controllerJudge->statusTip()=="nosee"){
+        ui->controllerJudge->setIcon(QIcon(":/custom/icons/see.png"));
+        ui->controllerJudge->setStatusTip("see");
+        ui->controller->setEchoMode(QLineEdit::Normal);
+    }else if(ui->controllerJudge->statusTip()=="see"){
+        ui->controllerJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
+        ui->controllerJudge->setStatusTip("nosee");
+        ui->controller->setEchoMode(QLineEdit::Password);
     }
-    else if(button->statusTip()=="see")
-    {
-        button->setIcon(QIcon(":/custom/icons/nosee.png"));
-        button->setStatusTip("nosee");
-        controller->setEchoMode(QLineEdit::Password);
-    }
+}
+void customLineEdit::setPlaceholderText(const QString &placeholderText){
+    ui->controller->setPlaceholderText(placeholderText);
 }

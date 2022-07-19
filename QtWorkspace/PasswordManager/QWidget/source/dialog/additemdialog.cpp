@@ -42,7 +42,7 @@ void addItemDialog::InitFrame()
     m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());
     //设定阴影效果
     QGraphicsDropShadowEffect* shadow_effect = new QGraphicsDropShadowEffect();
-    shadow_effect->setColor(QColor());
+    shadow_effect->setColor(QColor(128,128,128,255));
     shadow_effect->setBlurRadius(20);
     shadow_effect->setOffset(0, 0);
     ui->frame->setGraphicsEffect(shadow_effect);
@@ -59,9 +59,9 @@ void addItemDialog::InitFrame()
         this->setStyleSheet(styleSheet);
         file.close();
     }
-//    customComboBox* demo1=new customComboBox("测试",abstractCustomItem::REQUIRED,abstractCustomItem::MOBILE,this);
-//    ui->verticalLayout->addWidget(demo1);
-    customLineEdit* demo2=new customLineEdit("测试",abstractCustomItem::REQUIRED,abstractCustomItem::PASSWORD,this);
+    customComboBox* demo1=new customComboBox("测试",abstractCustomItem::REQUIRED,abstractCustomItem::MOBILE,this);
+    ui->verticalLayout->addWidget(demo1);
+    customLineEdit* demo2=new customLineEdit("测试",abstractCustomItem::REQUIRED,abstractCustomItem::MAIL,this);
     ui->verticalLayout->addWidget(demo2);
     //初始化普通密码
     InitCommon();
