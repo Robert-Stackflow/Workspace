@@ -25,7 +25,7 @@ void Widget::updateTableWidgetView(int index)
 }
 void Widget::changeTab()
 {
-    for(int i=0;i<tableCount;i++)
+    for(int i=0;i<groupCount;i++)
         buttons[i]->setStyleSheet("");
     QPushButton* send=(QPushButton*)sender();
     stackedWidget->setCurrentIndex(send->objectName().toInt());
@@ -38,9 +38,9 @@ void Widget::changeTab()
     QMenu* moveMenu=new QMenu("移动至");
     QMenu* copyMenu=new QMenu("复制至");
     moveMenu->setStyleSheet(styleSheet+"QMenu::item{padding-left:15px;}");
-    int count1=fillMoveMenu(moveMenu,tables[stackedWidget->currentIndex()]->type,0);
+    int count1=fillMoveMenu(moveMenu,groups[stackedWidget->currentIndex()]->type,0);
     copyMenu->setStyleSheet(styleSheet+"QMenu::item{padding-left:15px;}");
-    int count2=fillMoveMenu(copyMenu,tables[stackedWidget->currentIndex()]->type,1);
+    int count2=fillMoveMenu(copyMenu,groups[stackedWidget->currentIndex()]->type,1);
     connect(removeItem,SIGNAL(triggered()),this,SLOT(removeItemSlot()));
     connect(openWebsite,SIGNAL(triggered()),this,SLOT(openWebsiteSlot()));
     connect(copyAll,SIGNAL(triggered()),this,SLOT(copyAllSlot()));
@@ -60,12 +60,12 @@ void Widget::changeTab()
 int Widget::fillMoveMenu(QMenu * menu, int type, int mode)
 {
     int count=0;
-    for(int i=0;i<tables.size();i++)
+    for(int i=0;i<groups.size();i++)
     {
-        if(tables[i]->type==type&&tables[i]->name!=tables[stackedWidget->currentIndex()]->name)
+        if(groups[i]->type==type&&groups[i]->name!=groups[stackedWidget->currentIndex()]->name)
         {
             count++;
-            QAction* temp=new QAction(tables[i]->name);
+            QAction* temp=new QAction(groups[i]->name);
             menu->addAction(temp);
             if(mode==0)
                 connect(temp,SIGNAL(triggered()),this,SLOT(moveMenuSlot()));
@@ -77,23 +77,23 @@ int Widget::fillMoveMenu(QMenu * menu, int type, int mode)
 }
 void Widget::onTabIndexChanged(int index)
 {
-    for(int i=0;i<tableCount;i++)
+    for(int i=0;i<groupCount;i++)
         buttons[i]->setStyleSheet("");
     buttons[index]->setStyleSheet("background-color:#00b7c3");
 }
-void Widget::onTableCountChanged()
+void Widget::onGroupCountChanged()
 {
-    if(tableCount==0)
-        stackedWidget->hide(),addItem->hide(),deleteTable->hide(),editTableName->hide(),save->hide();
+    if(groupCount==0)
+        stackedWidget->hide(),addItem->hide(),deleteGroup->hide(),editGroup->hide(),save->hide();
     else
     {
         buttons[0]->click();
-        stackedWidget->show(),addItem->show(),deleteTable->show(),editTableName->show(),save->show();
+        stackedWidget->show(),addItem->show(),deleteGroup->show(),editGroup->show(),save->show();
     }
-    if(tableCount==1)
-        deleteTable->setEnabled(false);
+    if(groupCount==1)
+        deleteGroup->setEnabled(false);
     else
-        deleteTable->setEnabled(true);
+        deleteGroup->setEnabled(true);
 }
 void Widget::myHeaderList()
 {
@@ -105,11 +105,14 @@ void Widget::myHeaderList()
     jianguoyunHeader<<"名称"<<"邮箱"<<"网址"<<"授权码"<<"备注"<<"创建时间"<<"修改时间";
     QStringList otherHeader;
     otherHeader<<"名称"<<"密码"<<"备注"<<"创建时间"<<"修改时间";
-    header<<commonHeader<<mailHeader<<jianguoyunHeader<<otherHeader;
+    tableWidgetHeaders<<commonHeader<<mailHeader<<jianguoyunHeader<<otherHeader;
 }
 void Widget::optionButtonClicked()
 {
-    optiondialog->setModal(true);
-    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
-    optiondialog->exec();
+//    optiondialog->setModal(true);
+//    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
+//    optiondialog->exec();
+    grouptypemanagerdialog->setModal(true);
+    grouptypemanagerdialog->setGeometry(this->geometry().x()+this->width()/2-grouptypemanagerdialog->width()/2+10,this->geometry().y()+this->height()/2-grouptypemanagerdialog->height()/2-10,grouptypemanagerdialog->width(),grouptypemanagerdialog->height());
+    grouptypemanagerdialog->exec();
 }

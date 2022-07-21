@@ -1,6 +1,9 @@
 ﻿#include "dialog/newgroupdialog.h"
 #include "ui_newgroupdialog.h"
 #include "dialog/widget.h"
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 newGroupDialog::newGroupDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::newGroupDialog)
@@ -11,7 +14,7 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
     m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":/custom/icons/icon.png");
+    m_titleBar->setTitleBarIcon(":/custom/logos/logo.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);
@@ -43,6 +46,17 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
         this->setStyleSheet(styleSheet);
         file.close();
     }
+    //添加自定义控件
+    newGroupName=new customLineEdit("分组名称",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
+    ui->groupInfoLayout->addWidget(newGroupName);
+    newGroupType=new customComboBox("分组类型",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
+    ui->groupInfoLayout->addWidget(newGroupType);
+    Widget* tempParent=(Widget*)this->parent();
+    groupTypes* groupTypes=tempParent->groupTypes;
+    newGroupType->addItems(groupTypes->getGroupTypeNames());
+    //绑定槽函数
+    connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
+    connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
 }
 
 newGroupDialog::~newGroupDialog()
@@ -51,4 +65,37 @@ newGroupDialog::~newGroupDialog()
 }
 void newGroupDialog::setWindowTitle(const QString& title){
     m_titleBar->setWindowTitle(title);
+}
+void newGroupDialog::onConfirmClicked(){
+    if(newGroupName->isValid()&&newGroupType->isValid())
+    {
+        newGroup=new GROUP();
+        newGroup->createTime=QDateTime::currentDateTime();
+        newGroup->lastEditTime=QDateTime::currentDateTime();
+        newGroup->remark=ui->remark->toPlainText();
+        newGroup->count=0;
+        newGroup->name=newGroupName->text();
+        newGroup->type=newGroupType->currentIndex();
+        newGroup->flag=1;
+        this->close();
+    }else{
+        QString message="";
+        if(!newGroupName->isValid())
+            message+="分组名称不合法!\n";
+        if(!newGroupType->isValid())
+            message+="分组类型不合法!\n";
+        QMessageBox::warning(this,"警告",message);
+    }
+}
+void newGroupDialog::onCancelClicked(){
+    int choice=QMessageBox::question(this,"确认修改","是否放弃新建分组");
+    if(choice==QMessageBox::Yes){
+        newGroup=nullptr;
+        this->close();
+    }
+}
+void newGroupDialog::setCurrentMode(int newCurrentMode){
+    this->currentMode=newCurrentMode;
+    if(currentMode==1)
+        newGroupType->setEnable(false);
 }

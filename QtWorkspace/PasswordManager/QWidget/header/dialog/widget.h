@@ -22,7 +22,6 @@
 #include <QPainter>
 #include <QMessageBox>
 #include <QSqlError>
-#include <QDateTime>
 #include <QMenu>
 #include <QPainter>
 #include <QClipboard>
@@ -32,132 +31,111 @@
 #include <QtCore>
 #include <QVariant>
 #include <QDir>
-#include "controller/titleBar.h"
+#include "xlsxchart.h"
+#include "xlsxworkbook.h"
+#include "xlsxdocument.h"
+#include "xlsxcellrange.h"
+#include "xlsxchartsheet.h"
+#include "xlsxrichstring.h"
+#include "optiondialog.h"
 #include "newitemdialog.h"
 #include "newgroupdialog.h"
-#include "ui_newitemdialog.h"
-#include "dialog/optiondialog.h"
+#include "grouptypemanagerdialog.h"
 #include "ui_optiondialog.h"
-#include "xlsxdocument.h"
-#include "xlsxchartsheet.h"
-#include "xlsxcellrange.h"
-#include "xlsxchart.h"
-#include "xlsxrichstring.h"
-#include "xlsxworkbook.h"
+#include "ui_newitemdialog.h"
+#include "ui_newgroupdialog.h"
+#include "ui_grouptypemanagerdialog.h"
+#include "util/structures.h"
+#include "util/groupType.h"
+#include "controller/titleBar.h"
 using namespace QXlsx;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
-typedef struct key{
-    int flag=0;
-    int type;
-    QString name;
-    QString nickName;
-    QString id;
-    QString subName;
-    QString password;
-    QString mobile;
-    QString mail;
-    QString website;
-    QString remark;
-    QDateTime createTime;
-    QDateTime lastEditTime;
-    QString toString();
-}KEY;
-typedef struct Table{
-    int flag=0;
-    int type;
-    int count;
-    QString name;
-    QString remark;
-    QList<KEY*> keys;
-    QDateTime createTime;
-    QDateTime lastEditTime;
-}TABLE;
-typedef struct Info{
-    QStringList mobiles;
-    QStringList mails;
-    QStringList subNames;
-    QStringList mailWebsites;
-    QStringList jgyWebsites;
-}INFO;
 class Widget : public QWidget
 {
     Q_OBJECT
-
 public:
-    friend struct key;
+    //data structure
+    int groupCount;
+    QList<GROUP*> groups;
+    AUTOFILLINFO* autofillInfo;
+    groupTypes* groupTypes;
+    itemTypes itemTypes;
+    //widgets
+    Ui::Widget *ui;
+    QList<QWidget*> widgets;
+    QList<QPushButton*> buttons;
+    QStackedWidget* stackedWidget;
+    QList<QTableWidget*> tableWidgets;
+    QList<QStringList> tableWidgetHeaders;
+    //Group functions
+    QToolButton* save;
+    QLineEdit* search;
+    QPushButton* addItem;
+    QPushButton* addGroup;
+    QPushButton* editGroup;
+    QPushButton* deleteGroup;
+    //saveAs menu
+    QMenu *saveAsMenu;
+    QAction *saveAsPDF;
+    QAction *saveAsCSV;
+    QAction *saveAsExcel;
+    //dialogs
+    optionDialog* optiondialog;
+    newItemDialog* newitemdialog;
+    newGroupDialog* newgroupdialog;
+    groupTypeManagerDialog* grouptypemanagerdialog;
+    //custom controllers
+    TitleBar *m_titleBar;
+    QMenu* tableWidgetMenu;
+    //auxiliary variables
+    ITEM* newKey=NULL;
+    GROUP* newGroup=NULL;
+    int sqlConnectionCount=0;
+    //other variables
+    QPoint* cursorPos;
+    QString styleSheet;
+public:
+    friend struct Item;
     friend class newItemDialog;
+public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
     void initFrame();
-    void editTableNameFunction(QString oldName);
-    void addItemFunction(QString &tableName,int mode);
-    void addTableFunction(QString name,int type=0);
+    void editGroupFunction(QString oldName);
+    void loadItemFunction(QString& tableName);
+    void newItemFunction(QString &tableName);
+    void newGroupFunction(QString name,int type=0);
     void updateQSS();
     void myHeaderList();
     void updateTableWidgetView(int index);
     void loadUserData();
-    void updatePersonInfo();
+    void updateAutofillInfo();
     int fillMoveMenu(QMenu*,int,int);
 private slots:
-    void moveMenuSlot();
-    void copyMenuSlot();
     void saveSlot();
     void saveMenuTriggered();
-    void addTableSlot();
-    void deleteTableSlot();
-    void editTableNameSlot();
+    void newGroupSlot();
+    void deleteGroupSlot();
+    void editGroupSlot();
     void changeTab();
-    void addItemSlot();
+    void newItemSlot();
+    //tableWidgetMenu
+    void moveItemSlot();
+    void copyItemSlot();
     void removeItemSlot();
     void openWebsiteSlot();
-    void copyAllSlot();
-    void onTableCountChanged();
+    void copyItemInfoSlot();
+    void onGroupCountChanged();
     void onTabIndexChanged(int);
     void searchSlot(const QString&);
     void tableWidgetContextMenuRequested(QPoint pos);
-    void tableWidgetDoubleClickedSlot(int,int);
     void tableWidgetClickedSlot(int,int);
     void optionButtonClicked();
-public:
-    //data structure
-    bool sortUpDown=false;
-    int tableCount;
-    INFO* personInfo;
-    QList<TABLE*> tables;
-    //widgets
-    Ui::Widget *ui;
-    QList<QWidget*> widgets;
-    QList<QStringList> header;
-    QList<QPushButton*> buttons;
-    QStackedWidget* stackedWidget;
-    QList<QTableWidget*> tableWidgets;
-    //table functions
-    QToolButton* save;
-    QPushButton* addItem;
-    QPushButton* addTable;
-    QPushButton* deleteTable;
-    QPushButton* editTableName;
-    QLineEdit* search;
-    //save menu
-    QMenu *menu;
-    QAction *saveAsPDF;
-    QAction *saveAsExcel;
-    QAction *saveAsCSV;
-    //other variables
-    int times=0;
-    KEY* newKey=NULL;
-    QPoint* cursorPos;
-    QString styleSheet;
-    TitleBar *m_titleBar;
-    TABLE* newGroup=NULL;
-    QMenu* tableWidgetMenu;
-    newItemDialog* newitemdialog;
-    newGroupDialog* newgroupdialog;
-    optionDialog* optiondialog;
+    void onGroupTypeCountChanged();
 signals:
-    void tableCountChanged();
+    void groupCountChanged();
 };
 #endif // WIDGET_H

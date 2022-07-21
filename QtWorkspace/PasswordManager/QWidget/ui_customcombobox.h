@@ -32,19 +32,19 @@ public:
     {
         if (customComboBox->objectName().isEmpty())
             customComboBox->setObjectName(QString::fromUtf8("customComboBox"));
-        customComboBox->resize(300, 40);
-        customComboBox->setMinimumSize(QSize(300, 40));
-        customComboBox->setMaximumSize(QSize(300, 40));
+        customComboBox->resize(320, 40);
+        customComboBox->setMinimumSize(QSize(320, 40));
+        customComboBox->setMaximumSize(QSize(320, 40));
         layoutWidget = new QWidget(customComboBox);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 0, 301, 42));
+        layoutWidget->setGeometry(QRect(0, 0, 319, 42));
         mainLayout = new QHBoxLayout(layoutWidget);
         mainLayout->setObjectName(QString::fromUtf8("mainLayout"));
         mainLayout->setContentsMargins(0, 0, 0, 0);
         controllerLabel = new QLabel(layoutWidget);
         controllerLabel->setObjectName(QString::fromUtf8("controllerLabel"));
-        controllerLabel->setMinimumSize(QSize(60, 40));
-        controllerLabel->setMaximumSize(QSize(60, 40));
+        controllerLabel->setMinimumSize(QSize(80, 40));
+        controllerLabel->setMaximumSize(QSize(80, 40));
         controllerLabel->setAlignment(Qt::AlignCenter);
 
         mainLayout->addWidget(controllerLabel);

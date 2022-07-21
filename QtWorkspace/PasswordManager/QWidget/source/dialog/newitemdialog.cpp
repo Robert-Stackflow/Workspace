@@ -3,6 +3,9 @@
 #include "customItem/customLineEdit.h"
 #include "ui_newitemdialog.h"
 #include "dialog/widget.h"
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 newItemDialog::newItemDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::newItemDialog)
@@ -13,7 +16,7 @@ newItemDialog::newItemDialog(QWidget *parent) :
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
     m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":/custom/icons/icon.png");
+    m_titleBar->setTitleBarIcon(":/custom/logos/logo.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);

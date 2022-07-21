@@ -2,6 +2,10 @@
 #include "ui_customLineEdit.h"
 #include <QDebug>
 #include <QMetaEnum>
+#pragma warning (disable:4100)
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 customLineEdit::customLineEdit(const QString& name,isRequiredChoices isRequired,dataTypeChoices dataType,QWidget* parent) :
     abstractCustomItem(name,COMBOBOX,isRequired,dataType,parent),
     ui(new Ui::customLineEdit)
@@ -20,7 +24,10 @@ customLineEdit::customLineEdit(const QString& name,isRequiredChoices isRequired,
     QMetaEnum dataTypeMeta = QMetaEnum::fromType<abstractCustomItem::dataTypeChoices>();
     ui->controllerJudge->setObjectName(dataTypeMeta.valueToKey(controllerType)+QString("JUDGE"));
     //根据dataType初始化
-    if(dataType==WEBSITE||dataType==MOBILE||dataType==MAIL){
+    if(dataType==NORMAL){
+        //绑定槽函数
+        connect(ui->controller,SIGNAL(textChanged(QString)),this,SLOT(controllerEdited(QString)));
+    }else if(dataType==WEBSITE||dataType==MOBILE||dataType==MAIL){
         //设置Validator
         const QValidator* validator=getValidator();
         ui->controller->setValidator(validator);
@@ -28,6 +35,7 @@ customLineEdit::customLineEdit(const QString& name,isRequiredChoices isRequired,
         connect(ui->controller,SIGNAL(textEdited(QString)),this,SLOT(controllerEdited(QString)));
     }else if(dataType==PASSWORD){
         //设置初始样式:不显示密码
+        ui->controller->setEchoMode(QLineEdit::Password);
         ui->controllerJudge->setIcon(QIcon(":/custom/icons/nosee.png"));
         ui->controllerJudge->setStatusTip("nosee");
         //绑定槽函数
@@ -43,19 +51,14 @@ customLineEdit::~customLineEdit()
 bool customLineEdit::isValid(){
     int position=0;
     QString value=QString(ui->controller->text());
-    return (isRequired==REQUIRED&&value=="")||
-            (dataType==MAIL&&QValidator::Acceptable!=abstractCustomItem::mailValidator->validate(value,position))||
-            (dataType==MOBILE&&QValidator::Acceptable!=abstractCustomItem::mobileValidator->validate(value,position))||
-            (dataType==WEBSITE&&QValidator::Acceptable!=abstractCustomItem::websiteValidator->validate(value,position));
+    return ((value!=""&&isRequired==REQUIRED)||(getValidator()!=nullptr&&QValidator::Acceptable==getValidator()->validate(value,position)));
 }
 void customLineEdit::controllerEdited(const QString &arg)
 {
-    int position=0;
-    QString testValue=arg;
-    if(testValue==""){
+    if(isRequired==abstractCustomItem::OPTIONAL&&dataType==NORMAL){
         ui->controllerJudge->setIcon(QIcon());
         ui->controllerJudge->setStatusTip("");
-    }else if(QValidator::Acceptable!=getValidator()->validate(testValue,position)){
+    }else if(!isValid()){
         ui->controllerJudge->setIcon(QIcon(":custom/icons/wrong.png"));
         ui->controllerJudge->setStatusTip("wrong");
     }else{
@@ -75,6 +78,28 @@ void customLineEdit::passwordJudgeClicked()
         ui->controller->setEchoMode(QLineEdit::Password);
     }
 }
-void customLineEdit::setPlaceholderText(const QString &placeholderText){
+void customLineEdit::setPlaceholderText(const QString &placeholderText)
+{
     ui->controller->setPlaceholderText(placeholderText);
+}
+QString customLineEdit::text(){
+    return ui->controller->text();
+}
+void customLineEdit::setText(const QString &text)
+{
+    ui->controller->setText(text);
+}
+void customLineEdit::clear()
+{
+    ui->controller->clear();
+    if(dataType!=PASSWORD){
+        ui->controllerJudge->setIcon(QIcon());
+        ui->controllerJudge->setStatusTip("");
+    }
+}
+void customLineEdit::setMaxLength(int length){
+    ui->controller->setMaxLength(length);
+}
+QString customLineEdit::getPlaceholderText(){
+    return ui->controller->placeholderText();
 }

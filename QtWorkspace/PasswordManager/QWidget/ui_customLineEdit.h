@@ -22,7 +22,7 @@ QT_BEGIN_NAMESPACE
 class Ui_customLineEdit
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *mainLayout;
     QLabel *controllerLabel;
     QLineEdit *controller;
@@ -32,32 +32,32 @@ public:
     {
         if (customLineEdit->objectName().isEmpty())
             customLineEdit->setObjectName(QString::fromUtf8("customLineEdit"));
-        customLineEdit->resize(300, 40);
-        customLineEdit->setMinimumSize(QSize(300, 40));
-        customLineEdit->setMaximumSize(QSize(300, 40));
+        customLineEdit->resize(320, 40);
+        customLineEdit->setMinimumSize(QSize(320, 40));
+        customLineEdit->setMaximumSize(QSize(320, 40));
         customLineEdit->setContextMenuPolicy(Qt::NoContextMenu);
-        widget = new QWidget(customLineEdit);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, 0, 301, 42));
-        mainLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(customLineEdit);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(0, 0, 321, 41));
+        mainLayout = new QHBoxLayout(layoutWidget);
         mainLayout->setObjectName(QString::fromUtf8("mainLayout"));
         mainLayout->setContentsMargins(0, 0, 0, 0);
-        controllerLabel = new QLabel(widget);
+        controllerLabel = new QLabel(layoutWidget);
         controllerLabel->setObjectName(QString::fromUtf8("controllerLabel"));
-        controllerLabel->setMinimumSize(QSize(60, 40));
-        controllerLabel->setMaximumSize(QSize(60, 40));
+        controllerLabel->setMinimumSize(QSize(80, 40));
+        controllerLabel->setMaximumSize(QSize(80, 40));
         controllerLabel->setAlignment(Qt::AlignCenter);
 
         mainLayout->addWidget(controllerLabel);
 
-        controller = new QLineEdit(widget);
+        controller = new QLineEdit(layoutWidget);
         controller->setObjectName(QString::fromUtf8("controller"));
         controller->setMinimumSize(QSize(188, 30));
         controller->setMaximumSize(QSize(188, 30));
 
         mainLayout->addWidget(controller);
 
-        controllerJudge = new QPushButton(widget);
+        controllerJudge = new QPushButton(layoutWidget);
         controllerJudge->setObjectName(QString::fromUtf8("controllerJudge"));
         controllerJudge->setMinimumSize(QSize(35, 35));
         controllerJudge->setMaximumSize(QSize(35, 35));

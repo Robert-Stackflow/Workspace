@@ -6,11 +6,14 @@ CONFIG += c++11
 INCLUDEPATH = "./header"
 
 SOURCES += \
+    source/customItem/customTextEdit.cpp \
+    source/controller/draggabletablewidget.cpp \
     source/dialog/grouptypemanagerdialog.cpp \
     source/dialog/newitemdialog.cpp \
     source/customItem/customComboBox.cpp \
     source/customItem/abstractCustomItem.cpp \
     source/customItem/customLineEdit.cpp \
+    source/util/groupType.cpp \
     source/dialog/main.cpp \
     source/dialog/widget.cpp \
     source/dialog/logindialog.cpp \
@@ -21,9 +24,12 @@ SOURCES += \
     source/function/viewFunction.cpp \
     source/function/itemFunction.cpp \
     source/function/saveFunction.cpp \
-    source/function/tableFunction.cpp
+    source/function/tableFunction.cpp \
+    source/util/itemType.cpp
 
 HEADERS += \
+    header/controller/draggabletablewidget.h \
+    header/customItem/customTextEdit.h \
     header/dialog/grouptypemanagerdialog.h \
     header/customItem/customComboBox.h \
     header/customItem/customLineEdit.h \
@@ -35,9 +41,12 @@ HEADERS += \
     header/controller/titleBar.h \
     header/customItem/abstractCustomItem.h \
     header/dialog/newgroupdialog.h \
-    header/util/groupType.h
+    header/util/groupType.h \
+    header/util/itemType.h \
+    header/util/structures.h
 
 FORMS += \
+    ui/customTextEdit.ui \
     ui/grouptypemanagerdialog.ui \
     ui/newgroupdialog.ui \
     ui/newitemdialog.ui \

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_abstractCustomItem_t {
-    QByteArrayData data[16];
-    char stringdata0[171];
+    QByteArrayData data[13];
+    char stringdata0[147];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,22 +39,18 @@ QT_MOC_LITERAL(3, 46, 8), // "REQUIRED"
 QT_MOC_LITERAL(4, 55, 21), // "controllerTypeChoices"
 QT_MOC_LITERAL(5, 77, 8), // "LINEEDIT"
 QT_MOC_LITERAL(6, 86, 8), // "COMBOBOX"
-QT_MOC_LITERAL(7, 95, 8), // "CHECKBOX"
-QT_MOC_LITERAL(8, 104, 5), // "RADIO"
-QT_MOC_LITERAL(9, 110, 8), // "TEXTEDIT"
-QT_MOC_LITERAL(10, 119, 15), // "dataTypeChoices"
-QT_MOC_LITERAL(11, 135, 6), // "NORMAL"
-QT_MOC_LITERAL(12, 142, 8), // "PASSWORD"
-QT_MOC_LITERAL(13, 151, 4), // "MAIL"
-QT_MOC_LITERAL(14, 156, 6), // "MOBILE"
-QT_MOC_LITERAL(15, 163, 7) // "WEBSITE"
+QT_MOC_LITERAL(7, 95, 15), // "dataTypeChoices"
+QT_MOC_LITERAL(8, 111, 6), // "NORMAL"
+QT_MOC_LITERAL(9, 118, 8), // "PASSWORD"
+QT_MOC_LITERAL(10, 127, 4), // "MAIL"
+QT_MOC_LITERAL(11, 132, 6), // "MOBILE"
+QT_MOC_LITERAL(12, 139, 7) // "WEBSITE"
 
     },
     "abstractCustomItem\0isRequiredChoices\0"
     "OPTIONAL\0REQUIRED\0controllerTypeChoices\0"
-    "LINEEDIT\0COMBOBOX\0CHECKBOX\0RADIO\0"
-    "TEXTEDIT\0dataTypeChoices\0NORMAL\0"
-    "PASSWORD\0MAIL\0MOBILE\0WEBSITE"
+    "LINEEDIT\0COMBOBOX\0dataTypeChoices\0"
+    "NORMAL\0PASSWORD\0MAIL\0MOBILE\0WEBSITE"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,22 +69,19 @@ static const uint qt_meta_data_abstractCustomItem[] = {
 
  // enums: name, alias, flags, count, data
        1,    1, 0x0,    2,   29,
-       4,    4, 0x0,    5,   33,
-      10,   10, 0x0,    5,   43,
+       4,    4, 0x0,    2,   33,
+       7,    7, 0x0,    5,   37,
 
  // enum data: key, value
        2, uint(abstractCustomItem::OPTIONAL),
        3, uint(abstractCustomItem::REQUIRED),
        5, uint(abstractCustomItem::LINEEDIT),
        6, uint(abstractCustomItem::COMBOBOX),
-       7, uint(abstractCustomItem::CHECKBOX),
-       8, uint(abstractCustomItem::RADIO),
-       9, uint(abstractCustomItem::TEXTEDIT),
-      11, uint(abstractCustomItem::NORMAL),
-      12, uint(abstractCustomItem::PASSWORD),
-      13, uint(abstractCustomItem::MAIL),
-      14, uint(abstractCustomItem::MOBILE),
-      15, uint(abstractCustomItem::WEBSITE),
+       8, uint(abstractCustomItem::NORMAL),
+       9, uint(abstractCustomItem::PASSWORD),
+      10, uint(abstractCustomItem::MAIL),
+      11, uint(abstractCustomItem::MOBILE),
+      12, uint(abstractCustomItem::WEBSITE),
 
        0        // eod
 };

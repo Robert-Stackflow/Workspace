@@ -7,7 +7,6 @@
 #include "controller/titleBar.h"
 #include <QFile>
 #include<QGraphicsDropShadowEffect>
-
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -23,6 +22,7 @@ loginDialog::loginDialog(QWidget *parent) :
     //设置窗口样式
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
+    this->setWindowIcon(QIcon(":custom/logos/logo.png"));
     //添加自定义标题栏
     TitleBar *m_titleBar=new TitleBar(this);
     m_titleBar->setTitleBarIcon(":custom/logos/logo.png");

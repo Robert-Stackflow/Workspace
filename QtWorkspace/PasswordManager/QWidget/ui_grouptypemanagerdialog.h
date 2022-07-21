@@ -11,12 +11,16 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -27,32 +31,50 @@ class Ui_groupTypeManagerDialog
 {
 public:
     QTabWidget *tabWidget;
-    QWidget *defaultType;
-    QWidget *layoutWidget;
-    QVBoxLayout *typeNameLayout_defaultType;
-    QTextEdit *remark_defaultType;
-    QGroupBox *editFields_defaultType;
-    QPushButton *saveChange_defaultType;
     QWidget *typeManager;
-    QWidget *newType;
-    QWidget *layoutWidget_10;
+    QTableWidget *typeManagerTableWidget;
+    QWidget *layoutWidget;
+    QVBoxLayout *typeManagerButtonLayout;
+    QPushButton *editTypeButton;
+    QPushButton *deleteTypeButton;
+    QPushButton *copyTypeButton;
+    QPushButton *newTypeButton;
+    QWidget *layoutWidget_1;
+    QVBoxLayout *typeManagerChosenLayout;
+    QLabel *chosenLabel;
+    QLabel *chosen;
+    QWidget *editType;
+    QGroupBox *editFields;
+    QTableWidget *editFieldsTableWidget;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *addItemLayout;
+    QLabel *addItemLabel;
+    QComboBox *addItemComboBox;
+    QPushButton *addItemButton;
+    QWidget *layoutWidget_3;
+    QVBoxLayout *addItemNameLayout;
+    QWidget *layoutWidget_4;
+    QVBoxLayout *addItemTipLayout;
+    QWidget *layoutWidget_5;
     QHBoxLayout *confirmBoxLayout;
     QPushButton *confirm;
-    QPushButton *cancle;
-    QWidget *widget;
-    QVBoxLayout *typeNameLayout_newType;
-    QTextEdit *remark_newType;
-    QGroupBox *editFields_newType;
+    QPushButton *cancel;
+    QGroupBox *essentialInfo;
+    QWidget *layoutWidget_6;
+    QVBoxLayout *typeNameLayout;
+    QTextEdit *remark;
     QFrame *frame;
 
     void setupUi(QDialog *groupTypeManagerDialog)
     {
         if (groupTypeManagerDialog->objectName().isEmpty())
             groupTypeManagerDialog->setObjectName(QString::fromUtf8("groupTypeManagerDialog"));
-        groupTypeManagerDialog->resize(680, 510);
+        groupTypeManagerDialog->resize(890, 700);
+        groupTypeManagerDialog->setMinimumSize(QSize(890, 700));
+        groupTypeManagerDialog->setMaximumSize(QSize(890, 700));
         tabWidget = new QTabWidget(groupTypeManagerDialog);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(20, 50, 641, 441));
+        tabWidget->setGeometry(QRect(20, 50, 851, 631));
         QFont font;
         tabWidget->setFont(font);
         tabWidget->setTabPosition(QTabWidget::North);
@@ -60,61 +82,141 @@ public:
         tabWidget->setUsesScrollButtons(false);
         tabWidget->setMovable(false);
         tabWidget->setTabBarAutoHide(false);
-        defaultType = new QWidget();
-        defaultType->setObjectName(QString::fromUtf8("defaultType"));
-        layoutWidget = new QWidget(defaultType);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 311, 41));
-        typeNameLayout_defaultType = new QVBoxLayout(layoutWidget);
-        typeNameLayout_defaultType->setObjectName(QString::fromUtf8("typeNameLayout_defaultType"));
-        typeNameLayout_defaultType->setContentsMargins(0, 0, 0, 0);
-        remark_defaultType = new QTextEdit(defaultType);
-        remark_defaultType->setObjectName(QString::fromUtf8("remark_defaultType"));
-        remark_defaultType->setGeometry(QRect(10, 60, 311, 331));
-        editFields_defaultType = new QGroupBox(defaultType);
-        editFields_defaultType->setObjectName(QString::fromUtf8("editFields_defaultType"));
-        editFields_defaultType->setGeometry(QRect(340, 10, 281, 341));
-        saveChange_defaultType = new QPushButton(defaultType);
-        saveChange_defaultType->setObjectName(QString::fromUtf8("saveChange_defaultType"));
-        saveChange_defaultType->setGeometry(QRect(520, 360, 93, 29));
-        tabWidget->addTab(defaultType, QString());
         typeManager = new QWidget();
         typeManager->setObjectName(QString::fromUtf8("typeManager"));
+        typeManagerTableWidget = new QTableWidget(typeManager);
+        typeManagerTableWidget->setObjectName(QString::fromUtf8("typeManagerTableWidget"));
+        typeManagerTableWidget->setGeometry(QRect(10, 10, 651, 581));
+        layoutWidget = new QWidget(typeManager);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(680, 100, 151, 301));
+        typeManagerButtonLayout = new QVBoxLayout(layoutWidget);
+        typeManagerButtonLayout->setObjectName(QString::fromUtf8("typeManagerButtonLayout"));
+        typeManagerButtonLayout->setContentsMargins(0, 0, 0, 0);
+        editTypeButton = new QPushButton(layoutWidget);
+        editTypeButton->setObjectName(QString::fromUtf8("editTypeButton"));
+        editTypeButton->setMinimumSize(QSize(0, 35));
+
+        typeManagerButtonLayout->addWidget(editTypeButton);
+
+        deleteTypeButton = new QPushButton(layoutWidget);
+        deleteTypeButton->setObjectName(QString::fromUtf8("deleteTypeButton"));
+        deleteTypeButton->setMinimumSize(QSize(0, 35));
+
+        typeManagerButtonLayout->addWidget(deleteTypeButton);
+
+        copyTypeButton = new QPushButton(layoutWidget);
+        copyTypeButton->setObjectName(QString::fromUtf8("copyTypeButton"));
+        copyTypeButton->setMinimumSize(QSize(0, 35));
+
+        typeManagerButtonLayout->addWidget(copyTypeButton);
+
+        newTypeButton = new QPushButton(layoutWidget);
+        newTypeButton->setObjectName(QString::fromUtf8("newTypeButton"));
+        newTypeButton->setMinimumSize(QSize(0, 35));
+
+        typeManagerButtonLayout->addWidget(newTypeButton);
+
+        layoutWidget_1 = new QWidget(typeManager);
+        layoutWidget_1->setObjectName(QString::fromUtf8("layoutWidget_1"));
+        layoutWidget_1->setGeometry(QRect(680, 20, 151, 61));
+        typeManagerChosenLayout = new QVBoxLayout(layoutWidget_1);
+        typeManagerChosenLayout->setObjectName(QString::fromUtf8("typeManagerChosenLayout"));
+        typeManagerChosenLayout->setContentsMargins(0, 0, 0, 0);
+        chosenLabel = new QLabel(layoutWidget_1);
+        chosenLabel->setObjectName(QString::fromUtf8("chosenLabel"));
+        chosenLabel->setAlignment(Qt::AlignCenter);
+
+        typeManagerChosenLayout->addWidget(chosenLabel);
+
+        chosen = new QLabel(layoutWidget_1);
+        chosen->setObjectName(QString::fromUtf8("chosen"));
+        chosen->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
+        chosen->setAlignment(Qt::AlignCenter);
+
+        typeManagerChosenLayout->addWidget(chosen);
+
         tabWidget->addTab(typeManager, QString());
-        newType = new QWidget();
-        newType->setObjectName(QString::fromUtf8("newType"));
-        layoutWidget_10 = new QWidget(newType);
-        layoutWidget_10->setObjectName(QString::fromUtf8("layoutWidget_10"));
-        layoutWidget_10->setGeometry(QRect(420, 360, 195, 31));
-        confirmBoxLayout = new QHBoxLayout(layoutWidget_10);
+        editType = new QWidget();
+        editType->setObjectName(QString::fromUtf8("editType"));
+        editFields = new QGroupBox(editType);
+        editFields->setObjectName(QString::fromUtf8("editFields"));
+        editFields->setGeometry(QRect(10, 110, 821, 431));
+        editFieldsTableWidget = new QTableWidget(editFields);
+        editFieldsTableWidget->setObjectName(QString::fromUtf8("editFieldsTableWidget"));
+        editFieldsTableWidget->setGeometry(QRect(10, 130, 801, 291));
+        layoutWidget_2 = new QWidget(editFields);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(10, 80, 381, 42));
+        addItemLayout = new QHBoxLayout(layoutWidget_2);
+        addItemLayout->setObjectName(QString::fromUtf8("addItemLayout"));
+        addItemLayout->setContentsMargins(0, 0, 0, 0);
+        addItemLabel = new QLabel(layoutWidget_2);
+        addItemLabel->setObjectName(QString::fromUtf8("addItemLabel"));
+        addItemLabel->setMinimumSize(QSize(65, 40));
+        addItemLabel->setMaximumSize(QSize(65, 40));
+        addItemLabel->setAlignment(Qt::AlignCenter);
+
+        addItemLayout->addWidget(addItemLabel);
+
+        addItemComboBox = new QComboBox(layoutWidget_2);
+        addItemComboBox->setObjectName(QString::fromUtf8("addItemComboBox"));
+        addItemComboBox->setMinimumSize(QSize(188, 30));
+        addItemComboBox->setMaximumSize(QSize(188, 30));
+
+        addItemLayout->addWidget(addItemComboBox);
+
+        addItemButton = new QPushButton(layoutWidget_2);
+        addItemButton->setObjectName(QString::fromUtf8("addItemButton"));
+        addItemButton->setMinimumSize(QSize(80, 35));
+        addItemButton->setMaximumSize(QSize(80, 35));
+
+        addItemLayout->addWidget(addItemButton);
+
+        layoutWidget_3 = new QWidget(editFields);
+        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
+        layoutWidget_3->setGeometry(QRect(10, 30, 311, 41));
+        addItemNameLayout = new QVBoxLayout(layoutWidget_3);
+        addItemNameLayout->setObjectName(QString::fromUtf8("addItemNameLayout"));
+        addItemNameLayout->setContentsMargins(0, 0, 0, 0);
+        layoutWidget_4 = new QWidget(editFields);
+        layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
+        layoutWidget_4->setGeometry(QRect(330, 30, 311, 41));
+        addItemTipLayout = new QVBoxLayout(layoutWidget_4);
+        addItemTipLayout->setObjectName(QString::fromUtf8("addItemTipLayout"));
+        addItemTipLayout->setContentsMargins(0, 0, 0, 0);
+        layoutWidget_5 = new QWidget(editType);
+        layoutWidget_5->setObjectName(QString::fromUtf8("layoutWidget_5"));
+        layoutWidget_5->setGeometry(QRect(630, 550, 195, 31));
+        confirmBoxLayout = new QHBoxLayout(layoutWidget_5);
         confirmBoxLayout->setObjectName(QString::fromUtf8("confirmBoxLayout"));
         confirmBoxLayout->setContentsMargins(0, 0, 0, 0);
-        confirm = new QPushButton(layoutWidget_10);
+        confirm = new QPushButton(layoutWidget_5);
         confirm->setObjectName(QString::fromUtf8("confirm"));
 
         confirmBoxLayout->addWidget(confirm);
 
-        cancle = new QPushButton(layoutWidget_10);
-        cancle->setObjectName(QString::fromUtf8("cancle"));
+        cancel = new QPushButton(layoutWidget_5);
+        cancel->setObjectName(QString::fromUtf8("cancel"));
 
-        confirmBoxLayout->addWidget(cancle);
+        confirmBoxLayout->addWidget(cancel);
 
-        widget = new QWidget(newType);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 10, 311, 41));
-        typeNameLayout_newType = new QVBoxLayout(widget);
-        typeNameLayout_newType->setObjectName(QString::fromUtf8("typeNameLayout_newType"));
-        typeNameLayout_newType->setContentsMargins(0, 0, 0, 0);
-        remark_newType = new QTextEdit(newType);
-        remark_newType->setObjectName(QString::fromUtf8("remark_newType"));
-        remark_newType->setGeometry(QRect(10, 60, 311, 331));
-        editFields_newType = new QGroupBox(newType);
-        editFields_newType->setObjectName(QString::fromUtf8("editFields_newType"));
-        editFields_newType->setGeometry(QRect(340, 10, 281, 341));
-        tabWidget->addTab(newType, QString());
+        essentialInfo = new QGroupBox(editType);
+        essentialInfo->setObjectName(QString::fromUtf8("essentialInfo"));
+        essentialInfo->setGeometry(QRect(10, 10, 821, 91));
+        layoutWidget_6 = new QWidget(essentialInfo);
+        layoutWidget_6->setObjectName(QString::fromUtf8("layoutWidget_6"));
+        layoutWidget_6->setGeometry(QRect(10, 30, 311, 41));
+        typeNameLayout = new QVBoxLayout(layoutWidget_6);
+        typeNameLayout->setObjectName(QString::fromUtf8("typeNameLayout"));
+        typeNameLayout->setContentsMargins(0, 0, 0, 0);
+        remark = new QTextEdit(essentialInfo);
+        remark->setObjectName(QString::fromUtf8("remark"));
+        remark->setGeometry(QRect(330, 30, 481, 41));
+        tabWidget->addTab(editType, QString());
         frame = new QFrame(groupTypeManagerDialog);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(10, 10, 661, 491));
+        frame->setGeometry(QRect(10, 10, 871, 681));
         frame->setStyleSheet(QString::fromUtf8("border:0px;\n"
 "border-radius:10px;"));
         frame->setFrameShape(QFrame::StyledPanel);
@@ -124,7 +226,7 @@ public:
 
         retranslateUi(groupTypeManagerDialog);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(groupTypeManagerDialog);
@@ -133,16 +235,21 @@ public:
     void retranslateUi(QDialog *groupTypeManagerDialog)
     {
         groupTypeManagerDialog->setWindowTitle(QCoreApplication::translate("groupTypeManagerDialog", "Dialog", nullptr));
-        remark_defaultType->setPlaceholderText(QCoreApplication::translate("groupTypeManagerDialog", "\345\241\253\345\206\231\347\261\273\345\236\213\350\257\264\346\230\216", nullptr));
-        editFields_defaultType->setTitle(QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221\345\255\227\346\256\265", nullptr));
-        saveChange_defaultType->setText(QCoreApplication::translate("groupTypeManagerDialog", "\344\277\235\345\255\230\344\277\256\346\224\271", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(defaultType), QCoreApplication::translate("groupTypeManagerDialog", "\351\273\230\350\256\244\347\261\273\345\236\213", nullptr));
+        editTypeButton->setText(QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221\347\261\273\345\236\213", nullptr));
+        deleteTypeButton->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\210\240\351\231\244\347\261\273\345\236\213", nullptr));
+        copyTypeButton->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\244\215\345\210\266\347\261\273\345\236\213", nullptr));
+        newTypeButton->setText(QCoreApplication::translate("groupTypeManagerDialog", "\346\226\260\345\273\272\347\261\273\345\236\213", nullptr));
+        chosenLabel->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\275\223\345\211\215\351\200\211\344\270\255\347\261\273\345\236\213", nullptr));
+        chosen->setText(QCoreApplication::translate("groupTypeManagerDialog", "\346\234\252\351\200\211\344\270\255", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(typeManager), QCoreApplication::translate("groupTypeManagerDialog", "\347\261\273\345\236\213\347\256\241\347\220\206", nullptr));
+        editFields->setTitle(QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221\345\255\227\346\256\265", nullptr));
+        addItemLabel->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\255\227\346\256\265\347\261\273\345\236\213", nullptr));
+        addItemButton->setText(QCoreApplication::translate("groupTypeManagerDialog", "\346\267\273\345\212\240\345\255\227\346\256\265", nullptr));
         confirm->setText(QCoreApplication::translate("groupTypeManagerDialog", "\347\241\256\345\256\232", nullptr));
-        cancle->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\217\226\346\266\210", nullptr));
-        remark_newType->setPlaceholderText(QCoreApplication::translate("groupTypeManagerDialog", "\345\241\253\345\206\231\347\261\273\345\236\213\350\257\264\346\230\216", nullptr));
-        editFields_newType->setTitle(QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221\345\255\227\346\256\265", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(newType), QCoreApplication::translate("groupTypeManagerDialog", "\346\226\260\345\273\272\347\261\273\345\236\213", nullptr));
+        cancel->setText(QCoreApplication::translate("groupTypeManagerDialog", "\345\217\226\346\266\210", nullptr));
+        essentialInfo->setTitle(QCoreApplication::translate("groupTypeManagerDialog", "\345\237\272\346\234\254\344\277\241\346\201\257", nullptr));
+        remark->setPlaceholderText(QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221\347\261\273\345\236\213\350\257\264\346\230\216", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(editType), QCoreApplication::translate("groupTypeManagerDialog", "\347\274\226\350\276\221/\346\226\260\345\273\272\347\261\273\345\236\213", nullptr));
     } // retranslateUi
 
 };
