@@ -1,6 +1,6 @@
 ﻿#include "dialog/newgroupdialog.h"
 #include "ui_newgroupdialog.h"
-#include "dialog/widget.h"
+#include "widget.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -47,16 +47,17 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
         file.close();
     }
     //添加自定义控件
-    newGroupName=new customLineEdit("分组名称",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
+    newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->groupInfoLayout->addWidget(newGroupName);
-    newGroupType=new customComboBox("分组类型",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
+    newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->groupInfoLayout->addWidget(newGroupType);
     Widget* tempParent=(Widget*)this->parent();
-    groupTypes* groupTypes=tempParent->groupTypes;
+    GroupTypes* groupTypes=tempParent->groupTypes;
     newGroupType->addItems(groupTypes->getGroupTypeNames());
     //绑定槽函数
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
+    connect(ui->jumpToGroupTypeManager,SIGNAL(clicked()),this,SLOT(onJumpToGroupTypeManagerClicked()));
 }
 
 newGroupDialog::~newGroupDialog()
@@ -69,14 +70,8 @@ void newGroupDialog::setWindowTitle(const QString& title){
 void newGroupDialog::onConfirmClicked(){
     if(newGroupName->isValid()&&newGroupType->isValid())
     {
-        newGroup=new GROUP();
-        newGroup->createTime=QDateTime::currentDateTime();
-        newGroup->lastEditTime=QDateTime::currentDateTime();
-        newGroup->remark=ui->remark->toPlainText();
-        newGroup->count=0;
-        newGroup->name=newGroupName->text();
-        newGroup->type=newGroupType->currentIndex();
-        newGroup->flag=1;
+        newGroup=new Group(newGroupType->currentIndex(),newGroupName->text(),QDateTime::currentDateTime(),QDateTime::currentDateTime(),ui->describe->toPlainText());
+        newGroup->setFlag(1);
         this->close();
     }else{
         QString message="";
@@ -99,3 +94,13 @@ void newGroupDialog::setCurrentMode(int newCurrentMode){
     if(currentMode==1)
         newGroupType->setEnable(false);
 }
+
+void newGroupDialog::onJumpToGroupTypeManagerClicked()
+{
+    Widget* parent=(Widget*)this->parent();
+    groupTypeManagerDialog* grouptypemanagerdialog=parent->grouptypemanagerdialog;
+    grouptypemanagerdialog->setModal(true);
+    grouptypemanagerdialog->setGeometry(this->geometry().x()+this->width()/2-grouptypemanagerdialog->width()/2+10,this->geometry().y()+this->height()/2-grouptypemanagerdialog->height()/2-10,grouptypemanagerdialog->width(),grouptypemanagerdialog->height());
+    grouptypemanagerdialog->exec();
+}
+

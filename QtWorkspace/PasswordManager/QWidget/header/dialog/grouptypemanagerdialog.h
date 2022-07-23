@@ -1,11 +1,9 @@
 ﻿#ifndef GROUPTYPEMANAGERDIALOG_H
 #define GROUPTYPEMANAGERDIALOG_H
-
 #include <QDialog>
-#include "controller/titleBar.h"
 #include "util/groupType.h"
-#include "util/itemType.h"
-#include "customItem/customLineEdit.h"
+#include "controller/titleBar.h"
+#include "customField/customLineEdit.h"
 namespace Ui {
 class groupTypeManagerDialog;
 }
@@ -20,13 +18,13 @@ public:
     //自定义组件
     TitleBar *m_titleBar;
     customLineEdit* typeName;
-    customLineEdit* addItemName;
-    customLineEdit* addItemTip;
+    customLineEdit* addFieldName;
+    customLineEdit* addFieldTip;
     //辅助变量
-    groupType* newGroupType;
-    groupType* chosenType;
-    customItems* tempItems;
+    GroupType* chosenType;
     QString chosenOldName;
+    GroupType* newGroupType;
+    QList<AbstractCustomField*> tempFields;
     //辅助变量
     int currentRow=-1;
     int currentMode=-1;//0-新建,1-编辑
@@ -40,7 +38,7 @@ public:
 private:
     Ui::groupTypeManagerDialog *ui;
     void loadGroupTypes();
-    QStringList getItemTypeNameList() const;
+    QStringList getFieldTypeNameList() const;
 public slots:
     void onTypeManagerTableWidgetClicked();
     void onEditTypeClicked();
@@ -49,7 +47,7 @@ public slots:
     void onNewTypeClicked();
     void onCancelClicked();
     void onConfirmClicked();
-    void onAddItemClicked();
+    void onAddFieldClicked();
     void onIsReqiuredCheckBoxToggled(bool);
 signals:
     void typeManagerTableWidgetClicked();

@@ -1,9 +1,7 @@
 ﻿#ifndef OPTIONDIALOG_H
 #define OPTIONDIALOG_H
-
 #include <QDialog>
 #include "controller/titleBar.h"
-
 namespace Ui {
 class optionDialog;
 }

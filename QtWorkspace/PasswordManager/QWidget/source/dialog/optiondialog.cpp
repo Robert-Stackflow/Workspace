@@ -1,9 +1,7 @@
 ﻿#include "dialog/optiondialog.h"
 #include "ui_optiondialog.h"
-#include "dialog/widget.h"
 #include <QDebug>
-#include <QFile>
-#include <QCompleter>
+#include <QGraphicsDropShadowEffect>
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif

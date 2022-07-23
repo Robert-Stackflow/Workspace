@@ -1,12 +1,11 @@
 ﻿#include "dialog/logindialog.h"
-#include "customItem/customComboBox.h"
-#include "customItem/customLineEdit.h"
 #include "ui_logindialog.h"
-#include "dialog/widget.h"
-#include "ui_widget.h"
 #include "controller/titleBar.h"
+#include "customField/customComboBox.h"
+#include "customField/customLineEdit.h"
+#include "widget.h"
 #include <QFile>
-#include<QGraphicsDropShadowEffect>
+#include <QGraphicsDropShadowEffect>
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -56,8 +55,8 @@ loginDialog::loginDialog(QWidget *parent) :
     ui->portrait->setPixmap(pixMap);
     ui->portrait->setScaledContents(true);
     //设置用户名与密码
-    customComboBox* username=new customComboBox("用户名",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
-    customLineEdit* password=new customLineEdit("密码",abstractCustomItem::REQUIRED,abstractCustomItem::PASSWORD,this);
+    customComboBox* username=new customComboBox("用户名",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+    customLineEdit* password=new customLineEdit("密码",AbstractCustomField::REQUIRED,AbstractCustomField::PASSWORD,this);
     ui->verticalLayout->addWidget(username);
     ui->verticalLayout->addWidget(password);
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(confirmClicked()));

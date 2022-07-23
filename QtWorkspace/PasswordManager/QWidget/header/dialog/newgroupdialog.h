@@ -1,11 +1,10 @@
 ﻿#ifndef NEWGROUPDIALOG_H
 #define NEWGROUPDIALOG_H
-
 #include <QDialog>
+#include "util/group.h"
 #include "controller/titleBar.h"
-#include "customItem/customComboBox.h"
-#include "customItem/customLineEdit.h"
-#include "util/structures.h"
+#include "customField/customComboBox.h"
+#include "customField/customLineEdit.h"
 namespace Ui {
 class newGroupDialog;
 }
@@ -19,7 +18,7 @@ public:
     Ui::newGroupDialog *ui;
     customLineEdit* newGroupName;
     customComboBox* newGroupType;
-    GROUP* newGroup;
+    Group* newGroup;
     int currentMode;//0-新建,1-编辑
     explicit newGroupDialog(QWidget *parent = nullptr);
     ~newGroupDialog();
@@ -30,6 +29,8 @@ private:
 public slots:
     void onConfirmClicked();
     void onCancelClicked();
+private slots:
+    void onJumpToGroupTypeManagerClicked();
 };
 
 #endif // NEWGROUPDIALOG_H

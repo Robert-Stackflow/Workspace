@@ -267,8 +267,8 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmain.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf \
-		qrc\custom\custom.qrc \
 		qrc\dark\dark.qrc \
+		qrc\custom\custom.qrc \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl \
@@ -458,8 +458,8 @@ PasswordManager.pro:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmain.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf:
-qrc\custom\custom.qrc:
 qrc\dark\dark.qrc:
+qrc\custom\custom.qrc:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl:
@@ -473,12 +473,12 @@ qmake_all: FORCE
 make_first: debug-make_first release-make_first  FORCE
 all: debug-all release-all  FORCE
 clean: debug-clean release-clean  FORCE
-	-$(DEL_FILE) PasswordManager.vc.pdb
-	-$(DEL_FILE) PasswordManager.ilk
-	-$(DEL_FILE) PasswordManager.idb
+	-$(DEL_FILE) temp\obj\PasswordManager.vc.pdb
+	-$(DEL_FILE) bin\PasswordManager.ilk
+	-$(DEL_FILE) bin\PasswordManager.idb
 distclean: debug-distclean release-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) .qmake.stash PasswordManager.pdb
+	-$(DEL_FILE) .qmake.stash bin\PasswordManager.pdb
 
 debug-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)

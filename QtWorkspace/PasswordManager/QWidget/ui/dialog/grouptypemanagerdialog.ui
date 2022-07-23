@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>groupTypeManagerDialog</class>
+ <widget class="QDialog" name="groupTypeManagerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>890</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>890</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>890</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>851</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <property name="usesScrollButtons">
+    <bool>false</bool>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="tabBarAutoHide">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="typeManager">
+    <attribute name="title">
+     <string>类型管理</string>
+    </attribute>
+    <widget class="QTableWidget" name="typeManagerTableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>651</width>
+       <height>581</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>100</y>
+       <width>151</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="typeManagerButtonLayout">
+      <item>
+       <widget class="QPushButton" name="editTypeButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>编辑类型</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteTypeButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>删除类型</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="copyTypeButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>复制类型</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newTypeButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>新建类型</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_1">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>20</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="typeManagerChosenLayout">
+      <item>
+       <widget class="QLabel" name="chosenLabel">
+        <property name="text">
+         <string>当前选中类型</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="chosen">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>未选中</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="editType">
+    <attribute name="title">
+     <string>编辑/新建类型</string>
+    </attribute>
+    <widget class="QGroupBox" name="editFields">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>821</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>编辑字段</string>
+     </property>
+     <widget class="QTableWidget" name="editFieldsTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>801</width>
+        <height>291</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>381</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="addFieldLayout">
+       <item>
+        <widget class="QLabel" name="addFieldLabel">
+         <property name="minimumSize">
+          <size>
+           <width>65</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>65</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>字段类型</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="addFieldComboBox">
+         <property name="minimumSize">
+          <size>
+           <width>188</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>188</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addFieldButton">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>添加字段</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="addFieldNameLayout"/>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="addFieldTipLayout"/>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>550</y>
+       <width>195</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="confirmBoxLayout">
+      <item>
+       <widget class="QPushButton" name="confirm">
+        <property name="text">
+         <string>确定</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancel">
+        <property name="text">
+         <string>取消</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="essentialInfo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>821</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>基本信息</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="typeNameLayout"/>
+     </widget>
+     <widget class="QTextEdit" name="remark">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>481</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>编辑类型说明</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>871</width>
+     <height>681</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+border-radius:10px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>tabWidget</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

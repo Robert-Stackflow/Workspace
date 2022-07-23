@@ -1,65 +1,84 @@
-QT += core gui
-QT += sql
+QT += core gui sql widgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+#CONFIG += precompile_header
+#PRECOMPILED_HEADER = $$PWD/header/precompile.h
+
+DESTDIR = ./bin
+UI_DIR = temp/ui
+MOC_DIR = temp/moc
+RCC_DIR = temp/rcc
+OBJECTS_DIR = temp/obj
 INCLUDEPATH = "./header"
 
 SOURCES += \
-    source/customItem/customTextEdit.cpp \
-    source/controller/draggabletablewidget.cpp \
-    source/dialog/grouptypemanagerdialog.cpp \
-    source/dialog/newitemdialog.cpp \
-    source/customItem/customComboBox.cpp \
-    source/customItem/abstractCustomItem.cpp \
-    source/customItem/customLineEdit.cpp \
+    source/util/databasetablename.cpp \
+    source/main.cpp \
+    source/widget.cpp \
+    source/util/group.cpp \
+    source/util/groups.cpp \
+    source/util/keyItem.cpp \
     source/util/groupType.cpp \
-    source/dialog/main.cpp \
-    source/dialog/widget.cpp \
+    source/util/groupTypes.cpp \
+    source/util/fieldType.cpp \
+    source/util/fieldTypes.cpp \
+    source/util/autofillInfo.cpp \
     source/dialog/logindialog.cpp \
     source/dialog/optiondialog.cpp \
-#    source/dialog/additemdialog.cpp \
-    source/controller/titleBar.cpp \
+    source/dialog/newitemdialog.cpp \
     source/dialog/newgroupdialog.cpp \
+    source/dialog/grouptypemanagerdialog.cpp \
+    source/controller/titleBar.cpp \
+    source/controller/draggabletablewidget.cpp \
     source/function/viewFunction.cpp \
-    source/function/itemFunction.cpp \
     source/function/saveFunction.cpp \
-    source/function/tableFunction.cpp \
-    source/util/itemType.cpp
+    source/function/groupFunction.cpp \
+    source/function/keyItemFunction.cpp \
+    source/function/tableWidgetFunction.cpp \
+    source/customField/customComboBox.cpp \
+    source/customField/customLineEdit.cpp \
+    source/customField/customTextEdit.cpp \
+    source/customField/abstractCustomField.cpp
 
 HEADERS += \
+#    header/precompile.h \
+    header/util/autofillInfo.h \
+    header/util/databasetablename.h \
+    header/util/fieldTypes.h \
+    header/util/groupTypes.h \
+    header/util/groups.h \
+    header/util/keyItem.h \
+    header/widget.h \
+    header/controller/titleBar.h \
     header/controller/draggabletablewidget.h \
-    header/customItem/customTextEdit.h \
-    header/dialog/grouptypemanagerdialog.h \
-    header/customItem/customComboBox.h \
-    header/customItem/customLineEdit.h \
-    header/dialog/newitemdialog.h \
-    header/dialog/widget.h \
+    header/customField/customTextEdit.h \
+    header/customField/customComboBox.h \
+    header/customField/customLineEdit.h \
+    header/customField/abstractCustomField.h \
     header/dialog/logindialog.h \
     header/dialog/optiondialog.h \
-#    header/dialog/additemdialog.h \
-    header/controller/titleBar.h \
-    header/customItem/abstractCustomItem.h \
+    header/dialog/newitemdialog.h \
     header/dialog/newgroupdialog.h \
+    header/dialog/grouptypemanagerdialog.h \
+    header/util/group.h \
     header/util/groupType.h \
-    header/util/itemType.h \
-    header/util/structures.h
+    header/util/fieldType.h
 
 FORMS += \
-    ui/customTextEdit.ui \
-    ui/grouptypemanagerdialog.ui \
-    ui/newgroupdialog.ui \
-    ui/newitemdialog.ui \
-    ui/customLineEdit.ui \
-    ui/customComboBox.ui \
-    ui/widget.ui \
-    ui/logindialog.ui \
-#    ui/additemdialog.ui \
-    ui/optiondialog.ui
+    ui/dialog/logindialog.ui \
+    ui/dialog/optiondialog.ui \
+    ui/dialog/newitemdialog.ui \
+    ui/dialog/newgroupdialog.ui \
+    ui/dialog/grouptypemanagerdialog.ui \
+    ui/customField/customTextEdit.ui \
+    ui/customField/customLineEdit.ui \
+    ui/customField/customComboBox.ui \
+    ui/widget.ui
 
 RESOURCES += \
-    qrc/custom/custom.qrc \
-    qrc/dark/dark.qrc
+    qrc/dark/dark.qrc \
+    qrc/custom/custom.qrc
 
 QXLSX_PARENTPATH=./lib/QXlxs
 QXLSX_HEADERPATH=./lib/QXlxs/QXlxsHeader/

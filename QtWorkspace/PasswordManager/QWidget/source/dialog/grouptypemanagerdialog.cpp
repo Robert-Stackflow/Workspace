@@ -1,7 +1,7 @@
 ﻿#include "dialog/grouptypemanagerdialog.h"
-#include "customItem/customComboBox.h"
+#include "customField/customComboBox.h"
+#include "widget.h"
 #include "ui_grouptypemanagerdialog.h"
-#include "dialog/widget.h"
 #pragma warning (disable:4100)
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
@@ -48,19 +48,19 @@ groupTypeManagerDialog::groupTypeManagerDialog(QWidget *parent) :
         file.close();
     }
     //设置名称框
-    typeName=new customLineEdit("类型名称",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
+    typeName=new customLineEdit("类型名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->typeNameLayout->addWidget(typeName);
-    addItemName=new customLineEdit("字段名称",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
-    ui->addItemNameLayout->addWidget(addItemName);
-    addItemTip=new customLineEdit("填写提示",abstractCustomItem::OPTIONAL,abstractCustomItem::NORMAL,this);
-    ui->addItemTipLayout->addWidget(addItemTip);
-    addItemName->setMaxLength(10);
+    addFieldName=new customLineEdit("字段名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+    ui->addFieldNameLayout->addWidget(addFieldName);
+    addFieldTip=new customLineEdit("填写提示",AbstractCustomField::OPTIONAL,AbstractCustomField::NORMAL,this);
+    ui->addFieldTipLayout->addWidget(addFieldTip);
+    addFieldName->setMaxLength(10);
     ui->tabWidget->tabBar()->hide();
     ui->tabWidget->setCurrentIndex(0);
     //设置添加字段的下拉选择框
     Widget* tempParent=(Widget*)this->parent();
-    itemTypes* itemTypes=&tempParent->itemTypes;
-    ui->addItemComboBox->addItems(itemTypes->getNames());
+    FieldTypes* itemTypes=&tempParent->fieldTypes;
+    ui->addFieldComboBox->addItems(itemTypes->getNames());
     editFieldsTableWidgetHeader<<"是否必填"<<"字段名称"<<"字段类型"<<"填写提示";
     ui->editFieldsTableWidget->setColumnCount(editFieldsTableWidgetHeader.size());
     ui->editFieldsTableWidget->setHorizontalHeaderLabels(editFieldsTableWidgetHeader);
@@ -93,7 +93,7 @@ groupTypeManagerDialog::groupTypeManagerDialog(QWidget *parent) :
     connect(ui->newTypeButton,SIGNAL(clicked()),this,SLOT(onNewTypeClicked()));
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
-    connect(ui->addItemButton,SIGNAL(clicked()),this,SLOT(onAddItemClicked()));
+    connect(ui->addFieldButton,SIGNAL(clicked()),this,SLOT(onAddFieldClicked()));
     connect(this,SIGNAL(groupTypeCountChanged()),parent,SLOT(onGroupTypeCountChanged()));
 }
 
@@ -103,10 +103,10 @@ groupTypeManagerDialog::~groupTypeManagerDialog()
 }
 void groupTypeManagerDialog::loadGroupTypes(){
     Widget* parent=(Widget*)this->parent();
-    groupTypes* groupTypes=parent->groupTypes;
+    GroupTypes* groupTypes=parent->groupTypes;
     for(int i=0;i<groupTypes->count();i++)
     {
-        groupType* groupType=groupTypes->at(i);
+        GroupType* groupType=groupTypes->at(i);
         ui->typeManagerTableWidget->insertRow(ui->typeManagerTableWidget->rowCount());
         ui->typeManagerTableWidget->setItem(ui->typeManagerTableWidget->rowCount()-1,0,new QTableWidgetItem(groupType->getGroupTypeName()));
         ui->typeManagerTableWidget->setItem(ui->typeManagerTableWidget->rowCount()-1,1,new QTableWidgetItem(QString::number(groupType->count())));
@@ -131,7 +131,7 @@ void groupTypeManagerDialog::closeEvent(QCloseEvent* event)
     currentMode=-1;
     newGroupType=nullptr;
     chosenType=nullptr;
-    tempItems=nullptr;
+    tempFields.clear();
     ui->tabWidget->setCurrentIndex(0);
     m_titleBar->setWindowTitle("类型管理");
 }
@@ -150,13 +150,13 @@ void groupTypeManagerDialog::onEditTypeClicked(){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
         Widget* parent=(Widget*)this->parent();
-        groupTypes* groupTypes=parent->groupTypes;
+        GroupTypes* groupTypes=parent->groupTypes;
         chosenType=groupTypes->at(currentRow);
         typeName->setText(chosenType->getGroupTypeName());
         chosenOldName=chosenType->getGroupTypeName();
         ui->remark->setText(chosenType->getDescribe());
-        addItemName->clear();
-        addItemTip->clear();
+        addFieldName->clear();
+        addFieldTip->clear();
         for(int row = 0;row <= ui->editFieldsTableWidget->rowCount();row++)
             ui->editFieldsTableWidget->removeRow(0);
         for(int i = 0;i<chosenType->count();i++)
@@ -164,8 +164,8 @@ void groupTypeManagerDialog::onEditTypeClicked(){
             ui->editFieldsTableWidget->insertRow(ui->editFieldsTableWidget->rowCount());
             ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
             ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,chosenType->at(i)->getIsRequiredCheckBox());
-            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(chosenType->at(i)->getName()));
-            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(chosenType->at(i)->getItemTypeName()));
+            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(chosenType->at(i)->getFieldName()));
+            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(chosenType->at(i)->getFieldTypeName()));
             ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(chosenType->at(i)->getPlaceholderText()));
             for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
                 ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
@@ -187,12 +187,12 @@ void groupTypeManagerDialog::onCopyTypeClicked(){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
         Widget* parent=(Widget*)this->parent();
-        groupTypes* groupTypes=parent->groupTypes;
+        GroupTypes* groupTypes=parent->groupTypes;
         chosenType=groupTypes->at(currentRow);
         typeName->setText(chosenType->getGroupTypeName()+"_copy");
         ui->remark->setText(chosenType->getDescribe());
-        addItemName->clear();
-        addItemTip->clear();
+        addFieldName->clear();
+        addFieldTip->clear();
         for(int row = 0;row <= ui->editFieldsTableWidget->rowCount();row++)
             ui->editFieldsTableWidget->removeRow(0);
         currentMode=0;
@@ -202,13 +202,12 @@ void groupTypeManagerDialog::onCopyTypeClicked(){
 }
 void groupTypeManagerDialog::onNewTypeClicked(){
     typeName->clear();
-    addItemName->clear();
-    addItemTip->clear();
+    addFieldName->clear();
+    addFieldTip->clear();
     ui->remark->clear();
     for(int row = 0;row <= ui->editFieldsTableWidget->rowCount();row++)
         ui->editFieldsTableWidget->removeRow(0);
     currentMode=0;
-    tempItems=new customItems();
     ui->tabWidget->setCurrentIndex(1);
     m_titleBar->setWindowTitle("新建类型");
 }
@@ -229,17 +228,47 @@ void groupTypeManagerDialog::onCancelClicked(){
     currentMode=-1;
     newGroupType=nullptr;
     chosenType=nullptr;
-    tempItems=nullptr;
+    tempFields.clear();
 }
 void groupTypeManagerDialog::onConfirmClicked(){
     Widget* parent=(Widget*)this->parent();
-    groupTypes* groupTypes=parent->groupTypes;
+    GroupTypes* groupTypes=parent->groupTypes;
     if(currentMode==0){
-        if(typeName->isValid()&&!groupTypes->has(typeName->text())&&(tempItems!=nullptr&&tempItems->count()>=2)){
+        if(typeName->isValid()&&!groupTypes->has(typeName->text())&&tempFields.count()>=2){
             int choice=QMessageBox::question(this,"确认新建","是否确认新建类型\""+typeName->text()+"\"");
             if(choice==QMessageBox::Yes){
-                newGroupType=new groupType(typeName->text(),ui->remark->toPlainText(),tempItems);
+                newGroupType=new GroupType(typeName->text(),ui->remark->toPlainText(),tempFields);
                 groupTypes->append(newGroupType);
+                QSqlQuery query(parent->data);
+                if(!parent->data.open()){
+                    QMessageBox::critical(0, QObject::tr("Database Connection Error!"), parent->data.lastError().text());
+                    return;
+                }else{
+                    QString newGroupTypeTableName=parent->databaseTableNameGetter.getGroupTypeTableName(newGroupType->getGroupTypeName());
+                    if(!parent->data.tables().contains(newGroupTypeTableName)){
+                        //向groups表插入数据
+                        query.prepare("insert into "+parent->databaseTableNameGetter.getGroupTypesTableName()+" (groupTypeName,fieldCount,createTime,lastEditTime,describe)"
+                                                                                                              "VALUES (:1,:2,:3,:4,:5)");
+                        query.bindValue(":1",newGroupType->getGroupTypeName());
+                        query.bindValue(":2",newGroupType->count());
+                        query.bindValue(":3",newGroupType->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
+                        query.bindValue(":4",newGroupType->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+                        query.bindValue(":5",newGroupType->getDescribe());
+                        query.exec();
+                        //如果分组不存在，创建记录分组信息的表
+                        query.exec("create table "+newGroupTypeTableName+" (fieldName int,isRequired int,fieldTypeName varchar(200),placeholderText varchar(200))");
+                        for(int i=0;i<newGroupType->count();i++){
+                            query.prepare("insert into "+newGroupTypeTableName+" (fieldName,isRequired,fieldTypeName,placeholderText)"
+                                                                               "VALUES (:1,:2,:3,:4)");
+                            query.bindValue(":1",newGroupType->at(i)->getFieldName());
+                            query.bindValue(":2",newGroupType->at(i)->getIsRequired());
+                            query.bindValue(":3",newGroupType->at(i)->getFieldTypeName());
+                            query.bindValue(":4",newGroupType->at(i)->getPlaceholderText());
+                            query.exec();
+                        }
+                        parent->data.close();
+                    }
+                }
                 emit groupTypeCountChanged();
                 ui->typeManagerTableWidget->insertRow(ui->typeManagerTableWidget->rowCount());
                 ui->typeManagerTableWidget->setItem(ui->typeManagerTableWidget->rowCount()-1,0,new QTableWidgetItem(newGroupType->getGroupTypeName()));
@@ -256,7 +285,7 @@ void groupTypeManagerDialog::onConfirmClicked(){
                 currentMode=-1;
                 newGroupType=nullptr;
                 chosenType=nullptr;
-                tempItems=nullptr;
+                tempFields.clear();
             }
         }else{
             QString message="";
@@ -264,7 +293,7 @@ void groupTypeManagerDialog::onConfirmClicked(){
                 message+="名称不合法!\n";
             if(groupTypes->has(typeName->text()))
                 message+="类型名已存在!\n";
-            if((tempItems!=nullptr&&tempItems->count()<2))
+            if(tempFields.count()<2)
                 message+="字段数目不得小于2!";
             QMessageBox::warning(this,"警告",message);
         }
@@ -280,7 +309,7 @@ void groupTypeManagerDialog::onConfirmClicked(){
                 currentMode=-1;
                 newGroupType=nullptr;
                 chosenType=nullptr;
-                tempItems=nullptr;
+                tempFields.clear();
             }
         }else{
             QString message="";
@@ -294,44 +323,47 @@ void groupTypeManagerDialog::onConfirmClicked(){
         }
     }
 }
-void groupTypeManagerDialog::onAddItemClicked(){
+void groupTypeManagerDialog::onAddFieldClicked(){
     Widget* parent=(Widget*)this->parent();
-    itemTypes* itemTypes=&(parent->itemTypes);
-    if(tempItems==nullptr)
-        tempItems=new customItems();
+    FieldTypes* fieldTypes=&(parent->fieldTypes);
+    bool flag=false;
+    for(int i=0;i<tempFields.count();i++)
+        if(tempFields[i]->getFieldName()==addFieldName->text())
+            flag=true;
     if(currentMode==0){
-        if(addItemName->isValid()&&(tempItems!=nullptr&&!tempItems->has(addItemName->text()))){
+        if(addFieldName->isValid()&&!flag){
             //获取item信息
-            QString itemName=addItemName->text();
-            QString placeholderText=addItemTip->text();
-            int index=ui->addItemComboBox->currentIndex();
-            abstractCustomItem::controllerTypeChoices controllerType=itemTypes->at(index).getItemControllerType();
-            abstractCustomItem::dataTypeChoices dataType=itemTypes->at(index).getItemDataType();
-            abstractCustomItem::isRequiredChoices isRequired=itemTypes->at(index).getItemIsRequired();
-            abstractCustomItem* temp=nullptr;
-            //新建abstractCustomItem
-            if(controllerType==abstractCustomItem::LINEEDIT)
+            QString itemName=addFieldName->text();
+            QString placeholderText=addFieldTip->text();
+            int index=ui->addFieldComboBox->currentIndex();
+            AbstractCustomField::controllerTypeChoices controllerType=fieldTypes->at(index).getFieldControllerType();
+            AbstractCustomField::dataTypeChoices dataType=fieldTypes->at(index).getFieldDataType();
+            AbstractCustomField::isRequiredChoices isRequired=fieldTypes->at(index).getFieldIsRequired();
+            AbstractCustomField* temp=nullptr;
+            //新建abstractCustomField
+            if(controllerType==AbstractCustomField::LINEEDIT)
                 temp=new customLineEdit(itemName,isRequired,dataType,this);
-            else if(controllerType==abstractCustomItem::COMBOBOX)
+            else if(controllerType==AbstractCustomField::COMBOBOX)
                 temp=new customComboBox(itemName,isRequired,dataType,this);
             if(temp!=nullptr&&placeholderText!=""){
                 temp->setPlaceholderText(placeholderText);
             }
             //新建复选框
             QCheckBox *checkItem = new QCheckBox("是否必填",this);
-            checkItem->setChecked(temp->getIsRequired());
-            checkItem->setObjectName("isReqiuredCheckBox"+QString::number(ui->editFieldsTableWidget->rowCount()-1));
+            if(temp!=nullptr)
+                checkItem->setChecked(temp->getIsRequired());
+            checkItem->setObjectName("isRequiredCheckBox"+QString::number(ui->editFieldsTableWidget->rowCount()));
             connect(checkItem,SIGNAL(toggled(bool)),this,SLOT(onIsReqiuredCheckBoxToggled(bool)));
             temp->setIsRequiredCheckBox(checkItem);
-            temp->setItemTypeName(itemTypes->at(index).getItemTypeName());
-            //加入到Items中
-            tempItems->append(temp);
+            temp->setFieldTypeName(fieldTypes->at(index).getFieldTypeName());
+            //加入到tempFields中
+            tempFields<<temp;
             //添加到tableWidget中
             ui->editFieldsTableWidget->insertRow(ui->editFieldsTableWidget->rowCount());
             ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
             ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,checkItem);
             ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(itemName));
-            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(itemTypes->at(index).getItemTypeName()));
+            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(fieldTypes->at(index).getFieldTypeName()));
             ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(placeholderText));
             for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
                 ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
@@ -339,26 +371,26 @@ void groupTypeManagerDialog::onAddItemClicked(){
             }
         }else{
             QString message="";
-            if(tempItems->has(addItemName->text()))
+            if(flag)
                 message+="字段名已存在!";
-            if(!addItemName->isValid())
+            if(!addFieldName->isValid())
                 message+="字段名不合法!";
             QMessageBox::warning(this,"警告",message);
         }
     }else if(currentMode==1){
-        if(addItemName->isValid()&&(chosenType!=nullptr&&!chosenType->has(addItemName->text()))){
+        if(addFieldName->isValid()&&(chosenType!=nullptr&&!chosenType->has(addFieldName->text()))){
             //获取item信息
-            QString itemName=addItemName->text();
-            QString placeholderText=addItemTip->text();
-            int index=ui->addItemComboBox->currentIndex();
-            abstractCustomItem::controllerTypeChoices controllerType=itemTypes->at(index).getItemControllerType();
-            abstractCustomItem::dataTypeChoices dataType=itemTypes->at(index).getItemDataType();
-            abstractCustomItem::isRequiredChoices isRequired=itemTypes->at(index).getItemIsRequired();
-            abstractCustomItem* temp=nullptr;
-            //新建abstractCustomItem
-            if(controllerType==abstractCustomItem::LINEEDIT)
+            QString itemName=addFieldName->text();
+            QString placeholderText=addFieldTip->text();
+            int index=ui->addFieldComboBox->currentIndex();
+            AbstractCustomField::controllerTypeChoices controllerType=fieldTypes->at(index).getFieldControllerType();
+            AbstractCustomField::dataTypeChoices dataType=fieldTypes->at(index).getFieldDataType();
+            AbstractCustomField::isRequiredChoices isRequired=fieldTypes->at(index).getFieldIsRequired();
+            AbstractCustomField* temp=nullptr;
+            //新建abstractCustomField
+            if(controllerType==AbstractCustomField::LINEEDIT)
                 temp=new customLineEdit(itemName,isRequired,dataType,this);
-            else if(controllerType==abstractCustomItem::COMBOBOX)
+            else if(controllerType==AbstractCustomField::COMBOBOX)
                 temp=new customComboBox(itemName,isRequired,dataType,this);
             if(temp!=nullptr&&placeholderText!=""){
                 temp->setPlaceholderText(placeholderText);
@@ -369,8 +401,8 @@ void groupTypeManagerDialog::onAddItemClicked(){
             checkItem->setObjectName("isReqiuredCheckBox"+QString::number(ui->editFieldsTableWidget->rowCount()-1));
             connect(checkItem,SIGNAL(toggled(bool)),this,SLOT(onIsReqiuredCheckBoxToggled(bool)));
             temp->setIsRequiredCheckBox(checkItem);
-            temp->setItemTypeName(itemTypes->at(index).getItemTypeName());
-            //加入到Items中
+            temp->setFieldTypeName(fieldTypes->at(index).getFieldTypeName());
+            //加入到chosenType中
             chosenType->append(temp);
             //添加到tableWidget中
             for(int row = 0;row <= ui->editFieldsTableWidget->rowCount();row++)
@@ -380,45 +412,46 @@ void groupTypeManagerDialog::onAddItemClicked(){
                 ui->editFieldsTableWidget->insertRow(ui->editFieldsTableWidget->rowCount());
                 ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
                 ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,chosenType->at(i)->getIsRequiredCheckBox());
-                ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(chosenType->at(i)->getName()));
-                ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(chosenType->at(i)->getItemTypeName()));
+                ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(chosenType->at(i)->getFieldName()));
+                ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(chosenType->at(i)->getFieldTypeName()));
                 ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(chosenType->at(i)->getPlaceholderText()));
                 for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
                     ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
                     ui->editFieldsTableWidget->horizontalHeader()->setSectionResizeMode(j, QHeaderView::ResizeToContents);
                 }
             }
-//            qDebug()<<ui->editFieldsTableWidget->rowCount();
-//            ui->editFieldsTableWidget->insertRow(ui->editFieldsTableWidget->rowCount());
-//            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
-//            ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,checkItem);
-//            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(itemName));
-//            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(itemTypes->at(index).getItemTypeName()));
-//            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(placeholderText));
-//            for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
-//                ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
-//                ui->editFieldsTableWidget->horizontalHeader()->setSectionResizeMode(j, QHeaderView::ResizeToContents);
-//            }
+            //            qDebug()<<ui->editFieldsTableWidget->rowCount();
+            //            ui->editFieldsTableWidget->insertRow(ui->editFieldsTableWidget->rowCount());
+            //            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
+            //            ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,checkItem);
+            //            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(itemName));
+            //            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(itemTypes->at(index).getFieldTypeName()));
+            //            ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(placeholderText));
+            //            for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
+            //                ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
+            //                ui->editFieldsTableWidget->horizontalHeader()->setSectionResizeMode(j, QHeaderView::ResizeToContents);
+            //            }
         }else{
             QString message="";
-            if(chosenType!=nullptr&&chosenType->has(addItemName->text()))
+            if(chosenType!=nullptr&&chosenType->has(addFieldName->text()))
                 message+="字段名已存在!";
-            if(!addItemName->isValid())
+            if(!addFieldName->isValid())
                 message+="字段名不合法!";
             QMessageBox::warning(this,"警告",message);
         }
     }
 }
-QStringList groupTypeManagerDialog::getItemTypeNameList() const{
+QStringList groupTypeManagerDialog::getFieldTypeNameList() const{
     Widget* parent=(Widget*)this->parent();
-    itemTypes itemTypes=parent->itemTypes;
+    FieldTypes fieldTypes=parent->fieldTypes;
     QStringList list;
-    for(int i=0;i<itemTypes.count();i++)
-        list<<itemTypes[i].getItemTypeName();
+    for(int i=0;i<fieldTypes.count();i++)
+        list<<fieldTypes[i].getFieldTypeName();
     return list;
 }
 void groupTypeManagerDialog::onIsReqiuredCheckBoxToggled(bool isRequired){
     QCheckBox* send=(QCheckBox*)sender();
     int index=send->objectName().midRef(18,10000).toInt();
-    tempItems->at(index)->setIsRequired((abstractCustomItem::isRequiredChoices)isRequired);
+    qDebug()<<index;
+    tempFields[index]->setIsRequired((AbstractCustomField::isRequiredChoices)isRequired);
 }

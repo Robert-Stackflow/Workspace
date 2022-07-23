@@ -1,16 +1,15 @@
-#ifndef TITLEBAR_H
+﻿#ifndef TITLEBAR_H
 #define TITLEBAR_H
-
-#include <QWidget>
-#include <QPushButton>
 #include <QLabel>
-#include <QHBoxLayout>
 #include <QEvent>
-#include <QMouseEvent>
-#include <QApplication>
 #include <QPoint>
 #include <QPixmap>
 #include <QString>
+#include <QWidget>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QMouseEvent>
+#include <QApplication>
 
 class TitleBar : public QWidget
 {
@@ -21,7 +20,6 @@ public:
     void setTitleBarIcon(const QString& iconPath);
     void forbiddenMaxmizeButton();
     void forbiddenUserButton();
-    QLabel* m_titleLabel;
 protected:
     virtual void mouseDoubleClickEvent(QMouseEvent *event);
     virtual void mousePressEvent(QMouseEvent *event);
@@ -34,16 +32,17 @@ protected slots:
     void onClicked();
 
 public:
+    bool m_leftButtonPressed;
     bool m_maximizeForbidden=false;
+    QPoint m_end;
+    QPoint m_start;
     QLabel* m_iconLabel;
+    QLabel* m_titleLabel;
     QPushButton* m_optionButton;
     QPushButton* m_userButton;
     QPushButton* m_minimizeButton;
     QPushButton* m_maximizeButton;
     QPushButton* m_closeButton;
-    QPoint m_start;
-    QPoint m_end;
-    bool m_leftButtonPressed;
 };
 
 #endif // TITLEBAR_H

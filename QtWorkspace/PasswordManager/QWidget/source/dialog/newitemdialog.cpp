@@ -1,8 +1,9 @@
 ﻿#include "dialog/newitemdialog.h"
-#include "customItem/customComboBox.h"
-#include "customItem/customLineEdit.h"
+#include "customField/customComboBox.h"
+#include "customField/customLineEdit.h"
+#include "customField/customTextEdit.h"
 #include "ui_newitemdialog.h"
-#include "dialog/widget.h"
+#include "widget.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -48,23 +49,43 @@ newItemDialog::newItemDialog(QWidget *parent) :
         this->setStyleSheet(styleSheet);
         file.close();
     }
-    customLineEdit* appName=new customLineEdit("应用",abstractCustomItem::REQUIRED,abstractCustomItem::NORMAL,this);
-    ui->infoLayout->addWidget(appName);
-    customLineEdit* nickName=new customLineEdit("昵称",abstractCustomItem::OPTIONAL,abstractCustomItem::NORMAL,this);
-    ui->infoLayout->addWidget(nickName);
-    customLineEdit* id=new customLineEdit("ID",abstractCustomItem::OPTIONAL,abstractCustomItem::NORMAL,this);
-    ui->infoLayout->addWidget(id);
-    customLineEdit* password=new customLineEdit("密码",abstractCustomItem::REQUIRED,abstractCustomItem::PASSWORD,this);
-    ui->infoLayout->addWidget(password);
-    customComboBox* mobile=new customComboBox("手机",abstractCustomItem::OPTIONAL,abstractCustomItem::MOBILE,this);
-    ui->infoLayout->addWidget(mobile);
-    customComboBox* mail=new customComboBox("邮箱",abstractCustomItem::OPTIONAL,abstractCustomItem::MAIL,this);
-    ui->infoLayout->addWidget(mail);
-    customComboBox* website=new customComboBox("网址",abstractCustomItem::OPTIONAL,abstractCustomItem::WEBSITE,this);
-    ui->infoLayout->addWidget(website);
+    ui->scrollAreaWidgetContents->setLayout(ui->infoLayout);
 }
-
 newItemDialog::~newItemDialog()
 {
     delete ui;
+}
+void newItemDialog::loadGroupType(int index){
+    Widget* parent=(Widget*)this->parent();
+    GroupType* groupType=parent->groupTypes->at(index);
+    for(int i=0;i<groupType->count();i++)
+    {
+        AbstractCustomField* currentField=groupType->at(i);
+        AbstractCustomField* newField=nullptr;
+        qDebug()<<currentField->getControllerType();
+        switch(currentField->getControllerType())
+        {
+        case AbstractCustomField::LINEEDIT:
+            newField=new customLineEdit(currentField->getFieldName(),currentField->getIsRequired(),currentField->getDataType(),this);
+            ui->infoLayout->addWidget(newField);
+            break;
+        case AbstractCustomField::COMBOBOX:
+            newField=new customComboBox(currentField->getFieldName(),currentField->getIsRequired(),currentField->getDataType(),this);
+            ui->infoLayout->addWidget(newField);
+            break;
+        case AbstractCustomField::TEXTEDIT:
+            newField=new customTextEdit(currentField->getFieldName(),currentField->getIsRequired(),currentField->getDataType(),this);
+            ui->infoLayout->addWidget(newField);
+            break;
+        }
+    }
+    ui->groupTypeName->setText(groupType->getGroupTypeName());
+    ui->groupTypeCreateTime->setText(groupType->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    ui->groupTypeLastEditTime->setText(groupType->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+}
+void newItemDialog::onConfirmClicked(){
+
+}
+void newItemDialog::onCancelClicked(){
+
 }

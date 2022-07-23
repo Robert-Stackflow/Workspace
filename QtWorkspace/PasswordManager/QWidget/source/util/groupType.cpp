@@ -1,127 +1,115 @@
 ﻿#include "util/groupType.h"
-groupType::groupType(QString groupTypeName,QString describe,customItems* items){
-    this->groupTypeName=groupTypeName;
+GroupType::GroupType(QString GroupTypeName,QString describe,QList<AbstractCustomField*> customFieldList){
+    this->groupTypeName=GroupTypeName;
     this->describe=describe;
-    this->items=items;
+    this->customFieldList=customFieldList;
     this->createTime=QDateTime::currentDateTime();
     this->lastEditTime=QDateTime::currentDateTime();
 }
-bool groupType::has(const QString &name)
+bool GroupType::has(const QString &name)
 {
-    return items->has(name);
+    if(index(name)==-1)
+        return false;
+    return true;
 }
-int groupType::count()
+int GroupType::count()
 {
-    return items->count();
+    return customFieldList.count();
 }
-int groupType::index(const QString &name){
-    return items->index(name);
+int GroupType::index(const QString &name){
+    for(int i=0;i<customFieldList.count();i++)
+        if(customFieldList[i]->getFieldName()==name)
+            return i;
+    return -1;
 }
-void groupType::clear(){
-    items->clear();
+void GroupType::clear(){
+    customFieldList.clear();
 }
-bool groupType::removeOne(const QString &name){
-    return items->removeOne(name);
+bool GroupType::removeOne(const QString &name){
+    int i=index(name);
+    if(i==-1){
+        return false;
+    }else{
+        customFieldList.removeAt(i);
+        return true;
+    }
 }
-bool groupType::remove(const QStringList &names){
-    return items->remove(names);
+bool GroupType::removeAt(int index){
+    if(index<0&&index>=count()){
+        return false;
+    }else{
+        customFieldList.removeAt(index);
+        return true;
+    }
 }
-groupType* groupType::operator<<(abstractCustomItem* newItem)
+bool GroupType::remove(const QStringList &names){
+    bool flag=true;
+    for(int i=0;i<names.count();i++)
+        if(!removeAt(i))
+            flag=false;
+    return flag;
+}
+GroupType* GroupType::operator<<(AbstractCustomField* newField)
 {
-    items->append(newItem);
+    customFieldList<<newField;
     return this;
 }
-abstractCustomItem* groupType::operator[](int index){
-    return items->at(index);
+AbstractCustomField* GroupType::operator[](int index){
+    return customFieldList.at(index);
 }
-void groupType::append(abstractCustomItem* newItem){
-    items->append(newItem);
+void GroupType::append(AbstractCustomField* newItem){
+    customFieldList<<newItem;
 }
-abstractCustomItem* groupType::at(int index){
-    return items->at(index);
+AbstractCustomField* GroupType::at(int index){
+    return customFieldList.at(index);
 }
-void groupType::setLastEditTime(){
+void GroupType::setLastEditTime(){
     this->lastEditTime=QDateTime::currentDateTime();
 }
-const QString &groupType::getDescribe() const
+const QString &GroupType::getDescribe() const
 {
     return describe;
 }
 
-void groupType::setDescribe(const QString &newDescribe)
+void GroupType::setDescribe(const QString &newDescribe)
 {
     describe = newDescribe;
 }
 
-const QDateTime &groupType::getCreateTime() const
+const QDateTime &GroupType::getCreateTime() const
 {
     return createTime;
 }
 
-const QDateTime &groupType::getLastEditTime() const
+const QDateTime &GroupType::getLastEditTime() const
 {
     return lastEditTime;
 }
 
-const QString &groupType::getGroupTypeName() const
+const QString &GroupType::getGroupTypeName() const
 {
     return groupTypeName;
 }
-QStringList groupType::getItemNames(){
-    return items->getItemNames();
+QStringList GroupType::getFieldNames(){
+    QStringList list;
+    for(int i=0;i<count();i++)
+        list<<customFieldList[i]->getFieldName();
+    return list;
 }
-void groupType::setGroupTypeName(const QString &newGroupTypeName)
+void GroupType::setGroupTypeName(const QString &newGroupTypeName)
 {
     groupTypeName = newGroupTypeName;
 }
-
-int groupTypes::index(const QString& groupTypeName){
-    for(int i=0;i<groupTypeList.count();i++)
-        if(groupTypeList[i]->getGroupTypeName()==groupTypeName)
-            return i;
-    return -1;
-}
-bool groupTypes::has(const QString& groupTypeName){
-    if(index(groupTypeName)==-1)
-        return false;
-    else
-        return true;
-}
-groupType* groupTypes::at(int index){
-    return groupTypeList[index];
-}
-void groupTypes::append(groupType* newGroupType){
-    groupTypeList<<newGroupType;
-}
-bool groupTypes::removeOne(const QString& groupTypeName){
-    int i=index(groupTypeName);
-    if(i==-1){
-        return false;
-    }else{
-        groupTypeList.removeAt(i);
-        return true;
-    }
-}
-bool groupTypes::remove(const QStringList& groupTypeNames){
-    bool flag=true;
-    for(int i=0;i<groupTypeNames.count();i++)
-        if(!removeOne(groupTypeNames[i]))
-            flag=false;
-    return flag;
-}
-int groupTypes::count(){
-    return groupTypeList.count();
-}
-groupType *groupTypes::operator [](int index){
-    return groupTypeList[index];
-}
-groupTypes* groupTypes::operator<<(groupType* newGroupType){
-    groupTypeList<<newGroupType;
-    return this;
-}
-QStringList groupTypes::getGroupTypeNames(){
-    QStringList list;
-    for(int i=0;i<groupTypeList.count();i++)
-        list<<groupTypeList[i]->getGroupTypeName();
-    return list;
-}
+//CustomFields& CustomFields::operator=(const CustomFields& c){
+//    CustomFields* customFieldsTemp=new CustomFields();
+//    for(int i=0;i<c.fieldList.count();i++){
+//        AbstractCustomField* temp=nullptr;
+//        if(c.fieldList[i]->getControllerType()==AbstractCustomField::LINEEDIT){
+//            temp=new customLineEdit(c.fieldList[i]->getFieldName(),c.fieldList[i]->getIsRequired(),c.fieldList[i]->getDataType(),c.fieldList[i]->getParent());
+//        }else if(c.fieldList[i]->getControllerType()==AbstractCustomField::COMBOBOX){
+//            temp=new customComboBox(c.fieldList[i]->getFieldName(),c.fieldList[i]->getIsRequired(),c.fieldList[i]->getDataType(),c.fieldList[i]->getParent());
+//        }
+//        customFieldsTemp->append(temp);
+//    }
+//    return *customFieldsTemp;
+//}
