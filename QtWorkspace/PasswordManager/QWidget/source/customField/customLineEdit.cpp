@@ -7,7 +7,7 @@
 #pragma execution_character_set("utf-8")
 #endif
 customLineEdit::customLineEdit(const QString& fieldName,isRequiredChoices isRequired,dataTypeChoices dataType,QWidget* parent) :
-    AbstractCustomField(fieldName,COMBOBOX,isRequired,dataType,parent),
+    AbstractCustomField(fieldName,LINEEDIT,isRequired,dataType,parent),
     ui(new Ui::customLineEdit)
 {
     ui->setupUi(this);
@@ -15,7 +15,7 @@ customLineEdit::customLineEdit(const QString& fieldName,isRequiredChoices isRequ
     QMetaEnum controllerTypeMeta = QMetaEnum::fromType<AbstractCustomField::controllerTypeChoices>();
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     //设置controllerLabel
-    ui->controllerLabel->setText(this->fieldName);
+    ui->controllerLabel->setText(this->controllerFieldName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
@@ -102,4 +102,8 @@ void customLineEdit::setMaxLength(int length){
 }
 QString customLineEdit::getPlaceholderText(){
     return ui->controller->placeholderText();
+}
+AbstractCustomField* customLineEdit::clone(){
+    AbstractCustomField* copy=new customLineEdit(fieldName,isRequired,dataType,parent);
+    return copy;
 }

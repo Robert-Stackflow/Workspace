@@ -58,11 +58,16 @@ newItemDialog::~newItemDialog()
 void newItemDialog::loadGroupType(int index){
     Widget* parent=(Widget*)this->parent();
     GroupType* groupType=parent->groupTypes->at(index);
+    QLayoutItem *child;
+    while((child = ui->infoLayout->takeAt(0)) != 0){
+        if(child->widget())
+            child->widget()->setParent(nullptr);
+        delete child;
+    }
     for(int i=0;i<groupType->count();i++)
     {
         AbstractCustomField* currentField=groupType->at(i);
         AbstractCustomField* newField=nullptr;
-        qDebug()<<currentField->getControllerType();
         switch(currentField->getControllerType())
         {
         case AbstractCustomField::LINEEDIT:
@@ -78,6 +83,7 @@ void newItemDialog::loadGroupType(int index){
             ui->infoLayout->addWidget(newField);
             break;
         }
+        newField->setPlaceholderText(currentField->getPlaceholderText());
     }
     ui->groupTypeName->setText(groupType->getGroupTypeName());
     ui->groupTypeCreateTime->setText(groupType->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));

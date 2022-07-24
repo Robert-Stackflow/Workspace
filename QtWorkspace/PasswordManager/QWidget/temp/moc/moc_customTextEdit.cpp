@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_customTextEdit_t {
-    QByteArrayData data[4];
-    char stringdata0[39];
+    QByteArrayData data[3];
+    char stringdata0[35];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,12 +34,10 @@ static const qt_meta_stringdata_customTextEdit_t qt_meta_stringdata_customTextEd
     {
 QT_MOC_LITERAL(0, 0, 14), // "customTextEdit"
 QT_MOC_LITERAL(1, 15, 18), // "onControllerEdited"
-QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 3) // "arg"
+QT_MOC_LITERAL(2, 34, 0) // ""
 
     },
-    "customTextEdit\0onControllerEdited\0\0"
-    "arg"
+    "customTextEdit\0onControllerEdited\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,10 +55,10 @@ static const uint qt_meta_data_customTextEdit[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x0a /* Public */,
+       1,    0,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -71,10 +69,11 @@ void customTextEdit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<customTextEdit *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onControllerEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 0: _t->onControllerEdited(); break;
         default: ;
         }
     }
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject customTextEdit::staticMetaObject = { {

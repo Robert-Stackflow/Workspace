@@ -17,18 +17,24 @@ public:
     //属性
     void clear();
     bool isValid();
+    AbstractCustomField* clone();
     QString getPlaceholderText();
     void setPlaceholderText(const QString &placeholderText);
     void addItem(const QString& item);
     void addItems(const QStringList& items);
+    void addItems(const QList<QString>& items);
     int currentIndex();
     void setCurrentIndex(int index);
     QString currentText();
     void setCurrentText(const QString& text);
     void setEnable(bool enable);
+    void setEditable(bool editable);
     bool isEnable();
 public slots:
+    void onControllerCurrentIndexChanged(int);
     void onControllerEdited(const QString &arg);
+signals:
+    void currentIndexChanged();
 };
 
 #endif // CUSTOMCOMBOBOX_H

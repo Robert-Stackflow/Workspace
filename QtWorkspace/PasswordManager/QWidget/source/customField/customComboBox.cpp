@@ -16,7 +16,7 @@ customComboBox::customComboBox(const QString& fieldName,isRequiredChoices isRequ
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     ui->controller->setEditable(true);
     //设置controllerLabel
-    ui->controllerLabel->setText(this->fieldName);
+    ui->controllerLabel->setText(this->controllerFieldName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
@@ -28,12 +28,14 @@ customComboBox::customComboBox(const QString& fieldName,isRequiredChoices isRequ
     if(dataType==NORMAL){
         //绑定槽函数
         connect(ui->controller,SIGNAL(currentTextChanged(QString)),this,SLOT(onControllerEdited(QString)));
+        connect(ui->controller,SIGNAL(currentIndexChanged(int)),this,SLOT(onControllerCurrentIndexChanged(int)));
     }else if(dataType==WEBSITE||dataType==MOBILE||dataType==MAIL){
         //设置Validator
         const QValidator* validator=getValidator();
         ui->controller->setValidator(validator);
         //绑定槽函数
         connect(ui->controller,SIGNAL(currentTextChanged(QString)),this,SLOT(onControllerEdited(QString)));
+        connect(ui->controller,SIGNAL(currentIndexChanged()),this,SLOT(onControllerCurrentIndexChanged()));
     }
     setPlaceholderText(defaultPlaceholderText);
 }
@@ -46,6 +48,9 @@ bool customComboBox::isValid(){
     int position=0;
     QString value=QString(ui->controller->currentText());
     return ((value!=""&&isRequired==REQUIRED)||(getValidator()!=nullptr&&QValidator::Acceptable==getValidator()->validate(value,position)));
+}
+void customComboBox::onControllerCurrentIndexChanged(int){
+    emit currentIndexChanged();
 }
 void customComboBox::onControllerEdited(const QString &arg)
 {
@@ -72,6 +77,12 @@ void customComboBox::addItem(const QString& item){
 void customComboBox::addItems(const QStringList& items){
     ui->controller->addItems(items);
 }
+void customComboBox::addItems(const QList<QString> &items){
+    QStringList itemList;
+    for(int i=0;i<items.count();i++)
+        itemList<<items[i];
+    ui->controller->addItems(itemList);
+}
 void customComboBox::clear(){
     ui->controller->clear();
 }
@@ -89,4 +100,11 @@ void customComboBox::setCurrentText(const QString& text){
 }
 void customComboBox::setEnable(bool enable){
     ui->controller->setEnabled(enable);
+}
+void customComboBox::setEditable(bool editable){
+    ui->controller->setEditable(editable);
+}
+AbstractCustomField* customComboBox::clone(){
+    AbstractCustomField* copy=new customComboBox(fieldName,isRequired,dataType,parent);
+    return copy;
 }

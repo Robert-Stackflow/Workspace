@@ -42,11 +42,11 @@
 #include "dialog/optiondialog.h"
 #include "dialog/newitemdialog.h"
 #include "dialog/newgroupdialog.h"
-#include "dialog/grouptypemanagerdialog.h"
+#include "dialog/newgrouptypedialog.h"
 #include "ui_optiondialog.h"
 #include "ui_newitemdialog.h"
 #include "ui_newgroupdialog.h"
-#include "ui_grouptypemanagerdialog.h"
+#include "ui_newgrouptypedialog.h"
 #include "util/keyItem.h"
 #include "util/autofillInfo.h"
 #include "util/groups.h"
@@ -91,7 +91,7 @@ public:
     optionDialog* optiondialog;
     newItemDialog* newitemdialog;
     newGroupDialog* newgroupdialog;
-    groupTypeManagerDialog* grouptypemanagerdialog;
+    newGroupTypeDialog* newgrouptypedialog;
     //custom controllers
     TitleBar *m_titleBar;
     QMenu* tableWidgetMenu;
@@ -114,7 +114,7 @@ public:
     int fillMoveMenu(QMenu*,int,int);
     void updateTableWidgetView(int index);
     //增删改分组
-    void newGroupFunction();
+    void newGroupFunction(int mode);
     void editGroupFunction(QString oldName);
     //增删改条目
     void loadKeyItemFunction(QString& tableName);

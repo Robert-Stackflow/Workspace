@@ -1,10 +1,21 @@
 ﻿#include "util/groupType.h"
-GroupType::GroupType(QString GroupTypeName,QString describe,QList<AbstractCustomField*> customFieldList){
-    this->groupTypeName=GroupTypeName;
+void GroupType::setCustomFieldList(const QList<AbstractCustomField *> &newCustomFieldList)
+{
+    customFieldList = newCustomFieldList;
+}
+
+GroupType::GroupType(QString groupTypeName,QString describe,QList<AbstractCustomField*> customFieldList){
+    this->groupTypeName=groupTypeName;
     this->describe=describe;
     this->customFieldList=customFieldList;
     this->createTime=QDateTime::currentDateTime();
     this->lastEditTime=QDateTime::currentDateTime();
+}
+GroupType::GroupType(QString groupTypeName,QDateTime createTime,QDateTime lastEditTime,QString describe){
+    this->groupTypeName=groupTypeName;
+    this->describe=describe;
+    this->createTime=createTime;
+    this->lastEditTime=lastEditTime;
 }
 bool GroupType::has(const QString &name)
 {
@@ -100,16 +111,12 @@ void GroupType::setGroupTypeName(const QString &newGroupTypeName)
 {
     groupTypeName = newGroupTypeName;
 }
-//CustomFields& CustomFields::operator=(const CustomFields& c){
-//    CustomFields* customFieldsTemp=new CustomFields();
-//    for(int i=0;i<c.fieldList.count();i++){
-//        AbstractCustomField* temp=nullptr;
-//        if(c.fieldList[i]->getControllerType()==AbstractCustomField::LINEEDIT){
-//            temp=new customLineEdit(c.fieldList[i]->getFieldName(),c.fieldList[i]->getIsRequired(),c.fieldList[i]->getDataType(),c.fieldList[i]->getParent());
-//        }else if(c.fieldList[i]->getControllerType()==AbstractCustomField::COMBOBOX){
-//            temp=new customComboBox(c.fieldList[i]->getFieldName(),c.fieldList[i]->getIsRequired(),c.fieldList[i]->getDataType(),c.fieldList[i]->getParent());
-//        }
-//        customFieldsTemp->append(temp);
-//    }
-//    return *customFieldsTemp;
-//}
+GroupType* GroupType::clone(){
+    QList<AbstractCustomField*> copyFieldList;
+    for(int i=0;i<count();i++){
+        AbstractCustomField* copyField=customFieldList[i]->clone();
+        copyFieldList<<copyField;
+    }
+    GroupType* copy=new GroupType(groupTypeName,describe,copyFieldList);
+    return copy;
+}

@@ -15,7 +15,7 @@ customTextEdit::customTextEdit(const QString& fieldName,isRequiredChoices isRequ
     QMetaEnum controllerTypeMeta = QMetaEnum::fromType<AbstractCustomField::controllerTypeChoices>();
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     //设置controllerLabel
-    ui->controllerLabel->setText(this->fieldName);
+    ui->controllerLabel->setText(this->controllerFieldName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
@@ -26,11 +26,12 @@ customTextEdit::customTextEdit(const QString& fieldName,isRequiredChoices isRequ
     //根据dataType初始化
     if(dataType==NORMAL){
         //绑定槽函数
-        connect(ui->controller,SIGNAL(textChanged(QString)),this,SLOT(onControllerEdited(QString)));
+        connect(ui->controller,SIGNAL(textChanged()),this,SLOT(onControllerEdited()));
     }
     setPlaceholderText(defaultPlaceholderText);
 }
-void customTextEdit::onControllerEdited(const QString &arg){
+void customTextEdit::onControllerEdited(){
+    QString arg=ui->controller->toPlainText();
     if(isRequired==AbstractCustomField::OPTIONAL&&dataType==NORMAL){
         ui->controllerJudge->setIcon(QIcon());
         ui->controllerJudge->setStatusTip("");
@@ -65,4 +66,8 @@ bool customTextEdit::isValid(){
 
 customTextEdit::~customTextEdit(){
     delete ui;
+}
+AbstractCustomField* customTextEdit::clone(){
+    AbstractCustomField* copy=new customTextEdit(fieldName,isRequired,dataType,parent);
+    return copy;
 }

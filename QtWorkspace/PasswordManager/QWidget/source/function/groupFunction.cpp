@@ -1,4 +1,5 @@
-﻿#include "widget.h"
+﻿#include "customField/customTextEdit.h"
+#include "widget.h"
 #include "ui_widget.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
@@ -22,11 +23,62 @@ void Widget::loadUserData()
         if(!tableNames.contains(databaseTableNameGetter.getAutofillInfoTableName())){
             query.exec("create table autofillInfo (type int,content varchar(100),remark varchar(100))");
         }
-        tableNames.removeOne(databaseTableNameGetter.getGroupsTableName());
-        tableNames.removeOne(databaseTableNameGetter.getGroupTypesTableName());
-        tableNames.removeOne(databaseTableNameGetter.getAutofillInfoTableName());
+        //加载分组类型
+        QString curTableName=databaseTableNameGetter.getGroupTypesTableName();
+        query.exec("select * from "+curTableName);
+        //新建各个分组类型
+        for(int i = 0;query.next(); i++){
+            GroupType* newGroupType=new GroupType(query.value(0).toString(),query.value(2).toDateTime(),query.value(3).toDateTime(),query.value(4).toString());
+            groupTypes->append(newGroupType);
+        }
+        //加载各个分组类型的字段条目
+        for(int i=0;i<groupTypes->count();i++){
+            curTableName=databaseTableNameGetter.getGroupTypeTableName(groupTypes->at(i)->getGroupTypeName());
+            query.exec("select * from "+curTableName);
+            QList<AbstractCustomField*> fieldList;
+            for(int i = 0;query.next(); i++){
+                QString fieldName=query.value(0).toString();
+                QString fieldTypeName=query.value(2).toString();
+                QString fieldPlaceholderText=query.value(3).toString();
+                AbstractCustomField::controllerTypeChoices controllerType=fieldTypes.getControllerType(fieldTypeName);
+                AbstractCustomField::dataTypeChoices dataType=fieldTypes.getDataType(fieldTypeName);
+                AbstractCustomField::isRequiredChoices isRequired=AbstractCustomField::isRequiredChoices(query.value(1).toInt());
+                AbstractCustomField* tempField=nullptr;
+                //新建abstractCustomField
+                if(controllerType==AbstractCustomField::LINEEDIT)
+                    tempField=new customLineEdit(fieldName,isRequired,dataType);
+                else if(controllerType==AbstractCustomField::COMBOBOX)
+                    tempField=new customComboBox(fieldName,isRequired,dataType);
+                else if(controllerType==AbstractCustomField::TEXTEDIT)
+                    tempField=new customTextEdit(fieldName,isRequired,dataType);
+                if(tempField!=nullptr&&fieldPlaceholderText!=""){
+                    tempField->setPlaceholderText(fieldPlaceholderText);
+                }
+                fieldList<<tempField;
+            }
+            groupTypes->at(i)->setCustomFieldList(fieldList);
+        }
+        newgrouptypedialog->loadGroupTypes();
+        //加载分组
+        //新建各个分组
+        curTableName=databaseTableNameGetter.getGroupsTableName();
+        query.exec("select * from "+curTableName);
+        for(int i = 0;query.next(); i++){
+            newGroup=new Group(query.value(0).toInt(),query.value(1).toString(),query.value(3).toDateTime(),query.value(4).toDateTime(),query.value(5).toString());
+            newGroupFunction(1);
+        }
+        //加载每个分组的密码条目
+        for(int i=0;i<groups->count();i++){
+            curTableName=databaseTableNameGetter.getGroupTableName(groups->at(i)->getGroupName());
+            query.exec("select * from "+curTableName);
+            //加载密码条目
+            for(int k=0;query.next();k++){
+                newKeyItem=new KeyItem(groups->at(i)->getGroupType(),query.value(1).toDateTime(),query.value(2).toDateTime(),groupTypes->at(groups->at(i)->getGroupType())->getFieldNames());
+                loadKeyItemFunction(curTableName);
+            }
+        }
         //加载个人信息
-        QString curTableName=databaseTableNameGetter.getAutofillInfoTableName();
+        curTableName=databaseTableNameGetter.getAutofillInfoTableName();
         query.exec("select * from "+curTableName);
         for(int i = 0;query.next(); i++){
             //个人信息类型:1-邮箱,2-电话,3-网址
@@ -45,32 +97,6 @@ void Widget::loadUserData()
             }
         }
         updateAutofillInfo();
-        //新建各个分组
-        curTableName=databaseTableNameGetter.getGroupsTableName();
-        query.exec("select * from "+curTableName);
-        for(int i = 0;query.next(); i++){
-            newGroup=new Group(query.value(0).toInt(),query.value(1).toString(),query.value(3).toDateTime(),query.value(4).toDateTime(),query.value(5).toString());
-            newGroupFunction();
-        }
-        //加载每个分组的密码条目
-        for(int i=0;i<tableNames.count();i++){
-            //定位分组
-            Group* currentGroup=nullptr;
-            for(int j=0;j<groups->count();j++){
-                currentGroup=groups->at(j);
-                if(tableNames[i]==currentGroup->getGroupName())
-                    break;
-            }
-            //加载密码条目
-            if(currentGroup!=nullptr){
-                curTableName=currentGroup->getGroupName();
-                query.exec("select * from "+curTableName);
-                for(int k=0;query.next();k++){
-                    newKeyItem=new KeyItem(currentGroup->getGroupType(),query.value(1).toDateTime(),query.value(2).toDateTime(),groupTypes->at(currentGroup->getGroupType())->getFieldNames());
-                    loadKeyItemFunction(curTableName);
-                }
-            }
-        }
         data.close();
     }
     //发射分组数目改变的信号
@@ -88,9 +114,9 @@ void Widget::newGroupSlot()
     newgroupdialog->exec();
     //关闭newgroupdialog窗口后，赋值Group，并调用newGroupFunction新建分组
     newGroup=newgroupdialog->newGroup;
-    newGroupFunction();
+    newGroupFunction(0);
 }
-void Widget::newGroupFunction()
+void Widget::newGroupFunction(int mode)
 {
     if(newGroup==nullptr)
         return;
@@ -136,28 +162,30 @@ void Widget::newGroupFunction()
     stackedWidget->addWidget(widgets[groupCount]);
     //添加到groups中
     groups->append(newGroup);
-    //添加到数据库中
-    QSqlQuery query(data);
-    if(!data.open()){
-        QMessageBox::critical(0, QObject::tr("Database Connection Error!"), data.lastError().text());
-        return;
-    }else{
-        QString newGroupTableName=databaseTableNameGetter.getGroupTableName(newGroup->getGroupName());
-        if(!data.tables().contains(newGroupTableName)){
-            //如果分组不存在，创建记录分组信息的表
-            query.exec("create table "+newGroupTableName+" (groupType int,createTime varchar(200),lastEditTime varchar(200))");
-            //向groups表插入数据
-            query.prepare("insert into groups (groupType,groupName,KeyItemCount,createTime,lastEditTime,describe)"
-                          "VALUES (:1,:2,:3,:4,:5,:6)");
-            query.bindValue(":1",newGroup->getGroupType());
-            query.bindValue(":2",newGroup->getGroupName());
-            query.bindValue(":3",newGroup->count());
-            query.bindValue(":4",newGroup->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
-            query.bindValue(":5",newGroup->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
-            query.bindValue(":6",newGroup->getDescribe());
-            query.exec();
+    if(mode==0){
+        //添加到数据库中
+        QSqlQuery query(data);
+        if(!data.open()){
+            QMessageBox::critical(0, QObject::tr("Database Connection Error!"), data.lastError().text());
+            return;
+        }else{
+            QString newGroupTableName=databaseTableNameGetter.getGroupTableName(newGroup->getGroupName());
+            if(!data.tables().contains(newGroupTableName)){
+                //如果分组不存在，创建记录分组信息的表
+                query.exec("create table "+newGroupTableName+" (groupType int,createTime varchar(200),lastEditTime varchar(200))");
+                //向groups表插入数据
+                query.prepare("insert into groups (groupType,groupName,KeyItemCount,createTime,lastEditTime,describe)"
+                              "VALUES (:1,:2,:3,:4,:5,:6)");
+                query.bindValue(":1",newGroup->getGroupType());
+                query.bindValue(":2",newGroup->getGroupName());
+                query.bindValue(":3",newGroup->count());
+                query.bindValue(":4",newGroup->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
+                query.bindValue(":5",newGroup->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+                query.bindValue(":6",newGroup->getDescribe());
+                query.exec();
+            }
+            data.close();
         }
-        data.close();
     }
     //发射分组数目改变的信号
     emit groupCountChanged();

@@ -5,14 +5,15 @@ CONFIG += c++11
 #CONFIG += precompile_header
 #PRECOMPILED_HEADER = $$PWD/header/precompile.h
 
-DESTDIR = ./bin
+DESTDIR = bin
 UI_DIR = temp/ui
 MOC_DIR = temp/moc
 RCC_DIR = temp/rcc
 OBJECTS_DIR = temp/obj
-INCLUDEPATH = "./header"
+INCLUDEPATH = header
 
 SOURCES += \
+    source/dialog/newgrouptypedialog.cpp \
     source/util/databasetablename.cpp \
     source/main.cpp \
     source/widget.cpp \
@@ -28,7 +29,6 @@ SOURCES += \
     source/dialog/optiondialog.cpp \
     source/dialog/newitemdialog.cpp \
     source/dialog/newgroupdialog.cpp \
-    source/dialog/grouptypemanagerdialog.cpp \
     source/controller/titleBar.cpp \
     source/controller/draggabletablewidget.cpp \
     source/function/viewFunction.cpp \
@@ -43,6 +43,7 @@ SOURCES += \
 
 HEADERS += \
 #    header/precompile.h \
+    header/dialog/newgrouptypedialog.h \
     header/util/autofillInfo.h \
     header/util/databasetablename.h \
     header/util/fieldTypes.h \
@@ -60,17 +61,16 @@ HEADERS += \
     header/dialog/optiondialog.h \
     header/dialog/newitemdialog.h \
     header/dialog/newgroupdialog.h \
-    header/dialog/grouptypemanagerdialog.h \
     header/util/group.h \
     header/util/groupType.h \
     header/util/fieldType.h
 
 FORMS += \
     ui/dialog/logindialog.ui \
+    ui/dialog/newgrouptypedialog.ui \
     ui/dialog/optiondialog.ui \
     ui/dialog/newitemdialog.ui \
     ui/dialog/newgroupdialog.ui \
-    ui/dialog/grouptypemanagerdialog.ui \
     ui/customField/customTextEdit.ui \
     ui/customField/customLineEdit.ui \
     ui/customField/customComboBox.ui \

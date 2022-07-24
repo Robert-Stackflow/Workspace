@@ -1,6 +1,12 @@
 ﻿#include "util/databasetablename.h"
 
+const QString &dataBaseTableName::getAccountTableName() const
+{
+    return accountTableName;
+}
+
 dataBaseTableName::dataBaseTableName(){
+    accountTableName="accounts";
     groupsTableName="groups";
     groupTypesTableName="groupTypes";
     autofillInfoTableName="autofillInfo";

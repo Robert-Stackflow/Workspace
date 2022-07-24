@@ -41,9 +41,9 @@ public:
 protected:
     //控件
     QWidget* parent;
-    QCheckBox* isRequiredCheckBox;
     //基本属性
     QString fieldName;
+    QString controllerFieldName;
     QString fieldTypeName;
     dataTypeChoices dataType;
     isRequiredChoices isRequired;
@@ -62,8 +62,6 @@ public:
     controllerTypeChoices getControllerType() const;
     isRequiredChoices getIsRequired() const;
     void setIsRequired(isRequiredChoices newIsRequired);
-    QCheckBox *getIsRequiredCheckBox() const;
-    void setIsRequiredCheckBox(QCheckBox *newIsRequiredCheckBox);
     const QString &getFieldTypeName() const;
     void setFieldTypeName(const QString &newFieldTypeName);
     const QValidator* getValidator() const;
@@ -72,6 +70,7 @@ public:
     //抽象函数
     virtual bool isValid()=0;
     virtual QString getPlaceholderText()=0;
+    virtual AbstractCustomField* clone();
     virtual void setPlaceholderText(const QString& placeholderText)=0;
 };
 

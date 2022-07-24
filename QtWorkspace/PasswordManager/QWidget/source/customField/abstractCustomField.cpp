@@ -12,16 +12,20 @@ const QValidator* AbstractCustomField::mailValidator=new QRegExpValidator(Abstra
 AbstractCustomField::AbstractCustomField(const QString& fieldName,controllerTypeChoices controllerType,isRequiredChoices isRequired,dataTypeChoices dataType,QWidget* parent):QWidget(parent){
     this->parent=parent;
     this->fieldName=fieldName;
+    this->controllerFieldName=fieldName;
     if(isRequired==REQUIRED){
-        this->fieldName+='*';
+        this->controllerFieldName='*'+this->controllerFieldName;
     }
+    this->controllerFieldName+=':';
     this->controllerType=controllerType;
     this->isRequired=isRequired;
     this->dataType=dataType;
     switch(dataType){
     case NORMAL:
+        defaultPlaceholderText=QString("Enter Text");
+        break;
     case PASSWORD:
-        defaultPlaceholderText=QString("");
+        defaultPlaceholderText=QString("Enter Password");
         break;
     case WEBSITE:
         defaultPlaceholderText=QString("Enter website");
@@ -88,19 +92,9 @@ void AbstractCustomField::setIsRequired(isRequiredChoices newIsRequired)
 {
     isRequired = newIsRequired;
     if(isRequired==REQUIRED)
-        this->fieldName+="*";
+        controllerFieldName="*"+controllerFieldName;
     else
-        this->fieldName.left(this->fieldName.length());
-}
-
-QCheckBox *AbstractCustomField::getIsRequiredCheckBox() const
-{
-    return isRequiredCheckBox;
-}
-
-void AbstractCustomField::setIsRequiredCheckBox(QCheckBox *newIsRequiredCheckBox)
-{
-    isRequiredCheckBox = newIsRequiredCheckBox;
+        controllerFieldName=controllerFieldName.right(this->controllerFieldName.length()-1);
 }
 const QString &AbstractCustomField::getFieldTypeName() const
 {
@@ -110,4 +104,7 @@ const QString &AbstractCustomField::getFieldTypeName() const
 void AbstractCustomField::setFieldTypeName(const QString &newFieldTypeName)
 {
     fieldTypeName = newFieldTypeName;
+}
+AbstractCustomField* AbstractCustomField::clone(){
+    return nullptr;
 }

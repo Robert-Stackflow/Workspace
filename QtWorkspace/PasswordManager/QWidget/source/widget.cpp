@@ -17,7 +17,8 @@ Widget::~Widget()
 void Widget::initFrame()
 {
     //初始化列表
-    fieldTypes<<FieldType("文本",AbstractCustomField::LINEEDIT,AbstractCustomField::NORMAL,AbstractCustomField::OPTIONAL);
+    fieldTypes<<FieldType("单行文本",AbstractCustomField::LINEEDIT,AbstractCustomField::NORMAL,AbstractCustomField::OPTIONAL);
+    fieldTypes<<FieldType("多行文本",AbstractCustomField::TEXTEDIT,AbstractCustomField::NORMAL,AbstractCustomField::OPTIONAL);
     fieldTypes<<FieldType("密码",AbstractCustomField::LINEEDIT,AbstractCustomField::PASSWORD,AbstractCustomField::REQUIRED);
     fieldTypes<<FieldType("邮箱",AbstractCustomField::LINEEDIT,AbstractCustomField::MAIL,AbstractCustomField::OPTIONAL);
     fieldTypes<<FieldType("电话",AbstractCustomField::LINEEDIT,AbstractCustomField::MOBILE,AbstractCustomField::OPTIONAL);
@@ -47,7 +48,7 @@ void Widget::initFrame()
     optiondialog=new optionDialog(this);
     newitemdialog=new newItemDialog(this);
     newgroupdialog=new newGroupDialog(this);
-    grouptypemanagerdialog=new groupTypeManagerDialog(this);
+    newgrouptypedialog=new newGroupTypeDialog(this);
     //初始化数据库
     data=QSqlDatabase::addDatabase("QSQLITE",QString::asprintf("%d",0));
     data.setDatabaseName("user.db");

@@ -17,12 +17,13 @@ public:
     //属性
     void clear();
     bool isValid();
+    AbstractCustomField* clone();
     QString getPlaceholderText();
     void setPlaceholderText(const QString& placeholderText);
     QString toPlainText();
     void setText(const QString &text);
 public slots:
-    void onControllerEdited(const QString &arg);
+    void onControllerEdited();
 };
 
 #endif // CUSTOMTEXTEDIT_H

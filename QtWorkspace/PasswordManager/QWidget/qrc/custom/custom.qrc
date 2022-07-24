@@ -11,5 +11,6 @@
         <file>icons/pin.png</file>
         <file>icons/setting.png</file>
         <file>icons/unlogged.png</file>
+        <file>icons/defaultPortrait.png</file>
     </qresource>
 </RCC>

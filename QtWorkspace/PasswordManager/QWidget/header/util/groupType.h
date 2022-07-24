@@ -11,7 +11,8 @@ private:
     QList<AbstractCustomField*> customFieldList;
 public:
     //构造函数
-    GroupType(QString groupTypeName,QString describe,QList<AbstractCustomField*> items);
+    GroupType(QString groupTypeName,QString describe,QList<AbstractCustomField*> customFieldList);
+    GroupType(QString groupTypeName,QDateTime createTime,QDateTime lastEditTime,QString describe);
     //成员的setter与getter
     const QString &getDescribe() const;
     void setDescribe(const QString &newDescribe);
@@ -20,11 +21,13 @@ public:
     void setLastEditTime();
     const QString &getGroupTypeName() const;
     void setGroupTypeName(const QString &newGroupTypeName);
+    void setCustomFieldList(const QList<AbstractCustomField *> &newCustomFieldList);
     //辅助函数
     int count();
     void clear();
     int index(const QString &name);
     bool has(const QString &name);
+    GroupType* clone();
     //重载运算符
     GroupType* operator<<(AbstractCustomField* newField);
     AbstractCustomField* operator[](int index);

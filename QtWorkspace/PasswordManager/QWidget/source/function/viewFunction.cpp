@@ -86,7 +86,7 @@ void Widget::onOptionButtonClicked()
     //    optiondialog->setModal(true);
     //    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
     //    optiondialog->exec();
-    grouptypemanagerdialog->setModal(true);
-    grouptypemanagerdialog->setGeometry(this->geometry().x()+this->width()/2-grouptypemanagerdialog->width()/2+10,this->geometry().y()+this->height()/2-grouptypemanagerdialog->height()/2-10,grouptypemanagerdialog->width(),grouptypemanagerdialog->height());
-    grouptypemanagerdialog->exec();
+    newgrouptypedialog->setModal(true);
+    newgrouptypedialog->setGeometry(this->geometry().x()+this->width()/2-newgrouptypedialog->width()/2+10,this->geometry().y()+this->height()/2-newgrouptypedialog->height()/2-10,newgrouptypedialog->width(),newgrouptypedialog->height());
+    newgrouptypedialog->exec();
 }

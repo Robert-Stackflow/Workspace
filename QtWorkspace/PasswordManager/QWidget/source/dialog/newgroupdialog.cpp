@@ -48,9 +48,11 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
     }
     //添加自定义控件
     newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+    newGroupName->setPlaceholderText("输入分组名称");
     ui->groupInfoLayout->addWidget(newGroupName);
     newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->groupInfoLayout->addWidget(newGroupType);
+    newGroupType->setEditable(false);
     Widget* tempParent=(Widget*)this->parent();
     GroupTypes* groupTypes=tempParent->groupTypes;
     newGroupType->addItems(groupTypes->getGroupTypeNames());
@@ -98,7 +100,7 @@ void newGroupDialog::setCurrentMode(int newCurrentMode){
 void newGroupDialog::onJumpToGroupTypeManagerClicked()
 {
     Widget* parent=(Widget*)this->parent();
-    groupTypeManagerDialog* grouptypemanagerdialog=parent->grouptypemanagerdialog;
+    newGroupTypeDialog* grouptypemanagerdialog=parent->newgrouptypedialog;
     grouptypemanagerdialog->setModal(true);
     grouptypemanagerdialog->setGeometry(this->geometry().x()+this->width()/2-grouptypemanagerdialog->width()/2+10,this->geometry().y()+this->height()/2-grouptypemanagerdialog->height()/2-10,grouptypemanagerdialog->width(),grouptypemanagerdialog->height());
     grouptypemanagerdialog->exec();
