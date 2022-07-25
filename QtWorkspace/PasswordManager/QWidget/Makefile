@@ -241,6 +241,7 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf \
 		lib\QXlxs\QXlsx.pri \
+		lib\QsLog\QsLog.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds_post.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf \
@@ -432,6 +433,7 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf:
 lib\QXlxs\QXlsx.pri:
+lib\QsLog\QsLog.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds_post.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf:

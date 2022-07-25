@@ -1,7 +1,7 @@
 ﻿#ifndef NEWGROUPTYPEDIALOG_H
 #define NEWGROUPTYPEDIALOG_H
 #include <QDialog>
-#include "util/groupType.h"
+#include "structure/groupType.h"
 #include "controller/titleBar.h"
 #include "customField/customLineEdit.h"
 namespace Ui {
@@ -10,7 +10,12 @@ class newGroupTypeDialog;
 class newGroupTypeDialog : public QDialog
 {
     Q_OBJECT
-
+public:
+    enum mode{
+        NORMAL=-1,
+        NEWGROUPTYPE,
+        EDITGROUPTYPE
+    };
 public:
     //表头
     QStringList typeManagerTableWidgetHeader;
@@ -21,14 +26,15 @@ public:
     customLineEdit* addFieldName;
     customLineEdit* addFieldTip;
     //辅助变量
-    GroupType* currentGroupType;
     QString chosenOldName;
     GroupType* newGroupType;
+    GroupType* currentGroupType;
     QList<AbstractCustomField*> tempFields;
     //辅助变量
     int currentRow=-1;
-    int currentMode=-1;//0-新建,1-编辑
+    mode currentMode=NORMAL;
 private:
+    Ui::newGroupTypeDialog *ui;
     QString styleSheet;
 public:
     explicit newGroupTypeDialog(QWidget *parent = nullptr);
@@ -37,9 +43,8 @@ public:
     virtual void closeEvent(QCloseEvent* event) override;
     void loadGroupTypes();
 private:
-    Ui::newGroupTypeDialog *ui;
     void initDialog();
-public slots:
+private slots:
     void onTypeManagerTableWidgetClicked();
     void onEditTypeClicked();
     void onDeleteTypeClicked();
@@ -50,8 +55,8 @@ public slots:
     void onAddFieldClicked();
     void onIsReqiuredCheckBoxToggled(bool);
 signals:
-    void typeManagerTableWidgetClicked();
     void groupTypeCountChanged();
+    void typeManagerTableWidgetClicked();
 };
 
 #endif // NEWGROUPTYPEDIALOG_H

@@ -13,18 +13,21 @@ OBJECTS_DIR = temp/obj
 INCLUDEPATH = header
 
 SOURCES += \
+    source/util/datapathgetter.cpp \
+    source/structure/account.cpp \
     source/dialog/newgrouptypedialog.cpp \
-    source/util/databasetablename.cpp \
     source/main.cpp \
+    source/util/databasetablenamegetter.cpp \
+    source/util/shareddata.cpp \
     source/widget.cpp \
-    source/util/group.cpp \
-    source/util/groups.cpp \
-    source/util/keyItem.cpp \
-    source/util/groupType.cpp \
-    source/util/groupTypes.cpp \
-    source/util/fieldType.cpp \
-    source/util/fieldTypes.cpp \
-    source/util/autofillInfo.cpp \
+    source/structure/group.cpp \
+    source/structure/groups.cpp \
+    source/structure/keyItem.cpp \
+    source/structure/groupType.cpp \
+    source/structure/groupTypes.cpp \
+    source/structure/fieldType.cpp \
+    source/structure/fieldTypes.cpp \
+    source/structure/autofillInfo.cpp \
     source/dialog/logindialog.cpp \
     source/dialog/optiondialog.cpp \
     source/dialog/newitemdialog.cpp \
@@ -44,12 +47,15 @@ SOURCES += \
 HEADERS += \
 #    header/precompile.h \
     header/dialog/newgrouptypedialog.h \
-    header/util/autofillInfo.h \
-    header/util/databasetablename.h \
-    header/util/fieldTypes.h \
-    header/util/groupTypes.h \
-    header/util/groups.h \
-    header/util/keyItem.h \
+    header/structure/account.h \
+    header/structure/autofillInfo.h \
+    header/util/data.h \
+    header/util/databasetablenamegetter.h \
+    header/util/datapathgetter.h \
+    header/structure/fieldTypes.h \
+    header/structure/groupTypes.h \
+    header/structure/groups.h \
+    header/structure/keyItem.h \
     header/widget.h \
     header/controller/titleBar.h \
     header/controller/draggabletablewidget.h \
@@ -61,9 +67,10 @@ HEADERS += \
     header/dialog/optiondialog.h \
     header/dialog/newitemdialog.h \
     header/dialog/newgroupdialog.h \
-    header/util/group.h \
-    header/util/groupType.h \
-    header/util/fieldType.h
+    header/structure/group.h \
+    header/structure/groupType.h \
+    header/structure/fieldType.h \
+    header/util/shareddata.h
 
 FORMS += \
     ui/dialog/logindialog.ui \
@@ -84,6 +91,11 @@ QXLSX_PARENTPATH=./lib/QXlxs
 QXLSX_HEADERPATH=./lib/QXlxs/QXlxsHeader/
 QXLSX_SOURCEPATH=./lib/QXlxs/QXlxsSource/
 include(./lib/QXlxs/QXlsx.pri)
+
+QSLOG_PARENTPATH=./lib/QsLog
+QSLOG_HEADERPATH=./lib/QsLog/
+QSLOG_SOURCEPATH=./lib/QsLog/
+include(./lib/QsLog/QsLog.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,14 +1,30 @@
 ﻿#include "dialog/newgroupdialog.h"
 #include "ui_newgroupdialog.h"
 #include "widget.h"
+#include "util/data.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
+using namespace Data;
 newGroupDialog::newGroupDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::newGroupDialog)
 {
     ui->setupUi(this);
+    //添加自定义控件
+    newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+    newGroupName->setPlaceholderText("输入分组名称");
+    ui->groupInfoLayout->addWidget(newGroupName);
+    newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+    ui->groupInfoLayout->addWidget(newGroupType);
+    newGroupType->setEditable(false);
+    newGroupType->addItems(sharedData.groupTypeList.getGroupTypeNames());
+    //绑定槽函数
+    connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
+    connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
+    connect(ui->jumpToGroupTypeManager,SIGNAL(clicked()),this,SLOT(onJumpToGroupTypeManagerClicked()));
+}
+void newGroupDialog::InitDialog(){
     //删除标题栏
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
@@ -33,8 +49,8 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
     shadow_effect->setBlurRadius(20);
     shadow_effect->setOffset(0, 0);
     ui->frame->setGraphicsEffect(shadow_effect);
-    //    //隐藏tabWidget标题栏
-    //    ui->tabWidget->tabBar()->hide();
+    //隐藏tabWidget标题栏
+    ui->tabWidget->tabBar()->hide();
     //加载QSS样式
     QFile file(":/qss/dark.qss");
     file.open(QFile::ReadOnly);
@@ -46,22 +62,7 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
         this->setStyleSheet(styleSheet);
         file.close();
     }
-    //添加自定义控件
-    newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
-    newGroupName->setPlaceholderText("输入分组名称");
-    ui->groupInfoLayout->addWidget(newGroupName);
-    newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
-    ui->groupInfoLayout->addWidget(newGroupType);
-    newGroupType->setEditable(false);
-    Widget* tempParent=(Widget*)this->parent();
-    GroupTypes* groupTypes=tempParent->groupTypes;
-    newGroupType->addItems(groupTypes->getGroupTypeNames());
-    //绑定槽函数
-    connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
-    connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
-    connect(ui->jumpToGroupTypeManager,SIGNAL(clicked()),this,SLOT(onJumpToGroupTypeManagerClicked()));
 }
-
 newGroupDialog::~newGroupDialog()
 {
     delete ui;
@@ -91,9 +92,9 @@ void newGroupDialog::onCancelClicked(){
         this->close();
     }
 }
-void newGroupDialog::setCurrentMode(int newCurrentMode){
+void newGroupDialog::setCurrentMode(mode newCurrentMode){
     this->currentMode=newCurrentMode;
-    if(currentMode==1)
+    if(currentMode==NEWGROUP)
         newGroupType->setEnable(false);
 }
 

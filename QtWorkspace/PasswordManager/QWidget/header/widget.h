@@ -1,6 +1,6 @@
 ﻿#ifndef WIDGET_H
 #define WIDGET_H
-#include "util/databasetablename.h"
+#include "util/databasetablenamegetter.h"
 #pragma warning (disable:4819)
 #include <QWidget>
 #include <QStackedWidget>
@@ -47,11 +47,11 @@
 #include "ui_newitemdialog.h"
 #include "ui_newgroupdialog.h"
 #include "ui_newgrouptypedialog.h"
-#include "util/keyItem.h"
-#include "util/autofillInfo.h"
-#include "util/groups.h"
-#include "util/groupTypes.h"
-#include "util/fieldTypes.h"
+#include "structure/keyItem.h"
+#include "structure/autofillInfo.h"
+#include "structure/groups.h"
+#include "structure/groupTypes.h"
+#include "structure/fieldTypes.h"
 using namespace QXlsx;
 
 QT_BEGIN_NAMESPACE
@@ -62,12 +62,12 @@ class Widget : public QWidget
     Q_OBJECT
 public:
     //data structure
-    Groups* groups;
-    AutofillInfo* autofillInfo;
-    GroupTypes* groupTypes;
-    FieldTypes fieldTypes;
-    dataBaseTableName databaseTableNameGetter;
-    QSqlDatabase data;
+//    Groups* groups;
+//    AutofillInfo* autofillInfo;
+//    GroupTypes* groupTypes;
+//    FieldTypes fieldTypes;
+//    DataBaseTableNameGetter databaseTableNameGetter;
+//    QSqlDatabase data;
     //widgets
     Ui::Widget *ui;
     QList<QWidget*> widgets;

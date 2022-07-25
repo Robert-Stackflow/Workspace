@@ -16,17 +16,6 @@ Widget::~Widget()
 }
 void Widget::initFrame()
 {
-    //初始化列表
-    fieldTypes<<FieldType("单行文本",AbstractCustomField::LINEEDIT,AbstractCustomField::NORMAL,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("多行文本",AbstractCustomField::TEXTEDIT,AbstractCustomField::NORMAL,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("密码",AbstractCustomField::LINEEDIT,AbstractCustomField::PASSWORD,AbstractCustomField::REQUIRED);
-    fieldTypes<<FieldType("邮箱",AbstractCustomField::LINEEDIT,AbstractCustomField::MAIL,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("电话",AbstractCustomField::LINEEDIT,AbstractCustomField::MOBILE,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("网址",AbstractCustomField::LINEEDIT,AbstractCustomField::WEBSITE,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("可下拉选择-密码",AbstractCustomField::COMBOBOX,AbstractCustomField::PASSWORD,AbstractCustomField::REQUIRED);
-    fieldTypes<<FieldType("可下拉选择-邮箱",AbstractCustomField::COMBOBOX,AbstractCustomField::MAIL,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("可下拉选择-电话",AbstractCustomField::COMBOBOX,AbstractCustomField::MOBILE,AbstractCustomField::OPTIONAL);
-    fieldTypes<<FieldType("可下拉选择-网址",AbstractCustomField::COMBOBOX,AbstractCustomField::WEBSITE,AbstractCustomField::OPTIONAL);
     updateQSS();
     this->setWindowTitle("Password Manager");
     this->setWindowIcon(QIcon(":custom/logos/logo.png"));
@@ -42,16 +31,10 @@ void Widget::initFrame()
     stackedWidget=new QStackedWidget(this);
     stackedWidget->setGeometry(120,m_titleBar->height()+10,1000,680);
 
-    groups=new class Groups();
-    groupTypes=new class GroupTypes();
-    autofillInfo=new AutofillInfo;
     optiondialog=new optionDialog(this);
     newitemdialog=new newItemDialog(this);
     newgroupdialog=new newGroupDialog(this);
     newgrouptypedialog=new newGroupTypeDialog(this);
-    //初始化数据库
-    data=QSqlDatabase::addDatabase("QSQLITE",QString::asprintf("%d",0));
-    data.setDatabaseName("user.db");
     //添加操作按钮
     int leftEdge=350;
     search=new QLineEdit(this);

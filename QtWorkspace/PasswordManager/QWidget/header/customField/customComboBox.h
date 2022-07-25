@@ -30,6 +30,7 @@ public:
     void setEnable(bool enable);
     void setEditable(bool editable);
     bool isEnable();
+    void setCompleter(QCompleter* completer);
 public slots:
     void onControllerCurrentIndexChanged(int);
     void onControllerEdited(const QString &arg);

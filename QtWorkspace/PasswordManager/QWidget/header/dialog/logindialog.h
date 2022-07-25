@@ -6,25 +6,27 @@
 namespace Ui {
 class loginDialog;
 }
-
 class loginDialog : public QDialog
 {
     Q_OBJECT
-
 public:
     Ui::loginDialog *ui;
-    QString portraitDesPath;
+    //辅助变量，便于不同函数间传递数据
     QString tempPortraitPath;
     QMap<QString,QString> usernameToPortraitPathMap;
+    //自定义控件
     customComboBox* username;
     customLineEdit* password;
-    QPixmap PixmapToRound(const QPixmap &src, int radius);
+private:
+    QString styleSheet;
+public:
     explicit loginDialog(QWidget *parent = nullptr);
     ~loginDialog();
     bool eventFilter(QObject *obj, QEvent *event);
     QString copyFileToPath(QString srcPath,QString desDir);
+    QPixmap PixmapToRound(const QPixmap &src, int radius);
 private:
-    QString styleSheet;
+    void InitDialog();
 private slots:
     void onConfirmClicked();
     void onPortraitDesPathChanged();

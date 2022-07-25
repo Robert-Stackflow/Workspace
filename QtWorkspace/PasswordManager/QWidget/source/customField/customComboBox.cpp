@@ -104,7 +104,13 @@ void customComboBox::setEnable(bool enable){
 void customComboBox::setEditable(bool editable){
     ui->controller->setEditable(editable);
 }
+bool customComboBox::isEnable(){
+    return ui->controller->isEnabled();
+}
 AbstractCustomField* customComboBox::clone(){
     AbstractCustomField* copy=new customComboBox(fieldName,isRequired,dataType,parent);
     return copy;
+}
+void customComboBox::setCompleter(QCompleter* completer){
+    ui->controller->setCompleter(completer);
 }

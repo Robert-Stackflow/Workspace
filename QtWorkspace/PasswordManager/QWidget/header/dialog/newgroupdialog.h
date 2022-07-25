@@ -1,7 +1,7 @@
 ﻿#ifndef NEWGROUPDIALOG_H
 #define NEWGROUPDIALOG_H
 #include <QDialog>
-#include "util/group.h"
+#include "structure/group.h"
 #include "controller/titleBar.h"
 #include "customField/customComboBox.h"
 #include "customField/customLineEdit.h"
@@ -12,24 +12,32 @@ class newGroupDialog;
 class newGroupDialog : public QDialog
 {
     Q_OBJECT
-
 public:
-    TitleBar *m_titleBar;
+    enum mode{
+        NEWGROUP,
+        EDITGROUP
+    };
+public:
     Ui::newGroupDialog *ui;
+    //自定义控件
+    TitleBar *m_titleBar;
     customLineEdit* newGroupName;
     customComboBox* newGroupType;
+    //辅助变量，便于不同函数间传递数据
     Group* newGroup;
-    int currentMode;//0-新建,1-编辑
+    mode currentMode;
+private:
+    QString styleSheet;
+public:
     explicit newGroupDialog(QWidget *parent = nullptr);
     ~newGroupDialog();
     void setWindowTitle(const QString& title);
-    void setCurrentMode(int newCurrentMode);
+    void setCurrentMode(mode newCurrentMode);
 private:
-    QString styleSheet;
-public slots:
-    void onConfirmClicked();
-    void onCancelClicked();
+    void InitDialog();
 private slots:
+    void onCancelClicked();
+    void onConfirmClicked();
     void onJumpToGroupTypeManagerClicked();
 };
 
