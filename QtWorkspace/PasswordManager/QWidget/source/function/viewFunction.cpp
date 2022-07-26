@@ -1,8 +1,10 @@
 ﻿#include "widget.h"
 #include "ui_widget.h"
+#include "util/data.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
+using namespace Data;
 void Widget::updateQSS()
 {
     QFile file(":/qss/dark.qss");
@@ -23,11 +25,11 @@ void Widget::updateTableWidgetView(int index)
 }
 void Widget::changeTab()
 {
-    for(int i=0;i<groups->count();i++)
+    for(int i=0;i<Data::sharedData.groupList.count();i++)
         buttons[i]->setStyleSheet("");
     QPushButton* send=(QPushButton*)sender();
     int index=stackedWidget->currentIndex();
-    Group* currentGroup=groups->at(index);
+    Group* currentGroup=Data::sharedData.groupList[index];
     send->setStyleSheet("background-color:#00b7c3");
     stackedWidget->setCurrentIndex(send->objectName().toInt());
     tableWidgetMenu=new QMenu(tableWidgets[index]);
@@ -59,24 +61,24 @@ void Widget::changeTab()
 }
 void Widget::onTabIndexChanged(int index)
 {
-    for(int i=0;i<groups->count();i++)
+    for(int i=0;i<Data::sharedData.groupList.count();i++)
         buttons[i]->setStyleSheet("");
     buttons[index]->setStyleSheet("background-color:#00b7c3");
 }
 void Widget::onGroupTypeCountChanged()
 {
     this->newgroupdialog->newGroupType->clear();
-    this->newgroupdialog->newGroupType->addItems(this->groupTypes->getGroupTypeNames());
+    this->newgroupdialog->newGroupType->addItems(Data::sharedData.groupTypeList.getGroupTypeNames());
 }
 void Widget::onGroupCountChanged()
 {
-    if(groups->count()==0){
+    if(Data::sharedData.groupList.count()==0){
         stackedWidget->hide(),addItem->hide(),deleteGroup->hide(),editGroup->hide(),save->hide(),search->hide();
     }else{
         buttons[0]->click();
         stackedWidget->show(),addItem->show(),deleteGroup->show(),editGroup->show(),save->show(),search->show();
     }
-    if(groups->count()<=1)
+    if(Data::sharedData.groupList.count()<=1)
         deleteGroup->setEnabled(false);
     else
         deleteGroup->setEnabled(true);

@@ -1,17 +1,18 @@
 ﻿#include "util/datapathgetter.h"
+#include "util/data.h"
+DataPathGetter* DataPathGetter::sinstance=nullptr;
+QString DataPathGetter::portraitDir="portrait/";
+QString DataPathGetter::dataDir="data/";
+QString DataPathGetter::logsDir="logs/";
 DataPathGetter::DataPathGetter(){
-    portraitDir="portrait/";
-    dataDir="data/";
-    logsDir="logs/";
-    accountsDataBasePath="data/accounts.pmd";
 }
-DataPathGetter& DataPathGetter::getInstance(){
-    if(!instance)
-        instance=new DataPathGetter();
-    return *instance;
+DataPathGetter& DataPathGetter::instance(){
+    if(!sinstance)
+        sinstance=new DataPathGetter();
+    return *sinstance;
 }
 void DataPathGetter::deleteInstance(){
-    delete instance;
+    delete sinstance;
 }
 QString DataPathGetter::getPortraitDir()
 {
@@ -28,10 +29,10 @@ QString DataPathGetter::getLogsDir()
 }
 QString DataPathGetter::getAccountsDataBasePath()
 {
-    return accountsDataBasePath;
+    return dataDir+"accounts.pmd";
 }
 
 QString DataPathGetter::getCurrentAccountDataBasePath()
 {
-    return currentAccountDataBasePath;
+    return dataDir+QString::number(Data::sharedData.accountList.getActiveAccount()->getCreateTime().toTime_t())+".pmd";
 }

@@ -14,23 +14,22 @@
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
-using namespace Data;
 loginDialog::loginDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::loginDialog)
 {
     ui->setupUi(this);
-    InitDialog();
+    initDialog();
     //新建用户数据目录
     QDir dir;
-    if(!dir.exists(dataPathGetter.getDataDir()))
-        if(!dir.mkpath(QDir(dataPathGetter.getDataDir()).absolutePath()))
+    if(!dir.exists(Data::dataPathGetter.getDataDir()))
+        if(!dir.mkpath(QDir(Data::dataPathGetter.getDataDir()).absolutePath()))
             QMessageBox::critical(this,"错误","无法创建用户数据文件夹!");
-    if(!dir.exists(dataPathGetter.getPortraitDir()))
-        if(!dir.mkpath(QDir(dataPathGetter.getPortraitDir()).absolutePath()))
+    if(!dir.exists(Data::dataPathGetter.getPortraitDir()))
+        if(!dir.mkpath(QDir(Data::dataPathGetter.getPortraitDir()).absolutePath()))
             QMessageBox::critical(this,"错误","无法创建用户数据文件夹!");
-    if(!dir.exists(dataPathGetter.getLogsDir()))
-        if(!dir.mkpath(dataPathGetter.getLogsDir()))
+    if(!dir.exists(Data::dataPathGetter.getLogsDir()))
+        if(!dir.mkpath(Data::dataPathGetter.getLogsDir()))
             QMessageBox::critical(this,"错误","无法创建用户数据文件夹!");
     //添加自定义控件
     username=new customComboBox("用户名",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
@@ -42,49 +41,8 @@ loginDialog::loginDialog(QWidget *parent) :
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(username,SIGNAL(currentIndexChanged()),this,SLOT(onUsernameCurrentIndexChanged()));
     connect(this,SIGNAL(portraitDesPathChanged()),this,SLOT(onPortraitDesPathChanged()));
-    //设置用户名与密码
-    sharedData.database.setDatabaseName(dataPathGetter.getAccountsDataBasePath());
-    QSqlQuery query(sharedData.database);
-    if(!sharedData.database.open()){
-        QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
-        return;
-    }else{
-        QStringList tableNames=sharedData.database.tables();
-        if(!tableNames.contains(dataBaseTableNameGetter.getAccountsTableName())){
-            //如果不包含accounts表,则提示创建用户，并创建account表
-            ui->confirm->setText("创建用户");
-            ui->confirm->setStatusTip("createAccount");
-            query.exec("create table "+dataBaseTableNameGetter.getAccountsTableName()+" (username varchar(200),password varchar(200),portraitPath text,createTime varchar(200),lastEditTime varchar(200))");
-        }else{
-            //否则加载accounts表中的内容
-            query.exec("select * from accounts");
-            for(int i=0;query.next();i++){
-                QString tempUsername=query.value(0).toString();
-                QString tempPortraitPath=query.value(2).toString();
-                usernameToPortraitPathMap[tempUsername]=tempPortraitPath;
-            }
-            if(usernameToPortraitPathMap.count()==0){
-                //如果用户数量为0，提示创建用户
-                ui->confirm->setText("创建用户");
-                ui->confirm->setStatusTip("createAccount");
-            }else{
-                //否则提示登录
-                ui->confirm->setText("登录");
-                ui->confirm->setStatusTip("login");
-                //将用户名加载到username控件，并设置自动补全
-                username->addItems(usernameToPortraitPathMap.keys());
-                QCompleter *completer = new QCompleter(usernameToPortraitPathMap.keys(), this);
-                completer->setCaseSensitivity(Qt::CaseInsensitive);
-                username->setCompleter(completer);
-                //更改index以手动触发槽
-                username->setCurrentIndex(-1);
-                username->setCurrentIndex(0);
-            }
-        }
-        sharedData.database.close();
-    }
 }
-void loginDialog::InitDialog(){
+void loginDialog::initDialog(){
     //设置字体
     QFont font;
     font.setFamily("黑体");
@@ -127,9 +85,51 @@ void loginDialog::InitDialog(){
     ui->portrait->setScaledContents(true);
     ui->portrait->installEventFilter(this);
 }
-loginDialog::~loginDialog()
-{
-    delete ui;
+void loginDialog::loadAccounts(){
+    //设置用户名与密码
+    Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getAccountsDataBasePath());
+    QSqlQuery query(Data::sharedData.database);
+    if(!Data::sharedData.database.open()){
+        QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
+        return;
+    }else{
+        QStringList tableNames=Data::sharedData.database.tables();
+        if(!tableNames.contains(Data::dataBaseTableNameGetter.getAccountsTableName())){
+            //如果不包含accounts表,则提示创建用户，并创建account表
+            ui->confirm->setText("创建用户");
+            ui->confirm->setStatusTip("createAccount");
+            query.exec("create table "+Data::dataBaseTableNameGetter.getAccountsTableName()+" (username varchar(200),password varchar(200),portraitPath text,createTime varchar(200),lastEditTime varchar(200))");
+        }else{
+            //否则加载accounts表中的内容
+            query.exec("select * from accounts");
+            for(int i=0;query.next();i++){
+                QString newUsername=query.value(0).toString();
+                QString newPortraitPath=query.value(2).toString();
+                QDateTime newCreateTime=query.value(3).toDateTime();
+                QDateTime newLastEditTime=query.value(4).toDateTime();
+                Account* newAccount=new Account(newUsername,newCreateTime,newLastEditTime,newPortraitPath);
+                Data::sharedData.accountList<<newAccount;
+            }
+            if(Data::sharedData.accountList.count()==0){
+                //如果用户数量为0，提示创建用户
+                ui->confirm->setText("创建用户");
+                ui->confirm->setStatusTip("createAccount");
+            }else{
+                //否则提示登录
+                ui->confirm->setText("登录");
+                ui->confirm->setStatusTip("login");
+                //将用户名加载到username控件，并设置自动补全
+                username->addItems(Data::sharedData.accountList.getUsernames());
+                QCompleter *completer = new QCompleter(Data::sharedData.accountList.getUsernames(), this);
+                completer->setCaseSensitivity(Qt::CaseInsensitive);
+                username->setCompleter(completer);
+                //更改index以手动触发槽
+                username->setCurrentIndex(-1);
+                username->setCurrentIndex(0);
+            }
+        }
+        Data::sharedData.database.close();
+    }
 }
 void loginDialog::onConfirmClicked()
 {
@@ -137,28 +137,29 @@ void loginDialog::onConfirmClicked()
         //如果是创建用户，判断用户名和密码是否合法
         if(username->isValid()&&password->isValid()){
             //记录头像图片路径
-            usernameToPortraitPathMap[username->currentText()]=dataPathGetter.getPortraitDir()+"/"+QFileInfo(tempPortraitPath).fileName();
+            Data::sharedData.accountList.getAccount(username->currentText())->setPortraitPath(Data::dataPathGetter.getPortraitDir()+"/"+QFileInfo(tempPortraitPath).fileName());
             //向username添加新用户并更新completer
-            username->addItem(username->currentText());
-            QCompleter *completer = new QCompleter(usernameToPortraitPathMap.keys(), this);
+            username->clear();
+            username->addItems(Data::sharedData.accountList.getUsernames());
+            QCompleter *completer = new QCompleter(Data::sharedData.accountList.getUsernames(), this);
             completer->setCaseSensitivity(Qt::CaseInsensitive);
             username->setCompleter(completer);
             //更新数据库
-            sharedData.database.setDatabaseName(dataPathGetter.getAccountsDataBasePath());
-            QSqlQuery query(sharedData.database);
-            if(!sharedData.database.open()){
-                QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
+            Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getAccountsDataBasePath());
+            QSqlQuery query(Data::sharedData.database);
+            if(!Data::sharedData.database.open()){
+                QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
                 return;
             }else{
-                query.prepare("insert into "+dataBaseTableNameGetter.getAccountsTableName()+" (username,password,portraitPath,createTime,lastEditTime)"
-                                                              "VALUES (:1,:2,:3,:4,:5)");
+                query.prepare("insert into "+Data::dataBaseTableNameGetter.getAccountsTableName()+" (username,password,portraitPath,createTime,lastEditTime)"
+                                                                                            "VALUES (:1,:2,:3,:4,:5)");
                 query.bindValue(":1",username->currentText());
                 query.bindValue(":2",password->text());
-                query.bindValue(":3",usernameToPortraitPathMap[username->currentText()]);
+                query.bindValue(":3",Data::sharedData.accountList.getAccount(username->currentText())->getPortraitPath());
                 query.bindValue(":4",QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
                 query.bindValue(":5",QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
                 query.exec();
-                sharedData.database.close();
+                Data::sharedData.database.close();
             }
             QsLogging::Logger::getFileLogger(username->currentText(),"Account");
             QLOG_INFO()<<"Create Account:"<<username->currentText();
@@ -178,7 +179,7 @@ void loginDialog::onConfirmClicked()
     }else if(ui->confirm->statusTip()=="login"){
         //如果是登录操作,分步判断用户名是否存在、密码是否正确
         bool isSuccessful=false;
-        if(!usernameToPortraitPathMap.contains(username->currentText())){
+        if(!Data::sharedData.accountList.has(username->currentText())){
             //如果用户名不存在，提示是否创建新用户
             int choice=QMessageBox::question(this,"是否创建新用户","用户名\""+username->currentText()+"\"不存在,是否创建新用户?");
             if(choice==QMessageBox::Yes){
@@ -193,10 +194,10 @@ void loginDialog::onConfirmClicked()
             }
         }else{
             //用户名正确时，读取用户名对应的密码，比较是否与用户输入的密码一致
-            sharedData.database.setDatabaseName(dataPathGetter.getAccountsDataBasePath());
-            QSqlQuery query(sharedData.database);
-            if(!sharedData.database.open()){
-                QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
+            Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getAccountsDataBasePath());
+            QSqlQuery query(Data::sharedData.database);
+            if(!Data::sharedData.database.open()){
+                QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
                 return;
             }else{
                 query.exec("select password from accounts where username='"+username->currentText()+"'");
@@ -209,11 +210,12 @@ void loginDialog::onConfirmClicked()
                         QLOG_WARN()<<"Login Account:Wrong Password!";
                     }
                 }
-                sharedData.database.close();
+                Data::sharedData.database.close();
             }
         }
         if(isSuccessful){
             //登陆成功，加载Widget
+            Data::sharedData.accountList.setActiveAccount(username->currentText());
             QsLogging::Logger::getFileLogger(username->currentText(),"Account");
             QLOG_INFO()<<"Login Account:Login Successfully!";
             Widget *w=new Widget();
@@ -223,7 +225,7 @@ void loginDialog::onConfirmClicked()
     }
 }
 void loginDialog::onUsernameCurrentIndexChanged(){
-    tempPortraitPath=usernameToPortraitPathMap[username->currentText()];
+    tempPortraitPath=Data::sharedData.accountList.getAccount(username->currentText())->getPortraitPath();
     if(tempPortraitPath=="")
         return;
     QPixmap image;
@@ -238,7 +240,7 @@ bool loginDialog::eventFilter(QObject *obj, QEvent *event){
             QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
             if(mouseEvent->button() == Qt::LeftButton){
                 QString path = QFileDialog::getOpenFileName(this, tr("选择头像"), ".", tr("Image Files(*.jpg *.png)"));
-                tempPortraitPath=copyFileToPath(path,portraitDesPath);
+                tempPortraitPath=copyFileToPath(path,Data::dataPathGetter.getPortraitDir());
                 if(tempPortraitPath=="")
                     return false;
                 QPixmap image;
@@ -258,22 +260,6 @@ bool loginDialog::eventFilter(QObject *obj, QEvent *event){
     else{
         return QWidget::eventFilter(obj, event);
     }
-}
-QPixmap loginDialog::PixmapToRound(const QPixmap &src, int radius)
-{
-    if (src.isNull())
-        return QPixmap();
-    QSize size(2*radius, 2*radius);
-    QBitmap mask(size);
-    QPainter painter(&mask);
-    painter.setRenderHint(QPainter::Antialiasing);
-    painter.setRenderHint(QPainter::SmoothPixmapTransform);
-    painter.fillRect(0, 0, size.width(), size.height(), Qt::white);
-    painter.setBrush(QColor(0, 0, 0));
-    painter.drawRoundedRect(0, 0, size.width(), size.height(), 50, 50);
-    QPixmap image = src.scaled(size);
-    image.setMask(mask);
-    return image;
 }
 QString loginDialog::copyFileToPath(QString srcPath,QString desDir)
 {
@@ -301,26 +287,46 @@ QString loginDialog::copyFileToPath(QString srcPath,QString desDir)
 }
 void loginDialog::onPortraitDesPathChanged(){
     QString currentUsername=username->currentText();
-    if(!usernameToPortraitPathMap.contains(currentUsername))
+    if(!Data::sharedData.accountList.has(currentUsername))
         return;
     else{
         QsLogging::Logger::getFileLogger(currentUsername,"Account");
-        QLOG_INFO()<<"Change Portrait:"<<QString("From '"+usernameToPortraitPathMap[currentUsername]+"' To '"+tempPortraitPath+"'");
-        usernameToPortraitPathMap[currentUsername]=tempPortraitPath;
+        QLOG_INFO()<<"Change Portrait:"<<QString("From '"+Data::sharedData.accountList.getAccount(currentUsername)->getPortraitPath()+"' To '"+tempPortraitPath+"'");
+        Data::sharedData.accountList.getAccount(currentUsername)->setPortraitPath(tempPortraitPath);
+        Data::sharedData.accountList.getAccount(currentUsername)->setLastEditTime();
         //更新数据库
-        QSqlDatabase data=QSqlDatabase::addDatabase("QSQLITE",QString::asprintf("%d",3));
-        data.setDatabaseName(accountDatabasePath);
-        QSqlQuery query(data);
-        if(!data.open()){
-            QMessageBox::critical(0, QObject::tr("Database Connection Error!"), data.lastError().text());
+        Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getAccountsDataBasePath());
+        QSqlQuery query(Data::sharedData.database);
+        if(!Data::sharedData.database.open()){
+            QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
             return;
         }else{
-            QString sql=QString("update "+accountTableName+" set portraitPath='%1',lastEditTime='%2' where username='%3'")
-                    .arg(usernameToPortraitPathMap[currentUsername])
+            QString sql=QString("update "+Data::dataBaseTableNameGetter.getAccountsTableName()+" set portraitPath='%1',lastEditTime='%2' where username='%3'")
+                    .arg(Data::sharedData.accountList.getAccount(currentUsername)->getPortraitPath())
                     .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"))
                     .arg(currentUsername);
             query.exec(sql);
-            data.close();
+            Data::sharedData.database.close();
         }
     }
+}
+loginDialog::~loginDialog()
+{
+    delete ui;
+}
+QPixmap loginDialog::PixmapToRound(const QPixmap &src, int radius)
+{
+    if (src.isNull())
+        return QPixmap();
+    QSize size(2*radius, 2*radius);
+    QBitmap mask(size);
+    QPainter painter(&mask);
+    painter.setRenderHint(QPainter::Antialiasing);
+    painter.setRenderHint(QPainter::SmoothPixmapTransform);
+    painter.fillRect(0, 0, size.width(), size.height(), Qt::white);
+    painter.setBrush(QColor(0, 0, 0));
+    painter.drawRoundedRect(0, 0, size.width(), size.height(), 50, 50);
+    QPixmap image = src.scaled(size);
+    image.setMask(mask);
+    return image;
 }

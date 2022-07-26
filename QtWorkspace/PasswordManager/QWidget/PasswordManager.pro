@@ -1,4 +1,4 @@
-QT += core gui sql widgets
+QT += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -13,6 +13,8 @@ OBJECTS_DIR = temp/obj
 INCLUDEPATH = header
 
 SOURCES += \
+    source/structure/accounts.cpp \
+    source/util/data.cpp \
     source/util/datapathgetter.cpp \
     source/structure/account.cpp \
     source/dialog/newgrouptypedialog.cpp \
@@ -48,6 +50,7 @@ HEADERS += \
 #    header/precompile.h \
     header/dialog/newgrouptypedialog.h \
     header/structure/account.h \
+    header/structure/accounts.h \
     header/structure/autofillInfo.h \
     header/util/data.h \
     header/util/databasetablenamegetter.h \

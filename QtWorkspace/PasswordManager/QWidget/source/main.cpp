@@ -1,10 +1,10 @@
-﻿#include "dialog/logindialog.h"
-#include "ui_logindialog.h"
+﻿//#include "dialog/logindialog.h"
+//#include "ui_logindialog.h"
 #include <QApplication>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    loginDialog login;
-    login.show();
+//    loginDialog login;
+//    login.show();
     return a.exec();
 }

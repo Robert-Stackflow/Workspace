@@ -13,7 +13,6 @@ public:
     Ui::loginDialog *ui;
     //辅助变量，便于不同函数间传递数据
     QString tempPortraitPath;
-    QMap<QString,QString> usernameToPortraitPathMap;
     //自定义控件
     customComboBox* username;
     customLineEdit* password;
@@ -26,7 +25,8 @@ public:
     QString copyFileToPath(QString srcPath,QString desDir);
     QPixmap PixmapToRound(const QPixmap &src, int radius);
 private:
-    void InitDialog();
+    void initDialog();
+    void loadAccounts();
 private slots:
     void onConfirmClicked();
     void onPortraitDesPathChanged();

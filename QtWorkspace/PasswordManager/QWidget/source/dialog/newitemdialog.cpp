@@ -4,6 +4,7 @@
 #include "customField/customTextEdit.h"
 #include "ui_newitemdialog.h"
 #include "widget.h"
+#include "util/data.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -12,6 +13,10 @@ newItemDialog::newItemDialog(QWidget *parent) :
     ui(new Ui::newItemDialog)
 {
     ui->setupUi(this);
+    InitDialog();
+    ui->scrollAreaWidgetContents->setLayout(ui->infoLayout);
+}
+void newItemDialog::InitDialog(){
     //删除标题栏
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
@@ -49,21 +54,21 @@ newItemDialog::newItemDialog(QWidget *parent) :
         this->setStyleSheet(styleSheet);
         file.close();
     }
-    ui->scrollAreaWidgetContents->setLayout(ui->infoLayout);
 }
 newItemDialog::~newItemDialog()
 {
     delete ui;
 }
 void newItemDialog::loadGroupType(int index){
-    Widget* parent=(Widget*)this->parent();
-    GroupType* groupType=parent->groupTypes->at(index);
+    GroupType* groupType=Data::sharedData.groupTypeList[index];
+    //清除layout内的控件
     QLayoutItem *child;
     while((child = ui->infoLayout->takeAt(0)) != 0){
         if(child->widget())
             child->widget()->setParent(nullptr);
         delete child;
     }
+    //加载groupType中的字段控件
     for(int i=0;i<groupType->count();i++)
     {
         AbstractCustomField* currentField=groupType->at(i);

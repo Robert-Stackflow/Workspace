@@ -13,7 +13,8 @@ private:
     QString portraitPath;
 public:
     Account();
-    Account(const QString &newUsername,const QString &newPassword,const QString &newPortraitPath);
+    Account(const QString &newUsername,const QString &newPassword,const QString &newPortraitPath="");
+    Account(const QString &newUsername,QDateTime newCreateTime,QDateTime newLastEditTime,const QString &newPortraitPath);
     const QString &getUsername() const;
     void setUsername(const QString &newUsername);
     const QString &getPassword() const;

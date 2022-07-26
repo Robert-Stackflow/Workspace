@@ -1,5 +1,6 @@
 ﻿#ifndef SHAREDDATA_H
 #define SHAREDDATA_H
+#include "structure/accounts.h"
 #include "structure/autofillInfo.h"
 #include "structure/fieldTypes.h"
 #include "structure/groupTypes.h"
@@ -7,9 +8,10 @@
 #include "structure/account.h"
 #include <QSqlDatabase>
 class SharedData{
+private:
+    static SharedData* sinstance;
 public:
-    static SharedData* instance;
-    static Account account;
+    static Accounts accountList;
     static Groups groupList;
     static GroupTypes groupTypeList;
     static FieldTypes fieldTypeList;
@@ -18,7 +20,7 @@ public:
     static QSqlDatabase database;
     SharedData();
 public:
-    static SharedData& getInstace();
+    static SharedData& instace();
     static void deleteInstace();
 };
 #endif // SHAREDDATA_H

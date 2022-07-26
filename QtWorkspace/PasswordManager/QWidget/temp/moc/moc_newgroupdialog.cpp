@@ -33,14 +33,14 @@ struct qt_meta_stringdata_newGroupDialog_t {
 static const qt_meta_stringdata_newGroupDialog_t qt_meta_stringdata_newGroupDialog = {
     {
 QT_MOC_LITERAL(0, 0, 14), // "newGroupDialog"
-QT_MOC_LITERAL(1, 15, 16), // "onConfirmClicked"
-QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 15), // "onCancelClicked"
+QT_MOC_LITERAL(1, 15, 15), // "onCancelClicked"
+QT_MOC_LITERAL(2, 31, 0), // ""
+QT_MOC_LITERAL(3, 32, 16), // "onConfirmClicked"
 QT_MOC_LITERAL(4, 49, 31) // "onJumpToGroupTypeManagerClicked"
 
     },
-    "newGroupDialog\0onConfirmClicked\0\0"
-    "onCancelClicked\0onJumpToGroupTypeManagerClicked"
+    "newGroupDialog\0onCancelClicked\0\0"
+    "onConfirmClicked\0onJumpToGroupTypeManagerClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,8 +58,8 @@ static const uint qt_meta_data_newGroupDialog[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x0a /* Public */,
-       3,    0,   30,    2, 0x0a /* Public */,
+       1,    0,   29,    2, 0x08 /* Private */,
+       3,    0,   30,    2, 0x08 /* Private */,
        4,    0,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
@@ -76,8 +76,8 @@ void newGroupDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<newGroupDialog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onConfirmClicked(); break;
-        case 1: _t->onCancelClicked(); break;
+        case 0: _t->onCancelClicked(); break;
+        case 1: _t->onConfirmClicked(); break;
         case 2: _t->onJumpToGroupTypeManagerClicked(); break;
         default: ;
         }

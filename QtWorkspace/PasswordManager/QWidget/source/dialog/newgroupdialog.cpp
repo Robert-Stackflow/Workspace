@@ -5,7 +5,6 @@
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
-using namespace Data;
 newGroupDialog::newGroupDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::newGroupDialog)
@@ -18,7 +17,7 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
     newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->groupInfoLayout->addWidget(newGroupType);
     newGroupType->setEditable(false);
-    newGroupType->addItems(sharedData.groupTypeList.getGroupTypeNames());
+    newGroupType->addItems(Data::sharedData.groupTypeList.getGroupTypeNames());
     //绑定槽函数
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));

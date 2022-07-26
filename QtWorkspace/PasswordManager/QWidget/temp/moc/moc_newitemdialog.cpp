@@ -33,13 +33,13 @@ struct qt_meta_stringdata_newItemDialog_t {
 static const qt_meta_stringdata_newItemDialog_t qt_meta_stringdata_newItemDialog = {
     {
 QT_MOC_LITERAL(0, 0, 13), // "newItemDialog"
-QT_MOC_LITERAL(1, 14, 16), // "onConfirmClicked"
-QT_MOC_LITERAL(2, 31, 0), // ""
-QT_MOC_LITERAL(3, 32, 15) // "onCancelClicked"
+QT_MOC_LITERAL(1, 14, 15), // "onCancelClicked"
+QT_MOC_LITERAL(2, 30, 0), // ""
+QT_MOC_LITERAL(3, 31, 16) // "onConfirmClicked"
 
     },
-    "newItemDialog\0onConfirmClicked\0\0"
-    "onCancelClicked"
+    "newItemDialog\0onCancelClicked\0\0"
+    "onConfirmClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,8 +57,8 @@ static const uint qt_meta_data_newItemDialog[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x0a /* Public */,
-       3,    0,   25,    2, 0x0a /* Public */,
+       1,    0,   24,    2, 0x08 /* Private */,
+       3,    0,   25,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -73,8 +73,8 @@ void newItemDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         auto *_t = static_cast<newItemDialog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onConfirmClicked(); break;
-        case 1: _t->onCancelClicked(); break;
+        case 0: _t->onCancelClicked(); break;
+        case 1: _t->onConfirmClicked(); break;
         default: ;
         }
     }

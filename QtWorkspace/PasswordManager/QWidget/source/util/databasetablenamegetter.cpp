@@ -1,19 +1,20 @@
 ﻿#include "util/databasetablenamegetter.h"
+DataBaseTableNameGetter* DataBaseTableNameGetter::sinstance=nullptr;
+QString DataBaseTableNameGetter::accountsTableName="accounts";
+QString DataBaseTableNameGetter::groupsTableName="groups";
+QString DataBaseTableNameGetter::groupTypesTableName="groupTypes";
+QString DataBaseTableNameGetter::autofillInfoTableName="autofillInfo";
+QString DataBaseTableNameGetter::groupTableNamePrefix="group_";
+QString DataBaseTableNameGetter::groupTypeTableNamePrefix="groupType_";
 DataBaseTableNameGetter::DataBaseTableNameGetter(){
-    accountsTableName="accounts";
-    groupsTableName="groups";
-    groupTypesTableName="groupTypes";
-    autofillInfoTableName="autofillInfo";
-    groupTableNamePrefix="group_";
-    groupTypeTableNamePrefix="groupType_";
 }
-DataBaseTableNameGetter& DataBaseTableNameGetter::getInstace(){
-    if (!instance)
-        instance = new DataBaseTableNameGetter();
-    return *instance;
+DataBaseTableNameGetter& DataBaseTableNameGetter::instace(){
+    if (!sinstance)
+        sinstance = new DataBaseTableNameGetter();
+    return *sinstance;
 }
 void DataBaseTableNameGetter::deleteInstace(){
-    delete instance;
+    delete sinstance;
 }
 QString DataBaseTableNameGetter::getAccountsTableName(){
     return accountsTableName;

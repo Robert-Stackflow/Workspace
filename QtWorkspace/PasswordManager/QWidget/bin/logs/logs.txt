@@ -1,2 +1,0 @@
-[Password Manager] [测试] [2022-07-25 12:18:21.616] [WARN ] [Account] Login Account:Wrong Password! 
-[Password Manager] [测试用户] [2022-07-25 13:19:29.258] [INFO ] [Account] Login Account:Login Successfully! 

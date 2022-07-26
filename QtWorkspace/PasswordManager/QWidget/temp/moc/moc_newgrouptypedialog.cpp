@@ -33,9 +33,9 @@ struct qt_meta_stringdata_newGroupTypeDialog_t {
 static const qt_meta_stringdata_newGroupTypeDialog_t qt_meta_stringdata_newGroupTypeDialog = {
     {
 QT_MOC_LITERAL(0, 0, 18), // "newGroupTypeDialog"
-QT_MOC_LITERAL(1, 19, 29), // "typeManagerTableWidgetClicked"
-QT_MOC_LITERAL(2, 49, 0), // ""
-QT_MOC_LITERAL(3, 50, 21), // "groupTypeCountChanged"
+QT_MOC_LITERAL(1, 19, 21), // "groupTypeCountChanged"
+QT_MOC_LITERAL(2, 41, 0), // ""
+QT_MOC_LITERAL(3, 42, 29), // "typeManagerTableWidgetClicked"
 QT_MOC_LITERAL(4, 72, 31), // "onTypeManagerTableWidgetClicked"
 QT_MOC_LITERAL(5, 104, 17), // "onEditTypeClicked"
 QT_MOC_LITERAL(6, 122, 19), // "onDeleteTypeClicked"
@@ -47,8 +47,8 @@ QT_MOC_LITERAL(11, 210, 17), // "onAddFieldClicked"
 QT_MOC_LITERAL(12, 228, 27) // "onIsReqiuredCheckBoxToggled"
 
     },
-    "newGroupTypeDialog\0typeManagerTableWidgetClicked\0"
-    "\0groupTypeCountChanged\0"
+    "newGroupTypeDialog\0groupTypeCountChanged\0"
+    "\0typeManagerTableWidgetClicked\0"
     "onTypeManagerTableWidgetClicked\0"
     "onEditTypeClicked\0onDeleteTypeClicked\0"
     "onCopyTypeClicked\0onNewTypeClicked\0"
@@ -75,15 +75,15 @@ static const uint qt_meta_data_newGroupTypeDialog[] = {
        3,    0,   70,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   71,    2, 0x0a /* Public */,
-       5,    0,   72,    2, 0x0a /* Public */,
-       6,    0,   73,    2, 0x0a /* Public */,
-       7,    0,   74,    2, 0x0a /* Public */,
-       8,    0,   75,    2, 0x0a /* Public */,
-       9,    0,   76,    2, 0x0a /* Public */,
-      10,    0,   77,    2, 0x0a /* Public */,
-      11,    0,   78,    2, 0x0a /* Public */,
-      12,    1,   79,    2, 0x0a /* Public */,
+       4,    0,   71,    2, 0x08 /* Private */,
+       5,    0,   72,    2, 0x08 /* Private */,
+       6,    0,   73,    2, 0x08 /* Private */,
+       7,    0,   74,    2, 0x08 /* Private */,
+       8,    0,   75,    2, 0x08 /* Private */,
+       9,    0,   76,    2, 0x08 /* Private */,
+      10,    0,   77,    2, 0x08 /* Private */,
+      11,    0,   78,    2, 0x08 /* Private */,
+      12,    1,   79,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -109,8 +109,8 @@ void newGroupTypeDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         auto *_t = static_cast<newGroupTypeDialog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->typeManagerTableWidgetClicked(); break;
-        case 1: _t->groupTypeCountChanged(); break;
+        case 0: _t->groupTypeCountChanged(); break;
+        case 1: _t->typeManagerTableWidgetClicked(); break;
         case 2: _t->onTypeManagerTableWidgetClicked(); break;
         case 3: _t->onEditTypeClicked(); break;
         case 4: _t->onDeleteTypeClicked(); break;
@@ -126,14 +126,14 @@ void newGroupTypeDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (newGroupTypeDialog::*)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&newGroupTypeDialog::typeManagerTableWidgetClicked)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&newGroupTypeDialog::groupTypeCountChanged)) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (newGroupTypeDialog::*)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&newGroupTypeDialog::groupTypeCountChanged)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&newGroupTypeDialog::typeManagerTableWidgetClicked)) {
                 *result = 1;
                 return;
             }
@@ -182,13 +182,13 @@ int newGroupTypeDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void newGroupTypeDialog::typeManagerTableWidgetClicked()
+void newGroupTypeDialog::groupTypeCountChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 
 // SIGNAL 1
-void newGroupTypeDialog::groupTypeCountChanged()
+void newGroupTypeDialog::typeManagerTableWidgetClicked()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
