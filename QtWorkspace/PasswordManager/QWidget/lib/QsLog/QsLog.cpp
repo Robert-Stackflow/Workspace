@@ -43,11 +43,12 @@ namespace QsLogging
 typedef QVector<DestinationPtr> DestinationList;
 static std::string LogTypeString;
 static std::string ProgramNameString;
-static std::string ProgramUsernameString;
+static std::string ProgramUsernameString="PUBLIC";
+static std::string DefaultLogPathString="logs/log.txt";
 static const char TraceString[] = "[TRACE]";
 static const char DebugString[] = "[DEBUG]";
-static const char InfoString[]  = "[INFO ]";
-static const char WarnString[]  = "[WARN ]";
+static const char InfoString[]  = "[INFO]";
+static const char WarnString[]  = "[WARN]";
 static const char ErrorString[] = "[ERROR]";
 static const char FatalString[] = "[FATAL]";
 
@@ -152,7 +153,6 @@ Logger& Logger::instance()
 {
     if (!sInstance)
         sInstance = new Logger;
-
     return *sInstance;
 }
 
@@ -185,13 +185,11 @@ Level Logger::levelFromLogMessage(const QString& logMessage, bool* conversionSuc
         *conversionSucceeded = false;
     return OffLevel;
 }
-Logger& Logger::getFileLogger(const QString &username,const QString &logType,const QString logPath,int maxSizeBytes,int maxOldLogCount,LogRotationOption logRotationOption){
+Logger& Logger::getFileLogger(const QString &username, const QString &logType, int maxSizeBytes, int maxOldLogCount, LogRotationOption logRotationOption){
     Logger& logger = Logger::instance();
-    logger.setProgramName("Password Manager");
-    logger.setLoggingLevel(QsLogging::TraceLevel);
-    logger.setProgramUsername(username.toStdString());
     logger.setLogType(logType.toStdString());
-    const QString sLogPath(QDir(QApplication::applicationDirPath()).filePath(logPath));
+    logger.setProgramUsername(username.toStdString());
+    const QString sLogPath(QDir(QApplication::applicationDirPath()).filePath(QString::fromStdString(QsLogging::DefaultLogPathString)));
     DestinationPtr fileDestination(DestinationFactory::MakeFileDestination(
                                        sLogPath, logRotationOption, MaxSizeBytes(maxSizeBytes), MaxOldLogCount(maxOldLogCount)));
     logger.addDestination(fileDestination);
@@ -205,7 +203,10 @@ Logger::~Logger()
     delete d;
     d = 0;
 }
-
+void Logger::setDefaultLogPath(const QString &DefaultLogPathString)
+{
+    QsLogging::DefaultLogPathString=QString(DefaultLogPathString).toStdString();
+}
 void Logger::addDestination(DestinationPtr destination)
 {
     Q_ASSERT(destination.data());

@@ -44,7 +44,8 @@ public:
     static Logger& instance();
     static void destroyInstance();
     static Level levelFromLogMessage(const QString& logMessage, bool* conversionSucceeded = 0);
-    static Logger& getFileLogger(const QString &username,const QString &logType="default",const QString logPath="logs/logs.txt",int maxSizeBytes=512*1024,int maxOldLogCount=5,LogRotationOption logRotationOption=EnableLogRotation);
+    static Logger& getFileLogger(const QString &username,const QString &logType="default",int maxSizeBytes=512*1024,int maxOldLogCount=5,LogRotationOption logRotationOption=EnableLogRotation);
+    static void setDefaultLogPath(const QString &DefaultLogPathString);
     ~Logger();
 
     //! Adds a log message destination. Don't add null destinations.
@@ -102,7 +103,7 @@ public:
 private:
     Logger();
     Logger(const Logger&);            // not available
-    Logger& operator=(const Logger&); // not available
+//    Logger& operator=(const Logger&); // not available
 
     void enqueueWrite(const QString& message, Level level);
     void write(const QString& message, Level level);

@@ -1,8 +1,8 @@
 ﻿#ifndef LOGINDIALOG_H
 #define LOGINDIALOG_H
+#include <QDialog>
 #include "customField/customComboBox.h"
 #include "customField/customLineEdit.h"
-#include <QDialog>
 namespace Ui {
 class loginDialog;
 }
@@ -25,6 +25,7 @@ public:
     QString copyFileToPath(QString srcPath,QString desDir);
     QPixmap PixmapToRound(const QPixmap &src, int radius);
 private:
+    void initOther();
     void initDialog();
     void loadAccounts();
 private slots:

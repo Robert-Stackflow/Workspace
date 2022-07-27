@@ -1,6 +1,9 @@
 ﻿#include "widget.h"
 #include "ui_widget.h"
-#include "util/data.h"
+#include "util/databasetablenamegetter.h"
+#include "util/datapathgetter.h"
+#include "util/shareddata.h"
+#include "QsLog.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -9,7 +12,8 @@ void Widget::saveMenuTriggered(){
     save->setDefaultAction(send);
 }
 void Widget::saveSlot(){
-    Group* currentGroup=Data::sharedData.groupList[stackedWidget->currentIndex()];
+    SharedData& sharedData = SharedData::instace();
+    Group* currentGroup=sharedData.groupList[stackedWidget->currentIndex()];
     QAction* activeAction=((QToolButton*)sender())->defaultAction();
     QString title="将分组 "+currentGroup->getGroupName()+" 另存为"+save->defaultAction()->text()+"文件";
     if(activeAction==saveAsPDF){
@@ -23,10 +27,10 @@ void Widget::saveSlot(){
         if(saveFilePath=="")
             return;
         QXlsx::Document xlsxW;
-        for(int i=0,row=1;i<Data::sharedData.groupList.count();i++)
+        for(int i=0,row=1;i<sharedData.groupList.count();i++)
         {
-            Group* currentGroup=Data::sharedData.groupList[i];
-            QStringList header=Data::sharedData.groupTypeList[currentGroup->getGroupType()]->getFieldNames();
+            Group* currentGroup=sharedData.groupList[i];
+            QStringList header=sharedData.groupTypeList[currentGroup->getGroupType()]->getFieldNames();
             xlsxW.addSheet(currentGroup->getGroupName());
             xlsxW.selectSheet(currentGroup->getGroupName());
             for(int j=0;j<header.count();j++){
@@ -37,7 +41,7 @@ void Widget::saveSlot(){
                 }
             }
         }
-        xlsxW.selectSheet(Data::sharedData.groupList[0]->getGroupName());
+        xlsxW.selectSheet(sharedData.groupList[0]->getGroupName());
         if (xlsxW.saveAs(saveFilePath)){
             qDebug()<<"[Info] success to write xlsx file";
         }
@@ -51,8 +55,8 @@ void Widget::saveSlot(){
         if(!file.open(QIODevice::WriteOnly))
             return;
         int index=stackedWidget->currentIndex();
-        Group* currentGroup=Data::sharedData.groupList[index];
-        QStringList header=Data::sharedData.groupTypeList[currentGroup->getGroupType()]->getFieldNames();
+        Group* currentGroup=sharedData.groupList[index];
+        QStringList header=sharedData.groupTypeList[currentGroup->getGroupType()]->getFieldNames();
         //写入表头
         for(int j=0;j<header.count();j++){
             file.write(header[j].toLocal8Bit().data());

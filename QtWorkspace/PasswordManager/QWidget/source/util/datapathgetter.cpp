@@ -1,5 +1,5 @@
 ﻿#include "util/datapathgetter.h"
-#include "util/data.h"
+#include "util/shareddata.h"
 DataPathGetter* DataPathGetter::sinstance=nullptr;
 QString DataPathGetter::portraitDir="portrait/";
 QString DataPathGetter::dataDir="data/";
@@ -34,5 +34,6 @@ QString DataPathGetter::getAccountsDataBasePath()
 
 QString DataPathGetter::getCurrentAccountDataBasePath()
 {
-    return dataDir+QString::number(Data::sharedData.accountList.getActiveAccount()->getCreateTime().toTime_t())+".pmd";
+    SharedData& sharedData = SharedData::instace();
+    return dataDir+QString::number(sharedData.accountList.getActiveAccount()->getCreateTime().toTime_t())+".pmd";
 }

@@ -4,7 +4,7 @@
 #include "customField/customTextEdit.h"
 #include "ui_newitemdialog.h"
 #include "widget.h"
-#include "util/data.h"
+#include "util/shareddata.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -60,7 +60,8 @@ newItemDialog::~newItemDialog()
     delete ui;
 }
 void newItemDialog::loadGroupType(int index){
-    GroupType* groupType=Data::sharedData.groupTypeList[index];
+    SharedData& sharedData = SharedData::instace();
+    GroupType* groupType=sharedData.groupTypeList[index];
     //清除layout内的控件
     QLayoutItem *child;
     while((child = ui->infoLayout->takeAt(0)) != 0){

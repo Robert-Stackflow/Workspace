@@ -1,7 +1,7 @@
 ﻿#include "dialog/newgroupdialog.h"
 #include "ui_newgroupdialog.h"
+#include "util/shareddata.h"
 #include "widget.h"
-#include "util/data.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -11,13 +11,14 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     //添加自定义控件
+    SharedData& sharedData = SharedData::instace();
     newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     newGroupName->setPlaceholderText("输入分组名称");
     ui->groupInfoLayout->addWidget(newGroupName);
     newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     ui->groupInfoLayout->addWidget(newGroupType);
     newGroupType->setEditable(false);
-    newGroupType->addItems(Data::sharedData.groupTypeList.getGroupTypeNames());
+    newGroupType->addItems(sharedData.groupTypeList.getGroupTypeNames());
     //绑定槽函数
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));

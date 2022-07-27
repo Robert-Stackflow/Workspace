@@ -1,30 +1,33 @@
+#SET LIBRARIES
 QT += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+#SET CONFIG
 CONFIG += c++11
+CONFIG -= debug_and_release
 #CONFIG += precompile_header
 #PRECOMPILED_HEADER = $$PWD/header/precompile.h
-
+#SET ICON
+RC_ICONS = logo.ico
+#SET DESTDIR
 DESTDIR = bin
+INCLUDEPATH = header
+#SET TEMP_DIR
 UI_DIR = temp/ui
 MOC_DIR = temp/moc
 RCC_DIR = temp/rcc
 OBJECTS_DIR = temp/obj
-INCLUDEPATH = header
 
 SOURCES += \
-    source/structure/accounts.cpp \
-    source/util/data.cpp \
-    source/util/datapathgetter.cpp \
-    source/structure/account.cpp \
-    source/dialog/newgrouptypedialog.cpp \
     source/main.cpp \
-    source/util/databasetablenamegetter.cpp \
-    source/util/shareddata.cpp \
     source/widget.cpp \
+    source/util/shareddata.cpp \
+    source/util/datapathgetter.cpp \
+    source/util/databasetablenamegetter.cpp \
     source/structure/group.cpp \
     source/structure/groups.cpp \
     source/structure/keyItem.cpp \
+    source/structure/account.cpp \
+    source/structure/accounts.cpp \
     source/structure/groupType.cpp \
     source/structure/groupTypes.cpp \
     source/structure/fieldType.cpp \
@@ -34,6 +37,7 @@ SOURCES += \
     source/dialog/optiondialog.cpp \
     source/dialog/newitemdialog.cpp \
     source/dialog/newgroupdialog.cpp \
+    source/dialog/newgrouptypedialog.cpp \
     source/controller/titleBar.cpp \
     source/controller/draggabletablewidget.cpp \
     source/function/viewFunction.cpp \
@@ -48,18 +52,20 @@ SOURCES += \
 
 HEADERS += \
 #    header/precompile.h \
-    header/dialog/newgrouptypedialog.h \
-    header/structure/account.h \
-    header/structure/accounts.h \
-    header/structure/autofillInfo.h \
-    header/util/data.h \
-    header/util/databasetablenamegetter.h \
+    header/widget.h \
+    header/util/shareddata.h \
     header/util/datapathgetter.h \
-    header/structure/fieldTypes.h \
-    header/structure/groupTypes.h \
+    header/util/databasetablenamegetter.h \
+    header/structure/group.h \
     header/structure/groups.h \
     header/structure/keyItem.h \
-    header/widget.h \
+    header/structure/account.h \
+    header/structure/accounts.h \
+    header/structure/groupType.h \
+    header/structure/groupTypes.h \
+    header/structure/fieldType.h \
+    header/structure/fieldTypes.h \
+    header/structure/autofillInfo.h \
     header/controller/titleBar.h \
     header/controller/draggabletablewidget.h \
     header/customField/customTextEdit.h \
@@ -70,12 +76,10 @@ HEADERS += \
     header/dialog/optiondialog.h \
     header/dialog/newitemdialog.h \
     header/dialog/newgroupdialog.h \
-    header/structure/group.h \
-    header/structure/groupType.h \
-    header/structure/fieldType.h \
-    header/util/shareddata.h
+    header/dialog/newgrouptypedialog.h
 
 FORMS += \
+    ui/widget.ui \
     ui/dialog/logindialog.ui \
     ui/dialog/newgrouptypedialog.ui \
     ui/dialog/optiondialog.ui \
@@ -83,8 +87,7 @@ FORMS += \
     ui/dialog/newgroupdialog.ui \
     ui/customField/customTextEdit.ui \
     ui/customField/customLineEdit.ui \
-    ui/customField/customComboBox.ui \
-    ui/widget.ui
+    ui/customField/customComboBox.ui
 
 RESOURCES += \
     qrc/dark/dark.qrc \

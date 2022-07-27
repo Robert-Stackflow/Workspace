@@ -2,7 +2,10 @@
 #include "customField/customComboBox.h"
 #include "customField/customTextEdit.h"
 #include "widget.h"
-#include "util/data.h"
+#include "util/databasetablenamegetter.h"
+#include "util/datapathgetter.h"
+#include "util/shareddata.h"
+#include "QsLog.h"
 #include "ui_newgrouptypedialog.h"
 #pragma warning (disable:4100)
 #if _MSC_VER >= 1600
@@ -13,6 +16,7 @@ newGroupTypeDialog::newGroupTypeDialog(QWidget *parent) :
     ui(new Ui::newGroupTypeDialog)
 {
     ui->setupUi(this);
+    SharedData& sharedData = SharedData::instace();
     initDialog();
     //添加自定义Field控件
     typeName=new customLineEdit("类型名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
@@ -27,7 +31,7 @@ newGroupTypeDialog::newGroupTypeDialog(QWidget *parent) :
     ui->tabWidget->tabBar()->hide();
     ui->tabWidget->setCurrentIndex(0);
     //设置添加字段的下拉选择框
-    ui->addFieldComboBox->addItems(Data::sharedData.fieldTypeList.getNames());
+    ui->addFieldComboBox->addItems(sharedData.fieldTypeList.getNames());
     //设置typeManagerTableWidget
     typeManagerTableWidgetHeader<<"类型名称"<<"字段数目"<<"创建时间"<<"修改时间"<<"描述";
     ui->typeManagerTableWidget->setAlternatingRowColors(true);//设置行色交替
@@ -113,9 +117,10 @@ void newGroupTypeDialog::initDialog()
     }
 }
 void newGroupTypeDialog::loadGroupTypes(){
-    for(int i=0;i<Data::sharedData.groupTypeList.count();i++)
+    SharedData& sharedData = SharedData::instace();
+    for(int i=0;i<sharedData.groupTypeList.count();i++)
     {
-        GroupType* groupType=Data::sharedData.groupTypeList[i];
+        GroupType* groupType=sharedData.groupTypeList[i];
         ui->typeManagerTableWidget->insertRow(ui->typeManagerTableWidget->rowCount());
         ui->typeManagerTableWidget->setItem(ui->typeManagerTableWidget->rowCount()-1,0,new QTableWidgetItem(groupType->getGroupTypeName()));
         ui->typeManagerTableWidget->setItem(ui->typeManagerTableWidget->rowCount()-1,1,new QTableWidgetItem(QString::number(groupType->count())));
@@ -160,11 +165,12 @@ void newGroupTypeDialog::onTypeManagerTableWidgetClicked(){
         ui->chosen->setText("未选中");
 }
 void newGroupTypeDialog::onEditTypeClicked(){
+    SharedData& sharedData = SharedData::instace();
     if(currentRow==-1){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
         //获取当前GroupType
-        currentGroupType=Data::sharedData.groupTypeList[currentRow];
+        currentGroupType=sharedData.groupTypeList[currentRow];
         //加载currentGroupType信息
         tempFields.clear();
         addFieldTip->clear();
@@ -214,11 +220,12 @@ void newGroupTypeDialog::onDeleteTypeClicked(){
     }
 }
 void newGroupTypeDialog::onCopyTypeClicked(){
+    SharedData& sharedData = SharedData::instace();
     if(currentRow==-1){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
         //获取当前GroupType
-        currentGroupType=Data::sharedData.groupTypeList[currentRow];
+        currentGroupType=sharedData.groupTypeList[currentRow];
         //加载currentGroupType信息
         addFieldTip->clear();
         addFieldName->clear();
@@ -288,25 +295,28 @@ void newGroupTypeDialog::onCancelClicked(){
     currentGroupType=nullptr;
 }
 void newGroupTypeDialog::onConfirmClicked(){
+    SharedData& sharedData = SharedData::instace();
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     if(currentMode==0){
         //仅当typeName合法、类型名称不重复、字段数不少于2时合法
-        if(typeName->isValid()&&!Data::sharedData.groupTypeList.has(typeName->text())&&tempFields.count()>=2){
+        if(typeName->isValid()&&!sharedData.groupTypeList.has(typeName->text())&&tempFields.count()>=2){
             int choice=QMessageBox::question(this,"确认新建","是否确认新建类型\""+typeName->text()+"\"");
             if(choice==QMessageBox::Yes){
-                //新建newGroupType并添加到Data::sharedData.groupTypeList中
+                //新建newGroupType并添加到sharedData.groupTypeList中
                 newGroupType=new GroupType(typeName->text(),ui->describe->toPlainText(),tempFields);
-                Data::sharedData.groupTypeList<<newGroupType;
+                sharedData.groupTypeList<<newGroupType;
                 //添加到数据库中
-                Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getCurrentAccountDataBasePath());
-                QSqlQuery query(Data::sharedData.database);
-                if(!Data::sharedData.database.open()){
-                    QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
+                sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
+                QSqlQuery query(sharedData.database);
+                if(!sharedData.database.open()){
+                    QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
                     return;
                 }else{
-                    QString newGroupTypeTableName=Data::dataBaseTableNameGetter.getGroupTypeTableName(newGroupType->getGroupTypeName());
-                    if(!Data::sharedData.database.tables().contains(newGroupTypeTableName)){
-                        //向Data::sharedData.groupTypeList表插入数据
-                        query.prepare("insert into "+Data::dataBaseTableNameGetter.getGroupTypesTableName()+" (groupTypeName,fieldCount,createTime,lastEditTime,describe)"
+                    QString newGroupTypeTableName=dataBaseTableNameGetter.getGroupTypeTableName(newGroupType->getGroupTypeName());
+                    if(!sharedData.database.tables().contains(newGroupTypeTableName)){
+                        //向sharedData.groupTypeList表插入数据
+                        query.prepare("insert into "+dataBaseTableNameGetter.getGroupTypesTableName()+" (groupTypeName,fieldCount,createTime,lastEditTime,describe)"
                                                                                                               "VALUES (:1,:2,:3,:4,:5)");
                         query.bindValue(":1",newGroupType->getGroupTypeName());
                         query.bindValue(":2",newGroupType->count());
@@ -326,7 +336,7 @@ void newGroupTypeDialog::onConfirmClicked(){
                             query.bindValue(":4",newGroupType->at(i)->getPlaceholderText());
                             query.exec();
                         }
-                        Data::sharedData.database.close();
+                        sharedData.database.close();
                     }
                 }
                 //发射类型数目改变的信号
@@ -355,14 +365,14 @@ void newGroupTypeDialog::onConfirmClicked(){
             QString message="无法创建类型:\n";
             if(!typeName->isValid())
                 message+="名称不合法!\n";
-            if(Data::sharedData.groupTypeList.has(typeName->text()))
+            if(sharedData.groupTypeList.has(typeName->text()))
                 message+="类型名已存在!\n";
             if(tempFields.count()<2)
                 message+="字段数目不得小于2!";
             QMessageBox::warning(this,"警告",message);
         }
     }else if(currentMode==1){
-        if(typeName->isValid()&&!(typeName->text()!=chosenOldName&&Data::sharedData.groupTypeList.has(typeName->text()))&&(currentGroupType!=nullptr&&currentGroupType->count()>=2)){
+        if(typeName->isValid()&&!(typeName->text()!=chosenOldName&&sharedData.groupTypeList.has(typeName->text()))&&(currentGroupType!=nullptr&&currentGroupType->count()>=2)){
             int choice=QMessageBox::question(this,"确认修改","是否确认保存修改类型\""+typeName->text()+"\"");
             if(choice==QMessageBox::Yes){
                 //更新currentGroupType信息
@@ -372,18 +382,18 @@ void newGroupTypeDialog::onConfirmClicked(){
                 currentGroupType->setDescribe(ui->describe->toPlainText());
                 currentGroupType->setCustomFieldList(tempFields);
                 //更新数据库
-                Data::sharedData.database.setDatabaseName(Data::dataPathGetter.getCurrentAccountDataBasePath());
-                QSqlQuery query(Data::sharedData.database);
-                if(!Data::sharedData.database.open()){
-                    QMessageBox::critical(0, QObject::tr("Database Connection Error!"), Data::sharedData.database.lastError().text());
+                sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
+                QSqlQuery query(sharedData.database);
+                if(!sharedData.database.open()){
+                    QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
                     return;
                 }else{
-                    QString editGroupTypeTableOldName=Data::dataBaseTableNameGetter.getGroupTypeTableName(currentGroupOldName);
-                    QString editGroupTypeTableName=Data::dataBaseTableNameGetter.getGroupTypeTableName(currentGroupType->getGroupTypeName());
-                    if(!Data::sharedData.database.tables().contains(editGroupTypeTableOldName)){
+                    QString editGroupTypeTableOldName=dataBaseTableNameGetter.getGroupTypeTableName(currentGroupOldName);
+                    QString editGroupTypeTableName=dataBaseTableNameGetter.getGroupTypeTableName(currentGroupType->getGroupTypeName());
+                    if(!sharedData.database.tables().contains(editGroupTypeTableOldName)){
                     }else{
-                        //更新Data::sharedData.groupTypeList
-                        QString sql=QString("update "+Data::dataBaseTableNameGetter.getGroupTypesTableName()+" set groupTypeName='%1',fieldCount='%2',lastEditTime='%3',describe='%4' where createTime='%5' ")
+                        //更新sharedData.groupTypeList
+                        QString sql=QString("update "+dataBaseTableNameGetter.getGroupTypesTableName()+" set groupTypeName='%1',fieldCount='%2',lastEditTime='%3',describe='%4' where createTime='%5' ")
                                 .arg(currentGroupType->getGroupTypeName())
                                 .arg(QString::number(currentGroupType->count()))
                                 .arg(currentGroupType->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"))
@@ -403,7 +413,7 @@ void newGroupTypeDialog::onConfirmClicked(){
                             query.bindValue(":4",currentGroupType->at(i)->getPlaceholderText());
                             query.exec();
                         }
-                        Data::sharedData.database.close();
+                        sharedData.database.close();
                     }
                 }
                 //在typeManagerTableWidget中编辑信息
@@ -429,7 +439,7 @@ void newGroupTypeDialog::onConfirmClicked(){
             QString message="无法创建类型:\n";
             if(!typeName->isValid())
                 message+="名称不合法!\n";
-            if(typeName->text()!=chosenOldName&&Data::sharedData.groupTypeList.has(typeName->text()))
+            if(typeName->text()!=chosenOldName&&sharedData.groupTypeList.has(typeName->text()))
                 message+="类型名已存在!\n";
             if((currentGroupType!=nullptr&&currentGroupType->count()<2))
                 message+="字段数目不得小于2!";
@@ -438,6 +448,7 @@ void newGroupTypeDialog::onConfirmClicked(){
     }
 }
 void newGroupTypeDialog::onAddFieldClicked(){
+    SharedData& sharedData = SharedData::instace();
     //flag判断字段名是否重复
     bool IsRedundant=false;
     for(int i=0;i<tempFields.count();i++)
@@ -450,9 +461,9 @@ void newGroupTypeDialog::onAddFieldClicked(){
         QString newFieldName=addFieldName->text();
         QString newFieldPlaceholderText=addFieldTip->text();
         int index=ui->addFieldComboBox->currentIndex();
-        AbstractCustomField::controllerTypeChoices controllerType=Data::sharedData.fieldTypeList[index].getFieldControllerType();
-        AbstractCustomField::dataTypeChoices dataType=Data::sharedData.fieldTypeList[index].getFieldDataType();
-        AbstractCustomField::isRequiredChoices isRequired=Data::sharedData.fieldTypeList[index].getFieldIsRequired();
+        AbstractCustomField::controllerTypeChoices controllerType=sharedData.fieldTypeList[index].getFieldControllerType();
+        AbstractCustomField::dataTypeChoices dataType=sharedData.fieldTypeList[index].getFieldDataType();
+        AbstractCustomField::isRequiredChoices isRequired=sharedData.fieldTypeList[index].getFieldIsRequired();
         AbstractCustomField* tempNewField=nullptr;
         //新建abstractCustomField
         if(controllerType==AbstractCustomField::LINEEDIT)
@@ -475,11 +486,11 @@ void newGroupTypeDialog::onAddFieldClicked(){
             checkItem->setChecked(tempNewField->getIsRequired());
         checkItem->setObjectName("isRequiredCheckBox_"+QString::number(ui->editFieldsTableWidget->rowCount()-1));
         connect(checkItem,SIGNAL(toggled(bool)),this,SLOT(onIsReqiuredCheckBoxToggled(bool)));
-        tempNewField->setFieldTypeName(Data::sharedData.fieldTypeList[index].getFieldTypeName());
+        tempNewField->setFieldTypeName(sharedData.fieldTypeList[index].getFieldTypeName());
         ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,0,new QTableWidgetItem(""));
         ui->editFieldsTableWidget->setCellWidget(ui->editFieldsTableWidget->rowCount()-1,0,checkItem);
         ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,1,new QTableWidgetItem(tempNewField->getFieldName()));
-        ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(Data::sharedData.fieldTypeList[index].getFieldTypeName()));
+        ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,2,new QTableWidgetItem(sharedData.fieldTypeList[index].getFieldTypeName()));
         ui->editFieldsTableWidget->setItem(ui->editFieldsTableWidget->rowCount()-1,3,new QTableWidgetItem(tempNewField->getPlaceholderText()));
         for (int j=0;j<ui->editFieldsTableWidget->columnCount();j++){
             ui->editFieldsTableWidget->item(ui->editFieldsTableWidget->rowCount()-1,j)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
