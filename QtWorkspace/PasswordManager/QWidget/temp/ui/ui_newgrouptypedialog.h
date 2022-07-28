@@ -86,7 +86,7 @@ public:
         typeManager->setObjectName(QString::fromUtf8("typeManager"));
         typeManagerTableWidget = new QTableWidget(typeManager);
         typeManagerTableWidget->setObjectName(QString::fromUtf8("typeManagerTableWidget"));
-        typeManagerTableWidget->setGeometry(QRect(10, 10, 651, 581));
+        typeManagerTableWidget->setGeometry(QRect(10, 10, 651, 591));
         layoutWidget = new QWidget(typeManager);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(680, 100, 151, 301));
@@ -141,7 +141,7 @@ public:
         editType->setObjectName(QString::fromUtf8("editType"));
         editFields = new QGroupBox(editType);
         editFields->setObjectName(QString::fromUtf8("editFields"));
-        editFields->setGeometry(QRect(10, 110, 821, 431));
+        editFields->setGeometry(QRect(0, 110, 841, 451));
         editFieldsTableWidget = new QTableWidget(editFields);
         editFieldsTableWidget->setObjectName(QString::fromUtf8("editFieldsTableWidget"));
         editFieldsTableWidget->setGeometry(QRect(10, 130, 801, 291));
@@ -187,7 +187,7 @@ public:
         addFieldTipLayout->setContentsMargins(0, 0, 0, 0);
         layoutWidget_5 = new QWidget(editType);
         layoutWidget_5->setObjectName(QString::fromUtf8("layoutWidget_5"));
-        layoutWidget_5->setGeometry(QRect(630, 550, 195, 31));
+        layoutWidget_5->setGeometry(QRect(650, 570, 195, 31));
         confirmBoxLayout = new QHBoxLayout(layoutWidget_5);
         confirmBoxLayout->setObjectName(QString::fromUtf8("confirmBoxLayout"));
         confirmBoxLayout->setContentsMargins(0, 0, 0, 0);
@@ -203,7 +203,7 @@ public:
 
         essentialInfo = new QGroupBox(editType);
         essentialInfo->setObjectName(QString::fromUtf8("essentialInfo"));
-        essentialInfo->setGeometry(QRect(10, 10, 821, 91));
+        essentialInfo->setGeometry(QRect(0, 10, 841, 101));
         layoutWidget_6 = new QWidget(essentialInfo);
         layoutWidget_6->setObjectName(QString::fromUtf8("layoutWidget_6"));
         layoutWidget_6->setGeometry(QRect(10, 30, 311, 41));
@@ -226,7 +226,7 @@ public:
 
         retranslateUi(newGroupTypeDialog);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(newGroupTypeDialog);

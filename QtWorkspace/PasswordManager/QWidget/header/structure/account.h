@@ -24,6 +24,7 @@ public:
     void setLastEditTime();
     const QString &getPortraitPath() const;
     void setPortraitPath(const QString &newPortraitPath);
+    QString toString();
 };
 
 #endif // ACCOUNT_H

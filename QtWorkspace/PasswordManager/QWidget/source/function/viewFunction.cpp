@@ -28,13 +28,11 @@ void Widget::updateTableWidgetView(int index)
 void Widget::changeTab()
 {
     SharedData& sharedData = SharedData::instace();
-    for(int i=0;i<sharedData.groupList.count();i++)
-        buttons[i]->setStyleSheet("");
     QPushButton* send=(QPushButton*)sender();
-    int index=stackedWidget->currentIndex();
+    int index=tabWidget->currentIndex();
     Group* currentGroup=sharedData.groupList[index];
     send->setStyleSheet("background-color:#00b7c3");
-    stackedWidget->setCurrentIndex(send->objectName().toInt());
+    tabWidget->setCurrentIndex(send->objectName().toInt());
     tableWidgetMenu=new QMenu(tableWidgets[index]);
     QList<QAction*> tableMenu;
     QAction *removeItem=new QAction("删除密码");
@@ -62,12 +60,9 @@ void Widget::changeTab()
     tableWidgets[index]->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(tableWidgets[index],SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(tableWidgetContextMenuRequested(QPoint)));
 }
-void Widget::onTabIndexChanged(int index)
+void Widget::onTabIndexChanged(int)
 {
-    SharedData& sharedData = SharedData::instace();
-    for(int i=0;i<sharedData.groupList.count();i++)
-        buttons[i]->setStyleSheet("");
-    buttons[index]->setStyleSheet("background-color:#00b7c3");
+
 }
 void Widget::onGroupTypeCountChanged()
 {
@@ -79,10 +74,9 @@ void Widget::onGroupCountChanged()
 {
     SharedData& sharedData = SharedData::instace();
     if(sharedData.groupList.count()==0){
-        stackedWidget->hide(),addItem->hide(),deleteGroup->hide(),editGroup->hide(),save->hide(),search->hide();
+        tabWidget->hide(),addItem->hide(),deleteGroup->hide(),editGroup->hide(),save->hide(),search->hide();
     }else{
-        buttons[0]->click();
-        stackedWidget->show(),addItem->show(),deleteGroup->show(),editGroup->show(),save->show(),search->show();
+        tabWidget->show(),addItem->show(),deleteGroup->show(),editGroup->show(),save->show(),search->show();
     }
     if(sharedData.groupList.count()<=1)
         deleteGroup->setEnabled(false);
@@ -91,10 +85,10 @@ void Widget::onGroupCountChanged()
 }
 void Widget::onOptionButtonClicked()
 {
-    //    optiondialog->setModal(true);
-    //    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
-    //    optiondialog->exec();
-    newgrouptypedialog->setModal(true);
-    newgrouptypedialog->setGeometry(this->geometry().x()+this->width()/2-newgrouptypedialog->width()/2+10,this->geometry().y()+this->height()/2-newgrouptypedialog->height()/2-10,newgrouptypedialog->width(),newgrouptypedialog->height());
-    newgrouptypedialog->exec();
+    optiondialog->setModal(true);
+    optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
+    optiondialog->exec();
+//        newgrouptypedialog->setModal(true);
+//        newgrouptypedialog->setGeometry(this->geometry().x()+this->width()/2-newgrouptypedialog->width()/2+10,this->geometry().y()+this->height()/2-newgrouptypedialog->height()/2-10,newgrouptypedialog->width(),newgrouptypedialog->height());
+//        newgrouptypedialog->exec();
 }

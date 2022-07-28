@@ -28,15 +28,15 @@ void Widget::initFrame()
     m_titleBar->setFixedWidth(this->width());
     this->setFixedSize(this->width(),this->height()+m_titleBar->height());
 
-    stackedWidget=new QStackedWidget(this);
-    stackedWidget->setGeometry(120,m_titleBar->height()+10,1000,680);
+    tabWidget=new QTabWidget(this);
+    tabWidget->setGeometry(20,m_titleBar->height()+10,1160,680);
 
     optiondialog=new optionDialog(this);
     newitemdialog=new newItemDialog(this);
     newgroupdialog=new newGroupDialog(this);
     newgrouptypedialog=new newGroupTypeDialog(this);
     //添加操作按钮
-    int leftEdge=350;
+    int leftEdge=330;
     search=new QLineEdit(this);
     search->setPlaceholderText("键入以搜索/筛选");
     search->setStyleSheet("border-radius:5px");
@@ -72,7 +72,7 @@ void Widget::initFrame()
     connect(deleteGroup,SIGNAL(clicked()),this,SLOT(deleteGroupSlot()));
     connect(editGroup,SIGNAL(clicked()),this,SLOT(editGroupSlot()));
     connect(addItem,SIGNAL(clicked()),this,SLOT(newKeyItemSlot()));
-    connect(stackedWidget,SIGNAL(currentChanged(int)),this,SLOT(onTabIndexChanged(int)));
+    connect(tabWidget,SIGNAL(currentChanged(int)),this,SLOT(onTabIndexChanged(int)));
     connect(this,SIGNAL(groupCountChanged()),this,SLOT(onGroupCountChanged()));
     connect(m_titleBar->m_optionButton,SIGNAL(clicked()),this,SLOT(onOptionButtonClicked()));
 

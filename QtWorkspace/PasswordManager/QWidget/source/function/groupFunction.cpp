@@ -8,68 +8,78 @@
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
-void Widget::loadUserData()
+void Widget::loadGroups()
 {
     SharedData& sharedData = SharedData::instace();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     //连接数据库
-    sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
+    QString currentUsername=sharedData.accountList.getActiveAccount()->getUsername();
+    QString databaseName=dataPathGetter.getCurrentAccountDataBasePath();
+    sharedData.database.setDatabaseName(databaseName);
     QSqlQuery query(sharedData.database);
     if(!sharedData.database.open()){
+        QsLogging::Logger::getFileLogger(currentUsername,"DATABASE");
+        QLOG_WARN()<<"Database Connection Error:"<<databaseName<<"!";
         QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
         return;
     }else{
+        QsLogging::Logger::getFileLogger("PUBLIC","DATABASE");
+        QLOG_DEBUG()<<"Database Connection:"<<databaseName;
         //获取数据库表名列表
         QStringList tableNames=sharedData.database.tables();
         if(!tableNames.contains(dataBaseTableNameGetter.getGroupsTableName())){
-            query.exec("create table sharedData.groupList (groupType int,groupName varchar(40),KeyItemCount int,createTime varchar(200),lastEditTime varchar(200),describe text)");
-        }
-        if(!tableNames.contains(dataBaseTableNameGetter.getGroupTypesTableName())){
-            query.exec("create table sharedData.groupTypeList (groupTypeName int,fieldCount int,createTime varchar(200),lastEditTime varchar(200),describe text)");
+            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+            //开启事务
+            QString transactionBeginSql="begin";
+            query.exec(transactionBeginSql);
+            QLOG_DEBUG()<<"Begin Transaction:"<<transactionBeginSql;
+            //创建groups表
+            QString createSql="create table "+dataBaseTableNameGetter.getGroupsTableName()
+                    +" (groupType int,groupName varchar(40),KeyItemCount int,createTime varchar(200),"
+                     "lastEditTime varchar(200),describe text)";
+            bool createSqlFlag=query.exec(createSql);
+            QLOG_DEBUG()<<"Create Table(s):"<<createSql;
+            //创建默认分组
+            Group* newGroup=new Group(0,"默认分组",QDateTime::currentDateTime(),QDateTime::currentDateTime(),"账户初始化时创建的默认分组");
+            sharedData.groupList<<newGroup;
+            //插入到groups表中
+            QString insertSql="insert into "+dataBaseTableNameGetter.getGroupsTableName()
+                    +" (groupType,groupName,KeyItemCount,createTime,lastEditTime,describe) "
+                     "VALUES(:1,:2,:3,:4,:5,:6)";
+            query.prepare(insertSql);
+            query.bindValue(":1",newGroup->getGroupType());
+            query.bindValue(":2",newGroup->getGroupName());
+            query.bindValue(":3",newGroup->count());
+            query.bindValue(":4",newGroup->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
+            query.bindValue(":5",newGroup->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+            query.bindValue(":6",newGroup->getDescribe());
+            bool insertSqlFlag=query.exec();
+            QLOG_DEBUG()<<"Insert Record(s):"<<insertSql;
+            //创建默认分组表
+            QString createDefaultGroupSql="create table "+dataBaseTableNameGetter.getGroupTableName(newGroup->getGroupName())
+                    +" (groupType int,createTime varchar(200),lastEditTime varchar(200))";
+            bool createDefaultGroupFlag=query.exec(createDefaultGroupSql);
+            QLOG_DEBUG()<<"Create Table(s):"<<createDefaultGroupSql;
+            if(createSqlFlag&&insertSqlFlag&&createDefaultGroupFlag){
+                QString transactionCommitSql="commit";
+                query.exec(transactionCommitSql);
+                QLOG_DEBUG()<<"Commit Transaction:"<<transactionCommitSql;
+            }else{
+                QString transactionRollbackSql="rollback";
+                query.exec(transactionRollbackSql);
+                QLOG_DEBUG()<<"Rollback Transaction:"<<transactionRollbackSql;
+            }
         }
         if(!tableNames.contains(dataBaseTableNameGetter.getAutofillInfoTableName())){
-            query.exec("create table sharedData.autofillInfo (type int,content varchar(100),remark varchar(100))");
+            QString createSql="create table sharedData.autofillInfo (type int,content varchar(100),remark varchar(100))";
+            query.exec(createSql);
+            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+            QLOG_DEBUG()<<"Create Table(s):"<<createSql;
         }
-        //加载分组类型
-        QString curTableName=dataBaseTableNameGetter.getGroupTypesTableName();
-        query.exec("select * from "+curTableName);
-        //新建各个分组类型
-        for(int i = 0;query.next(); i++){
-            GroupType* newGroupType=new GroupType(query.value(0).toString(),query.value(2).toDateTime(),query.value(3).toDateTime(),query.value(4).toString());
-            sharedData.groupTypeList<<newGroupType;
-        }
-        //加载各个分组类型的字段条目
-        for(int i=0;i<sharedData.groupTypeList.count();i++){
-            curTableName=dataBaseTableNameGetter.getGroupTypeTableName(sharedData.groupTypeList[i]->getGroupTypeName());
-            query.exec("select * from "+curTableName);
-            QList<AbstractCustomField*> fieldList;
-            for(int i = 0;query.next(); i++){
-                QString fieldName=query.value(0).toString();
-                QString fieldTypeName=query.value(2).toString();
-                QString fieldPlaceholderText=query.value(3).toString();
-                AbstractCustomField::controllerTypeChoices controllerType=sharedData.fieldTypeList.getControllerType(fieldTypeName);
-                AbstractCustomField::dataTypeChoices dataType=sharedData.fieldTypeList.getDataType(fieldTypeName);
-                AbstractCustomField::isRequiredChoices isRequired=AbstractCustomField::isRequiredChoices(query.value(1).toInt());
-                AbstractCustomField* tempField=nullptr;
-                //新建abstractCustomField
-                if(controllerType==AbstractCustomField::LINEEDIT)
-                    tempField=new customLineEdit(fieldName,isRequired,dataType);
-                else if(controllerType==AbstractCustomField::COMBOBOX)
-                    tempField=new customComboBox(fieldName,isRequired,dataType);
-                else if(controllerType==AbstractCustomField::TEXTEDIT)
-                    tempField=new customTextEdit(fieldName,isRequired,dataType);
-                if(tempField!=nullptr&&fieldPlaceholderText!=""){
-                    tempField->setPlaceholderText(fieldPlaceholderText);
-                }
-                fieldList<<tempField;
-            }
-            sharedData.groupTypeList[i]->setCustomFieldList(fieldList);
-        }
-        newgrouptypedialog->loadGroupTypes();
         //加载分组
         //新建各个分组
-        curTableName=dataBaseTableNameGetter.getGroupsTableName();
+        QString curTableName=dataBaseTableNameGetter.getGroupsTableName();
         query.exec("select * from "+curTableName);
         for(int i = 0;query.next(); i++){
             newGroup=new Group(query.value(0).toInt(),query.value(1).toString(),query.value(3).toDateTime(),query.value(4).toDateTime(),query.value(5).toString());
@@ -85,9 +95,186 @@ void Widget::loadUserData()
                 loadKeyItemFunction(curTableName);
             }
         }
+        sharedData.database.close();
+    }
+    //发射分组数目改变的信号
+    emit groupCountChanged();
+}
+void Widget::loadGroupTypes()
+{
+    SharedData& sharedData = SharedData::instace();
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
+    //连接数据库
+    QString currentUsername=sharedData.accountList.getActiveAccount()->getUsername();
+    QString databaseName=dataPathGetter.getCurrentAccountDataBasePath();
+    sharedData.database.setDatabaseName(databaseName);
+    QSqlQuery query(sharedData.database);
+    if(!sharedData.database.open()){
+        QsLogging::Logger::getFileLogger(currentUsername,"DATABASE");
+        QLOG_WARN()<<"Database Connection Error:"<<databaseName<<"!";
+        QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
+        return;
+    }else{
+        QsLogging::Logger::getFileLogger("PUBLIC","DATABASE");
+        QLOG_DEBUG()<<"Database Connection:"<<databaseName;
+        //获取数据库表名列表
+        QStringList tableNames=sharedData.database.tables();
+        if(!tableNames.contains(dataBaseTableNameGetter.getGroupTypesTableName())){
+            //如果不包含groupTypes表，则创建之并插入默认分组类型
+            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+            //开启事务
+            QString transactionBeginSql="begin";
+            query.exec(transactionBeginSql);
+            QLOG_DEBUG()<<"Begin Transaction:"<<transactionBeginSql;
+            //创建groupTypes表
+            QString createGroupTypesTableSql="create table "+dataBaseTableNameGetter.getGroupTypesTableName()
+                    +" (groupTypeName varchar(200),fieldCount int,"
+                     "createTime varchar(200),lastEditTime varchar(200),describe text)";
+            bool createGroupTypesTableFlag=query.exec(createGroupTypesTableSql);
+            QLOG_DEBUG()<<"Create Table(s):"<<createGroupTypesTableSql;
+            //创建默认分组类型
+            QList<AbstractCustomField*> customFieldList;
+            AbstractCustomField* field_1=new customLineEdit("名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+            field_1->setFieldTypeName("单行文本");
+            AbstractCustomField* field_2=new customLineEdit("用户名",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
+            field_2->setFieldTypeName("单行文本");
+            AbstractCustomField* field_3=new customLineEdit("密码",AbstractCustomField::REQUIRED,AbstractCustomField::PASSWORD,this);
+            field_3->setFieldTypeName("密码");
+            AbstractCustomField* field_4=new customComboBox("邮箱",AbstractCustomField::OPTIONAL,AbstractCustomField::MAIL,this);
+            field_4->setFieldTypeName("自动填充-邮箱");
+            AbstractCustomField* field_5=new customComboBox("手机号码",AbstractCustomField::OPTIONAL,AbstractCustomField::MOBILE,this);
+            field_5->setFieldTypeName("自动填充-电话");
+            AbstractCustomField* field_6=new customComboBox("网址",AbstractCustomField::OPTIONAL,AbstractCustomField::WEBSITE,this);
+            field_6->setFieldTypeName("自动填充-网址");
+            AbstractCustomField* field_7=new customTextEdit("备注",AbstractCustomField::OPTIONAL,AbstractCustomField::NORMAL,this);
+            field_7->setFieldTypeName("多行文本");
+            customFieldList<<field_1<<field_2<<field_3<<field_4<<field_5<<field_6<<field_7;
+            GroupType* loadGroupType=new GroupType("默认类型","账户初始化时创建的默认分组类型",customFieldList);
+            sharedData.groupTypeList<<loadGroupType;
+            //插入到groupTypes表中
+            QString insertIntoGroupTypesTableSql="insert into "+dataBaseTableNameGetter.getGroupTypesTableName()
+                    +" (groupTypeName,fieldCount,createTime,lastEditTime,describe) "
+                     "VALUES(:1,:2,:3,:4,:5)";
+            query.prepare(insertIntoGroupTypesTableSql);
+            query.bindValue(":1",loadGroupType->getGroupTypeName());
+            query.bindValue(":2",loadGroupType->count());
+            query.bindValue(":3",loadGroupType->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
+            query.bindValue(":4",loadGroupType->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+            query.bindValue(":5",loadGroupType->getDescribe());
+            bool insertIntoGroupTypesTableFlag=query.exec();
+            QLOG_DEBUG()<<"Insert Record(s):"<<insertIntoGroupTypesTableSql;
+            //创建默认分组类型表
+            QString createDefaultGroupTypeTableSql="create table "+dataBaseTableNameGetter.getGroupTypeTableName(loadGroupType->getGroupTypeName())
+                    +" (fieldName varchar(200),isRequired int,fieldTypeName varchar(200),placeholderText text)";
+            bool createDefaultGroupTypeTableFlag=query.exec(createDefaultGroupTypeTableSql);
+            QLOG_DEBUG()<<"Create Table(s):"<<createDefaultGroupTypeTableSql;
+            //插入类型字段
+            bool insertFieldFlag=true;
+            for(int i=0;i<loadGroupType->count();i++){
+                QString insertFieldSql="insert into "+dataBaseTableNameGetter.getGroupTypeTableName(loadGroupType->getGroupTypeName())
+                        +" (fieldName,isRequired,fieldTypeName,placeholderText)VALUES(:1,:2,:3,:4)";
+                query.prepare(insertFieldSql);
+                query.bindValue(":1",loadGroupType->at(i)->getFieldName());
+                query.bindValue(":2",int(loadGroupType->at(i)->getIsRequired()));
+                query.bindValue(":3",loadGroupType->at(i)->getFieldTypeName());
+                query.bindValue(":4",loadGroupType->at(i)->getPlaceholderText());
+                bool temp=query.exec();
+                qDebug()<<query.lastError();
+                insertFieldFlag=insertFieldFlag&&temp;
+                QLOG_DEBUG()<<"Insert Record(s):"<<insertFieldSql;
+            }
+            if(createGroupTypesTableFlag&&insertIntoGroupTypesTableFlag&&createDefaultGroupTypeTableFlag&&insertFieldFlag){
+                QString transactionCommitSql="commit";
+                query.exec(transactionCommitSql);
+                QLOG_DEBUG()<<"Commit Transaction:"<<transactionCommitSql;
+            }else{
+                QString transactionRollbackSql="rollback";
+                query.exec(transactionRollbackSql);
+                QLOG_DEBUG()<<"Rollback Transaction:"<<transactionRollbackSql;
+            }
+        }else{
+            //加载分组类型
+            QString curTableName=dataBaseTableNameGetter.getGroupTypesTableName();
+            QString selectSql="select * from "+curTableName;
+            query.exec(selectSql);
+            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+            QLOG_DEBUG()<<"Select Column(s):"<<selectSql;
+            //新建各个分组类型
+            for(int i = 0;query.next(); i++){
+                GroupType* newGroupType=new GroupType(query.value(0).toString(),query.value(2).toDateTime(),query.value(3).toDateTime(),query.value(4).toString());
+                sharedData.groupTypeList<<newGroupType;
+                QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+                QLOG_DEBUG()<<"Load GroupType:"<<newGroupType->getGroupTypeName();
+            }
+            //加载各个分组类型的字段条目
+            for(int i=0;i<sharedData.groupTypeList.count();i++){
+                curTableName=dataBaseTableNameGetter.getGroupTypeTableName(sharedData.groupTypeList[i]->getGroupTypeName());
+                QString selectSql="select * from "+curTableName;
+                query.exec(selectSql);
+                QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+                QLOG_DEBUG()<<"Select Column(s):"<<selectSql;
+                QList<AbstractCustomField*> fieldList;
+                for(int i = 0;query.next(); i++){
+                    QString fieldName=query.value(0).toString();
+                    QString fieldTypeName=query.value(2).toString();
+                    QString fieldPlaceholderText=query.value(3).toString();
+                    AbstractCustomField::isRequiredChoices isRequired=AbstractCustomField::isRequiredChoices(query.value(1).toInt());
+                    AbstractCustomField::controllerTypeChoices controllerType=sharedData.fieldTypeList.getControllerType(fieldTypeName);
+                    AbstractCustomField::dataTypeChoices dataType=sharedData.fieldTypeList.getDataType(fieldTypeName);
+                    QLOG_DEBUG()<<"Load Field:"<<fieldName;
+                    AbstractCustomField* tempField=nullptr;
+                    //新建abstractCustomField
+                    if(controllerType==AbstractCustomField::LINEEDIT)
+                        tempField=new customLineEdit(fieldName,isRequired,dataType);
+                    else if(controllerType==AbstractCustomField::COMBOBOX)
+                        tempField=new customComboBox(fieldName,isRequired,dataType);
+                    else if(controllerType==AbstractCustomField::TEXTEDIT)
+                        tempField=new customTextEdit(fieldName,isRequired,dataType);
+                    if(tempField!=nullptr&&fieldPlaceholderText!=""){
+                        tempField->setPlaceholderText(fieldPlaceholderText);
+                    }
+                    fieldList<<tempField;
+                }
+                sharedData.groupTypeList[i]->setCustomFieldList(fieldList);
+            }
+        }
+        newgrouptypedialog->loadGroupTypes();
+        sharedData.database.close();
+    }
+}
+void Widget::loadAutofillInfo()
+{
+    SharedData& sharedData = SharedData::instace();
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
+    //连接数据库
+    QString currentUsername=sharedData.accountList.getActiveAccount()->getUsername();
+    QString databaseName=dataPathGetter.getCurrentAccountDataBasePath();
+    sharedData.database.setDatabaseName(databaseName);
+    QSqlQuery query(sharedData.database);
+    if(!sharedData.database.open()){
+        QsLogging::Logger::getFileLogger(currentUsername,"DATABASE");
+        QLOG_WARN()<<"Database Connection Error:"<<databaseName<<"!";
+        QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
+        return;
+    }else{
+        QsLogging::Logger::getFileLogger("PUBLIC","DATABASE");
+        QLOG_DEBUG()<<"Database Connection:"<<databaseName;
+        //获取数据库表名列表
+        QStringList tableNames=sharedData.database.tables();
+        if(!tableNames.contains(dataBaseTableNameGetter.getAutofillInfoTableName())){
+            QString createSql="create table sharedData.autofillInfo (type int,content varchar(100),remark varchar(100))";
+            query.exec(createSql);
+            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+            QLOG_DEBUG()<<"Create Table(s):"<<createSql;
+        }
         //加载个人信息
-        curTableName=dataBaseTableNameGetter.getAutofillInfoTableName();
-        query.exec("select * from "+curTableName);
+        QString curTableName=dataBaseTableNameGetter.getAutofillInfoTableName();
+        QString selectSql="select * from "+curTableName;
+        query.exec(selectSql);
+        QsLogging::Logger::getFileLogger(currentUsername,"SQL");
+        QLOG_DEBUG()<<"Select Column(s):"<<selectSql;
         for(int i = 0;query.next(); i++){
             //个人信息类型:1-邮箱,2-电话,3-网址
             int type=query.value(0).toInt();
@@ -109,6 +296,12 @@ void Widget::loadUserData()
     }
     //发射分组数目改变的信号
     emit groupCountChanged();
+}
+void Widget::loadUserData()
+{
+    loadGroupTypes();
+    loadGroups();
+    loadAutofillInfo();
 }
 void Widget::newGroupSlot()
 {
@@ -152,25 +345,13 @@ void Widget::newGroupFunction(int mode)
         tableWidgets[groupCount]->horizontalHeader()->setSectionResizeMode(i,QHeaderView::ResizeToContents);
     //绑定tableWidget槽函数
     connect(tableWidgets[groupCount],SIGNAL(cellClicked(int,int)),this,SLOT(tableWidgetClickedSlot(int,int)));
-    //初始化button
-    QPushButton* tempButton=new QPushButton(groupName,this);
-    buttons<<tempButton;
-    buttons[groupCount]->setVisible(true);
-    buttons[groupCount]->setObjectName(QString::number(groupCount));
-    //设置button位置
-    if(groupCount==0)
-        buttons[groupCount]->setGeometry(20,m_titleBar->height()+20,100,30);
-    else
-        buttons[groupCount]->setGeometry(20,m_titleBar->height()+buttons[groupCount-1]->geometry().y(),100,30);
-    //绑定button槽函数
-    connect(buttons[groupCount],SIGNAL(clicked()),this,SLOT(changeTab()));
-    //初始化stackedWidget
+    //初始化tabWidget
     QWidget* tempWidget=new QWidget;
     widgets<<tempWidget;
     QHBoxLayout* tempLayout=new QHBoxLayout;
     tempLayout->addWidget(tableWidgets[groupCount]);
     widgets[groupCount]->setLayout(tempLayout);
-    stackedWidget->addWidget(widgets[groupCount]);
+    tabWidget->addTab(widgets[groupCount],groupName);
     //添加到sharedData.groupList中
     sharedData.groupList<<newGroup;
     if(mode==0){
@@ -205,7 +386,7 @@ void Widget::newGroupFunction(int mode)
 void Widget::deleteGroupSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    int index=stackedWidget->currentIndex();
+    int index=tabWidget->currentIndex();
     QString deleteGroupName=sharedData.groupList[index]->getGroupName();
     QString title="删除分组 "+deleteGroupName+" ";
     QString message="是否确认"+title;
@@ -224,9 +405,7 @@ void Widget::deleteGroupSlot()
             query.exec("drop table "+deleteGroupName);
             QString sql = QString("delete from sharedData.groupList where groupName = '%1' ").arg(deleteGroupName);
             //删除stackedWidget、buttons、widgets、tableWidgets中的相关控件
-            stackedWidget->removeWidget(widgets[index]);
-            buttons.at(index)->hide();
-            buttons.removeAt(index);
+            tabWidget->removeTab(index);
             widgets.removeAt(index);
             tableWidgets.removeAt(index);
             //删除group
@@ -234,22 +413,13 @@ void Widget::deleteGroupSlot()
             query.exec(sql);
         }
     }
-    //删除成功后跳转到第一个分组,并更新buttons位置与相关信息
-    buttons[0]->click();
-    buttons[0]->setGeometry(20,m_titleBar->height()+20,100,30);
-    buttons[0]->setObjectName(QString::number(0));
-    for(int i=1;i<buttons.count();i++)
-    {
-        buttons[i]->setGeometry(20,m_titleBar->height()+buttons[i-1]->geometry().y()+20,100,30);
-        buttons[i]->setObjectName(QString::number(i));
-    }
     //发射分组数目改变的信号
     emit groupCountChanged();
 }
 void Widget::editGroupSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    Group* currentGroup=sharedData.groupList[stackedWidget->currentIndex()];
+    Group* currentGroup=sharedData.groupList[tabWidget->currentIndex()];
     int groupType=currentGroup->getGroupType();
     QString oldGroupName=currentGroup->getGroupName();
     newgroupdialog->ui->tabWidget->setCurrentIndex(1);
@@ -266,15 +436,14 @@ void Widget::editGroupSlot()
 void Widget::editGroupFunction(QString oldGroupName)
 {
     SharedData& sharedData = SharedData::instace();
-    int index=stackedWidget->currentIndex();
-    Group* currentGroup=sharedData.groupList[stackedWidget->currentIndex()];
+    int index=tabWidget->currentIndex();
+    Group* currentGroup=sharedData.groupList[tabWidget->currentIndex()];
     if(newGroup!=NULL&&newGroup->getFlag())
     {
         //更新group信息
         currentGroup->setGroupName(newGroup->getGroupName());
         currentGroup->setDescribe(newGroup->getDescribe());
         currentGroup->setLastEditTime();
-        buttons[index]->setText(newGroup->getGroupName());
         //更新数据库
         QSqlQuery query(sharedData.database);
         if(!sharedData.database.open()){

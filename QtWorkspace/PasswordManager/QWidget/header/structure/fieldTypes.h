@@ -5,6 +5,7 @@ class FieldTypes{
 private:
     QList<FieldType> fieldTypeList;
 public:
+    FieldTypes();
     QStringList getNames();
     AbstractCustomField::isRequiredChoices getIsRequired(const QString& fieldTypeName);
     AbstractCustomField::controllerTypeChoices getControllerType(const QString& fieldTypeName);

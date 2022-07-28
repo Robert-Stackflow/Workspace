@@ -57,9 +57,8 @@ class Widget : public QWidget
 public:
     //widgets
     Ui::Widget *ui;
+    QTabWidget* tabWidget;
     QList<QWidget*> widgets;
-    QList<QPushButton*> buttons;
-    QStackedWidget* stackedWidget;
     QList<QTableWidget*> tableWidgets;
     QList<QStringList> tableWidgetHeaders;
     //Group functions
@@ -107,6 +106,9 @@ public:
     void loadKeyItemFunction(QString& tableName);
     void newKeyItemFunction(QString& tableName);
     //加载、更新数据库
+    void loadGroups();
+    void loadGroupTypes();
+    void loadAutofillInfo();
     void loadUserData();
     void updateAutofillInfo();
 private slots:

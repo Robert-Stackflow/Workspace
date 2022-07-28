@@ -4,6 +4,7 @@ DataPathGetter* DataPathGetter::sinstance=nullptr;
 QString DataPathGetter::portraitDir="portrait/";
 QString DataPathGetter::dataDir="data/";
 QString DataPathGetter::logsDir="logs/";
+QString DataPathGetter::defaultPortraitPath=":custom/icons/defaultPortrait.png";
 DataPathGetter::DataPathGetter(){
 }
 DataPathGetter& DataPathGetter::instance(){
@@ -36,4 +37,8 @@ QString DataPathGetter::getCurrentAccountDataBasePath()
 {
     SharedData& sharedData = SharedData::instace();
     return dataDir+QString::number(sharedData.accountList.getActiveAccount()->getCreateTime().toTime_t())+".pmd";
+}
+QString DataPathGetter::getDefaultPortraitPath()
+{
+    return defaultPortraitPath;
 }

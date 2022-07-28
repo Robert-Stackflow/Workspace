@@ -61,3 +61,11 @@ void Account::setPortraitPath(const QString &newPortraitPath)
 {
     portraitPath = newPortraitPath;
 }
+QString Account::toString(){
+    QString str=QString("username:'%1',portraitPath:'%2',createTime:'%3',lastEditTime:'%4'")
+            .arg(username)
+            .arg(portraitPath)
+            .arg(createTime.toString("yyyy-MM-dd hh:mm:ss"))
+            .arg(lastEditTime.toString("yyyy-MM-dd hh:mm:ss"));
+    return str;
+}

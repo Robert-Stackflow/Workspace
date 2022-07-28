@@ -1,4 +1,9 @@
 ﻿#include "structure/fieldTypes.h"
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+FieldTypes::FieldTypes(){
+}
 QStringList FieldTypes::getNames(){
     QStringList names;
     for(int i=0;i<fieldTypeList.count();i++)

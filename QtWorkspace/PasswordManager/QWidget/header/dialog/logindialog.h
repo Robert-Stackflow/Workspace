@@ -12,7 +12,7 @@ class loginDialog : public QDialog
 public:
     Ui::loginDialog *ui;
     //辅助变量，便于不同函数间传递数据
-    QString tempPortraitPath;
+    QString tempPortraitPath="";
     //自定义控件
     customComboBox* username;
     customLineEdit* password;
@@ -28,6 +28,7 @@ private:
     void initOther();
     void initDialog();
     void loadAccounts();
+    void loadPortrait(const QString& portraitPath);
 private slots:
     void onConfirmClicked();
     void onPortraitDesPathChanged();

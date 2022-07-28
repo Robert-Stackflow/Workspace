@@ -35,7 +35,7 @@ customComboBox::customComboBox(const QString& fieldName,isRequiredChoices isRequ
         ui->controller->setValidator(validator);
         //绑定槽函数
         connect(ui->controller,SIGNAL(currentTextChanged(QString)),this,SLOT(onControllerEdited(QString)));
-        connect(ui->controller,SIGNAL(currentIndexChanged()),this,SLOT(onControllerCurrentIndexChanged()));
+        connect(ui->controller,SIGNAL(currentIndexChanged(int)),this,SLOT(onControllerCurrentIndexChanged(int)));
     }
     setPlaceholderText(defaultPlaceholderText);
 }

@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     //初始化Logger
-    QsLogging::Logger& logger=QsLogging::Logger::getFileLogger("PUBLIC","Program");
+    QsLogging::Logger& logger=QsLogging::Logger::getFileLogger("PUBLIC","PROGRAM");
     logger.setProgramName("Password Manager");
     logger.setLoggingLevel(QsLogging::TraceLevel);
     logger.setDefaultLogPath("logs/log.txt");

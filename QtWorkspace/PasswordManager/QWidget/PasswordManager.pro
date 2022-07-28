@@ -91,7 +91,9 @@ FORMS += \
 
 RESOURCES += \
     qrc/dark/dark.qrc \
-    qrc/custom/custom.qrc
+    qrc/custom/custom.qrc \
+    qrc/win11_dark/win11_dark.qrc \
+    qrc/win11_light/win11_light.qrc
 
 QXLSX_PARENTPATH=./lib/QXlxs
 QXLSX_HEADERPATH=./lib/QXlxs/QXlxsHeader/

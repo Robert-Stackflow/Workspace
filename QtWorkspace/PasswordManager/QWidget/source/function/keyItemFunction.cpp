@@ -39,11 +39,11 @@ void Widget::newKeyItemSlot()
     {
 
     }
-    QString groupName=sharedData.groupList[stackedWidget->currentIndex()]->getGroupName();
+    QString groupName=sharedData.groupList[tabWidget->currentIndex()]->getGroupName();
     newitemdialog->setWindowTitle("在分组 "+groupName+" 中添加密码");
     newitemdialog->m_titleBar->setWindowTitle("在分组 "+groupName+" 中添加密码");
     //转到newitemdialog
-    newitemdialog->loadGroupType(sharedData.groupList[stackedWidget->currentIndex()]->getGroupType());
+    newitemdialog->loadGroupType(sharedData.groupList[tabWidget->currentIndex()]->getGroupType());
     newitemdialog->setModal(true);
     newitemdialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
     newitemdialog->exec();
@@ -98,7 +98,7 @@ void Widget::newKeyItemFunction(QString& groupName)
 void Widget::removeKeyItemSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    QList<QTableWidgetItem*> selectItems = tableWidgets[stackedWidget->currentIndex()]->selectedItems();
+    QList<QTableWidgetItem*> selectItems = tableWidgets[tabWidget->currentIndex()]->selectedItems();
     QList<int> selectRows;
     for(int i=0;i<selectItems.size();i++)
     {
@@ -110,7 +110,7 @@ void Widget::removeKeyItemSlot()
     for(int i=selectRows.size()-1;i>=0;i--)
     {
         int row=selectRows[i];
-        message+=sharedData.groupList[stackedWidget->currentIndex()]->at(row)->toString();
+        message+=sharedData.groupList[tabWidget->currentIndex()]->at(row)->toString();
         message+="\n";
     }
     int choice=QMessageBox::question(this,"删除条目",message);
@@ -127,7 +127,7 @@ void Widget::removeKeyItemSlot()
             }
             else
             {
-                int index=stackedWidget->currentIndex();
+                int index=tabWidget->currentIndex();
                 Group* currentGroup=sharedData.groupList.at(index);
                 QString sql = QString("delete from '%1' where createTime = '%2' ").arg(currentGroup->getGroupName()).arg(currentGroup->at(row)->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
                 query.exec(sql);
