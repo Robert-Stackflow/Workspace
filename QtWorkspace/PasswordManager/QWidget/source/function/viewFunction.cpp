@@ -28,7 +28,7 @@ void Widget::updateTableWidgetView(int index)
 }
 void Widget::changeTab()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     QPushButton* send=(QPushButton*)sender();
     int index=ui->tabWidget->currentIndex();
     Group* currentGroup=sharedData.groupList[index];
@@ -63,7 +63,7 @@ void Widget::changeTab()
 }
 void Widget::onTabIndexChanged(int index)
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     ui->groupNameLabel->setText(sharedData.groupList[index]->getGroupName());
     ui->groupDescribeLabel->setText(sharedData.groupList[index]->getDescribe());
 }
@@ -73,13 +73,13 @@ void Widget::onListWidgetIndexChanged(int currentRow)
 }
 void Widget::onGroupTypeCountChanged()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     this->newgroupdialog->newGroupType->clear();
     this->newgroupdialog->newGroupType->addItems(sharedData.groupTypeList.getGroupTypeNames());
 }
 void Widget::onGroupCountChanged()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     ui->listWidget->clear();
     ui->listWidget->addItems(sharedData.groupList.getGroupNames());
     for(int i=0;i<ui->listWidget->count();i++){

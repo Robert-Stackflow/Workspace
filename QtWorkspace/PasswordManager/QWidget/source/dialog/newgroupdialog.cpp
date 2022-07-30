@@ -22,7 +22,7 @@ newGroupDialog::newGroupDialog(QWidget *parent) :
     ui->setupUi(this);
     InitDialog();
     //添加自定义控件
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     newGroupName->setPlaceholderText("输入分组名称");
     ui->groupNameLayout->addWidget(newGroupName);

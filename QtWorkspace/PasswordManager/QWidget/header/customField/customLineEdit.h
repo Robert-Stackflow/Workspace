@@ -14,16 +14,18 @@ public:
     //构造函数/析构函数
     explicit customLineEdit(const QString& fieldName,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     ~customLineEdit();
-    //属性
-    void clear();
+    //实现抽象函数
     bool isValid();
-    AbstractCustomField* clone();
-    void setPlaceholderText(const QString &placeholderText);
-    QString getPlaceholderText();
     QString text();
+    AbstractCustomField* clone();
+    QString getPlaceholderText();
+    void setPlaceholderText(const QString &placeholderText);
+    //与QLineEdit相关的属性
+    void clear();
     void setText(const QString &text);
     int maxLength();
     void setMaxLength(int length);
+    void setCompleter(QCompleter* completer);
 public slots:
     void onPasswordJudgeClicked();
     void onControllerEdited(const QString &arg);

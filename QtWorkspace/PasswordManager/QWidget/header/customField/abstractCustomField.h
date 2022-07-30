@@ -44,14 +44,13 @@ protected:
     //基本属性
     QString fieldName;
     QString fieldTypeName;
-    QString controllerFieldName;
+    QString controllerLabelName;
+    QString defaultPlaceholderText;
     dataTypeChoices dataType;
     isRequiredChoices isRequired;
     controllerTypeChoices controllerType;
-    //其他
-    QString defaultPlaceholderText;
 public:
-    //构造函数
+    //构造函数/析构函数
     explicit AbstractCustomField(const QString& fieldName,controllerTypeChoices controllerType,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     ~AbstractCustomField();
     //Getter与Setter
@@ -65,13 +64,13 @@ public:
     const QString &getFieldTypeName() const;
     void setFieldTypeName(const QString &newFieldTypeName);
     const QValidator* getValidator() const;
-    //其他
-    QString toString();
+    //虚函数
+    virtual QString toString();
     //抽象函数
     virtual bool isValid()=0;
     virtual QString text()=0;
+    virtual AbstractCustomField* clone()=0;
     virtual QString getPlaceholderText()=0;
-    virtual AbstractCustomField* clone();
     virtual void setPlaceholderText(const QString& placeholderText)=0;
 };
 

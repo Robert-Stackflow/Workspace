@@ -12,17 +12,17 @@ const QValidator* AbstractCustomField::mailValidator=new QRegExpValidator(Abstra
 AbstractCustomField::AbstractCustomField(const QString& fieldName,controllerTypeChoices controllerType,isRequiredChoices isRequired,dataTypeChoices dataType,QWidget* parent):QWidget(parent){
     this->parent=parent;
     this->fieldName=fieldName;
-    this->controllerFieldName=fieldName;
+    this->controllerLabelName=fieldName;
     if(isRequired==REQUIRED){
-        this->controllerFieldName='*'+this->controllerFieldName;
+        this->controllerLabelName='*'+this->controllerLabelName;
     }
-    this->controllerFieldName+=':';
+    this->controllerLabelName+=':';
     this->controllerType=controllerType;
     this->isRequired=isRequired;
     this->dataType=dataType;
     switch(dataType){
     case NORMAL:
-        defaultPlaceholderText=QString("Enter Text");
+        defaultPlaceholderText=QString("");
         break;
     case PASSWORD:
         defaultPlaceholderText=QString("Enter Password");
@@ -37,6 +37,9 @@ AbstractCustomField::AbstractCustomField(const QString& fieldName,controllerType
         defaultPlaceholderText=QString("Enter phone number");
         break;
     }
+}
+AbstractCustomField::~AbstractCustomField()
+{
 }
 const QValidator* AbstractCustomField::getValidator() const{
     const QValidator* validator=nullptr;
@@ -56,8 +59,6 @@ QString AbstractCustomField::toString(){
                    +QString(",{controllerType}:")+QString(controllerTypeMeta.valueToKey(controllerType))
                    +QString(",{isRequired}:")+QString(isRequiredMeta.valueToKey(isRequired))
                    +QString(",{dataType}:")+QString(dataTypeMeta.valueToKey(dataType)));
-}
-AbstractCustomField::~AbstractCustomField(){
 }
 const QString &AbstractCustomField::getFieldName() const
 {
@@ -92,9 +93,9 @@ void AbstractCustomField::setIsRequired(isRequiredChoices newIsRequired)
 {
     isRequired = newIsRequired;
     if(isRequired==REQUIRED)
-        controllerFieldName="*"+controllerFieldName;
+        controllerLabelName="*"+controllerLabelName;
     else
-        controllerFieldName=controllerFieldName.right(this->controllerFieldName.length()-1);
+        controllerLabelName=controllerLabelName.right(this->controllerLabelName.length()-1);
 }
 const QString &AbstractCustomField::getFieldTypeName() const
 {
@@ -104,7 +105,4 @@ const QString &AbstractCustomField::getFieldTypeName() const
 void AbstractCustomField::setFieldTypeName(const QString &newFieldTypeName)
 {
     fieldTypeName = newFieldTypeName;
-}
-AbstractCustomField* AbstractCustomField::clone(){
-    return nullptr;
 }

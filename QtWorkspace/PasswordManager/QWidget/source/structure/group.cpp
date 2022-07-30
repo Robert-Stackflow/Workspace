@@ -1,7 +1,19 @@
 ﻿#include "structure/group.h"
+#include "util/shareddata.h"
 #include <QDateTime>
-Group::Group(int groupType,QString groupName,QDateTime createTime,QDateTime lastEditTime,QString describe){
-    this->groupType=groupType;
+Group::Group(){
+    this->createTime=QDateTime::currentDateTime();
+    this->lastEditTime=QDateTime::currentDateTime();
+}
+Group::Group(const QString& groupTypeName,const QString& groupName,const QString& describe){
+    this->groupTypeName=groupTypeName;
+    this->groupName=groupName;
+    this->createTime=QDateTime::currentDateTime();
+    this->lastEditTime=QDateTime::currentDateTime();
+    this->describe=describe;
+}
+Group::Group(const QString& groupTypeName,const QString& groupName,QDateTime createTime,QDateTime lastEditTime,const QString& describe){
+    this->groupTypeName=groupTypeName;
     this->groupName=groupName;
     this->createTime=createTime;
     this->lastEditTime=lastEditTime;
@@ -38,7 +50,8 @@ void Group::append(KeyItem* newKeyItem){
 
 int Group::getGroupType() const
 {
-    return groupType;
+    SharedData& sharedData=SharedData::instance();
+    return sharedData.groupTypeList.index(groupTypeName);
 }
 const QString &Group::getGroupName() const
 {

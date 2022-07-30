@@ -101,7 +101,7 @@ void loginDialog::initOther()
 void loginDialog::loadAccounts()
 {
     //获取各单例类
-    SharedData &sharedData = SharedData::instace();
+    SharedData &sharedData = SharedData::instance();
     DataPathGetter &dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter &dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     //加载数据库中的账户与头像
@@ -178,7 +178,7 @@ void loginDialog::onConfirmClicked()
     QString currentUsername = username->currentText();
     QsLogging::Logger::getFileLogger(currentUsername, "PROGRAM");
     QLOG_TRACE() << "Clicked Confirm Button:" << ui->confirm->text() << ui->confirm->statusTip();
-    SharedData &sharedData = SharedData::instace();
+    SharedData &sharedData = SharedData::instance();
     DataPathGetter &dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter &dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     if (ui->confirm->statusTip() == "createAccount")
@@ -313,7 +313,7 @@ void loginDialog::onConfirmClicked()
 }
 void loginDialog::onUsernameCurrentIndexChanged()
 {
-    SharedData &sharedData = SharedData::instace();
+    SharedData &sharedData = SharedData::instance();
     DataPathGetter &dataPathGetter = DataPathGetter::instance();
     Account *currentAccount = sharedData.accountList.getAccount(username->currentText());
     if (currentAccount == nullptr)
@@ -416,7 +416,7 @@ QString loginDialog::copyFileToPath(QString srcPath, QString desDir)
 }
 void loginDialog::onPortraitDesPathChanged()
 {
-    SharedData &sharedData = SharedData::instace();
+    SharedData &sharedData = SharedData::instance();
     DataPathGetter &dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter &dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     QString currentUsername = username->currentText();

@@ -153,3 +153,8 @@
 [Password Manager] [PUBLIC] [2022-07-30 13:07:02.552] [DEBUG] [DATABASE] Database Connection: "data/1659156955.pmd" 
 [Password Manager] [默认用户] [2022-07-30 13:07:02.553] [DEBUG] [SQL] Create Table(s): "create table sharedData.autofillInfo (type int,content varchar(100),remark varchar(100))" 
 [Password Manager] [默认用户] [2022-07-30 13:07:02.553] [DEBUG] [SQL] Select Column(s): "select * from autofillInfo" 
+[Password Manager] [PUBLIC] [2022-07-30 14:11:02.623] [INFO] [PROGRAM] Running Password Manager... 
+[Password Manager] [PUBLIC] [2022-07-30 14:11:02.774] [DEBUG] [DATABASE] Database Connection: "data/accounts.pmd" 
+[Password Manager] [PUBLIC] [2022-07-30 14:11:02.775] [DEBUG] [SQL] Select Column(s): "select * from accounts" 
+[Password Manager] [PUBLIC] [2022-07-30 14:11:02.775] [DEBUG] [SQL] Load Account: "username:'默认用户',portraitPath:'portrait//1620050232879_20210808_215712_086_1658969335.jpg',createTime:'2022-07-30 12:55:55',lastEditTime:'2022-07-30 12:55:55'" 
+[Password Manager] [PUBLIC] [2022-07-30 14:11:02.775] [DEBUG] [ACCOUNT] Load Accounts: ("默认用户") 

@@ -12,7 +12,7 @@ void Widget::saveMenuTriggered(){
     ui->save->setDefaultAction(send);
 }
 void Widget::saveSlot(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     Group* currentGroup=sharedData.groupList[ui->tabWidget->currentIndex()];
     QAction* activeAction=((QToolButton*)sender())->defaultAction();
     QString title="将分组 "+currentGroup->getGroupName()+" 另存为"+ui->save->defaultAction()->text()+"文件";

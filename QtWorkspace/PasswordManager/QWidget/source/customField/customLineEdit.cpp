@@ -15,8 +15,8 @@ customLineEdit::customLineEdit(const QString& fieldName,isRequiredChoices isRequ
     QMetaEnum controllerTypeMeta = QMetaEnum::fromType<AbstractCustomField::controllerTypeChoices>();
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     //设置controllerLabel
-    ui->controllerLabel->setText(this->controllerFieldName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
+    ui->controllerLabel->setText(this->controllerLabelName);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
     //设置controllerJudge
@@ -106,4 +106,7 @@ QString customLineEdit::getPlaceholderText(){
 AbstractCustomField* customLineEdit::clone(){
     AbstractCustomField* copy=new customLineEdit(fieldName,isRequired,dataType,parent);
     return copy;
+}
+void customLineEdit::setCompleter(QCompleter* completer){
+    ui->controller->setCompleter(completer);
 }

@@ -7,14 +7,16 @@ class Account
 {
 private:
     QString username;
-    QString password;
     QDateTime createTime;
     QDateTime lastEditTime;
     QString portraitPath;
+    QString originalPortraitPath;
 public:
+    //构造函数
     Account();
-    Account(const QString &newUsername,const QString &newPassword,const QString &newPortraitPath="");
+    Account(const QString &newUsername,const QString &newPortraitPath="");
     Account(const QString &newUsername,QDateTime newCreateTime,QDateTime newLastEditTime,const QString &newPortraitPath);
+    //Getter和Setter
     const QString &getUsername() const;
     void setUsername(const QString &newUsername);
     const QString &getPassword() const;
@@ -25,6 +27,8 @@ public:
     const QString &getPortraitPath() const;
     void setPortraitPath(const QString &newPortraitPath);
     QString toString();
+    const QString &getOriginalPortraitPath() const;
+    void setOriginalPortraitPath(const QString &newOriginalPortraitPath);
 };
 
 #endif // ACCOUNT_H

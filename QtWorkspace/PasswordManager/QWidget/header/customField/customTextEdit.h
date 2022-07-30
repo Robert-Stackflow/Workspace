@@ -14,13 +14,14 @@ public:
     //构造函数与析构函数
     explicit customTextEdit(const QString& fieldName,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     ~customTextEdit();
-    //属性
-    void clear();
+    //实现抽象函数
     bool isValid();
     QString text();
     AbstractCustomField* clone();
     QString getPlaceholderText();
-    void setPlaceholderText(const QString& placeholderText);
+    void setPlaceholderText(const QString &placeholderText);
+    //与QTextEdit有关的属性
+    void clear();
     QString toPlainText();
     void setText(const QString &text);
 public slots:

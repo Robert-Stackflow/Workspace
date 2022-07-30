@@ -57,7 +57,7 @@ newItemDialog::~newItemDialog()
     delete ui;
 }
 void newItemDialog::loadGroupType(int index){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     GroupType* groupType=sharedData.groupTypeList[index];
     currentGroupType=index;
     //清除layout内的控件

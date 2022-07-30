@@ -35,7 +35,7 @@ QString DataPathGetter::getAccountsDataBasePath()
 
 QString DataPathGetter::getCurrentAccountDataBasePath()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     return dataDir+QString::number(sharedData.accountList.getActiveAccount()->getCreateTime().toTime_t())+".pmd";
 }
 QString DataPathGetter::getDefaultPortraitPath()

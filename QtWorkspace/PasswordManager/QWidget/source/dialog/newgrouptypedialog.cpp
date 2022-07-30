@@ -16,7 +16,7 @@ newGroupTypeDialog::newGroupTypeDialog(QWidget *parent) :
     ui(new Ui::newGroupTypeDialog)
 {
     ui->setupUi(this);
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     initDialog();
     //添加自定义Field控件
     typeName=new customLineEdit("类型名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
@@ -116,7 +116,7 @@ void newGroupTypeDialog::initDialog()
     }
 }
 void newGroupTypeDialog::loadGroupTypes(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     for(int i=0;i<sharedData.groupTypeList.count();i++)
     {
         GroupType* groupType=sharedData.groupTypeList[i];
@@ -164,7 +164,7 @@ void newGroupTypeDialog::onTypeManagerTableWidgetClicked(){
         ui->chosen->setText("未选中");
 }
 void newGroupTypeDialog::onEditTypeClicked(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     if(currentRow==-1){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
@@ -219,7 +219,7 @@ void newGroupTypeDialog::onDeleteTypeClicked(){
     }
 }
 void newGroupTypeDialog::onCopyTypeClicked(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     if(currentRow==-1){
         QMessageBox::warning(this,"警告","未选中类型!");
     }else{
@@ -294,7 +294,7 @@ void newGroupTypeDialog::onCancelClicked(){
     currentGroupType=nullptr;
 }
 void newGroupTypeDialog::onConfirmClicked(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     if(currentMode==0){
@@ -447,7 +447,7 @@ void newGroupTypeDialog::onConfirmClicked(){
     }
 }
 void newGroupTypeDialog::onAddFieldClicked(){
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     //flag判断字段名是否重复
     bool IsRedundant=false;
     for(int i=0;i<tempFields.count();i++)

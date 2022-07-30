@@ -20,7 +20,7 @@ public:
     static QSqlDatabase database;
     SharedData();
 public:
-    static SharedData& instace();
+    static SharedData& instance();
     static void deleteInstace();
 };
 #endif // SHAREDDATA_H

@@ -13,7 +13,7 @@ public:
     //构造函数
     GroupType(QString groupTypeName,QString describe,QList<AbstractCustomField*> customFieldList);
     GroupType(QString groupTypeName,QDateTime createTime,QDateTime lastEditTime,QString describe);
-    //成员的setter与getter
+    //Getter和Setter
     const QString &getDescribe() const;
     void setDescribe(const QString &newDescribe);
     const QDateTime &getCreateTime() const;

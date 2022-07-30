@@ -10,7 +10,7 @@
 #endif
 void Widget::loadGroups()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     //连接数据库
@@ -99,7 +99,7 @@ void Widget::loadGroups()
 }
 void Widget::loadGroupTypes()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     //连接数据库
@@ -242,7 +242,7 @@ void Widget::loadGroupTypes()
 }
 void Widget::loadAutofillInfo()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     //连接数据库
@@ -315,7 +315,7 @@ void Widget::newGroupSlot()
 }
 void Widget::newGroupFunction(int mode,Group* newGroup)
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     if(newGroup==nullptr||(mode==0&&!newgroupdialog->getDataValid()))
@@ -388,7 +388,7 @@ void Widget::newGroupFunction(int mode,Group* newGroup)
 }
 void Widget::deleteGroupSlot()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     int index=ui->tabWidget->currentIndex();
@@ -424,7 +424,7 @@ void Widget::deleteGroupSlot()
 }
 void Widget::editGroupSlot()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     Group* currentGroup=sharedData.groupList[ui->tabWidget->currentIndex()];
     int groupType=currentGroup->getGroupType();
     QString oldGroupName=currentGroup->getGroupName();
@@ -442,7 +442,7 @@ void Widget::editGroupSlot()
 }
 void Widget::editGroupFunction(QString oldGroupName)
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
     int index=ui->tabWidget->currentIndex();
@@ -478,7 +478,7 @@ void Widget::editGroupFunction(QString oldGroupName)
 }
 void Widget::updateAutofillInfo()
 {
-    SharedData& sharedData = SharedData::instace();
+    SharedData& sharedData = SharedData::instance();
     //    newitemdialog->ui->nickName->clear();
     //    newitemdialog->ui->mail->clear();
     //    newitemdialog->ui->mobile->clear();

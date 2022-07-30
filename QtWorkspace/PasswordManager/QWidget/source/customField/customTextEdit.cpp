@@ -15,7 +15,7 @@ customTextEdit::customTextEdit(const QString& fieldName,isRequiredChoices isRequ
     QMetaEnum controllerTypeMeta = QMetaEnum::fromType<AbstractCustomField::controllerTypeChoices>();
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     //设置controllerLabel
-    ui->controllerLabel->setText(this->controllerFieldName);
+    ui->controllerLabel->setText(this->controllerLabelName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));

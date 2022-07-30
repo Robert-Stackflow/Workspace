@@ -6,20 +6,20 @@ private:
     QList<Group*> groupList;
 public:
     Groups();
-    //辅助函数
+    //基本操作
     int count();
     void clear();
-    int index(const QString &groupName);
     bool has(const QString &groupName);
-    //重载运算符
-    Groups* operator<<(Group* newGroup);
-    Group* operator[](int index);
-    //增删元素与返回索引
+    int index(const QString &groupName);
     Group* at(int index);
     bool removeAt(int i);
+    void append(Group* newGroup);
     bool removeOne(const QString &groupName);
     bool remove(const QStringList &groupNames);
-    void append(Group* newGroup);
+    //重载运算符
+    Group* operator[](int index);
+    Groups* operator<<(Group* newGroup);
+    //获取分组名称列表
     QStringList getGroupNames();
 };
 #endif // GROUPS_H

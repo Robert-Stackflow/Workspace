@@ -16,8 +16,8 @@ customComboBox::customComboBox(const QString& fieldName,isRequiredChoices isRequ
     ui->controller->setObjectName(controllerTypeMeta.valueToKey(controllerType));
     ui->controller->setEditable(true);
     //设置controllerLabel
-    ui->controllerLabel->setText(this->controllerFieldName);
     ui->controllerLabel->setAlignment(Qt::AlignCenter);
+    ui->controllerLabel->setText(this->controllerLabelName);
     ui->controllerLabel->setStyleSheet("border:0px;background-color:transparent");
     ui->controllerLabel->setObjectName(controllerTypeMeta.valueToKey(controllerType)+QString("LABEL"));
     //设置controllerJudge
@@ -109,6 +109,9 @@ void customComboBox::setEditable(bool editable){
 }
 bool customComboBox::isEnable(){
     return ui->controller->isEnabled();
+}
+bool customComboBox::isEditable(){
+    return ui->controller->isEditable();
 }
 AbstractCustomField* customComboBox::clone(){
     AbstractCustomField* copy=new customComboBox(fieldName,isRequired,dataType,parent);

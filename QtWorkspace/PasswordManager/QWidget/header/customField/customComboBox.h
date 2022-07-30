@@ -14,13 +14,13 @@ public:
     //构造函数/析构函数
     explicit customComboBox(const QString& fieldName,isRequiredChoices isRequired=OPTIONAL,dataTypeChoices dataType=NORMAL,QWidget* parent=nullptr);
     ~customComboBox();
-    //属性
-    void clear();
+    //实现抽象函数
     bool isValid();
     QString text();
     AbstractCustomField* clone();
     QString getPlaceholderText();
     void setPlaceholderText(const QString &placeholderText);
+    //与QComboBox有关的属性
     void addItem(const QString& item);
     void addItems(const QStringList& items);
     void addItems(const QList<QString>& items);
@@ -31,7 +31,9 @@ public:
     void setEnable(bool enable);
     void setEditable(bool editable);
     bool isEnable();
+    bool isEditable();
     void setCompleter(QCompleter* completer);
+    void clear();
 public slots:
     void onControllerCurrentIndexChanged(int);
     void onControllerEdited(const QString &arg);

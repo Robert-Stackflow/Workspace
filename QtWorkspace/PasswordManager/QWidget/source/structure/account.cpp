@@ -1,17 +1,21 @@
 ﻿#include "structure/account.h"
-Account::Account(){
+Account::Account()
+{
+    //无参构造函数
     this->createTime=QDateTime::currentDateTime();
     this->lastEditTime=QDateTime::currentDateTime();
 }
-Account::Account(const QString &newUsername,const QString &newPassword,const QString &newPortraitPath)
+Account::Account(const QString &newUsername,const QString &newPortraitPath)
 {
+    //用于新建用户
     this->username=newUsername;
-    this->password=newPassword;
     this->portraitPath=newPortraitPath;
     this->createTime=QDateTime::currentDateTime();
     this->lastEditTime=QDateTime::currentDateTime();
 }
-Account::Account(const QString &newUsername,QDateTime newCreateTime,QDateTime newLastEditTime,const QString &newPortraitPath){
+Account::Account(const QString &newUsername,QDateTime newCreateTime,QDateTime newLastEditTime,const QString &newPortraitPath)
+{
+    //用于加载用户信息
     this->username=newUsername;
     this->createTime=newCreateTime;
     this->lastEditTime=newLastEditTime;
@@ -25,16 +29,6 @@ const QString &Account::getUsername() const
 void Account::setUsername(const QString &newUsername)
 {
     username = newUsername;
-}
-
-const QString &Account::getPassword() const
-{
-    return password;
-}
-
-void Account::setPassword(const QString &newPassword)
-{
-    password = newPassword;
 }
 
 const QDateTime &Account::getCreateTime() const
@@ -60,6 +54,15 @@ const QString &Account::getPortraitPath() const
 void Account::setPortraitPath(const QString &newPortraitPath)
 {
     portraitPath = newPortraitPath;
+}
+const QString &Account::getOriginalPortraitPath() const
+{
+    return originalPortraitPath;
+}
+
+void Account::setOriginalPortraitPath(const QString &newOriginalPortraitPath)
+{
+    originalPortraitPath = newOriginalPortraitPath;
 }
 QString Account::toString(){
     QString str=QString("username:'%1',portraitPath:'%2',createTime:'%3',lastEditTime:'%4'")

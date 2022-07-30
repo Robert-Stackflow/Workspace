@@ -2,6 +2,11 @@
 #define AUTOFILLINFO_H
 #include <QStringList>
 class AutofillInfo{
+private:
+    QStringList mails;
+    QStringList mobiles;
+    QStringList websites;
+    QStringList mailAliases;
 public:
     const QStringList &getMails() const;
     const QStringList &getMobiles() const;
@@ -14,10 +19,5 @@ public:
     void removeMail(const QString mail);
     void removeMobile(const QString mobile);
     void removeWebsite(const QString website);
-private:
-    QStringList mails;
-    QStringList mobiles;
-    QStringList websites;
-    QStringList mailAliases;
 };
 #endif // AUTOFILLINFO_H

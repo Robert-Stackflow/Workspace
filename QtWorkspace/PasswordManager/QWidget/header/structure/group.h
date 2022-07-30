@@ -3,14 +3,16 @@
 #include "keyItem.h"
 class Group{
 private:
-    int groupType;
+    QString groupTypeName;
     QString groupName;
     QString describe;
     QDateTime createTime;
     QDateTime lastEditTime;
     QList<KeyItem*> keyItemList;
 public:
-    Group(int groupType,QString groupName,QDateTime createTime,QDateTime lastEditTime,QString describe);
+    Group();
+    Group(const QString& groupTypeName,const QString& groupName,const QString& describe);
+    Group(const QString& groupTypeName,const QString& groupName,QDateTime createTime,QDateTime lastEditTime,const QString& describe);
     //Getter与Setter
     int getGroupType() const;
     const QString &getGroupName() const;
@@ -20,15 +22,14 @@ public:
     const QDateTime &getCreateTime() const;
     const QDateTime &getLastEditTime() const;
     void setLastEditTime();
-    //辅助函数
+    //基本操作
     int count();
     void clear();
+    bool removeAt(int i);
+    KeyItem* at(int index);
+    void append(KeyItem* newKeyItem);
     //重载运算符
     Group* operator<<(KeyItem* newKeyItem);
     KeyItem* operator[](int index);
-    //增删元素与返回索引
-    KeyItem* at(int index);
-    bool removeAt(int i);
-    void append(KeyItem* newKeyItem);
 };
 #endif // GROUP_H

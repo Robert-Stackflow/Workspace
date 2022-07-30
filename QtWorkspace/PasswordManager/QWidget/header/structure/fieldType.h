@@ -3,10 +3,12 @@
 #include"customField/abstractCustomField.h"
 class FieldType{
 private:
+    //字段类型名称
     QString fieldTypeName;
+    //字段类型属性
+    AbstractCustomField::dataTypeChoices fieldDataType;
     AbstractCustomField::isRequiredChoices fieldIsRequired;
     AbstractCustomField::controllerTypeChoices fieldControllerType;
-    AbstractCustomField::dataTypeChoices fieldDataType;
 public:
     FieldType(QString fieldTypeName,AbstractCustomField::controllerTypeChoices fieldControllerType,AbstractCustomField::dataTypeChoices fieldDataType,AbstractCustomField::isRequiredChoices fieldIsRequired=AbstractCustomField::OPTIONAL);
     const QString &getFieldTypeName() const;
