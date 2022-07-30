@@ -1,5 +1,5 @@
 #SET LIBRARIES
-QT += core gui sql
+QT += core gui sql svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #SET CONFIG
 CONFIG += c++11
@@ -18,6 +18,8 @@ RCC_DIR = temp/rcc
 OBJECTS_DIR = temp/obj
 
 SOURCES += \
+    source/controller/customdialog.cpp \
+    source/controller/customTitleBar.cpp \
     source/main.cpp \
     source/widget.cpp \
     source/util/shareddata.cpp \
@@ -38,7 +40,6 @@ SOURCES += \
     source/dialog/newitemdialog.cpp \
     source/dialog/newgroupdialog.cpp \
     source/dialog/newgrouptypedialog.cpp \
-    source/controller/titleBar.cpp \
     source/controller/draggabletablewidget.cpp \
     source/function/viewFunction.cpp \
     source/function/saveFunction.cpp \
@@ -52,6 +53,8 @@ SOURCES += \
 
 HEADERS += \
 #    header/precompile.h \
+    header/controller/customTitleBar.h \
+    header/controller/customdialog.h \
     header/widget.h \
     header/util/shareddata.h \
     header/util/datapathgetter.h \
@@ -66,7 +69,6 @@ HEADERS += \
     header/structure/fieldType.h \
     header/structure/fieldTypes.h \
     header/structure/autofillInfo.h \
-    header/controller/titleBar.h \
     header/controller/draggabletablewidget.h \
     header/customField/customTextEdit.h \
     header/customField/customComboBox.h \
@@ -79,6 +81,7 @@ HEADERS += \
     header/dialog/newgrouptypedialog.h
 
 FORMS += \
+    ui/controller/customdialog.ui \
     ui/widget.ui \
     ui/dialog/logindialog.ui \
     ui/dialog/newgrouptypedialog.ui \
@@ -104,6 +107,11 @@ QSLOG_PARENTPATH=./lib/QsLog
 QSLOG_HEADERPATH=./lib/QsLog/
 QSLOG_SOURCEPATH=./lib/QsLog/
 include(./lib/QsLog/QsLog.pri)
+
+FRAMELESSWINDOW_PARENTPATH=./lib/FramelessWindow
+FRAMELESSWINDOW_HEADERPATH=./lib/FramelessWindow/
+FRAMELESSWINDOW_SOURCEPATH=./lib/FramelessWindow/
+include(./lib/FramelessWindow/FramelessWindow.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

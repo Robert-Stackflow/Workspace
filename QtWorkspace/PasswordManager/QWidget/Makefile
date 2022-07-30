@@ -14,13 +14,13 @@ EQ            = =
 
 CC            = cl
 CXX           = cl
-DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_DEPRECATED_WARNINGS -DQS_LOG_SEPARATE_THREAD -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
+DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_DEPRECATED_WARNINGS -DQS_LOG_SEPARATE_THREAD -DQT_QML_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fdtemp\obj\PasswordManager.vc.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fdtemp\obj\PasswordManager.vc.pdb $(DEFINES)
-INCPATH       = -I. -Iheader -Ilib\QXlxs -Ilib\QXlxs -Ilib\QXlxs\QXlxsHeader -I./lib/QXlxs/QXlxsHeader/msvc2015 -Ilib\QsLog -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\5.15.2 -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\5.15.2\QtGui -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtANGLE -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\5.15.2 -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\5.15.2\QtCore -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore -Itemp\moc -Itemp\ui -I/include -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc 
+INCPATH       = -I. -Iheader -Ilib\QXlxs -Ilib\QXlxs -Ilib\QXlxs\QXlxsHeader -I./lib/QXlxs/QXlxsHeader/msvc2015 -Ilib\QsLog -Ilib\FramelessWindow -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSvg -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\5.15.2 -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\5.15.2\QtGui -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtANGLE -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\5.15.2 -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\5.15.2\QtCore -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore -Itemp\moc -Itemp\ui -I/include -I..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib temp\obj\PasswordManager_resource.res  D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
+LIBS          = D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Svgd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib temp\obj\PasswordManager_resource.res  D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
 QMAKE         = D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -51,7 +51,9 @@ OBJECTS_DIR   = temp\obj
 
 ####### Files
 
-SOURCES       = source\main.cpp \
+SOURCES       = source\controller\customdialog.cpp \
+		source\controller\customTitleBar.cpp \
+		source\main.cpp \
 		source\widget.cpp \
 		source\util\shareddata.cpp \
 		source\util\datapathgetter.cpp \
@@ -71,7 +73,6 @@ SOURCES       = source\main.cpp \
 		source\dialog\newitemdialog.cpp \
 		source\dialog\newgroupdialog.cpp \
 		source\dialog\newgrouptypedialog.cpp \
-		source\controller\titleBar.cpp \
 		source\controller\draggabletablewidget.cpp \
 		source\function\viewFunction.cpp \
 		source\function\saveFunction.cpp \
@@ -119,12 +120,20 @@ SOURCES       = source\main.cpp \
 		lib\QsLog\QsLog.cpp \
 		lib\QsLog\QsLogDestConsole.cpp \
 		lib\QsLog\QsLogDestFile.cpp \
-		lib\QsLog\QsLogDestFunctor.cpp temp\rcc\qrc_dark.cpp \
+		lib\QsLog\QsLogDestFunctor.cpp \
+		lib\FramelessWindow\MuFramelessHelper.cpp \
+		lib\FramelessWindow\MuWidgetData.cpp \
+		lib\FramelessWindow\MuCursorPosCalculator.cpp \
+		lib\FramelessWindow\MuTitleBar.cpp \
+		lib\FramelessWindow\MuShadowWidget.cpp \
+		lib\FramelessWindow\MuCustomWindow.cpp temp\rcc\qrc_dark.cpp \
 		temp\rcc\qrc_custom.cpp \
 		temp\rcc\qrc_win11_dark.cpp \
 		temp\rcc\qrc_win11_light.cpp \
+		temp\rcc\qrc_images.cpp \
+		temp\moc\moc_customTitleBar.cpp \
+		temp\moc\moc_customdialog.cpp \
 		temp\moc\moc_widget.cpp \
-		temp\moc\moc_titleBar.cpp \
 		temp\moc\moc_draggabletablewidget.cpp \
 		temp\moc\moc_customTextEdit.cpp \
 		temp\moc\moc_customComboBox.cpp \
@@ -136,8 +145,14 @@ SOURCES       = source\main.cpp \
 		temp\moc\moc_newgroupdialog.cpp \
 		temp\moc\moc_newgrouptypedialog.cpp \
 		temp\moc\moc_xlsxdocument.cpp \
-		temp\moc\moc_QsLogDestFunctor.cpp
-OBJECTS       = temp\obj\main.obj \
+		temp\moc\moc_QsLogDestFunctor.cpp \
+		temp\moc\moc_MuFramelessHelper.cpp \
+		temp\moc\moc_MuTitleBar.cpp \
+		temp\moc\moc_MuShadowWidget.cpp \
+		temp\moc\moc_MuCustomWindow.cpp
+OBJECTS       = temp\obj\customdialog.obj \
+		temp\obj\customTitleBar.obj \
+		temp\obj\main.obj \
 		temp\obj\widget.obj \
 		temp\obj\shareddata.obj \
 		temp\obj\datapathgetter.obj \
@@ -157,7 +172,6 @@ OBJECTS       = temp\obj\main.obj \
 		temp\obj\newitemdialog.obj \
 		temp\obj\newgroupdialog.obj \
 		temp\obj\newgrouptypedialog.obj \
-		temp\obj\titleBar.obj \
 		temp\obj\draggabletablewidget.obj \
 		temp\obj\viewFunction.obj \
 		temp\obj\saveFunction.obj \
@@ -206,12 +220,20 @@ OBJECTS       = temp\obj\main.obj \
 		temp\obj\QsLogDestConsole.obj \
 		temp\obj\QsLogDestFile.obj \
 		temp\obj\QsLogDestFunctor.obj \
+		temp\obj\MuFramelessHelper.obj \
+		temp\obj\MuWidgetData.obj \
+		temp\obj\MuCursorPosCalculator.obj \
+		temp\obj\MuTitleBar.obj \
+		temp\obj\MuShadowWidget.obj \
+		temp\obj\MuCustomWindow.obj \
 		temp\obj\qrc_dark.obj \
 		temp\obj\qrc_custom.obj \
 		temp\obj\qrc_win11_dark.obj \
 		temp\obj\qrc_win11_light.obj \
+		temp\obj\qrc_images.obj \
+		temp\obj\moc_customTitleBar.obj \
+		temp\obj\moc_customdialog.obj \
 		temp\obj\moc_widget.obj \
-		temp\obj\moc_titleBar.obj \
 		temp\obj\moc_draggabletablewidget.obj \
 		temp\obj\moc_customTextEdit.obj \
 		temp\obj\moc_customComboBox.obj \
@@ -223,9 +245,15 @@ OBJECTS       = temp\obj\main.obj \
 		temp\obj\moc_newgroupdialog.obj \
 		temp\obj\moc_newgrouptypedialog.obj \
 		temp\obj\moc_xlsxdocument.obj \
-		temp\obj\moc_QsLogDestFunctor.obj
+		temp\obj\moc_QsLogDestFunctor.obj \
+		temp\obj\moc_MuFramelessHelper.obj \
+		temp\obj\moc_MuTitleBar.obj \
+		temp\obj\moc_MuShadowWidget.obj \
+		temp\obj\moc_MuCustomWindow.obj
 
-DIST          =  header\widget.h \
+DIST          =  header\controller\customTitleBar.h \
+		header\controller\customdialog.h \
+		header\widget.h \
 		header\util\shareddata.h \
 		header\util\datapathgetter.h \
 		header\util\databasetablenamegetter.h \
@@ -239,7 +267,6 @@ DIST          =  header\widget.h \
 		header\structure\fieldType.h \
 		header\structure\fieldTypes.h \
 		header\structure\autofillInfo.h \
-		header\controller\titleBar.h \
 		header\controller\draggabletablewidget.h \
 		header\customField\customTextEdit.h \
 		header\customField\customComboBox.h \
@@ -303,7 +330,18 @@ DIST          =  header\widget.h \
 		lib\QsLog\QsLogLevel.h \
 		lib\QsLog\QsLogDestFile.h \
 		lib\QsLog\QsLogDisableForThisFile.h \
-		lib\QsLog\QsLogDestFunctor.h source\main.cpp \
+		lib\QsLog\QsLogDestFunctor.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		lib\FramelessWindow\MuFramelessHelperPrivate.h \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		lib\FramelessWindow\MuWidgetData.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\MuShadowWindow.h \
+		lib\FramelessWindow\MuCustomWindow.h \
+		lib\FramelessWindow\FramelessWindow_Global.h source\controller\customdialog.cpp \
+		source\controller\customTitleBar.cpp \
+		source\main.cpp \
 		source\widget.cpp \
 		source\util\shareddata.cpp \
 		source\util\datapathgetter.cpp \
@@ -323,7 +361,6 @@ DIST          =  header\widget.h \
 		source\dialog\newitemdialog.cpp \
 		source\dialog\newgroupdialog.cpp \
 		source\dialog\newgrouptypedialog.cpp \
-		source\controller\titleBar.cpp \
 		source\controller\draggabletablewidget.cpp \
 		source\function\viewFunction.cpp \
 		source\function\saveFunction.cpp \
@@ -371,7 +408,13 @@ DIST          =  header\widget.h \
 		lib\QsLog\QsLog.cpp \
 		lib\QsLog\QsLogDestConsole.cpp \
 		lib\QsLog\QsLogDestFile.cpp \
-		lib\QsLog\QsLogDestFunctor.cpp
+		lib\QsLog\QsLogDestFunctor.cpp \
+		lib\FramelessWindow\MuFramelessHelper.cpp \
+		lib\FramelessWindow\MuWidgetData.cpp \
+		lib\FramelessWindow\MuCursorPosCalculator.cpp \
+		lib\FramelessWindow\MuTitleBar.cpp \
+		lib\FramelessWindow\MuShadowWidget.cpp \
+		lib\FramelessWindow\MuCustomWindow.cpp
 QMAKE_TARGET  = PasswordManager
 DESTDIR        = bin\ #avoid trailing-slash linebreak
 TARGET         = PasswordManager.exe
@@ -437,6 +480,26 @@ DESTDIR_TARGET = bin\PasswordManager.exe
 <<
 
 {temp/ui}.c{temp\obj\}.obj::
+	$(CC) -c $(CFLAGS) $(INCPATH) -Fotemp\obj\ @<<
+	$<
+<<
+
+{lib\FramelessWindow}.cpp{temp\obj\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fotemp\obj\ @<<
+	$<
+<<
+
+{lib\FramelessWindow}.cc{temp\obj\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fotemp\obj\ @<<
+	$<
+<<
+
+{lib\FramelessWindow}.cxx{temp\obj\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fotemp\obj\ @<<
+	$<
+<<
+
+{lib\FramelessWindow}.c{temp\obj\}.obj::
 	$(CC) -c $(CFLAGS) $(INCPATH) -Fotemp\obj\ @<<
 	$<
 <<
@@ -646,11 +709,11 @@ DESTDIR_TARGET = bin\PasswordManager.exe
 first: all
 all: Makefile  bin\PasswordManager.exe
 
-bin\PasswordManager.exe: D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h $(OBJECTS) temp\obj\PasswordManager_resource.res
+bin\PasswordManager.exe: D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Svgd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib temp\ui\ui_customdialog.h temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h $(OBJECTS) temp\obj\PasswordManager_resource.res
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-temp\obj\main.obj temp\obj\widget.obj temp\obj\shareddata.obj temp\obj\datapathgetter.obj temp\obj\databasetablenamegetter.obj temp\obj\group.obj temp\obj\groups.obj temp\obj\keyItem.obj temp\obj\account.obj temp\obj\accounts.obj temp\obj\groupType.obj temp\obj\groupTypes.obj temp\obj\fieldType.obj temp\obj\fieldTypes.obj temp\obj\autofillInfo.obj temp\obj\logindialog.obj temp\obj\optiondialog.obj temp\obj\newitemdialog.obj temp\obj\newgroupdialog.obj temp\obj\newgrouptypedialog.obj temp\obj\titleBar.obj temp\obj\draggabletablewidget.obj temp\obj\viewFunction.obj temp\obj\saveFunction.obj temp\obj\groupFunction.obj temp\obj\keyItemFunction.obj temp\obj\tableWidgetFunction.obj temp\obj\customComboBox.obj temp\obj\customLineEdit.obj temp\obj\customTextEdit.obj temp\obj\abstractCustomField.obj temp\obj\xlsxabstractooxmlfile.obj temp\obj\xlsxabstractsheet.obj temp\obj\xlsxcell.obj temp\obj\xlsxcellformula.obj temp\obj\xlsxcelllocation.obj temp\obj\xlsxcellrange.obj
-temp\obj\xlsxcellreference.obj temp\obj\xlsxchart.obj temp\obj\xlsxchartsheet.obj temp\obj\xlsxcolor.obj temp\obj\xlsxconditionalformatting.obj temp\obj\xlsxcontenttypes.obj temp\obj\xlsxdatavalidation.obj temp\obj\xlsxdatetype.obj temp\obj\xlsxdocpropsapp.obj temp\obj\xlsxdocpropscore.obj temp\obj\xlsxdocument.obj temp\obj\xlsxdrawing.obj temp\obj\xlsxdrawinganchor.obj temp\obj\xlsxformat.obj temp\obj\xlsxmediafile.obj temp\obj\xlsxnumformatparser.obj temp\obj\xlsxrelationships.obj temp\obj\xlsxrichstring.obj temp\obj\xlsxsharedstrings.obj temp\obj\xlsxsimpleooxmlfile.obj temp\obj\xlsxstyles.obj temp\obj\xlsxtheme.obj temp\obj\xlsxutility.obj temp\obj\xlsxworkbook.obj temp\obj\xlsxworksheet.obj temp\obj\xlsxzipreader.obj temp\obj\xlsxzipwriter.obj temp\obj\QsLogDest.obj temp\obj\QsLog.obj temp\obj\QsLogDestConsole.obj temp\obj\QsLogDestFile.obj temp\obj\QsLogDestFunctor.obj temp\obj\qrc_dark.obj temp\obj\qrc_custom.obj temp\obj\qrc_win11_dark.obj temp\obj\qrc_win11_light.obj
-temp\obj\moc_widget.obj temp\obj\moc_titleBar.obj temp\obj\moc_draggabletablewidget.obj temp\obj\moc_customTextEdit.obj temp\obj\moc_customComboBox.obj temp\obj\moc_customLineEdit.obj temp\obj\moc_abstractCustomField.obj temp\obj\moc_logindialog.obj temp\obj\moc_optiondialog.obj temp\obj\moc_newitemdialog.obj temp\obj\moc_newgroupdialog.obj temp\obj\moc_newgrouptypedialog.obj temp\obj\moc_xlsxdocument.obj temp\obj\moc_QsLogDestFunctor.obj
+temp\obj\customdialog.obj temp\obj\customTitleBar.obj temp\obj\main.obj temp\obj\widget.obj temp\obj\shareddata.obj temp\obj\datapathgetter.obj temp\obj\databasetablenamegetter.obj temp\obj\group.obj temp\obj\groups.obj temp\obj\keyItem.obj temp\obj\account.obj temp\obj\accounts.obj temp\obj\groupType.obj temp\obj\groupTypes.obj temp\obj\fieldType.obj temp\obj\fieldTypes.obj temp\obj\autofillInfo.obj temp\obj\logindialog.obj temp\obj\optiondialog.obj temp\obj\newitemdialog.obj temp\obj\newgroupdialog.obj temp\obj\newgrouptypedialog.obj temp\obj\draggabletablewidget.obj temp\obj\viewFunction.obj temp\obj\saveFunction.obj temp\obj\groupFunction.obj temp\obj\keyItemFunction.obj temp\obj\tableWidgetFunction.obj temp\obj\customComboBox.obj temp\obj\customLineEdit.obj temp\obj\customTextEdit.obj temp\obj\abstractCustomField.obj temp\obj\xlsxabstractooxmlfile.obj temp\obj\xlsxabstractsheet.obj temp\obj\xlsxcell.obj temp\obj\xlsxcellformula.obj temp\obj\xlsxcelllocation.obj
+temp\obj\xlsxcellrange.obj temp\obj\xlsxcellreference.obj temp\obj\xlsxchart.obj temp\obj\xlsxchartsheet.obj temp\obj\xlsxcolor.obj temp\obj\xlsxconditionalformatting.obj temp\obj\xlsxcontenttypes.obj temp\obj\xlsxdatavalidation.obj temp\obj\xlsxdatetype.obj temp\obj\xlsxdocpropsapp.obj temp\obj\xlsxdocpropscore.obj temp\obj\xlsxdocument.obj temp\obj\xlsxdrawing.obj temp\obj\xlsxdrawinganchor.obj temp\obj\xlsxformat.obj temp\obj\xlsxmediafile.obj temp\obj\xlsxnumformatparser.obj temp\obj\xlsxrelationships.obj temp\obj\xlsxrichstring.obj temp\obj\xlsxsharedstrings.obj temp\obj\xlsxsimpleooxmlfile.obj temp\obj\xlsxstyles.obj temp\obj\xlsxtheme.obj temp\obj\xlsxutility.obj temp\obj\xlsxworkbook.obj temp\obj\xlsxworksheet.obj temp\obj\xlsxzipreader.obj temp\obj\xlsxzipwriter.obj temp\obj\QsLogDest.obj temp\obj\QsLog.obj temp\obj\QsLogDestConsole.obj temp\obj\QsLogDestFile.obj temp\obj\QsLogDestFunctor.obj temp\obj\MuFramelessHelper.obj temp\obj\MuWidgetData.obj
+temp\obj\MuCursorPosCalculator.obj temp\obj\MuTitleBar.obj temp\obj\MuShadowWidget.obj temp\obj\MuCustomWindow.obj temp\obj\qrc_dark.obj temp\obj\qrc_custom.obj temp\obj\qrc_win11_dark.obj temp\obj\qrc_win11_light.obj temp\obj\qrc_images.obj temp\obj\moc_customTitleBar.obj temp\obj\moc_customdialog.obj temp\obj\moc_widget.obj temp\obj\moc_draggabletablewidget.obj temp\obj\moc_customTextEdit.obj temp\obj\moc_customComboBox.obj temp\obj\moc_customLineEdit.obj temp\obj\moc_abstractCustomField.obj temp\obj\moc_logindialog.obj temp\obj\moc_optiondialog.obj temp\obj\moc_newitemdialog.obj temp\obj\moc_newgroupdialog.obj temp\obj\moc_newgrouptypedialog.obj temp\obj\moc_xlsxdocument.obj temp\obj\moc_QsLogDestFunctor.obj temp\obj\moc_MuFramelessHelper.obj temp\obj\moc_MuTitleBar.obj temp\obj\moc_MuShadowWidget.obj temp\obj\moc_MuCustomWindow.obj
 $(LIBS)
 <<
 
@@ -789,6 +852,13 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine_private.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore_private.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets.pri \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview.pri \
@@ -815,6 +885,8 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf \
 		lib\QXlxs\QXlsx.pri \
 		lib\QsLog\QsLog.pri \
+		lib\FramelessWindow\common.pri \
+		lib\FramelessWindow\FramelessWindow.pri \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qml_debug.prf \
@@ -838,6 +910,8 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 		qrc\custom\custom.qrc \
 		qrc\win11_dark\win11_dark.qrc \
 		qrc\win11_light\win11_light.qrc \
+		lib\FramelessWindow\images.qrc \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Svgd.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl \
@@ -976,6 +1050,13 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine_private.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore_private.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets.pri:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview.pri:
@@ -1002,6 +1083,8 @@ Makefile: PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf:
 lib\QXlxs\QXlsx.pri:
 lib\QsLog\QsLog.pri:
+lib\FramelessWindow\common.pri:
+lib\FramelessWindow\FramelessWindow.pri:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qml_debug.prf:
@@ -1025,6 +1108,8 @@ qrc\dark\dark.qrc:
 qrc\custom\custom.qrc:
 qrc\win11_dark\win11_dark.qrc:
 qrc\win11_light\win11_light.qrc:
+lib\FramelessWindow\images.qrc:
+..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Svgd.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl:
 ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl:
@@ -1036,11 +1121,11 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) PasswordManager.zip $(SOURCES) $(DIST) PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_pre.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\angle.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\qconfig.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_functions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf lib\QXlxs\QXlsx.pri lib\QsLog\QsLog.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qml_debug.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\precompile_header.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\warn_on.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resources_functions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resources.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\moc.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\uic.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qmake_use.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\file_copies.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\windows.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exceptions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\yacc.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\lex.prf PasswordManager.pro qrc\dark\dark.qrc qrc\custom\custom.qrc qrc\win11_dark\win11_dark.qrc qrc\win11_light\win11_light.qrc ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.prl   qrc\dark\dark.qrc qrc\custom\custom.qrc qrc\win11_dark\win11_dark.qrc qrc\win11_light\win11_light.qrc ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp header\widget.h header\util\shareddata.h header\util\datapathgetter.h header\util\databasetablenamegetter.h header\structure\group.h header\structure\groups.h header\structure\keyItem.h header\structure\account.h header\structure\accounts.h header\structure\groupType.h header\structure\groupTypes.h header\structure\fieldType.h header\structure\fieldTypes.h header\structure\autofillInfo.h header\controller\titleBar.h header\controller\draggabletablewidget.h header\customField\customTextEdit.h header\customField\customComboBox.h header\customField\customLineEdit.h header\customField\abstractCustomField.h header\dialog\logindialog.h header\dialog\optiondialog.h header\dialog\newitemdialog.h header\dialog\newgroupdialog.h header\dialog\newgrouptypedialog.h lib\QXlxs\QXlxsHeader\xlsxabstractooxmlfile.h lib\QXlxs\QXlxsHeader\xlsxabstractooxmlfile_p.h lib\QXlxs\QXlxsHeader\xlsxabstractsheet.h lib\QXlxs\QXlxsHeader\xlsxabstractsheet_p.h lib\QXlxs\QXlxsHeader\xlsxcell.h lib\QXlxs\QXlxsHeader\xlsxcellformula.h lib\QXlxs\QXlxsHeader\xlsxcellformula_p.h lib\QXlxs\QXlxsHeader\xlsxcelllocation.h lib\QXlxs\QXlxsHeader\xlsxcellrange.h lib\QXlxs\QXlxsHeader\xlsxcellreference.h lib\QXlxs\QXlxsHeader\xlsxcell_p.h lib\QXlxs\QXlxsHeader\xlsxchart.h lib\QXlxs\QXlxsHeader\xlsxchartsheet.h lib\QXlxs\QXlxsHeader\xlsxchartsheet_p.h lib\QXlxs\QXlxsHeader\xlsxchart_p.h lib\QXlxs\QXlxsHeader\xlsxcolor_p.h lib\QXlxs\QXlxsHeader\xlsxconditionalformatting.h lib\QXlxs\QXlxsHeader\xlsxconditionalformatting_p.h lib\QXlxs\QXlxsHeader\xlsxcontenttypes_p.h lib\QXlxs\QXlxsHeader\xlsxdatavalidation.h lib\QXlxs\QXlxsHeader\xlsxdatavalidation_p.h lib\QXlxs\QXlxsHeader\xlsxdatetype.h lib\QXlxs\QXlxsHeader\xlsxdocpropsapp_p.h lib\QXlxs\QXlxsHeader\xlsxdocpropscore_p.h lib\QXlxs\QXlxsHeader\xlsxdocument.h lib\QXlxs\QXlxsHeader\xlsxdocument_p.h lib\QXlxs\QXlxsHeader\xlsxdrawinganchor_p.h lib\QXlxs\QXlxsHeader\xlsxdrawing_p.h lib\QXlxs\QXlxsHeader\xlsxformat.h lib\QXlxs\QXlxsHeader\xlsxformat_p.h lib\QXlxs\QXlxsHeader\xlsxglobal.h lib\QXlxs\QXlxsHeader\xlsxmediafile_p.h lib\QXlxs\QXlxsHeader\xlsxnumformatparser_p.h lib\QXlxs\QXlxsHeader\xlsxrelationships_p.h lib\QXlxs\QXlxsHeader\xlsxrichstring.h lib\QXlxs\QXlxsHeader\xlsxrichstring_p.h lib\QXlxs\QXlxsHeader\xlsxsharedstrings_p.h lib\QXlxs\QXlxsHeader\xlsxsimpleooxmlfile_p.h lib\QXlxs\QXlxsHeader\xlsxstyles_p.h lib\QXlxs\QXlxsHeader\xlsxtheme_p.h lib\QXlxs\QXlxsHeader\xlsxutility_p.h lib\QXlxs\QXlxsHeader\xlsxworkbook.h lib\QXlxs\QXlxsHeader\xlsxworkbook_p.h lib\QXlxs\QXlxsHeader\xlsxworksheet.h lib\QXlxs\QXlxsHeader\xlsxworksheet_p.h lib\QXlxs\QXlxsHeader\xlsxzipreader_p.h lib\QXlxs\QXlxsHeader\xlsxzipwriter_p.h lib\QsLog\QsLogDest.h lib\QsLog\QsLog.h lib\QsLog\QsLogDestConsole.h lib\QsLog\QsLogLevel.h lib\QsLog\QsLogDestFile.h lib\QsLog\QsLogDisableForThisFile.h lib\QsLog\QsLogDestFunctor.h  source\main.cpp source\widget.cpp source\util\shareddata.cpp source\util\datapathgetter.cpp source\util\databasetablenamegetter.cpp source\structure\group.cpp source\structure\groups.cpp source\structure\keyItem.cpp source\structure\account.cpp source\structure\accounts.cpp source\structure\groupType.cpp source\structure\groupTypes.cpp source\structure\fieldType.cpp source\structure\fieldTypes.cpp source\structure\autofillInfo.cpp source\dialog\logindialog.cpp source\dialog\optiondialog.cpp source\dialog\newitemdialog.cpp source\dialog\newgroupdialog.cpp source\dialog\newgrouptypedialog.cpp source\controller\titleBar.cpp source\controller\draggabletablewidget.cpp source\function\viewFunction.cpp source\function\saveFunction.cpp source\function\groupFunction.cpp source\function\keyItemFunction.cpp source\function\tableWidgetFunction.cpp source\customField\customComboBox.cpp source\customField\customLineEdit.cpp source\customField\customTextEdit.cpp source\customField\abstractCustomField.cpp lib\QXlxs\QXlxsSource\xlsxabstractooxmlfile.cpp lib\QXlxs\QXlxsSource\xlsxabstractsheet.cpp lib\QXlxs\QXlxsSource\xlsxcell.cpp lib\QXlxs\QXlxsSource\xlsxcellformula.cpp lib\QXlxs\QXlxsSource\xlsxcelllocation.cpp lib\QXlxs\QXlxsSource\xlsxcellrange.cpp lib\QXlxs\QXlxsSource\xlsxcellreference.cpp lib\QXlxs\QXlxsSource\xlsxchart.cpp lib\QXlxs\QXlxsSource\xlsxchartsheet.cpp lib\QXlxs\QXlxsSource\xlsxcolor.cpp lib\QXlxs\QXlxsSource\xlsxconditionalformatting.cpp lib\QXlxs\QXlxsSource\xlsxcontenttypes.cpp lib\QXlxs\QXlxsSource\xlsxdatavalidation.cpp lib\QXlxs\QXlxsSource\xlsxdatetype.cpp lib\QXlxs\QXlxsSource\xlsxdocpropsapp.cpp lib\QXlxs\QXlxsSource\xlsxdocpropscore.cpp lib\QXlxs\QXlxsSource\xlsxdocument.cpp lib\QXlxs\QXlxsSource\xlsxdrawing.cpp lib\QXlxs\QXlxsSource\xlsxdrawinganchor.cpp lib\QXlxs\QXlxsSource\xlsxformat.cpp lib\QXlxs\QXlxsSource\xlsxmediafile.cpp lib\QXlxs\QXlxsSource\xlsxnumformatparser.cpp lib\QXlxs\QXlxsSource\xlsxrelationships.cpp lib\QXlxs\QXlxsSource\xlsxrichstring.cpp lib\QXlxs\QXlxsSource\xlsxsharedstrings.cpp lib\QXlxs\QXlxsSource\xlsxsimpleooxmlfile.cpp lib\QXlxs\QXlxsSource\xlsxstyles.cpp lib\QXlxs\QXlxsSource\xlsxtheme.cpp lib\QXlxs\QXlxsSource\xlsxutility.cpp lib\QXlxs\QXlxsSource\xlsxworkbook.cpp lib\QXlxs\QXlxsSource\xlsxworksheet.cpp lib\QXlxs\QXlxsSource\xlsxzipreader.cpp lib\QXlxs\QXlxsSource\xlsxzipwriter.cpp lib\QsLog\QsLogDest.cpp lib\QsLog\QsLog.cpp lib\QsLog\QsLogDestConsole.cpp lib\QsLog\QsLogDestFile.cpp lib\QsLog\QsLogDestFunctor.cpp ui\widget.ui ui\dialog\logindialog.ui ui\dialog\newgrouptypedialog.ui ui\dialog\optiondialog.ui ui\dialog\newitemdialog.ui ui\dialog\newgroupdialog.ui ui\customField\customTextEdit.ui ui\customField\customLineEdit.ui ui\customField\customComboBox.ui    
+	$(ZIP) PasswordManager.zip $(SOURCES) $(DIST) PasswordManager.pro ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_pre.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\angle.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\qconfig.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webengine_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecore_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_functions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_pre.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\default_pre.prf lib\QXlxs\QXlsx.pri lib\QsLog\QsLog.pri lib\FramelessWindow\common.pri lib\FramelessWindow\FramelessWindow.pri ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resolve_config.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\default_post.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qml_debug.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\precompile_header.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\warn_on.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qt.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resources_functions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\resources.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\moc.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\uic.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\qmake_use.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\file_copies.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\win32\windows.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\exceptions.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\yacc.prf ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\lex.prf PasswordManager.pro qrc\dark\dark.qrc qrc\custom\custom.qrc qrc\win11_dark\win11_dark.qrc qrc\win11_light\win11_light.qrc lib\FramelessWindow\images.qrc ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Svgd.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.prl ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\lib\qtmaind.prl   qrc\dark\dark.qrc qrc\custom\custom.qrc qrc\win11_dark\win11_dark.qrc qrc\win11_light\win11_light.qrc lib\FramelessWindow\images.qrc ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp header\controller\customTitleBar.h header\controller\customdialog.h header\widget.h header\util\shareddata.h header\util\datapathgetter.h header\util\databasetablenamegetter.h header\structure\group.h header\structure\groups.h header\structure\keyItem.h header\structure\account.h header\structure\accounts.h header\structure\groupType.h header\structure\groupTypes.h header\structure\fieldType.h header\structure\fieldTypes.h header\structure\autofillInfo.h header\controller\draggabletablewidget.h header\customField\customTextEdit.h header\customField\customComboBox.h header\customField\customLineEdit.h header\customField\abstractCustomField.h header\dialog\logindialog.h header\dialog\optiondialog.h header\dialog\newitemdialog.h header\dialog\newgroupdialog.h header\dialog\newgrouptypedialog.h lib\QXlxs\QXlxsHeader\xlsxabstractooxmlfile.h lib\QXlxs\QXlxsHeader\xlsxabstractooxmlfile_p.h lib\QXlxs\QXlxsHeader\xlsxabstractsheet.h lib\QXlxs\QXlxsHeader\xlsxabstractsheet_p.h lib\QXlxs\QXlxsHeader\xlsxcell.h lib\QXlxs\QXlxsHeader\xlsxcellformula.h lib\QXlxs\QXlxsHeader\xlsxcellformula_p.h lib\QXlxs\QXlxsHeader\xlsxcelllocation.h lib\QXlxs\QXlxsHeader\xlsxcellrange.h lib\QXlxs\QXlxsHeader\xlsxcellreference.h lib\QXlxs\QXlxsHeader\xlsxcell_p.h lib\QXlxs\QXlxsHeader\xlsxchart.h lib\QXlxs\QXlxsHeader\xlsxchartsheet.h lib\QXlxs\QXlxsHeader\xlsxchartsheet_p.h lib\QXlxs\QXlxsHeader\xlsxchart_p.h lib\QXlxs\QXlxsHeader\xlsxcolor_p.h lib\QXlxs\QXlxsHeader\xlsxconditionalformatting.h lib\QXlxs\QXlxsHeader\xlsxconditionalformatting_p.h lib\QXlxs\QXlxsHeader\xlsxcontenttypes_p.h lib\QXlxs\QXlxsHeader\xlsxdatavalidation.h lib\QXlxs\QXlxsHeader\xlsxdatavalidation_p.h lib\QXlxs\QXlxsHeader\xlsxdatetype.h lib\QXlxs\QXlxsHeader\xlsxdocpropsapp_p.h lib\QXlxs\QXlxsHeader\xlsxdocpropscore_p.h lib\QXlxs\QXlxsHeader\xlsxdocument.h lib\QXlxs\QXlxsHeader\xlsxdocument_p.h lib\QXlxs\QXlxsHeader\xlsxdrawinganchor_p.h lib\QXlxs\QXlxsHeader\xlsxdrawing_p.h lib\QXlxs\QXlxsHeader\xlsxformat.h lib\QXlxs\QXlxsHeader\xlsxformat_p.h lib\QXlxs\QXlxsHeader\xlsxglobal.h lib\QXlxs\QXlxsHeader\xlsxmediafile_p.h lib\QXlxs\QXlxsHeader\xlsxnumformatparser_p.h lib\QXlxs\QXlxsHeader\xlsxrelationships_p.h lib\QXlxs\QXlxsHeader\xlsxrichstring.h lib\QXlxs\QXlxsHeader\xlsxrichstring_p.h lib\QXlxs\QXlxsHeader\xlsxsharedstrings_p.h lib\QXlxs\QXlxsHeader\xlsxsimpleooxmlfile_p.h lib\QXlxs\QXlxsHeader\xlsxstyles_p.h lib\QXlxs\QXlxsHeader\xlsxtheme_p.h lib\QXlxs\QXlxsHeader\xlsxutility_p.h lib\QXlxs\QXlxsHeader\xlsxworkbook.h lib\QXlxs\QXlxsHeader\xlsxworkbook_p.h lib\QXlxs\QXlxsHeader\xlsxworksheet.h lib\QXlxs\QXlxsHeader\xlsxworksheet_p.h lib\QXlxs\QXlxsHeader\xlsxzipreader_p.h lib\QXlxs\QXlxsHeader\xlsxzipwriter_p.h lib\QsLog\QsLogDest.h lib\QsLog\QsLog.h lib\QsLog\QsLogDestConsole.h lib\QsLog\QsLogLevel.h lib\QsLog\QsLogDestFile.h lib\QsLog\QsLogDisableForThisFile.h lib\QsLog\QsLogDestFunctor.h lib\FramelessWindow\MuFramelessHelper.h lib\FramelessWindow\MuFramelessHelperPrivate.h lib\FramelessWindow\MuCursorPosCalculator.h lib\FramelessWindow\MuTitleBar.h lib\FramelessWindow\MuWidgetData.h lib\FramelessWindow\MuShadowWidget.h lib\FramelessWindow\MuShadowWindow.h lib\FramelessWindow\MuCustomWindow.h lib\FramelessWindow\FramelessWindow_Global.h  source\controller\customdialog.cpp source\controller\customTitleBar.cpp source\main.cpp source\widget.cpp source\util\shareddata.cpp source\util\datapathgetter.cpp source\util\databasetablenamegetter.cpp source\structure\group.cpp source\structure\groups.cpp source\structure\keyItem.cpp source\structure\account.cpp source\structure\accounts.cpp source\structure\groupType.cpp source\structure\groupTypes.cpp source\structure\fieldType.cpp source\structure\fieldTypes.cpp source\structure\autofillInfo.cpp source\dialog\logindialog.cpp source\dialog\optiondialog.cpp source\dialog\newitemdialog.cpp source\dialog\newgroupdialog.cpp source\dialog\newgrouptypedialog.cpp source\controller\draggabletablewidget.cpp source\function\viewFunction.cpp source\function\saveFunction.cpp source\function\groupFunction.cpp source\function\keyItemFunction.cpp source\function\tableWidgetFunction.cpp source\customField\customComboBox.cpp source\customField\customLineEdit.cpp source\customField\customTextEdit.cpp source\customField\abstractCustomField.cpp lib\QXlxs\QXlxsSource\xlsxabstractooxmlfile.cpp lib\QXlxs\QXlxsSource\xlsxabstractsheet.cpp lib\QXlxs\QXlxsSource\xlsxcell.cpp lib\QXlxs\QXlxsSource\xlsxcellformula.cpp lib\QXlxs\QXlxsSource\xlsxcelllocation.cpp lib\QXlxs\QXlxsSource\xlsxcellrange.cpp lib\QXlxs\QXlxsSource\xlsxcellreference.cpp lib\QXlxs\QXlxsSource\xlsxchart.cpp lib\QXlxs\QXlxsSource\xlsxchartsheet.cpp lib\QXlxs\QXlxsSource\xlsxcolor.cpp lib\QXlxs\QXlxsSource\xlsxconditionalformatting.cpp lib\QXlxs\QXlxsSource\xlsxcontenttypes.cpp lib\QXlxs\QXlxsSource\xlsxdatavalidation.cpp lib\QXlxs\QXlxsSource\xlsxdatetype.cpp lib\QXlxs\QXlxsSource\xlsxdocpropsapp.cpp lib\QXlxs\QXlxsSource\xlsxdocpropscore.cpp lib\QXlxs\QXlxsSource\xlsxdocument.cpp lib\QXlxs\QXlxsSource\xlsxdrawing.cpp lib\QXlxs\QXlxsSource\xlsxdrawinganchor.cpp lib\QXlxs\QXlxsSource\xlsxformat.cpp lib\QXlxs\QXlxsSource\xlsxmediafile.cpp lib\QXlxs\QXlxsSource\xlsxnumformatparser.cpp lib\QXlxs\QXlxsSource\xlsxrelationships.cpp lib\QXlxs\QXlxsSource\xlsxrichstring.cpp lib\QXlxs\QXlxsSource\xlsxsharedstrings.cpp lib\QXlxs\QXlxsSource\xlsxsimpleooxmlfile.cpp lib\QXlxs\QXlxsSource\xlsxstyles.cpp lib\QXlxs\QXlxsSource\xlsxtheme.cpp lib\QXlxs\QXlxsSource\xlsxutility.cpp lib\QXlxs\QXlxsSource\xlsxworkbook.cpp lib\QXlxs\QXlxsSource\xlsxworksheet.cpp lib\QXlxs\QXlxsSource\xlsxzipreader.cpp lib\QXlxs\QXlxsSource\xlsxzipwriter.cpp lib\QsLog\QsLogDest.cpp lib\QsLog\QsLog.cpp lib\QsLog\QsLogDestConsole.cpp lib\QsLog\QsLogDestFile.cpp lib\QsLog\QsLogDestFunctor.cpp lib\FramelessWindow\MuFramelessHelper.cpp lib\FramelessWindow\MuWidgetData.cpp lib\FramelessWindow\MuCursorPosCalculator.cpp lib\FramelessWindow\MuTitleBar.cpp lib\FramelessWindow\MuShadowWidget.cpp lib\FramelessWindow\MuCustomWindow.cpp ui\controller\customdialog.ui ui\widget.ui ui\dialog\logindialog.ui ui\dialog\newgrouptypedialog.ui ui\dialog\optiondialog.ui ui\dialog\newitemdialog.ui ui\dialog\newgroupdialog.ui ui\customField\customTextEdit.ui ui\customField\customLineEdit.ui ui\customField\customComboBox.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) temp\obj\main.obj temp\obj\widget.obj temp\obj\shareddata.obj temp\obj\datapathgetter.obj temp\obj\databasetablenamegetter.obj temp\obj\group.obj temp\obj\groups.obj temp\obj\keyItem.obj temp\obj\account.obj temp\obj\accounts.obj temp\obj\groupType.obj temp\obj\groupTypes.obj temp\obj\fieldType.obj temp\obj\fieldTypes.obj temp\obj\autofillInfo.obj temp\obj\logindialog.obj temp\obj\optiondialog.obj temp\obj\newitemdialog.obj temp\obj\newgroupdialog.obj temp\obj\newgrouptypedialog.obj temp\obj\titleBar.obj temp\obj\draggabletablewidget.obj temp\obj\viewFunction.obj temp\obj\saveFunction.obj temp\obj\groupFunction.obj temp\obj\keyItemFunction.obj temp\obj\tableWidgetFunction.obj temp\obj\customComboBox.obj temp\obj\customLineEdit.obj temp\obj\customTextEdit.obj temp\obj\abstractCustomField.obj temp\obj\xlsxabstractooxmlfile.obj temp\obj\xlsxabstractsheet.obj temp\obj\xlsxcell.obj temp\obj\xlsxcellformula.obj temp\obj\xlsxcelllocation.obj temp\obj\xlsxcellrange.obj temp\obj\xlsxcellreference.obj temp\obj\xlsxchart.obj temp\obj\xlsxchartsheet.obj temp\obj\xlsxcolor.obj temp\obj\xlsxconditionalformatting.obj temp\obj\xlsxcontenttypes.obj temp\obj\xlsxdatavalidation.obj temp\obj\xlsxdatetype.obj temp\obj\xlsxdocpropsapp.obj temp\obj\xlsxdocpropscore.obj temp\obj\xlsxdocument.obj temp\obj\xlsxdrawing.obj temp\obj\xlsxdrawinganchor.obj temp\obj\xlsxformat.obj temp\obj\xlsxmediafile.obj temp\obj\xlsxnumformatparser.obj temp\obj\xlsxrelationships.obj temp\obj\xlsxrichstring.obj temp\obj\xlsxsharedstrings.obj temp\obj\xlsxsimpleooxmlfile.obj temp\obj\xlsxstyles.obj temp\obj\xlsxtheme.obj temp\obj\xlsxutility.obj temp\obj\xlsxworkbook.obj temp\obj\xlsxworksheet.obj temp\obj\xlsxzipreader.obj temp\obj\xlsxzipwriter.obj temp\obj\QsLogDest.obj temp\obj\QsLog.obj temp\obj\QsLogDestConsole.obj temp\obj\QsLogDestFile.obj temp\obj\QsLogDestFunctor.obj temp\obj\qrc_dark.obj temp\obj\qrc_custom.obj temp\obj\qrc_win11_dark.obj temp\obj\qrc_win11_light.obj temp\obj\moc_widget.obj temp\obj\moc_titleBar.obj
-	-$(DEL_FILE) temp\obj\moc_draggabletablewidget.obj temp\obj\moc_customTextEdit.obj temp\obj\moc_customComboBox.obj temp\obj\moc_customLineEdit.obj temp\obj\moc_abstractCustomField.obj temp\obj\moc_logindialog.obj temp\obj\moc_optiondialog.obj temp\obj\moc_newitemdialog.obj temp\obj\moc_newgroupdialog.obj temp\obj\moc_newgrouptypedialog.obj temp\obj\moc_xlsxdocument.obj temp\obj\moc_QsLogDestFunctor.obj
+	-$(DEL_FILE) temp\obj\customdialog.obj temp\obj\customTitleBar.obj temp\obj\main.obj temp\obj\widget.obj temp\obj\shareddata.obj temp\obj\datapathgetter.obj temp\obj\databasetablenamegetter.obj temp\obj\group.obj temp\obj\groups.obj temp\obj\keyItem.obj temp\obj\account.obj temp\obj\accounts.obj temp\obj\groupType.obj temp\obj\groupTypes.obj temp\obj\fieldType.obj temp\obj\fieldTypes.obj temp\obj\autofillInfo.obj temp\obj\logindialog.obj temp\obj\optiondialog.obj temp\obj\newitemdialog.obj temp\obj\newgroupdialog.obj temp\obj\newgrouptypedialog.obj temp\obj\draggabletablewidget.obj temp\obj\viewFunction.obj temp\obj\saveFunction.obj temp\obj\groupFunction.obj temp\obj\keyItemFunction.obj temp\obj\tableWidgetFunction.obj temp\obj\customComboBox.obj temp\obj\customLineEdit.obj temp\obj\customTextEdit.obj temp\obj\abstractCustomField.obj temp\obj\xlsxabstractooxmlfile.obj temp\obj\xlsxabstractsheet.obj temp\obj\xlsxcell.obj temp\obj\xlsxcellformula.obj temp\obj\xlsxcelllocation.obj temp\obj\xlsxcellrange.obj temp\obj\xlsxcellreference.obj temp\obj\xlsxchart.obj temp\obj\xlsxchartsheet.obj temp\obj\xlsxcolor.obj temp\obj\xlsxconditionalformatting.obj temp\obj\xlsxcontenttypes.obj temp\obj\xlsxdatavalidation.obj temp\obj\xlsxdatetype.obj temp\obj\xlsxdocpropsapp.obj temp\obj\xlsxdocpropscore.obj temp\obj\xlsxdocument.obj temp\obj\xlsxdrawing.obj temp\obj\xlsxdrawinganchor.obj temp\obj\xlsxformat.obj temp\obj\xlsxmediafile.obj temp\obj\xlsxnumformatparser.obj temp\obj\xlsxrelationships.obj temp\obj\xlsxrichstring.obj temp\obj\xlsxsharedstrings.obj temp\obj\xlsxsimpleooxmlfile.obj temp\obj\xlsxstyles.obj temp\obj\xlsxtheme.obj temp\obj\xlsxutility.obj temp\obj\xlsxworkbook.obj temp\obj\xlsxworksheet.obj temp\obj\xlsxzipreader.obj temp\obj\xlsxzipwriter.obj temp\obj\QsLogDest.obj temp\obj\QsLog.obj temp\obj\QsLogDestConsole.obj temp\obj\QsLogDestFile.obj temp\obj\QsLogDestFunctor.obj temp\obj\MuFramelessHelper.obj temp\obj\MuWidgetData.obj temp\obj\MuCursorPosCalculator.obj temp\obj\MuTitleBar.obj
+	-$(DEL_FILE) temp\obj\MuShadowWidget.obj temp\obj\MuCustomWindow.obj temp\obj\qrc_dark.obj temp\obj\qrc_custom.obj temp\obj\qrc_win11_dark.obj temp\obj\qrc_win11_light.obj temp\obj\qrc_images.obj temp\obj\moc_customTitleBar.obj temp\obj\moc_customdialog.obj temp\obj\moc_widget.obj temp\obj\moc_draggabletablewidget.obj temp\obj\moc_customTextEdit.obj temp\obj\moc_customComboBox.obj temp\obj\moc_customLineEdit.obj temp\obj\moc_abstractCustomField.obj temp\obj\moc_logindialog.obj temp\obj\moc_optiondialog.obj temp\obj\moc_newitemdialog.obj temp\obj\moc_newgroupdialog.obj temp\obj\moc_newgrouptypedialog.obj temp\obj\moc_xlsxdocument.obj temp\obj\moc_QsLogDestFunctor.obj temp\obj\moc_MuFramelessHelper.obj temp\obj\moc_MuTitleBar.obj temp\obj\moc_MuShadowWidget.obj temp\obj\moc_MuCustomWindow.obj
 	-$(DEL_FILE) temp\obj\PasswordManager.vc.pdb bin\PasswordManager.ilk bin\PasswordManager.idb
 	-$(DEL_FILE) temp\obj\PasswordManager_resource.res
 
@@ -1059,9 +1144,9 @@ benchmark: first
 
 compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
-compiler_rcc_make_all: temp\rcc\qrc_dark.cpp temp\rcc\qrc_custom.cpp temp\rcc\qrc_win11_dark.cpp temp\rcc\qrc_win11_light.cpp
+compiler_rcc_make_all: temp\rcc\qrc_dark.cpp temp\rcc\qrc_custom.cpp temp\rcc\qrc_win11_dark.cpp temp\rcc\qrc_win11_light.cpp temp\rcc\qrc_images.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) temp\rcc\qrc_dark.cpp temp\rcc\qrc_custom.cpp temp\rcc\qrc_win11_dark.cpp temp\rcc\qrc_win11_light.cpp
+	-$(DEL_FILE) temp\rcc\qrc_dark.cpp temp\rcc\qrc_custom.cpp temp\rcc\qrc_win11_dark.cpp temp\rcc\qrc_win11_light.cpp temp\rcc\qrc_images.cpp
 temp\rcc\qrc_dark.cpp: qrc\dark\dark.qrc \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\rcc.exe \
 		qrc\dark\icons\transparent.png \
@@ -1281,6 +1366,7 @@ temp\rcc\qrc_custom.cpp: qrc\custom\custom.qrc \
 		qrc\custom\icons\wrong.png \
 		qrc\custom\icons\maximize.png \
 		qrc\custom\icons\defaultPortrait.png \
+		qrc\custom\icons\addKeyItem.svg \
 		qrc\custom\icons\nosee.png \
 		qrc\custom\icons\see.png \
 		qrc\custom\icons\pin.png \
@@ -1373,15 +1459,305 @@ temp\rcc\qrc_win11_light.cpp: qrc\win11_light\win11_light.qrc \
 		qrc\win11_light\icons\ScrollTopHover.png
 	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\rcc.exe -name win11_light qrc\win11_light\win11_light.qrc -o temp\rcc\qrc_win11_light.cpp
 
+temp\rcc\qrc_images.cpp: lib\FramelessWindow\images.qrc \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\rcc.exe \
+		lib\FramelessWindow\images\minimizeBtnBlack_16.png \
+		lib\FramelessWindow\images\warningYellow_48.png \
+		lib\FramelessWindow\images\closeBtnWhite_16.png \
+		lib\FramelessWindow\images\questionBlue_48.png \
+		lib\FramelessWindow\images\closeBtnBlack_16.png \
+		lib\FramelessWindow\images\successGreen_48.png \
+		lib\FramelessWindow\images\errorRed_48.png \
+		lib\FramelessWindow\images\maximizeBtnWhite_16.png \
+		lib\FramelessWindow\images\restoreWhite_16.png \
+		lib\FramelessWindow\images\maximizeBtnBlack_16.png \
+		lib\FramelessWindow\images\restoreBlack_16.png \
+		lib\FramelessWindow\images\informationBlue_48.png \
+		lib\FramelessWindow\images\minimizeBtnWhite_16.png \
+		lib\FramelessWindow\images\logo.jpg \
+		lib\FramelessWindow\images\winwindow\close.png \
+		lib\FramelessWindow\images\winwindow\maximize.png \
+		lib\FramelessWindow\images\winwindow\1.jpg \
+		lib\FramelessWindow\images\winwindow\restore.png \
+		lib\FramelessWindow\images\winwindow\minimize.png
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\rcc.exe -name images lib\FramelessWindow\images.qrc -o temp\rcc\qrc_images.cpp
+
 compiler_moc_predefs_make_all: temp\moc\moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) temp\moc\moc_predefs.h
 temp\moc\moc_predefs.h: ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp
 	cl -BxD:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2>NUL >temp\moc\moc_predefs.h
 
-compiler_moc_header_make_all: temp\moc\moc_widget.cpp temp\moc\moc_titleBar.cpp temp\moc\moc_draggabletablewidget.cpp temp\moc\moc_customTextEdit.cpp temp\moc\moc_customComboBox.cpp temp\moc\moc_customLineEdit.cpp temp\moc\moc_abstractCustomField.cpp temp\moc\moc_logindialog.cpp temp\moc\moc_optiondialog.cpp temp\moc\moc_newitemdialog.cpp temp\moc\moc_newgroupdialog.cpp temp\moc\moc_newgrouptypedialog.cpp temp\moc\moc_xlsxdocument.cpp temp\moc\moc_QsLogDestFunctor.cpp
+compiler_moc_header_make_all: temp\moc\moc_customTitleBar.cpp temp\moc\moc_customdialog.cpp temp\moc\moc_widget.cpp temp\moc\moc_draggabletablewidget.cpp temp\moc\moc_customTextEdit.cpp temp\moc\moc_customComboBox.cpp temp\moc\moc_customLineEdit.cpp temp\moc\moc_abstractCustomField.cpp temp\moc\moc_logindialog.cpp temp\moc\moc_optiondialog.cpp temp\moc\moc_newitemdialog.cpp temp\moc\moc_newgroupdialog.cpp temp\moc\moc_newgrouptypedialog.cpp temp\moc\moc_xlsxdocument.cpp temp\moc\moc_QsLogDestFunctor.cpp temp\moc\moc_MuFramelessHelper.cpp temp\moc\moc_MuTitleBar.cpp temp\moc\moc_MuShadowWidget.cpp temp\moc\moc_MuCustomWindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) temp\moc\moc_widget.cpp temp\moc\moc_titleBar.cpp temp\moc\moc_draggabletablewidget.cpp temp\moc\moc_customTextEdit.cpp temp\moc\moc_customComboBox.cpp temp\moc\moc_customLineEdit.cpp temp\moc\moc_abstractCustomField.cpp temp\moc\moc_logindialog.cpp temp\moc\moc_optiondialog.cpp temp\moc\moc_newitemdialog.cpp temp\moc\moc_newgroupdialog.cpp temp\moc\moc_newgrouptypedialog.cpp temp\moc\moc_xlsxdocument.cpp temp\moc\moc_QsLogDestFunctor.cpp
+	-$(DEL_FILE) temp\moc\moc_customTitleBar.cpp temp\moc\moc_customdialog.cpp temp\moc\moc_widget.cpp temp\moc\moc_draggabletablewidget.cpp temp\moc\moc_customTextEdit.cpp temp\moc\moc_customComboBox.cpp temp\moc\moc_customLineEdit.cpp temp\moc\moc_abstractCustomField.cpp temp\moc\moc_logindialog.cpp temp\moc\moc_optiondialog.cpp temp\moc\moc_newitemdialog.cpp temp\moc\moc_newgroupdialog.cpp temp\moc\moc_newgrouptypedialog.cpp temp\moc\moc_xlsxdocument.cpp temp\moc\moc_QsLogDestFunctor.cpp temp\moc\moc_MuFramelessHelper.cpp temp\moc\moc_MuTitleBar.cpp temp\moc\moc_MuShadowWidget.cpp temp\moc\moc_MuCustomWindow.cpp
+temp\moc\moc_customTitleBar.cpp: header\controller\customTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\controller\customTitleBar.h -o temp\moc\moc_customTitleBar.cpp
+
+temp\moc\moc_customdialog.cpp: header\controller\customdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		header\controller\customTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\controller\customdialog.h -o temp\moc\moc_customdialog.cpp
+
 temp\moc\moc_widget.cpp: header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
@@ -1724,7 +2100,7 @@ temp\moc\moc_widget.cpp: header\widget.h \
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -1751,144 +2127,23 @@ temp\moc\moc_widget.cpp: header\widget.h \
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\widget.h -o temp\moc\moc_widget.cpp
-
-temp\moc\moc_titleBar.cpp: header\controller\titleBar.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
-		temp\moc\moc_predefs.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\controller\titleBar.h -o temp\moc\moc_titleBar.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\widget.h -o temp\moc\moc_widget.cpp
 
 temp\moc\moc_draggabletablewidget.cpp: header\controller\draggabletablewidget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
@@ -2019,7 +2274,7 @@ temp\moc\moc_draggabletablewidget.cpp: header\controller\draggabletablewidget.h 
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qheaderview.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\controller\draggabletablewidget.h -o temp\moc\moc_draggabletablewidget.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\controller\draggabletablewidget.h -o temp\moc\moc_draggabletablewidget.cpp
 
 temp\moc\moc_customTextEdit.cpp: header\customField\customTextEdit.h \
 		header\customField\abstractCustomField.h \
@@ -2163,7 +2418,7 @@ temp\moc\moc_customTextEdit.cpp: header\customField\customTextEdit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customTextEdit.h -o temp\moc\moc_customTextEdit.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customTextEdit.h -o temp\moc\moc_customTextEdit.cpp
 
 temp\moc\moc_customComboBox.cpp: header\customField\customComboBox.h \
 		header\customField\abstractCustomField.h \
@@ -2307,7 +2562,7 @@ temp\moc\moc_customComboBox.cpp: header\customField\customComboBox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customComboBox.h -o temp\moc\moc_customComboBox.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customComboBox.h -o temp\moc\moc_customComboBox.cpp
 
 temp\moc\moc_customLineEdit.cpp: header\customField\customLineEdit.h \
 		header\customField\abstractCustomField.h \
@@ -2451,7 +2706,7 @@ temp\moc\moc_customLineEdit.cpp: header\customField\customLineEdit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customLineEdit.h -o temp\moc\moc_customLineEdit.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\customLineEdit.h -o temp\moc\moc_customLineEdit.cpp
 
 temp\moc\moc_abstractCustomField.cpp: header\customField\abstractCustomField.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
@@ -2594,7 +2849,7 @@ temp\moc\moc_abstractCustomField.cpp: header\customField\abstractCustomField.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\abstractCustomField.h -o temp\moc\moc_abstractCustomField.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\customField\abstractCustomField.h -o temp\moc\moc_abstractCustomField.cpp
 
 temp\moc\moc_logindialog.cpp: header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -2701,13 +2956,35 @@ temp\moc\moc_logindialog.cpp: header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\customField\customComboBox.h \
-		header\customField\abstractCustomField.h \
+		header\controller\customdialog.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		header\customField\customComboBox.h \
+		header\customField\abstractCustomField.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -2715,7 +2992,6 @@ temp\moc\moc_logindialog.cpp: header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyle.h \
@@ -2725,24 +3001,16 @@ temp\moc\moc_logindialog.cpp: header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLineEdit \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlineedit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextcursor.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextformat.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		header\customField\customLineEdit.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\logindialog.h -o temp\moc\moc_logindialog.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\logindialog.h -o temp\moc\moc_logindialog.cpp
 
 temp\moc\moc_optiondialog.cpp: header\dialog\optiondialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -2849,7 +3117,7 @@ temp\moc\moc_optiondialog.cpp: header\dialog\optiondialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -2877,7 +3145,7 @@ temp\moc\moc_optiondialog.cpp: header\dialog\optiondialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\optiondialog.h -o temp\moc\moc_optiondialog.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\optiondialog.h -o temp\moc\moc_optiondialog.cpp
 
 temp\moc\moc_newitemdialog.cpp: header\dialog\newitemdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -2984,7 +3252,7 @@ temp\moc\moc_newitemdialog.cpp: header\dialog\newitemdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -3015,7 +3283,7 @@ temp\moc\moc_newitemdialog.cpp: header\dialog\newitemdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatetime.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newitemdialog.h -o temp\moc\moc_newitemdialog.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newitemdialog.h -o temp\moc\moc_newitemdialog.cpp
 
 temp\moc\moc_newgroupdialog.cpp: header\dialog\newgroupdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -3127,7 +3395,7 @@ temp\moc\moc_newgroupdialog.cpp: header\dialog\newgroupdialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDateTime \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatetime.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -3179,7 +3447,7 @@ temp\moc\moc_newgroupdialog.cpp: header\dialog\newgroupdialog.h \
 		header\customField\customLineEdit.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newgroupdialog.h -o temp\moc\moc_newgroupdialog.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newgroupdialog.h -o temp\moc\moc_newgroupdialog.cpp
 
 temp\moc\moc_newgrouptypedialog.cpp: header\dialog\newgrouptypedialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -3326,7 +3594,7 @@ temp\moc\moc_newgrouptypedialog.cpp: header\dialog\newgrouptypedialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -3341,7 +3609,7 @@ temp\moc\moc_newgrouptypedialog.cpp: header\dialog\newgrouptypedialog.h \
 		header\customField\customLineEdit.h \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newgrouptypedialog.h -o temp\moc\moc_newgrouptypedialog.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include header\dialog\newgrouptypedialog.h -o temp\moc\moc_newgrouptypedialog.cpp
 
 temp\moc\moc_xlsxdocument.cpp: lib\QXlxs\QXlxsHeader\xlsxdocument.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtGlobal \
@@ -3463,7 +3731,7 @@ temp\moc\moc_xlsxdocument.cpp: lib\QXlxs\QXlxsHeader\xlsxdocument.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaType \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\QXlxs\QXlxsHeader\xlsxdocument.h -o temp\moc\moc_xlsxdocument.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\QXlxs\QXlxsHeader\xlsxdocument.h -o temp\moc\moc_xlsxdocument.cpp
 
 temp\moc\moc_QsLogDestFunctor.cpp: lib\QsLog\QsLogDestFunctor.h \
 		lib\QsLog\QsLogDest.h \
@@ -3529,15 +3797,443 @@ temp\moc\moc_QsLogDestFunctor.cpp: lib\QsLog\QsLogDestFunctor.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
 		temp\moc\moc_predefs.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\QsLog\QsLogDestFunctor.h -o temp\moc\moc_QsLogDestFunctor.cpp
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\QsLog\QsLogDestFunctor.h -o temp\moc\moc_QsLogDestFunctor.cpp
+
+temp\moc\moc_MuFramelessHelper.cpp: lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\FramelessWindow\MuFramelessHelper.h -o temp\moc\moc_MuFramelessHelper.cpp
+
+temp\moc\moc_MuTitleBar.cpp: lib\FramelessWindow\MuTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\FramelessWindow\MuTitleBar.h -o temp\moc\moc_MuTitleBar.cpp
+
+temp\moc\moc_MuShadowWidget.cpp: lib\FramelessWindow\MuShadowWidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\FramelessWindow\MuShadowWidget.h -o temp\moc\moc_MuShadowWidget.cpp
+
+temp\moc\moc_MuCustomWindow.cpp: lib\FramelessWindow\MuCustomWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialogButtonBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialogbuttonbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		lib\FramelessWindow\MuShadowWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
+		temp\moc\moc_predefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Workspace/QtWorkspace/PasswordManager/QWidget/temp/moc/moc_predefs.h -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -ID:/Workspace/QtWorkspace/PasswordManager/QWidget -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/header -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QXlxs/QXlxsHeader/msvc2015 -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/QsLog -ID:/Workspace/QtWorkspace/PasswordManager/QWidget/lib/FramelessWindow -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSvg -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui/5.15.2/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtSql -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2 -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore/5.15.2/QtCore -ID:/Ruida/Documents/Qt/5.15.2/msvc2019_64/include/QtCore -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include lib\FramelessWindow\MuCustomWindow.h -o temp\moc\moc_MuCustomWindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h
+compiler_uic_make_all: temp\ui\ui_customdialog.h temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h
 compiler_uic_clean:
-	-$(DEL_FILE) temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h
+	-$(DEL_FILE) temp\ui\ui_customdialog.h temp\ui\ui_widget.h temp\ui\ui_logindialog.h temp\ui\ui_newgrouptypedialog.h temp\ui\ui_optiondialog.h temp\ui\ui_newitemdialog.h temp\ui\ui_newgroupdialog.h temp\ui\ui_customTextEdit.h temp\ui\ui_customLineEdit.h temp\ui\ui_customComboBox.h
+temp\ui\ui_customdialog.h: ui\controller\customdialog.ui \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\uic.exe
+	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\uic.exe ui\controller\customdialog.ui -o temp\ui\ui_customdialog.h
+
 temp\ui\ui_widget.h: ui\widget.ui \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\uic.exe
 	D:\Ruida\Documents\Qt\5.15.2\msvc2019_64\bin\uic.exe ui\widget.ui -o temp\ui\ui_widget.h
@@ -3585,6 +4281,273 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 
 ####### Compile
+
+temp\obj\customdialog.obj: source\controller\customdialog.cpp header\controller\customdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		header\controller\customTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		temp\ui\ui_customdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGraphicsDropShadowEffect \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgraphicseffect.h
+
+temp\obj\customTitleBar.obj: source\controller\customTitleBar.cpp header\controller\customTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h
 
 temp\obj\main.obj: source\main.cpp header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -3691,13 +4654,35 @@ temp\obj\main.obj: source\main.cpp header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\customField\customComboBox.h \
-		header\customField\abstractCustomField.h \
+		header\controller\customdialog.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		header\customField\customComboBox.h \
+		header\customField\abstractCustomField.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -3705,7 +4690,6 @@ temp\obj\main.obj: source\main.cpp header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyle.h \
@@ -3715,22 +4699,17 @@ temp\obj\main.obj: source\main.cpp header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLineEdit \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlineedit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextcursor.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextformat.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		header\customField\customLineEdit.h \
 		temp\ui\ui_logindialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		lib\QsLog\QsLog.h \
 		lib\QsLog\QsLogLevel.h \
 		lib\QsLog\QsLogDest.h \
@@ -3738,14 +4717,7 @@ temp\obj\main.obj: source\main.cpp header\dialog\logindialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtGlobal \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		lib\QsLog\QsLogDisableForThisFile.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug
 
 temp\obj\widget.obj: source\widget.cpp header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
@@ -4089,7 +5061,7 @@ temp\obj\widget.obj: source\widget.cpp header\widget.h \
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -4116,10 +5088,22 @@ temp\obj\widget.obj: source\widget.cpp header\widget.h \
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
-		temp\ui\ui_widget.h
+		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem
 
 temp\obj\shareddata.obj: source\util\shareddata.cpp header\util\shareddata.h \
 		header\structure\accounts.h \
@@ -5461,13 +6445,35 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\customField\customComboBox.h \
-		header\customField\abstractCustomField.h \
+		header\controller\customdialog.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		header\customField\customComboBox.h \
+		header\customField\abstractCustomField.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -5475,7 +6481,6 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyle.h \
@@ -5485,20 +6490,12 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLineEdit \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlineedit.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextcursor.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextformat.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		header\customField\customLineEdit.h \
 		lib\QsLog\QsLog.h \
 		lib\QsLog\QsLogLevel.h \
@@ -5508,19 +6505,10 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		lib\QsLog\QsLogDisableForThisFile.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug \
-		header\controller\titleBar.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
 		temp\ui\ui_logindialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		header\util\databasetablenamegetter.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QStringList \
 		header\util\datapathgetter.h \
@@ -5541,10 +6529,26 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql\qtsql-config.h \
+		lib\FramelessWindow\MuCustomWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialogButtonBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialogbuttonbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		lib\FramelessWindow\MuShadowWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
 		header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QStackedWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstackedwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QFileInfo \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QDesktopServices \
@@ -5574,8 +6578,6 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbitmap.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPainter \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpainter.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql\QSqlError \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSql\qsqlerror.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMenu \
@@ -5627,7 +6629,6 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qexception.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfactoryinterface.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfileselector.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfilesystemwatcher.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfinalstate.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfuture.h \
@@ -5704,7 +6705,6 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcoreversion.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDir \
 		lib\QXlxs\QXlxsHeader\xlsxchart.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QXmlStreamReader \
@@ -5742,7 +6742,17 @@ temp\obj\logindialog.obj: source\dialog\logindialog.cpp header\dialog\logindialo
 		header\dialog\newgroupdialog.h \
 		header\dialog\newgrouptypedialog.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCompleter \
@@ -5854,7 +6864,7 @@ temp\obj\optiondialog.obj: source\dialog\optiondialog.cpp header\dialog\optiondi
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -5881,6 +6891,46 @@ temp\obj\optiondialog.obj: source\dialog\optiondialog.cpp header\dialog\optiondi
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCheckBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QComboBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcombobox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qslider.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyle.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtabbar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLineEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlineedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QListWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlistwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlistview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QToolButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtoolbutton.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGraphicsDropShadowEffect \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgraphicseffect.h
@@ -5990,7 +7040,7 @@ temp\obj\newitemdialog.obj: source\dialog\newitemdialog.cpp header\dialog\newite
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -6046,10 +7096,20 @@ temp\obj\newitemdialog.obj: source\dialog\newitemdialog.cpp header\dialog\newite
 		header\customField\customLineEdit.h \
 		header\customField\customTextEdit.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QStackedWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstackedwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QFileInfo \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QDesktopServices \
@@ -6063,7 +7123,6 @@ temp\obj\newitemdialog.obj: source\dialog\newitemdialog.cpp header\dialog\newite
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtablewidget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtableview.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qitemselectionmodel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QInputDialog \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qinputdialog.h \
@@ -6216,7 +7275,6 @@ temp\obj\newitemdialog.obj: source\dialog\newitemdialog.cpp header\dialog\newite
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcoreversion.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDir \
 		lib\QXlxs\QXlxsHeader\xlsxchart.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedPointer \
@@ -6256,6 +7314,9 @@ temp\obj\newitemdialog.obj: source\dialog\newitemdialog.cpp header\dialog\newite
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		header\util\shareddata.h \
@@ -6377,7 +7438,7 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDateTime \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatetime.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
@@ -6428,6 +7489,13 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
 		header\customField\customLineEdit.h \
 		temp\ui\ui_newgroupdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		header\util\shareddata.h \
 		header\structure\accounts.h \
 		header\structure\account.h \
@@ -6445,7 +7513,6 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QStackedWidget \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstackedwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QFileInfo \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QDesktopServices \
@@ -6459,7 +7526,6 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtablewidget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtableview.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qitemselectionmodel.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QInputDialog \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qinputdialog.h \
@@ -6607,7 +7673,6 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcoreversion.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDir \
 		lib\QXlxs\QXlxsHeader\xlsxchart.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedPointer \
@@ -6645,7 +7710,14 @@ temp\obj\newgroupdialog.obj: source\dialog\newgroupdialog.cpp header\dialog\newg
 		header\dialog\newitemdialog.h \
 		header\dialog\newgrouptypedialog.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgrouptypedialog.h
 
 temp\obj\newgrouptypedialog.obj: source\dialog\newgrouptypedialog.cpp header\dialog\newgrouptypedialog.h \
@@ -6793,7 +7865,7 @@ temp\obj\newgrouptypedialog.obj: source\dialog\newgrouptypedialog.cpp header\dia
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -7018,7 +8090,18 @@ temp\obj\newgrouptypedialog.obj: source\dialog\newgrouptypedialog.cpp header\dia
 		header\dialog\newgroupdialog.h \
 		header\structure\group.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		header\util\databasetablenamegetter.h \
@@ -7036,135 +8119,6 @@ temp\obj\newgrouptypedialog.obj: source\dialog\newgrouptypedialog.cpp header\dia
 		lib\QsLog\QsLogDest.h \
 		lib\QsLog\QsLogDisableForThisFile.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug
-
-temp\obj\titleBar.obj: source\controller\titleBar.cpp header\controller\titleBar.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QString \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h
 
 temp\obj\draggabletablewidget.obj: source\controller\draggabletablewidget.cpp header\controller\draggabletablewidget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
@@ -7637,7 +8591,7 @@ temp\obj\viewFunction.obj: source\function\viewFunction.cpp header\widget.h \
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -7664,10 +8618,22 @@ temp\obj\viewFunction.obj: source\function\viewFunction.cpp header\widget.h \
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		header\util\databasetablenamegetter.h \
 		header\util\datapathgetter.h \
 		header\util\shareddata.h \
@@ -7682,7 +8648,10 @@ temp\obj\viewFunction.obj: source\function\viewFunction.cpp header\widget.h \
 		lib\QsLog\QsLogLevel.h \
 		lib\QsLog\QsLogDest.h \
 		lib\QsLog\QsLogDisableForThisFile.h \
-		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtDebug \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSvg\QSvgRenderer \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSvg\qsvgrenderer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtSvg\qtsvgglobal.h
 
 temp\obj\saveFunction.obj: source\function\saveFunction.cpp header\widget.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
@@ -8026,7 +8995,7 @@ temp\obj\saveFunction.obj: source\function\saveFunction.cpp header\widget.h \
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -8053,10 +9022,22 @@ temp\obj\saveFunction.obj: source\function\saveFunction.cpp header\widget.h \
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		header\util\databasetablenamegetter.h \
 		header\util\datapathgetter.h \
 		header\util\shareddata.h \
@@ -8422,7 +9403,7 @@ temp\obj\groupFunction.obj: source\function\groupFunction.cpp header\customField
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -8443,10 +9424,22 @@ temp\obj\groupFunction.obj: source\function\groupFunction.cpp header\customField
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		header\util\databasetablenamegetter.h \
 		header\util\datapathgetter.h \
 		header\util\shareddata.h \
@@ -8805,7 +9798,7 @@ temp\obj\keyItemFunction.obj: source\function\keyItemFunction.cpp header\widget.
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -8832,10 +9825,22 @@ temp\obj\keyItemFunction.obj: source\function\keyItemFunction.cpp header\widget.
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		header\util\databasetablenamegetter.h \
 		header\util\datapathgetter.h \
 		header\util\shareddata.h \
@@ -9194,7 +10199,7 @@ temp\obj\tableWidgetFunction.obj: source\function\tableWidgetFunction.cpp header
 		lib\QXlxs\QXlxsHeader\xlsxchartsheet.h \
 		lib\QXlxs\QXlxsHeader\xlsxrichstring.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QSharedDataPointer \
-		header\controller\titleBar.h \
+		header\controller\customTitleBar.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPixmap \
@@ -9221,10 +10226,22 @@ temp\obj\tableWidgetFunction.obj: source\function\tableWidgetFunction.cpp header
 		header\dialog\newgrouptypedialog.h \
 		header\structure\groupType.h \
 		temp\ui\ui_optiondialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpinBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTabWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		temp\ui\ui_newitemdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		temp\ui\ui_newgroupdialog.h \
 		temp\ui\ui_newgrouptypedialog.h \
 		temp\ui\ui_widget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		header\util\databasetablenamegetter.h \
 		header\util\datapathgetter.h \
 		header\util\shareddata.h \
@@ -9382,6 +10399,14 @@ temp\obj\customComboBox.obj: source\customField\customComboBox.cpp header\custom
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\ui\ui_customComboBox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
@@ -9527,6 +10552,14 @@ temp\obj\customLineEdit.obj: source\customField\customLineEdit.cpp header\custom
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\ui\ui_customLineEdit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
@@ -9672,6 +10705,18 @@ temp\obj\customTextEdit.obj: source\customField\customTextEdit.cpp header\custom
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		temp\ui\ui_customTextEdit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QVariant \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QTextEdit \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextdocument.h \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMetaEnum \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetaobject.h
@@ -13662,6 +14707,702 @@ temp\obj\QsLogDestFunctor.obj: lib\QsLog\QsLogDestFunctor.cpp lib\QsLog\QsLogDes
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtGlobal \
 		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject
 
+temp\obj\MuFramelessHelper.obj: lib\FramelessWindow\MuFramelessHelper.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuFramelessHelperPrivate.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h
+
+temp\obj\MuWidgetData.obj: lib\FramelessWindow\MuWidgetData.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QRubberBand \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDesktopWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		lib\FramelessWindow\MuCursorPosCalculator.h \
+		lib\FramelessWindow\MuFramelessHelperPrivate.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		lib\FramelessWindow\MuShadowWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		lib\FramelessWindow\MuFramelessHelper.h
+
+temp\obj\MuCursorPosCalculator.obj: lib\FramelessWindow\MuCursorPosCalculator.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		lib\FramelessWindow\MuCursorPosCalculator.h
+
+temp\obj\MuTitleBar.obj: lib\FramelessWindow\MuTitleBar.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDesktopWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QStyleOption \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qslider.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstyle.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtabbar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPainter \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpainter.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuShadowWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		lib\FramelessWindow\MuCursorPosCalculator.h
+
+temp\obj\MuShadowWidget.obj: lib\FramelessWindow\MuShadowWidget.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QPainter \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpainter.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpen.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QtMath \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmath.h
+
+temp\obj\MuCustomWindow.obj: lib\FramelessWindow\MuCustomWindow.cpp ..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialogButtonBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialogbuttonbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobal.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qconfig.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlogging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qflags.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstring.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qchar.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringview.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpair.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvector.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmargins.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qrect.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsize.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpalette.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcolor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgb.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qbrush.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qregion.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qline.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtransform.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qimage.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qhash.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfont.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qcursor.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qevent.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qmap.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qset.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurl.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfile.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QCheckBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\qicon.h \
+		lib\FramelessWindow\MuCustomWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QHash \
+		lib\FramelessWindow\MuShadowWindow.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtGui\QIcon \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QDebug \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		lib\FramelessWindow\MuShadowWidget.h \
+		lib\FramelessWindow\FramelessWindow_Global.h \
+		lib\FramelessWindow\MuTitleBar.h \
+		lib\FramelessWindow\MuFramelessHelper.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
+		lib\FramelessWindow\MuWidgetData.h \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QPoint \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QMargins \
+		..\..\..\..\Ruida\Documents\Qt\5.15.2\msvc2019_64\include\QtCore\QRect \
+		lib\FramelessWindow\MuCursorPosCalculator.h
+
 temp\obj\qrc_dark.obj: temp\rcc\qrc_dark.cpp 
 
 temp\obj\qrc_custom.obj: temp\rcc\qrc_custom.cpp 
@@ -13670,9 +15411,13 @@ temp\obj\qrc_win11_dark.obj: temp\rcc\qrc_win11_dark.cpp
 
 temp\obj\qrc_win11_light.obj: temp\rcc\qrc_win11_light.cpp 
 
-temp\obj\moc_widget.obj: temp\moc\moc_widget.cpp 
+temp\obj\qrc_images.obj: temp\rcc\qrc_images.cpp 
 
-temp\obj\moc_titleBar.obj: temp\moc\moc_titleBar.cpp 
+temp\obj\moc_customTitleBar.obj: temp\moc\moc_customTitleBar.cpp 
+
+temp\obj\moc_customdialog.obj: temp\moc\moc_customdialog.cpp 
+
+temp\obj\moc_widget.obj: temp\moc\moc_widget.cpp 
 
 temp\obj\moc_draggabletablewidget.obj: temp\moc\moc_draggabletablewidget.cpp 
 
@@ -13697,6 +15442,14 @@ temp\obj\moc_newgrouptypedialog.obj: temp\moc\moc_newgrouptypedialog.cpp
 temp\obj\moc_xlsxdocument.obj: temp\moc\moc_xlsxdocument.cpp 
 
 temp\obj\moc_QsLogDestFunctor.obj: temp\moc\moc_QsLogDestFunctor.cpp 
+
+temp\obj\moc_MuFramelessHelper.obj: temp\moc\moc_MuFramelessHelper.cpp 
+
+temp\obj\moc_MuTitleBar.obj: temp\moc\moc_MuTitleBar.cpp 
+
+temp\obj\moc_MuShadowWidget.obj: temp\moc\moc_MuShadowWidget.cpp 
+
+temp\obj\moc_MuCustomWindow.obj: temp\moc\moc_MuCustomWindow.cpp 
 
 ####### Install
 

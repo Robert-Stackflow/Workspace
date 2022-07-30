@@ -36,16 +36,6 @@ void Group::append(KeyItem* newKeyItem){
     keyItemList.append(newKeyItem);
 }
 
-int Group::getFlag() const
-{
-    return flag;
-}
-
-void Group::setFlag(int newFlag)
-{
-    flag = newFlag;
-}
-
 int Group::getGroupType() const
 {
     return groupType;

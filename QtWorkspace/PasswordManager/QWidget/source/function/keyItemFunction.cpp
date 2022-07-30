@@ -11,7 +11,7 @@
 void Widget::loadKeyItemFunction(QString& groupName)
 {
     SharedData& sharedData = SharedData::instace();
-    if(newKeyItem!=NULL&&newKeyItem->getFlag()){
+    if(newKeyItem!=nullptr){
         int index=0;
         int groupType=newKeyItem->getGroupType();
         int groupTypeFieldCount=sharedData.groupTypeList[groupType]->count();
@@ -20,30 +20,23 @@ void Widget::loadKeyItemFunction(QString& groupName)
                 index=j;
         }
         sharedData.groupList[index]->append(newKeyItem);
-        if(!sharedData.database.open()){
-            QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
-            return;
-        }else{
-            tableWidgets[index]->insertRow(tableWidgets[index]->rowCount());
-            tableWidgets[index]->setItem(tableWidgets[index]->rowCount()-1,groupTypeFieldCount+1,new QTableWidgetItem(newKeyItem->getCreateTime().toString("yyyy-MM-dd hh:mm:ss")));
-            tableWidgets[index]->setItem(tableWidgets[index]->rowCount()-1,groupTypeFieldCount+2,new QTableWidgetItem(newKeyItem->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss")));
-            updateTableWidgetView(index);
-            sharedData.database.close();
+        tableWidgets[index]->insertRow(tableWidgets[index]->rowCount());
+        for(int i=0;i<groupTypeFieldCount;i++){
+            tableWidgets[index]->setItem(tableWidgets[index]->rowCount()-1,i,new QTableWidgetItem(newKeyItem->at(i)));
         }
+        tableWidgets[index]->setItem(tableWidgets[index]->rowCount()-1,groupTypeFieldCount+1,new QTableWidgetItem(newKeyItem->getCreateTime().toString("yyyy-MM-dd hh:mm:ss")));
+        tableWidgets[index]->setItem(tableWidgets[index]->rowCount()-1,groupTypeFieldCount+2,new QTableWidgetItem(newKeyItem->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss")));
+        updateTableWidgetView(index);
     }
 }
 void Widget::newKeyItemSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    if(sharedData.groupList.count()==0)
-    {
-
-    }
-    QString groupName=sharedData.groupList[tabWidget->currentIndex()]->getGroupName();
+    QString groupName=sharedData.groupList[ui->tabWidget->currentIndex()]->getGroupName();
     newitemdialog->setWindowTitle("在分组 "+groupName+" 中添加密码");
     newitemdialog->m_titleBar->setWindowTitle("在分组 "+groupName+" 中添加密码");
     //转到newitemdialog
-    newitemdialog->loadGroupType(sharedData.groupList[tabWidget->currentIndex()]->getGroupType());
+    newitemdialog->loadGroupType(sharedData.groupList[ui->tabWidget->currentIndex()]->getGroupType());
     newitemdialog->setModal(true);
     newitemdialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
     newitemdialog->exec();
@@ -52,7 +45,9 @@ void Widget::newKeyItemSlot()
 void Widget::newKeyItemFunction(QString& groupName)
 {
     SharedData& sharedData = SharedData::instace();
-    if(newKeyItem!=NULL&&newKeyItem->getFlag()){
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
+    if(newKeyItem!=nullptr){
         int index=0;
         for(int j=0;j<sharedData.groupList.count();j++){
             if(groupName==sharedData.groupList[j]->getGroupName())
@@ -61,13 +56,14 @@ void Widget::newKeyItemFunction(QString& groupName)
         Group* currentGroup=sharedData.groupList[index];
         currentGroup->append(newKeyItem);
         currentGroup->setLastEditTime();
-        sharedData.database.setPassword("123456");
+        QString databaseName=dataPathGetter.getCurrentAccountDataBasePath();
+        sharedData.database.setDatabaseName(databaseName);
         QSqlQuery query(sharedData.database);
         if(!sharedData.database.open()){
             QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
             return;
         }else{
-            QString sql=QString("update sharedData.groupList set count='%1',lastEditTime='%2' where name='%3' ")
+            QString sql=QString("update "+dataBaseTableNameGetter.getGroupTableName(groupName)+" set count='%1',lastEditTime='%2' where name='%3' ")
                     .arg(currentGroup->count())
                     .arg(currentGroup->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"))
                     .arg(currentGroup->getGroupName());
@@ -98,7 +94,7 @@ void Widget::newKeyItemFunction(QString& groupName)
 void Widget::removeKeyItemSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    QList<QTableWidgetItem*> selectItems = tableWidgets[tabWidget->currentIndex()]->selectedItems();
+    QList<QTableWidgetItem*> selectItems = tableWidgets[ui->tabWidget->currentIndex()]->selectedItems();
     QList<int> selectRows;
     for(int i=0;i<selectItems.size();i++)
     {
@@ -110,7 +106,7 @@ void Widget::removeKeyItemSlot()
     for(int i=selectRows.size()-1;i>=0;i--)
     {
         int row=selectRows[i];
-        message+=sharedData.groupList[tabWidget->currentIndex()]->at(row)->toString();
+        message+=sharedData.groupList[ui->tabWidget->currentIndex()]->at(row)->toString();
         message+="\n";
     }
     int choice=QMessageBox::question(this,"删除条目",message);
@@ -127,7 +123,7 @@ void Widget::removeKeyItemSlot()
             }
             else
             {
-                int index=tabWidget->currentIndex();
+                int index=ui->tabWidget->currentIndex();
                 Group* currentGroup=sharedData.groupList.at(index);
                 QString sql = QString("delete from '%1' where createTime = '%2' ").arg(currentGroup->getGroupName()).arg(currentGroup->at(row)->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
                 query.exec(sql);

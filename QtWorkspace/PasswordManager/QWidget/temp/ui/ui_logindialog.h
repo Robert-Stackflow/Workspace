@@ -25,15 +25,15 @@ class Ui_loginDialog
 public:
     QPushButton *confirm;
     QFrame *frame;
-    QLabel *portrait;
     QWidget *layoutWidget_1;
     QVBoxLayout *verticalLayout;
+    QLabel *portrait;
 
     void setupUi(QDialog *loginDialog)
     {
         if (loginDialog->objectName().isEmpty())
             loginDialog->setObjectName(QString::fromUtf8("loginDialog"));
-        loginDialog->resize(383, 524);
+        loginDialog->resize(380, 523);
         confirm = new QPushButton(loginDialog);
         confirm->setObjectName(QString::fromUtf8("confirm"));
         confirm->setGeometry(QRect(70, 380, 241, 51));
@@ -42,18 +42,20 @@ public:
         frame->setGeometry(QRect(10, 10, 361, 501));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        portrait = new QLabel(frame);
-        portrait->setObjectName(QString::fromUtf8("portrait"));
-        portrait->setGeometry(QRect(130, 80, 100, 100));
-        portrait->setAlignment(Qt::AlignCenter);
-        layoutWidget_1 = new QWidget(frame);
+        layoutWidget_1 = new QWidget(loginDialog);
         layoutWidget_1->setObjectName(QString::fromUtf8("layoutWidget_1"));
-        layoutWidget_1->setGeometry(QRect(20, 230, 321, 91));
+        layoutWidget_1->setGeometry(QRect(30, 260, 321, 91));
         verticalLayout = new QVBoxLayout(layoutWidget_1);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        portrait = new QLabel(loginDialog);
+        portrait->setObjectName(QString::fromUtf8("portrait"));
+        portrait->setGeometry(QRect(140, 80, 100, 100));
+        portrait->setAlignment(Qt::AlignCenter);
         frame->raise();
         confirm->raise();
+        layoutWidget_1->raise();
+        portrait->raise();
 
         retranslateUi(loginDialog);
 

@@ -52,6 +52,8 @@ public:
 
         controller = new QTextEdit(layoutWidget);
         controller->setObjectName(QString::fromUtf8("controller"));
+        controller->setMinimumSize(QSize(190, 190));
+        controller->setMaximumSize(QSize(190, 190));
 
         mainLayout->addWidget(controller);
 

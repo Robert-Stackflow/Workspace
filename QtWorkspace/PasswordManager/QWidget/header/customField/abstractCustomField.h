@@ -43,8 +43,8 @@ protected:
     QWidget* parent;
     //基本属性
     QString fieldName;
-    QString controllerFieldName;
     QString fieldTypeName;
+    QString controllerFieldName;
     dataTypeChoices dataType;
     isRequiredChoices isRequired;
     controllerTypeChoices controllerType;
@@ -69,6 +69,7 @@ public:
     QString toString();
     //抽象函数
     virtual bool isValid()=0;
+    virtual QString text()=0;
     virtual QString getPlaceholderText()=0;
     virtual AbstractCustomField* clone();
     virtual void setPlaceholderText(const QString& placeholderText)=0;

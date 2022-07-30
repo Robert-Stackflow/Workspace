@@ -37,7 +37,7 @@
 #include "xlsxcellrange.h"
 #include "xlsxchartsheet.h"
 #include "xlsxrichstring.h"
-#include "controller/titleBar.h"
+#include "controller/customTitleBar.h"
 #include "dialog/optiondialog.h"
 #include "dialog/newitemdialog.h"
 #include "dialog/newgroupdialog.h"
@@ -57,17 +57,21 @@ class Widget : public QWidget
 public:
     //widgets
     Ui::Widget *ui;
-    QTabWidget* tabWidget;
+//    QTabWidget* tabWidget;
     QList<QWidget*> widgets;
     QList<QTableWidget*> tableWidgets;
     QList<QStringList> tableWidgetHeaders;
+    //辅助控件
+//    QLabel* groupNameLabel;
+//    QLabel* groupDescribeLabel;
+//    QListWidget* listWidget;
     //Group functions
-    QToolButton* save;
-    QLineEdit* search;
-    QPushButton* addItem;
-    QPushButton* addGroup;
-    QPushButton* editGroup;
-    QPushButton* deleteGroup;
+//    QToolButton* save;
+//    QLineEdit* search;
+//    QPushButton* addItem;
+//    QPushButton* addGroup;
+//    QPushButton* editGroup;
+//    QPushButton* deleteGroup;
     //saveAs menu
     QMenu *saveAsMenu;
     QAction *saveAsPDF;
@@ -79,12 +83,12 @@ public:
     newGroupDialog* newgroupdialog;
     newGroupTypeDialog* newgrouptypedialog;
     //custom controllers
-    TitleBar *m_titleBar;
+    QPushButton* userButton;
+    QPushButton* optionButton;
+    CustomTitleBar *customTitleBar;
     QMenu* tableWidgetMenu;
     //auxiliary variables
     KeyItem* newKeyItem=nullptr;
-    Group* newGroup=nullptr;
-    int sqlConnectionCount=0;
     //other variables
     QPoint* cursorPos;
     QString styleSheet;
@@ -100,7 +104,7 @@ public:
     int fillMoveMenu(QMenu*,int,int);
     void updateTableWidgetView(int index);
     //增删改分组
-    void newGroupFunction(int mode);
+    void newGroupFunction(int mode, Group *newGroup);
     void editGroupFunction(QString oldName);
     //增删改条目
     void loadKeyItemFunction(QString& tableName);
@@ -122,6 +126,7 @@ private slots:
     //分组切换
     void changeTab();
     void onTabIndexChanged(int);
+    void onListWidgetIndexChanged(int);
     //增删改条目
     void newKeyItemSlot();
     //tableWidget右键菜单

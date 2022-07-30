@@ -2,7 +2,7 @@
 #define NEWGROUPDIALOG_H
 #include <QDialog>
 #include "structure/group.h"
-#include "controller/titleBar.h"
+#include "controller/customTitleBar.h"
 #include "customField/customComboBox.h"
 #include "customField/customLineEdit.h"
 namespace Ui {
@@ -20,19 +20,23 @@ public:
 public:
     Ui::newGroupDialog *ui;
     //自定义控件
-    TitleBar *m_titleBar;
+    CustomTitleBar *m_titleBar;
     customLineEdit* newGroupName;
     customComboBox* newGroupType;
     //辅助变量，便于不同函数间传递数据
     Group* newGroup;
     mode currentMode;
 private:
+    bool dataValid=false;
     QString styleSheet;
 public:
     explicit newGroupDialog(QWidget *parent = nullptr);
     ~newGroupDialog();
     void setWindowTitle(const QString& title);
     void setCurrentMode(mode newCurrentMode);
+    bool getDataValid() const;
+    void setDataValid(bool newDataValid);
+
 private:
     void InitDialog();
 private slots:

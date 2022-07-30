@@ -2,7 +2,7 @@
 #define NEWGROUPTYPEDIALOG_H
 #include <QDialog>
 #include "structure/groupType.h"
-#include "controller/titleBar.h"
+#include "controller/customTitleBar.h"
 #include "customField/customLineEdit.h"
 namespace Ui {
 class newGroupTypeDialog;
@@ -21,7 +21,7 @@ public:
     QStringList typeManagerTableWidgetHeader;
     QStringList editFieldsTableWidgetHeader;
     //自定义控件
-    TitleBar *m_titleBar;
+    CustomTitleBar *m_titleBar;
     customLineEdit* typeName;
     customLineEdit* addFieldName;
     customLineEdit* addFieldTip;

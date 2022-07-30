@@ -57,8 +57,7 @@ void Widget::loadGroups()
             bool insertSqlFlag=query.exec();
             QLOG_DEBUG()<<"Insert Record(s):"<<insertSql;
             //创建默认分组表
-            QString createDefaultGroupSql="create table "+dataBaseTableNameGetter.getGroupTableName(newGroup->getGroupName())
-                    +" (groupType int,createTime varchar(200),lastEditTime varchar(200))";
+            QString createDefaultGroupSql=sharedData.groupTypeList[newGroup->getGroupType()]->getCreateSql(dataBaseTableNameGetter.getGroupTableName(newGroup->getGroupName()));
             bool createDefaultGroupFlag=query.exec(createDefaultGroupSql);
             QLOG_DEBUG()<<"Create Table(s):"<<createDefaultGroupSql;
             if(createSqlFlag&&insertSqlFlag&&createDefaultGroupFlag){
@@ -71,19 +70,13 @@ void Widget::loadGroups()
                 QLOG_DEBUG()<<"Rollback Transaction:"<<transactionRollbackSql;
             }
         }
-        if(!tableNames.contains(dataBaseTableNameGetter.getAutofillInfoTableName())){
-            QString createSql="create table sharedData.autofillInfo (type int,content varchar(100),remark varchar(100))";
-            query.exec(createSql);
-            QsLogging::Logger::getFileLogger(currentUsername,"SQL");
-            QLOG_DEBUG()<<"Create Table(s):"<<createSql;
-        }
         //加载分组
         //新建各个分组
         QString curTableName=dataBaseTableNameGetter.getGroupsTableName();
         query.exec("select * from "+curTableName);
         for(int i = 0;query.next(); i++){
-            newGroup=new Group(query.value(0).toInt(),query.value(1).toString(),query.value(3).toDateTime(),query.value(4).toDateTime(),query.value(5).toString());
-            newGroupFunction(1);
+            Group* newGroup=new Group(query.value(0).toInt(),query.value(1).toString(),query.value(3).toDateTime(),query.value(4).toDateTime(),query.value(5).toString());
+            newGroupFunction(1,newGroup);
         }
         //加载每个分组的密码条目
         for(int i=0;i<sharedData.groupList.count();i++){
@@ -91,7 +84,11 @@ void Widget::loadGroups()
             query.exec("select * from "+curTableName);
             //加载密码条目
             for(int k=0;query.next();k++){
-                newKeyItem=new KeyItem(sharedData.groupList[i]->getGroupType(),query.value(1).toDateTime(),query.value(2).toDateTime(),sharedData.groupTypeList[sharedData.groupList[i]->getGroupType()]->getFieldNames());
+                QStringList fieldValueList;
+                int j=0;
+                for(j=0;j<sharedData.groupTypeList[sharedData.groupList[i]->getGroupType()]->count();j++)
+                    fieldValueList<<query.value(j).toString();
+                newKeyItem=new KeyItem(sharedData.groupList[i]->getGroupType(),query.value(j).toDateTime(),query.value(j+1).toDateTime(),fieldValueList);
                 loadKeyItemFunction(curTableName);
             }
         }
@@ -306,28 +303,33 @@ void Widget::loadUserData()
 void Widget::newGroupSlot()
 {
     //新建分组时置newGroup为nullptr
-    newGroup=nullptr;
     newgroupdialog->newGroup=nullptr;
     //设置标题并转到newgroupdialog窗口
     newgroupdialog->setWindowTitle("新建分组");
     newgroupdialog->setModal(true);
+    newgroupdialog->setDataValid(false);
     newgroupdialog->setGeometry(this->geometry().x()+this->width()/2-newgroupdialog->width()/2+10,this->geometry().y()+this->height()/2-newgroupdialog->height()/2+20,newgroupdialog->width(),newgroupdialog->height());
     newgroupdialog->exec();
     //关闭newgroupdialog窗口后，赋值Group，并调用newGroupFunction新建分组
-    newGroup=newgroupdialog->newGroup;
-    newGroupFunction(0);
+    newGroupFunction(0,newgroupdialog->newGroup);
 }
-void Widget::newGroupFunction(int mode)
+void Widget::newGroupFunction(int mode,Group* newGroup)
 {
     SharedData& sharedData = SharedData::instace();
     DataPathGetter& dataPathGetter = DataPathGetter::instance();
     DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
-    if(newGroup==nullptr)
+    if(newGroup==nullptr||(mode==0&&!newgroupdialog->getDataValid()))
         return;
+    if(sharedData.groupList.has(newGroup->getGroupName())){
+        QMessageBox::warning(this,"警告","分组\""+newGroup->getGroupName()+"\"已存在!");
+        return;
+    }
     int groupCount=sharedData.groupList.count();
     int groupType=newGroup->getGroupType();
     QString groupName=newGroup->getGroupName();
     GroupType* currentGroupType=sharedData.groupTypeList[groupType];
+    //添加到sharedData.groupList中
+    sharedData.groupList<<newGroup;
     //初始化tableWidget
     QTableWidget* newGroupWidget=new QTableWidget();
     tableWidgets<<newGroupWidget;
@@ -345,15 +347,13 @@ void Widget::newGroupFunction(int mode)
         tableWidgets[groupCount]->horizontalHeader()->setSectionResizeMode(i,QHeaderView::ResizeToContents);
     //绑定tableWidget槽函数
     connect(tableWidgets[groupCount],SIGNAL(cellClicked(int,int)),this,SLOT(tableWidgetClickedSlot(int,int)));
-    //初始化tabWidget
+    //初始化ui->tabWidget
     QWidget* tempWidget=new QWidget;
     widgets<<tempWidget;
     QHBoxLayout* tempLayout=new QHBoxLayout;
     tempLayout->addWidget(tableWidgets[groupCount]);
     widgets[groupCount]->setLayout(tempLayout);
-    tabWidget->addTab(widgets[groupCount],groupName);
-    //添加到sharedData.groupList中
-    sharedData.groupList<<newGroup;
+    ui->tabWidget->addTab(widgets[groupCount],groupName);
     if(mode==0){
         //添加到数据库中
         sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
@@ -365,10 +365,13 @@ void Widget::newGroupFunction(int mode)
             QString newGroupTableName=dataBaseTableNameGetter.getGroupTableName(newGroup->getGroupName());
             if(!sharedData.database.tables().contains(newGroupTableName)){
                 //如果分组不存在，创建记录分组信息的表
+                qDebug()<<sharedData.groupTypeList[newGroup->getGroupType()]->getUpdateSql(newGroupTableName);
+                query.exec(sharedData.groupTypeList[newGroup->getGroupType()]->getCreateSql(newGroupTableName));
+                qDebug()<<query.lastError();
                 query.exec("create table "+newGroupTableName+" (groupType int,createTime varchar(200),lastEditTime varchar(200))");
                 //向sharedData.groupList表插入数据
-                query.prepare("insert into sharedData.groupList (groupType,groupName,KeyItemCount,createTime,lastEditTime,describe)"
-                              "VALUES (:1,:2,:3,:4,:5,:6)");
+                query.prepare("insert into "+dataBaseTableNameGetter.getGroupsTableName()+" (groupType,groupName,KeyItemCount,createTime,lastEditTime,describe)"
+                                                                                          "VALUES (:1,:2,:3,:4,:5,:6)");
                 query.bindValue(":1",newGroup->getGroupType());
                 query.bindValue(":2",newGroup->getGroupName());
                 query.bindValue(":3",newGroup->count());
@@ -386,15 +389,18 @@ void Widget::newGroupFunction(int mode)
 void Widget::deleteGroupSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    int index=tabWidget->currentIndex();
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
+    int index=ui->tabWidget->currentIndex();
     QString deleteGroupName=sharedData.groupList[index]->getGroupName();
-    QString title="删除分组 "+deleteGroupName+" ";
+    QString deleteGroupTableName=dataBaseTableNameGetter.getGroupTableName(deleteGroupName);
+    QString title="删除分组\""+deleteGroupName+"\"";
     QString message="是否确认"+title;
     //询问是否确认删除
     int choice=QMessageBox::question(this,title,message,QMessageBox::Yes|QMessageBox::No);
     if(choice==QMessageBox::Yes){
         //连接数据库
-        sharedData.database.setPassword("123456");
+        sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
         QSqlQuery query(sharedData.database);
         if(!sharedData.database.open()){
             QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
@@ -402,10 +408,10 @@ void Widget::deleteGroupSlot()
         }
         else{
             //删除数据表
-            query.exec("drop table "+deleteGroupName);
-            QString sql = QString("delete from sharedData.groupList where groupName = '%1' ").arg(deleteGroupName);
+            query.exec("drop table "+deleteGroupTableName);
+            QString sql = QString("delete from "+dataBaseTableNameGetter.getGroupsTableName()+" where groupName = '%1' ").arg(deleteGroupName);
             //删除stackedWidget、buttons、widgets、tableWidgets中的相关控件
-            tabWidget->removeTab(index);
+            ui->tabWidget->removeTab(index);
             widgets.removeAt(index);
             tableWidgets.removeAt(index);
             //删除group
@@ -419,15 +425,16 @@ void Widget::deleteGroupSlot()
 void Widget::editGroupSlot()
 {
     SharedData& sharedData = SharedData::instace();
-    Group* currentGroup=sharedData.groupList[tabWidget->currentIndex()];
+    Group* currentGroup=sharedData.groupList[ui->tabWidget->currentIndex()];
     int groupType=currentGroup->getGroupType();
     QString oldGroupName=currentGroup->getGroupName();
-    newgroupdialog->ui->tabWidget->setCurrentIndex(1);
     newgroupdialog->setWindowTitle("编辑分组 "+oldGroupName+" ");
     newgroupdialog->m_titleBar->setWindowTitle("编辑分组 "+oldGroupName+" ");
     newgroupdialog->newGroupName->setText(oldGroupName);
     newgroupdialog->newGroupType->setCurrentIndex(groupType);
     newgroupdialog->newGroupType->setEnable(false);
+    newgroupdialog->ui->describe->setText(currentGroup->getDescribe());
+    newgroupdialog->setDataValid(false);
     newgroupdialog->setModal(true);
     newgroupdialog->setGeometry(this->geometry().x()+this->width()/2-newgroupdialog->width()/2+10,this->geometry().y()+this->height()/2-newgroupdialog->height()/2+20,newgroupdialog->width(),newgroupdialog->height());
     newgroupdialog->exec();
@@ -436,23 +443,31 @@ void Widget::editGroupSlot()
 void Widget::editGroupFunction(QString oldGroupName)
 {
     SharedData& sharedData = SharedData::instace();
-    int index=tabWidget->currentIndex();
-    Group* currentGroup=sharedData.groupList[tabWidget->currentIndex()];
-    if(newGroup!=NULL&&newGroup->getFlag())
-    {
+    DataPathGetter& dataPathGetter = DataPathGetter::instance();
+    DataBaseTableNameGetter& dataBaseTableNameGetter = DataBaseTableNameGetter::instace();
+    int index=ui->tabWidget->currentIndex();
+    Group* currentGroup=sharedData.groupList[index];
+    if(currentGroup!=nullptr&&newgroupdialog->getDataValid()){
         //更新group信息
-        currentGroup->setGroupName(newGroup->getGroupName());
-        currentGroup->setDescribe(newGroup->getDescribe());
         currentGroup->setLastEditTime();
+        currentGroup->setGroupName(newgroupdialog->newGroupName->text());
+        currentGroup->setDescribe(newgroupdialog->ui->describe->toPlainText());
+        //更新显示的信息
+        ui->listWidget->currentItem()->setText(currentGroup->getGroupName());
+        ui->groupNameLabel->setText(currentGroup->getGroupName());
+        ui->groupDescribeLabel->setText(currentGroup->getDescribe());
         //更新数据库
+        sharedData.database.setDatabaseName(dataPathGetter.getCurrentAccountDataBasePath());
         QSqlQuery query(sharedData.database);
         if(!sharedData.database.open()){
             QMessageBox::critical(0, QObject::tr("Database Connection Error!"), sharedData.database.lastError().text());
             return;
         }else{
-            query.exec("alter table "+oldGroupName+" rename to "+currentGroup->getGroupName());
-            QString sql=QString("update sharedData.groupList set groupName='%1',lastEditTime='%2',describe='%3' where createTime='%4' ")
-                    .arg(newGroup->getGroupName())
+            QString oldGroupTableName=dataBaseTableNameGetter.getGroupTableName(oldGroupName);
+            QString newGroupTableName=dataBaseTableNameGetter.getGroupTableName(currentGroup->getGroupName());
+            query.exec("alter table "+oldGroupTableName+" rename to "+newGroupTableName);
+            QString sql=QString("update "+dataBaseTableNameGetter.getGroupsTableName()+" set groupName='%1',lastEditTime='%2',describe='%3' where createTime='%4' ")
+                    .arg(currentGroup->getGroupName())
                     .arg(sharedData.groupList[index]->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"))
                     .arg(sharedData.groupList[index]->getDescribe())
                     .arg(sharedData.groupList[index]->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));

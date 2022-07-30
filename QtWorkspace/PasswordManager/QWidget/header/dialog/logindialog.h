@@ -1,6 +1,7 @@
 ﻿#ifndef LOGINDIALOG_H
 #define LOGINDIALOG_H
 #include <QDialog>
+#include "controller/customdialog.h"
 #include "customField/customComboBox.h"
 #include "customField/customLineEdit.h"
 namespace Ui {
@@ -14,6 +15,7 @@ public:
     //辅助变量，便于不同函数间传递数据
     QString tempPortraitPath="";
     //自定义控件
+    CustomTitleBar* m_titleBar;
     customComboBox* username;
     customLineEdit* password;
 private:

@@ -92,6 +92,9 @@ int customComboBox::currentIndex(){
 QString customComboBox::currentText(){
     return ui->controller->currentText();
 }
+QString customComboBox::text(){
+    return currentText();
+}
 void customComboBox::setCurrentIndex(int index){
     ui->controller->setCurrentIndex(index);
 }

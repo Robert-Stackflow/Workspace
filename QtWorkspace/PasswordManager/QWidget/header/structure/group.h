@@ -3,7 +3,6 @@
 #include "keyItem.h"
 class Group{
 private:
-    int flag=0;
     int groupType;
     QString groupName;
     QString describe;
@@ -13,8 +12,6 @@ private:
 public:
     Group(int groupType,QString groupName,QDateTime createTime,QDateTime lastEditTime,QString describe);
     //Getter与Setter
-    int getFlag() const;
-    void setFlag(int newFlag);
     int getGroupType() const;
     const QString &getGroupName() const;
     void setGroupName(const QString &newGroupName);

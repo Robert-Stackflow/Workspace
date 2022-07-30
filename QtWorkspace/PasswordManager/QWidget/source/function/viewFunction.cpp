@@ -4,6 +4,7 @@
 #include "util/datapathgetter.h"
 #include "util/shareddata.h"
 #include "QsLog.h"
+#include <QSvgRenderer>
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -29,10 +30,10 @@ void Widget::changeTab()
 {
     SharedData& sharedData = SharedData::instace();
     QPushButton* send=(QPushButton*)sender();
-    int index=tabWidget->currentIndex();
+    int index=ui->tabWidget->currentIndex();
     Group* currentGroup=sharedData.groupList[index];
     send->setStyleSheet("background-color:#00b7c3");
-    tabWidget->setCurrentIndex(send->objectName().toInt());
+    ui->tabWidget->setCurrentIndex(send->objectName().toInt());
     tableWidgetMenu=new QMenu(tableWidgets[index]);
     QList<QAction*> tableMenu;
     QAction *removeItem=new QAction("删除密码");
@@ -60,9 +61,15 @@ void Widget::changeTab()
     tableWidgets[index]->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(tableWidgets[index],SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(tableWidgetContextMenuRequested(QPoint)));
 }
-void Widget::onTabIndexChanged(int)
+void Widget::onTabIndexChanged(int index)
 {
-
+    SharedData& sharedData = SharedData::instace();
+    ui->groupNameLabel->setText(sharedData.groupList[index]->getGroupName());
+    ui->groupDescribeLabel->setText(sharedData.groupList[index]->getDescribe());
+}
+void Widget::onListWidgetIndexChanged(int currentRow)
+{
+    ui->tabWidget->setCurrentIndex(currentRow);
 }
 void Widget::onGroupTypeCountChanged()
 {
@@ -73,22 +80,29 @@ void Widget::onGroupTypeCountChanged()
 void Widget::onGroupCountChanged()
 {
     SharedData& sharedData = SharedData::instace();
+    ui->listWidget->clear();
+    ui->listWidget->addItems(sharedData.groupList.getGroupNames());
+    for(int i=0;i<ui->listWidget->count();i++){
+        ui->listWidget->item(i)->setFont(QFont("Microsoft Yahei",9,50));
+        ui->listWidget->item(i)->setTextAlignment(Qt::AlignCenter);
+        ui->listWidget->item(i)->setSizeHint(QSize(50,50));
+    }
     if(sharedData.groupList.count()==0){
-        tabWidget->hide(),addItem->hide(),deleteGroup->hide(),editGroup->hide(),save->hide(),search->hide();
+        ui->tabWidget->hide(),ui->addItem->hide(),ui->deleteGroup->hide(),ui->editGroup->hide(),ui->save->hide(),ui->search->hide();
     }else{
-        tabWidget->show(),addItem->show(),deleteGroup->show(),editGroup->show(),save->show(),search->show();
+        ui->tabWidget->show(),ui->addItem->show(),ui->deleteGroup->show(),ui->editGroup->show(),ui->save->show(),ui->search->show();
     }
     if(sharedData.groupList.count()<=1)
-        deleteGroup->setEnabled(false);
+        ui->deleteGroup->setEnabled(false);
     else
-        deleteGroup->setEnabled(true);
+        ui->deleteGroup->setEnabled(true);
 }
 void Widget::onOptionButtonClicked()
 {
     optiondialog->setModal(true);
     optiondialog->setGeometry(this->geometry().x()+this->width()/2-newitemdialog->width()/2+10,this->geometry().y()+this->height()/2-newitemdialog->height()/2+20,newitemdialog->width(),newitemdialog->height());
     optiondialog->exec();
-//        newgrouptypedialog->setModal(true);
-//        newgrouptypedialog->setGeometry(this->geometry().x()+this->width()/2-newgrouptypedialog->width()/2+10,this->geometry().y()+this->height()/2-newgrouptypedialog->height()/2-10,newgrouptypedialog->width(),newgrouptypedialog->height());
-//        newgrouptypedialog->exec();
+    //        newgrouptypedialog->setModal(true);
+    //        newgrouptypedialog->setGeometry(this->geometry().x()+this->width()/2-newgrouptypedialog->width()/2+10,this->geometry().y()+this->height()/2-newgrouptypedialog->height()/2-10,newgrouptypedialog->width(),newgrouptypedialog->height());
+    //        newgrouptypedialog->exec();
 }

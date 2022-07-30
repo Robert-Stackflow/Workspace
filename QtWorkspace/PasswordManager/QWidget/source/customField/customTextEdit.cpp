@@ -52,6 +52,9 @@ void customTextEdit::setPlaceholderText(const QString& placeholderText){
 QString customTextEdit::toPlainText(){
     return ui->controller->toPlainText();
 }
+QString customTextEdit::text(){
+    return toPlainText();
+}
 void customTextEdit::setText(const QString &text){
     ui->controller->setText(text);
 }

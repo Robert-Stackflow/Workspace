@@ -9,13 +9,13 @@
 #endif
 void Widget::saveMenuTriggered(){
     QAction* send=(QAction*)sender();
-    save->setDefaultAction(send);
+    ui->save->setDefaultAction(send);
 }
 void Widget::saveSlot(){
     SharedData& sharedData = SharedData::instace();
-    Group* currentGroup=sharedData.groupList[tabWidget->currentIndex()];
+    Group* currentGroup=sharedData.groupList[ui->tabWidget->currentIndex()];
     QAction* activeAction=((QToolButton*)sender())->defaultAction();
-    QString title="将分组 "+currentGroup->getGroupName()+" 另存为"+save->defaultAction()->text()+"文件";
+    QString title="将分组 "+currentGroup->getGroupName()+" 另存为"+ui->save->defaultAction()->text()+"文件";
     if(activeAction==saveAsPDF){
         QString saveFilePath=QFileDialog::getSaveFileName(this,title,"./",tr("PDF files(*.pdf)"));
         if(saveFilePath=="")
@@ -54,7 +54,7 @@ void Widget::saveSlot(){
         QFile file(saveFilePath);
         if(!file.open(QIODevice::WriteOnly))
             return;
-        int index=tabWidget->currentIndex();
+        int index=ui->tabWidget->currentIndex();
         Group* currentGroup=sharedData.groupList[index];
         QStringList header=sharedData.groupTypeList[currentGroup->getGroupType()]->getFieldNames();
         //写入表头

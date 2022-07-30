@@ -18,13 +18,12 @@ optionDialog::optionDialog(QWidget *parent) :
     font.setFamily("黑体");
     font.setPointSize(11);
     font.setBold(true);
-    m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":custom/logos/logo.png");
-    m_titleBar->forbiddenMaxmizeButton();
-    m_titleBar->m_titleLabel->setFont(font);
+    m_titleBar=new CustomTitleBar(this);
+    m_titleBar->setWindowIcon(":custom/logos/logo.png");
+    m_titleBar->setMaximizeVisible(false);
+    m_titleBar->titleLabel->setFont(font);
     m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());
     m_titleBar->setFixedWidth(ui->frame->width());
-    m_titleBar->forbiddenUserButton();
     //设置阴影效果
     QGraphicsDropShadowEffect* shadow_effect = new QGraphicsDropShadowEffect();
     shadow_effect->setColor(QColor());

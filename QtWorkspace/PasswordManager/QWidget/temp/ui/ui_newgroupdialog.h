@@ -11,12 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -26,18 +24,16 @@ QT_BEGIN_NAMESPACE
 class Ui_newGroupDialog
 {
 public:
-    QTabWidget *tabWidget;
-    QWidget *groupManager;
-    QWidget *editGroup;
-    QWidget *layoutWidget_12;
-    QVBoxLayout *groupInfoLayout;
+    QFrame *frame;
     QTextEdit *describe;
+    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *groupNameLayout;
+    QVBoxLayout *groupTypeLayout;
     QWidget *layoutWidget_13;
     QHBoxLayout *confirmLayout;
     QPushButton *confirm;
     QPushButton *cancel;
-    QCommandLinkButton *jumpToGroupTypeManager;
-    QFrame *frame;
 
     void setupUi(QDialog *newGroupDialog)
     {
@@ -46,64 +42,52 @@ public:
         newGroupDialog->resize(680, 500);
         newGroupDialog->setMinimumSize(QSize(680, 500));
         newGroupDialog->setMaximumSize(QSize(680, 500));
-        tabWidget = new QTabWidget(newGroupDialog);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(20, 50, 641, 431));
-        QFont font;
-        tabWidget->setFont(font);
-        tabWidget->setTabPosition(QTabWidget::North);
-        tabWidget->setTabShape(QTabWidget::Rounded);
-        tabWidget->setUsesScrollButtons(false);
-        tabWidget->setMovable(false);
-        tabWidget->setTabBarAutoHide(false);
-        groupManager = new QWidget();
-        groupManager->setObjectName(QString::fromUtf8("groupManager"));
-        tabWidget->addTab(groupManager, QString());
-        editGroup = new QWidget();
-        editGroup->setObjectName(QString::fromUtf8("editGroup"));
-        layoutWidget_12 = new QWidget(editGroup);
-        layoutWidget_12->setObjectName(QString::fromUtf8("layoutWidget_12"));
-        layoutWidget_12->setGeometry(QRect(11, 11, 341, 187));
-        groupInfoLayout = new QVBoxLayout(layoutWidget_12);
-        groupInfoLayout->setObjectName(QString::fromUtf8("groupInfoLayout"));
-        groupInfoLayout->setContentsMargins(0, 0, 0, 0);
-        describe = new QTextEdit(editGroup);
+        frame = new QFrame(newGroupDialog);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(10, 10, 661, 481));
+        frame->setStyleSheet(QString::fromUtf8("border:0px;\n"
+"border-radius:10px;"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        describe = new QTextEdit(newGroupDialog);
         describe->setObjectName(QString::fromUtf8("describe"));
-        describe->setGeometry(QRect(360, 10, 261, 341));
-        layoutWidget_13 = new QWidget(editGroup);
+        describe->setGeometry(QRect(30, 150, 621, 281));
+        layoutWidget = new QWidget(newGroupDialog);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 80, 621, 41));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        groupNameLayout = new QVBoxLayout();
+        groupNameLayout->setObjectName(QString::fromUtf8("groupNameLayout"));
+
+        horizontalLayout->addLayout(groupNameLayout);
+
+        groupTypeLayout = new QVBoxLayout();
+        groupTypeLayout->setObjectName(QString::fromUtf8("groupTypeLayout"));
+
+        horizontalLayout->addLayout(groupTypeLayout);
+
+        layoutWidget_13 = new QWidget(newGroupDialog);
         layoutWidget_13->setObjectName(QString::fromUtf8("layoutWidget_13"));
-        layoutWidget_13->setGeometry(QRect(430, 360, 195, 31));
+        layoutWidget_13->setGeometry(QRect(430, 440, 231, 37));
         confirmLayout = new QHBoxLayout(layoutWidget_13);
         confirmLayout->setObjectName(QString::fromUtf8("confirmLayout"));
         confirmLayout->setContentsMargins(0, 0, 0, 0);
         confirm = new QPushButton(layoutWidget_13);
         confirm->setObjectName(QString::fromUtf8("confirm"));
+        confirm->setMinimumSize(QSize(0, 30));
 
         confirmLayout->addWidget(confirm);
 
         cancel = new QPushButton(layoutWidget_13);
         cancel->setObjectName(QString::fromUtf8("cancel"));
+        cancel->setMinimumSize(QSize(0, 30));
 
         confirmLayout->addWidget(cancel);
 
-        jumpToGroupTypeManager = new QCommandLinkButton(editGroup);
-        jumpToGroupTypeManager->setObjectName(QString::fromUtf8("jumpToGroupTypeManager"));
-        jumpToGroupTypeManager->setGeometry(QRect(10, 210, 141, 41));
-        tabWidget->addTab(editGroup, QString());
-        frame = new QFrame(newGroupDialog);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(10, 10, 660, 480));
-        frame->setStyleSheet(QString::fromUtf8("border:0px;\n"
-"border-radius:10px;"));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        frame->raise();
-        tabWidget->raise();
 
         retranslateUi(newGroupDialog);
-
-        tabWidget->setCurrentIndex(1);
-
 
         QMetaObject::connectSlotsByName(newGroupDialog);
     } // setupUi
@@ -111,12 +95,9 @@ public:
     void retranslateUi(QDialog *newGroupDialog)
     {
         newGroupDialog->setWindowTitle(QCoreApplication::translate("newGroupDialog", "Dialog", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(groupManager), QCoreApplication::translate("newGroupDialog", "\345\210\206\347\273\204\347\256\241\347\220\206", nullptr));
         describe->setPlaceholderText(QCoreApplication::translate("newGroupDialog", "\347\274\226\350\276\221\345\244\207\346\263\250", nullptr));
         confirm->setText(QCoreApplication::translate("newGroupDialog", "\347\241\256\345\256\232", nullptr));
         cancel->setText(QCoreApplication::translate("newGroupDialog", "\345\217\226\346\266\210", nullptr));
-        jumpToGroupTypeManager->setText(QCoreApplication::translate("newGroupDialog", "\345\210\206\347\273\204\347\261\273\345\236\213\347\256\241\347\220\206", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(editGroup), QCoreApplication::translate("newGroupDialog", "\347\274\226\350\276\221/\346\226\260\345\273\272\345\210\206\347\273\204", nullptr));
     } // retranslateUi
 
 };

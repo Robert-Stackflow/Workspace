@@ -1,4 +1,5 @@
 ﻿#include "structure/groupType.h"
+#include <QDebug>
 void GroupType::setCustomFieldList(const QList<AbstractCustomField *> &newCustomFieldList)
 {
     customFieldList = newCustomFieldList;
@@ -106,6 +107,51 @@ QStringList GroupType::getFieldNames(){
     for(int i=0;i<count();i++)
         list<<customFieldList[i]->getFieldName();
     return list;
+}
+QString groupTypeName;
+QString describe;
+QDateTime createTime;
+QDateTime lastEditTime;
+QList<AbstractCustomField*> customFieldList;
+QString GroupType::getCreateSql(const QString &tableName){
+    QString sql="create table "+tableName+" (";
+    for(int i=0;i<count();i++){
+        sql+="'";
+        sql+=customFieldList[i]->getFieldName();
+        sql+="'";
+        sql+=" text,";
+    }
+    sql+="createTime varchar(200),lastEditTime varchar(200))";
+    return sql;
+}
+QString GroupType::getUpdateSql(const QString &tableName){
+    QString sql="update "+tableName+" set ";
+    for(int i=0;i<count();i++){
+        sql+="'";
+        sql+=customFieldList[i]->getFieldName();
+        sql+="'";
+        sql+="='%"+QString::number(i+1)+"',";
+    }
+    sql+="lastEditTime='%"+QString::number(count()+1)+"' where createTime='%"+QString::number(count()+2)+"'";
+    return sql;
+}
+QString GroupType::getInsertSql(const QString &tableName){
+    QString sql="insert into "+tableName+" (";
+    for(int i=0;i<count();i++){
+        sql+="'";
+        sql+=customFieldList[i]->getFieldName();
+        sql+="'";
+        sql+=",";
+    }
+    sql+="createTime,lastEditTime)VALUES(";
+    for(int i=0;i<count()+2;i++){
+        sql+=":";
+        sql+=QString::number(i+1);
+        if(i<count()+1)
+        sql+=",";
+    }
+    sql+=")";
+    return sql;
 }
 void GroupType::setGroupTypeName(const QString &newGroupTypeName)
 {

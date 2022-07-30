@@ -21,17 +21,16 @@ void newItemDialog::InitDialog(){
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
-    m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":/custom/logos/logo.png");
+    m_titleBar=new CustomTitleBar(this);
+    m_titleBar->setWindowIcon(":/custom/logos/logo.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);
     font.setPointSize(11);
     font.setFamily("黑体");
-    m_titleBar->m_titleLabel->setFont(font);
+    m_titleBar->titleLabel->setFont(font);
     //隐藏标题栏按钮
-    m_titleBar->forbiddenUserButton();
-    m_titleBar->forbiddenMaxmizeButton();
+    m_titleBar->setMaximizeVisible(false);
     //设定标题栏位置与大小
     m_titleBar->setFixedWidth(ui->frame->width());
     m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());
@@ -41,8 +40,6 @@ void newItemDialog::InitDialog(){
     shadow_effect->setBlurRadius(20);
     shadow_effect->setOffset(0, 0);
     ui->frame->setGraphicsEffect(shadow_effect);
-    //隐藏tabWidget标题栏
-    ui->tabWidget->tabBar()->hide();
     //加载QSS样式
     QFile file(":/qss/dark.qss");
     file.open(QFile::ReadOnly);
@@ -62,6 +59,7 @@ newItemDialog::~newItemDialog()
 void newItemDialog::loadGroupType(int index){
     SharedData& sharedData = SharedData::instace();
     GroupType* groupType=sharedData.groupTypeList[index];
+    currentGroupType=index;
     //清除layout内的控件
     QLayoutItem *child;
     while((child = ui->infoLayout->takeAt(0)) != 0){
@@ -70,6 +68,7 @@ void newItemDialog::loadGroupType(int index){
         delete child;
     }
     //加载groupType中的字段控件
+    fieldControllerList.clear();
     for(int i=0;i<groupType->count();i++)
     {
         AbstractCustomField* currentField=groupType->at(i);
@@ -90,12 +89,26 @@ void newItemDialog::loadGroupType(int index){
             break;
         }
         newField->setPlaceholderText(currentField->getPlaceholderText());
+        fieldControllerList<<newField;
     }
+    ui->scrollAreaWidgetContents->setWindowFlags(Qt::FramelessWindowHint);
     ui->groupTypeName->setText(groupType->getGroupTypeName());
     ui->groupTypeCreateTime->setText(groupType->getCreateTime().toString("yyyy-MM-dd hh:mm:ss"));
     ui->groupTypeLastEditTime->setText(groupType->getLastEditTime().toString("yyyy-MM-dd hh:mm:ss"));
+    ui->tip->setText(groupType->getDescribe());
 }
 void newItemDialog::onConfirmClicked(){
+    bool isValid=false;
+    for(int i=0;i<fieldControllerList.count();i++)
+        isValid=isValid&&fieldControllerList[i]->isValid();
+    if(isValid)
+    {
+        QStringList fieldValueList;
+        for(int i=0;i<fieldControllerList.count();i++)
+            fieldValueList<<fieldControllerList[i]->text();
+        newKeyItem=new KeyItem(currentGroupType,fieldValueList);
+        this->close();
+    }
 
 }
 void newItemDialog::onCancelClicked(){

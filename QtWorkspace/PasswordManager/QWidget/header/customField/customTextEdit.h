@@ -17,6 +17,7 @@ public:
     //属性
     void clear();
     bool isValid();
+    QString text();
     AbstractCustomField* clone();
     QString getPlaceholderText();
     void setPlaceholderText(const QString& placeholderText);

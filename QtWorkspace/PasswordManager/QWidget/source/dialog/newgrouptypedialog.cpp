@@ -83,18 +83,17 @@ void newGroupTypeDialog::initDialog()
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
-    m_titleBar=new TitleBar(this);
+    m_titleBar=new CustomTitleBar(this);
     m_titleBar->setWindowTitle("类型管理");
-    m_titleBar->setTitleBarIcon(":/custom/logos/logo.png");
+    m_titleBar->setWindowIcon(":/custom/logos/logo.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);
     font.setPointSize(11);
     font.setFamily("黑体");
-    m_titleBar->m_titleLabel->setFont(font);
+    m_titleBar->titleLabel->setFont(font);
     //隐藏标题栏按钮
-    m_titleBar->forbiddenUserButton();
-    m_titleBar->forbiddenMaxmizeButton();
+    m_titleBar->setMaximizeVisible(false);
     //设置标题栏位置与大小
     m_titleBar->setFixedWidth(ui->frame->width());
     m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());

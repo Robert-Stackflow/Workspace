@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Widget_t {
-    QByteArrayData data[24];
-    char stringdata0[383];
+    QByteArrayData data[25];
+    char stringdata0[408];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,30 +43,32 @@ QT_MOC_LITERAL(7, 88, 13), // "editGroupSlot"
 QT_MOC_LITERAL(8, 102, 15), // "deleteGroupSlot"
 QT_MOC_LITERAL(9, 118, 9), // "changeTab"
 QT_MOC_LITERAL(10, 128, 17), // "onTabIndexChanged"
-QT_MOC_LITERAL(11, 146, 14), // "newKeyItemSlot"
-QT_MOC_LITERAL(12, 161, 15), // "moveKeyItemSlot"
-QT_MOC_LITERAL(13, 177, 15), // "copyKeyItemSlot"
-QT_MOC_LITERAL(14, 193, 17), // "removeKeyItemSlot"
-QT_MOC_LITERAL(15, 211, 15), // "openWebsiteSlot"
-QT_MOC_LITERAL(16, 227, 19), // "copyKeyItemInfoSlot"
-QT_MOC_LITERAL(17, 247, 31), // "tableWidgetContextMenuRequested"
-QT_MOC_LITERAL(18, 279, 3), // "pos"
-QT_MOC_LITERAL(19, 283, 10), // "searchSlot"
-QT_MOC_LITERAL(20, 294, 22), // "tableWidgetClickedSlot"
-QT_MOC_LITERAL(21, 317, 19), // "onGroupCountChanged"
-QT_MOC_LITERAL(22, 337, 23), // "onGroupTypeCountChanged"
-QT_MOC_LITERAL(23, 361, 21) // "onOptionButtonClicked"
+QT_MOC_LITERAL(11, 146, 24), // "onListWidgetIndexChanged"
+QT_MOC_LITERAL(12, 171, 14), // "newKeyItemSlot"
+QT_MOC_LITERAL(13, 186, 15), // "moveKeyItemSlot"
+QT_MOC_LITERAL(14, 202, 15), // "copyKeyItemSlot"
+QT_MOC_LITERAL(15, 218, 17), // "removeKeyItemSlot"
+QT_MOC_LITERAL(16, 236, 15), // "openWebsiteSlot"
+QT_MOC_LITERAL(17, 252, 19), // "copyKeyItemInfoSlot"
+QT_MOC_LITERAL(18, 272, 31), // "tableWidgetContextMenuRequested"
+QT_MOC_LITERAL(19, 304, 3), // "pos"
+QT_MOC_LITERAL(20, 308, 10), // "searchSlot"
+QT_MOC_LITERAL(21, 319, 22), // "tableWidgetClickedSlot"
+QT_MOC_LITERAL(22, 342, 19), // "onGroupCountChanged"
+QT_MOC_LITERAL(23, 362, 23), // "onGroupTypeCountChanged"
+QT_MOC_LITERAL(24, 386, 21) // "onOptionButtonClicked"
 
     },
     "Widget\0groupCountChanged\0\0"
     "groupTypeCountChanged\0saveSlot\0"
     "saveMenuTriggered\0newGroupSlot\0"
     "editGroupSlot\0deleteGroupSlot\0changeTab\0"
-    "onTabIndexChanged\0newKeyItemSlot\0"
-    "moveKeyItemSlot\0copyKeyItemSlot\0"
-    "removeKeyItemSlot\0openWebsiteSlot\0"
-    "copyKeyItemInfoSlot\0tableWidgetContextMenuRequested\0"
-    "pos\0searchSlot\0tableWidgetClickedSlot\0"
+    "onTabIndexChanged\0onListWidgetIndexChanged\0"
+    "newKeyItemSlot\0moveKeyItemSlot\0"
+    "copyKeyItemSlot\0removeKeyItemSlot\0"
+    "openWebsiteSlot\0copyKeyItemInfoSlot\0"
+    "tableWidgetContextMenuRequested\0pos\0"
+    "searchSlot\0tableWidgetClickedSlot\0"
     "onGroupCountChanged\0onGroupTypeCountChanged\0"
     "onOptionButtonClicked"
 };
@@ -78,7 +80,7 @@ static const uint qt_meta_data_Widget[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      21,   14, // methods
+      22,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -86,29 +88,30 @@ static const uint qt_meta_data_Widget[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  119,    2, 0x06 /* Public */,
-       3,    0,  120,    2, 0x06 /* Public */,
+       1,    0,  124,    2, 0x06 /* Public */,
+       3,    0,  125,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,  121,    2, 0x08 /* Private */,
-       5,    0,  122,    2, 0x08 /* Private */,
-       6,    0,  123,    2, 0x08 /* Private */,
-       7,    0,  124,    2, 0x08 /* Private */,
-       8,    0,  125,    2, 0x08 /* Private */,
-       9,    0,  126,    2, 0x08 /* Private */,
-      10,    1,  127,    2, 0x08 /* Private */,
-      11,    0,  130,    2, 0x08 /* Private */,
-      12,    0,  131,    2, 0x08 /* Private */,
-      13,    0,  132,    2, 0x08 /* Private */,
-      14,    0,  133,    2, 0x08 /* Private */,
-      15,    0,  134,    2, 0x08 /* Private */,
-      16,    0,  135,    2, 0x08 /* Private */,
-      17,    1,  136,    2, 0x08 /* Private */,
-      19,    1,  139,    2, 0x08 /* Private */,
-      20,    2,  142,    2, 0x08 /* Private */,
-      21,    0,  147,    2, 0x08 /* Private */,
-      22,    0,  148,    2, 0x08 /* Private */,
-      23,    0,  149,    2, 0x08 /* Private */,
+       4,    0,  126,    2, 0x08 /* Private */,
+       5,    0,  127,    2, 0x08 /* Private */,
+       6,    0,  128,    2, 0x08 /* Private */,
+       7,    0,  129,    2, 0x08 /* Private */,
+       8,    0,  130,    2, 0x08 /* Private */,
+       9,    0,  131,    2, 0x08 /* Private */,
+      10,    1,  132,    2, 0x08 /* Private */,
+      11,    1,  135,    2, 0x08 /* Private */,
+      12,    0,  138,    2, 0x08 /* Private */,
+      13,    0,  139,    2, 0x08 /* Private */,
+      14,    0,  140,    2, 0x08 /* Private */,
+      15,    0,  141,    2, 0x08 /* Private */,
+      16,    0,  142,    2, 0x08 /* Private */,
+      17,    0,  143,    2, 0x08 /* Private */,
+      18,    1,  144,    2, 0x08 /* Private */,
+      20,    1,  147,    2, 0x08 /* Private */,
+      21,    2,  150,    2, 0x08 /* Private */,
+      22,    0,  155,    2, 0x08 /* Private */,
+      23,    0,  156,    2, 0x08 /* Private */,
+      24,    0,  157,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -122,13 +125,14 @@ static const uint qt_meta_data_Widget[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QPoint,   18,
+    QMetaType::Void, QMetaType::QPoint,   19,
     QMetaType::Void, QMetaType::QString,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
     QMetaType::Void,
@@ -153,18 +157,19 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 6: _t->deleteGroupSlot(); break;
         case 7: _t->changeTab(); break;
         case 8: _t->onTabIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: _t->newKeyItemSlot(); break;
-        case 10: _t->moveKeyItemSlot(); break;
-        case 11: _t->copyKeyItemSlot(); break;
-        case 12: _t->removeKeyItemSlot(); break;
-        case 13: _t->openWebsiteSlot(); break;
-        case 14: _t->copyKeyItemInfoSlot(); break;
-        case 15: _t->tableWidgetContextMenuRequested((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 16: _t->searchSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 17: _t->tableWidgetClickedSlot((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 18: _t->onGroupCountChanged(); break;
-        case 19: _t->onGroupTypeCountChanged(); break;
-        case 20: _t->onOptionButtonClicked(); break;
+        case 9: _t->onListWidgetIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: _t->newKeyItemSlot(); break;
+        case 11: _t->moveKeyItemSlot(); break;
+        case 12: _t->copyKeyItemSlot(); break;
+        case 13: _t->removeKeyItemSlot(); break;
+        case 14: _t->openWebsiteSlot(); break;
+        case 15: _t->copyKeyItemInfoSlot(); break;
+        case 16: _t->tableWidgetContextMenuRequested((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 17: _t->searchSlot((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 18: _t->tableWidgetClickedSlot((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 19: _t->onGroupCountChanged(); break;
+        case 20: _t->onGroupTypeCountChanged(); break;
+        case 21: _t->onOptionButtonClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -215,13 +220,13 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 21)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 21;
+        _id -= 22;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 21)
+        if (_id < 22)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 21;
+        _id -= 22;
     }
     return _id;
 }

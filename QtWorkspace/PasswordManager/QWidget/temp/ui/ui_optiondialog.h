@@ -362,7 +362,7 @@ public:
 
         retranslateUi(optionDialog);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(optionDialog);
@@ -387,7 +387,8 @@ public:
                         "\347\240\201</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\344\275\277\347\224\250\347\224\250\346\210\267\345\257\206\347\240\201</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\344\275\277\347\224\250\351\273\230\350\256\244\345\257\206\347\240\201</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\350\207\252\345\256\232\344\271\211\345\257\206\347\240\201</p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\350\207\252\345\256\232\344\271\211\345\257\206\347\240\201</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\346\230\257\345\220\246\346\230\276\347\244\272\345\257\206\347\240\201\346\227\266\351\227\264</p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(secure), QCoreApplication::translate("optionDialog", "\345\256\211\345\205\250", nullptr));
         groupBox->setTitle(QCoreApplication::translate("optionDialog", "\345\257\274\345\207\272\350\256\260\345\275\225", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("optionDialog", "\350\256\276\347\275\256", nullptr));

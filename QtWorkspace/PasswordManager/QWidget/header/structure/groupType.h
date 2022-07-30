@@ -38,5 +38,8 @@ public:
     bool remove(const QStringList &names);
     void append(AbstractCustomField* newField);
     QStringList getFieldNames();
+    QString getCreateSql(const QString& tableName);
+    QString getUpdateSql(const QString &tableName);
+    QString getInsertSql(const QString &tableName);
 };
 #endif // GROUPTYPE_H

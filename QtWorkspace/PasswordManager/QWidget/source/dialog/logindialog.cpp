@@ -1,11 +1,12 @@
 ﻿#include "dialog/logindialog.h"
 #include "QsLog.h"
-#include "controller/titleBar.h"
 #include "ui_logindialog.h"
 #include "util/databasetablenamegetter.h"
 #include "util/datapathgetter.h"
 #include "util/shareddata.h"
+#include "MuCustomWindow.h"
 #include "widget.h"
+#include "controller/customdialog.h"
 #include <QCompleter>
 #include <QDir>
 #include <QFile>
@@ -30,36 +31,40 @@ loginDialog::loginDialog(QWidget *parent) : QDialog(parent),
 void loginDialog::initDialog()
 {
     DataPathGetter &dataPathGetter = DataPathGetter::instance();
-    //设置字体
-    QFont font;
-    font.setFamily("黑体");
-    setFont(font);
-    //设置窗口样式
+    this->setWindowIcon(QIcon(":custom/logos/logo.png"));
+    this->setWindowTitle("Password Manager");
+    //删除标题栏
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
-    this->setWindowIcon(QIcon(":custom/logos/logo.png"));
     //添加自定义标题栏
-    TitleBar *m_titleBar = new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":custom/logos/logo.png");
+    m_titleBar=new CustomTitleBar(this);
+    m_titleBar->setWindowIcon(":/custom/logos/logo.png");
     m_titleBar->setWindowTitle("Password Manager");
-    m_titleBar->forbiddenMaxmizeButton();
-    m_titleBar->forbiddenUserButton();
-    m_titleBar->setGeometry(m_titleBar->geometry().x() + 6, m_titleBar->geometry().y(), m_titleBar->width(), m_titleBar->height());
+    //设置标题栏字体
+    QFont font;
+    font.setBold(true);
+    font.setPointSize(11);
+    font.setFamily("黑体");
+    m_titleBar->titleLabel->setFont(font);
+    //隐藏标题栏按钮
+    m_titleBar->setMaximizeVisible(false);
+    //设定标题栏位置与大小
     m_titleBar->setFixedWidth(ui->frame->width());
-    //设置窗口阴影效果
-    QGraphicsDropShadowEffect *shadow_effect = new QGraphicsDropShadowEffect();
-    shadow_effect->setColor(QColor(128, 128, 128, 255));
+    m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());
+    //设定阴影效果
+    QGraphicsDropShadowEffect* shadow_effect = new QGraphicsDropShadowEffect();
+    shadow_effect->setColor(QColor(128,128,128,255));
     shadow_effect->setBlurRadius(20);
     shadow_effect->setOffset(0, 0);
     ui->frame->setGraphicsEffect(shadow_effect);
-    //加载QSS
+    //加载QSS样式
     QFile file(":/qss/dark.qss");
     file.open(QFile::ReadOnly);
     if (file.isOpen())
     {
         QString temp = this->styleSheet;
         temp += QLatin1String(file.readAll());
-        this->styleSheet = temp;
+        this->styleSheet=temp;
         this->setStyleSheet(styleSheet);
         file.close();
     }

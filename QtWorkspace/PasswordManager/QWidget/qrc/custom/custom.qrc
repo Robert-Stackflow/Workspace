@@ -12,5 +12,6 @@
         <file>icons/setting.png</file>
         <file>icons/unlogged.png</file>
         <file>icons/defaultPortrait.png</file>
+        <file>icons/addKeyItem.svg</file>
     </qresource>
 </RCC>

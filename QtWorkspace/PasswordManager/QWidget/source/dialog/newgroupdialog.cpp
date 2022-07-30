@@ -5,41 +5,51 @@
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
+bool newGroupDialog::getDataValid() const
+{
+    return dataValid;
+}
+
+void newGroupDialog::setDataValid(bool newDataValid)
+{
+    dataValid = newDataValid;
+}
+
 newGroupDialog::newGroupDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::newGroupDialog)
 {
     ui->setupUi(this);
+    InitDialog();
     //添加自定义控件
     SharedData& sharedData = SharedData::instace();
     newGroupName=new customLineEdit("分组名称",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
     newGroupName->setPlaceholderText("输入分组名称");
-    ui->groupInfoLayout->addWidget(newGroupName);
+    ui->groupNameLayout->addWidget(newGroupName);
     newGroupType=new customComboBox("分组类型",AbstractCustomField::REQUIRED,AbstractCustomField::NORMAL,this);
-    ui->groupInfoLayout->addWidget(newGroupType);
+    ui->groupTypeLayout->addWidget(newGroupType);
     newGroupType->setEditable(false);
     newGroupType->addItems(sharedData.groupTypeList.getGroupTypeNames());
     //绑定槽函数
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(onConfirmClicked()));
     connect(ui->cancel,SIGNAL(clicked()),this,SLOT(onCancelClicked()));
-    connect(ui->jumpToGroupTypeManager,SIGNAL(clicked()),this,SLOT(onJumpToGroupTypeManagerClicked()));
+//    connect(ui->jumpToGroupTypeManager,SIGNAL(clicked()),this,SLOT(onJumpToGroupTypeManagerClicked()));
 }
 void newGroupDialog::InitDialog(){
     //删除标题栏
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Dialog);
     this->setAttribute(Qt::WA_TranslucentBackground);
     //添加自定义标题栏
-    m_titleBar=new TitleBar(this);
-    m_titleBar->setTitleBarIcon(":/custom/logos/logo.png");
+    m_titleBar=new CustomTitleBar(this);
+    m_titleBar->setWindowIcon(":/custom/logos/logo.png");
     //设置标题栏字体
     QFont font;
     font.setBold(true);
     font.setPointSize(11);
     font.setFamily("黑体");
-    m_titleBar->m_titleLabel->setFont(font);
+    m_titleBar->titleLabel->setFont(font);
     //隐藏标题栏按钮
-    m_titleBar->forbiddenUserButton();
-    m_titleBar->forbiddenMaxmizeButton();
+    m_titleBar->setMaximizeVisible(false);
     //设定标题栏位置与大小
     m_titleBar->setFixedWidth(ui->frame->width());
     m_titleBar->setGeometry(m_titleBar->geometry().x()+6,m_titleBar->geometry().y(),m_titleBar->width(),m_titleBar->height());
@@ -49,8 +59,6 @@ void newGroupDialog::InitDialog(){
     shadow_effect->setBlurRadius(20);
     shadow_effect->setOffset(0, 0);
     ui->frame->setGraphicsEffect(shadow_effect);
-    //隐藏tabWidget标题栏
-    ui->tabWidget->tabBar()->hide();
     //加载QSS样式
     QFile file(":/qss/dark.qss");
     file.open(QFile::ReadOnly);
@@ -74,7 +82,7 @@ void newGroupDialog::onConfirmClicked(){
     if(newGroupName->isValid()&&newGroupType->isValid())
     {
         newGroup=new Group(newGroupType->currentIndex(),newGroupName->text(),QDateTime::currentDateTime(),QDateTime::currentDateTime(),ui->describe->toPlainText());
-        newGroup->setFlag(1);
+        dataValid=true;
         this->close();
     }else{
         QString message="";

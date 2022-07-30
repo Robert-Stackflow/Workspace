@@ -1,7 +1,7 @@
 ﻿#ifndef OPTIONDIALOG_H
 #define OPTIONDIALOG_H
 #include <QDialog>
-#include "controller/titleBar.h"
+#include "controller/customTitleBar.h"
 namespace Ui {
 class optionDialog;
 }
@@ -11,7 +11,7 @@ class optionDialog : public QDialog
     Q_OBJECT
 
 public:
-    TitleBar *m_titleBar;
+    CustomTitleBar *m_titleBar;
     explicit optionDialog(QWidget *parent = nullptr);
     ~optionDialog();
 
